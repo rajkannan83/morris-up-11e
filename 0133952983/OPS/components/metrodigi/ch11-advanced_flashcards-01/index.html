@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+    <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="container has-instructions">
+
+    <div class="Flashcards">
+
+        <nav class="main-nav">
+            <button tabindex="0" class="current-chapter-cards"></button>
+            <button tabindex="0" class="all-chapters-cards"></button>
+            <div class="right-helper">
+                <button tabindex="0" class="flip right">Flip Cards</button>
+                <button tabindex="0" class="restart right">Start Over</button>
+            </div>
+        </nav>
+
+        <section class="cards">
+
+            <div class="end-screen">
+                <div class="content-wrapper">
+                    <h2>All done!</h2>
+                    <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                    <ul class="repeated-cards"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+            <button tabindex="0" class="skip right">Skip</button>
+        </nav>
+
+    </div>
+
+</div> <!-- container -->
+
+<script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+<script type="text/javascript">
+
+    window.addEvent('domready', function() {
+        // Widget initialization
+        window.widget_instance = new Flashcards({
+            container: $$('.Flashcards')[0],
+            currentChapter: 0, displayCurrentChapterButton: false,
+            cards: [
+                {
+                    chapter: 0,
+                    term: "actualizing tendency",
+                    definition: "According to Rogers, the drive of every organism to fulfill its biological potential and become what it is inherently capable of becoming."
+                },
+                {
+                    chapter: 0,
+                    term: "anal stage",
+                    definition: "Second stage in Freud’s theory of personality development, in which a child’s erotic feelings center on the anus and on elimination."
+                },
+                {
+                    chapter: 0,
+                    term: "archetypes",
+                    definition: "In Jung’s theory of personality, thought forms common to all human beings, stored in the collective unconscious."
+                },
+                {
+                    chapter: 0,
+                    term: "Big Five",
+                    definition: "Five traits or basic dimensions currently considered to be of central importance in describing personality."
+                },
+                {
+                    chapter: 0,
+                    term: "cognitive–social learning theories",
+                    definition: "Personality theories that view behavior as the product of the interaction of cognitions, learning and past experiences, and the immediate environment."
+                },
+                {
+                    chapter: 0,
+                    term: "collective unconscious",
+                    definition: "In Jung’s theory of personality, the level of the unconscious that is inherited and common to all members of a species."
+                },
+                {
+                    chapter: 0,
+                    term: "compensation",
+                    definition: "According to Adler, the person’s effort to overcome imagined or real personal weaknesses."
+                },
+                {
+                    chapter: 0,
+                    term: "conditional positive regard",
+                    definition: "In Rogers’s theory, acceptance and love that are dependent on another’s behaving in certain ways and on fulfilling certain conditions."
+                },
+                {
+                    chapter: 0,
+                    term: "ego",
+                    definition: "Freud’s term for the part of the personality that mediates between environmental demands (reality), conscience (superego), and instinctual needs (id); now often used as a synonym for “self.”"
+                },
+                {
+                    chapter: 0,
+                    term: "ego ideal",
+                    definition: "The part of the superego that consists of standards of what one would like to be."
+                },
+                {
+                    chapter: 0,
+                    term: "expectancies",
+                    definition: "In Bandura’s view, what a person anticipates in a situation or as a result of behaving in certain ways."
+                },
+                {
+                    chapter: 0,
+                    term: "extraverts",
+                    definition: "According to Jung, people who usually focus on social life and the external world instead of on their internal experience."
+                },
+                {
+                    chapter: 0,
+                    term: "fixation",
+                    definition: "According to Freud, a partial or complete halt at some point in the individual’s psychosexual development."
+                },
+                {
+                    chapter: 0,
+                    term: "fully functioning person",
+                    definition: "According to Rogers, an individual whose self-concept closely resembles his or her inborn capacities or potentials."
+                },
+                {
+                    chapter: 0,
+                    term: "genital stage",
+                    definition: "In Freud’s theory of personality development, the final stage of normal adult sexual development, which is usually marked by mature sexuality."
+                },
+                {
+                    chapter: 0,
+                    term: "humanistic personality theory",
+                    definition: "Any personality theory that asserts the fundamental goodness of people and their striving toward higher levels of functioning."
+                },
+                {
+                    chapter: 0,
+                    term: "id",
+                    definition: "In Freud’s theory of personality, the collection of unconscious urges and desires that continually seek expression."
+                },
+                {
+                    chapter: 0,
+                    term: "inferiority complex",
+                    definition: "In Adler’s theory, the fixation on feelings of personal inferiority that results in emotional and social paralysis."
+                },
+                {
+                    chapter: 0,
+                    term: "introverts",
+                    definition: "According to Jung, people who usually focus on their own thoughts and feelings."
+                },
+                {
+                    chapter: 0,
+                    term: "latency period",
+                    definition: "In Freud’s theory of personality, a period in which the child appears to have no interest in the other sex; occurs after the phallic stage."
+                },
+                {
+                    chapter: 0,
+                    term: "libido",
+                    definition: "According to Freud, the energy generated by the sexual instinct."
+                },
+                {
+                    chapter: 0,
+                    term: "locus of control",
+                    definition: "According to Rotter, an expectancy about whether reinforcement is under internal or external control."
+                },
+                {
+                    chapter: 0,
+                    term: "Minnesota Multiphasic Personality Inventory (MMPI-2)",
+                    definition: "The most widely used objective personality test, originally intended for psychiatric diagnosis."
+                },
+                {
+                    chapter: 0,
+                    term: "NEO-PI-R",
+                    definition: "An objective personality test designed to assess the Big Five personality traits."
+                },
+                {
+                    chapter: 0,
+                    term: "objective tests",
+                    definition: "Personality tests that are administered and scored in a standard way."
+                },
+                {
+                    chapter: 0,
+                    term: "Oedipus complex and Electra complex",
+                    definition: "According to Freud, a child’s sexual attachment to the parent of the opposite sex and jealousy toward the parent of the same sex; generally occurs in the phallic stage."
+                },
+                {
+                    chapter: 0,
+                    term: "oral stage",
+                    definition: "First stage in Freud’s theory of personality development, in which the infant’s erotic feelings center on the mouth, lips, and tongue."
+                },
+                {
+                    chapter: 0,
+                    term: "performance standards",
+                    definition: "In Bandura’s theory, standards that people develop to rate the adequacy of their own behavior in a variety of situations."
+                },
+                {
+                    chapter: 0,
+                    term: "persona",
+                    definition: "According to Jung, our public self, the mask we wear to represent ourselves to others."
+                },
+                {
+                    chapter: 0,
+                    term: "personal unconscious",
+                    definition: "In Jung’s theory of personality, one of the two levels of the unconscious; it contains the individual’s repressed thoughts, forgotten experiences, and undeveloped ideas."
+                },
+                {
+                    chapter: 0,
+                    term: "personality",
+                    definition: "An individual’s unique pattern of thoughts, feelings, and behaviors that persists over time and across situations."
+                },
+                {
+                    chapter: 0,
+                    term: "personality traits",
+                    definition: "Dimensions or characteristics on which people differ in distinctive ways."
+                },
+                {
+                    chapter: 0,
+                    term: "phallic stage",
+                    definition: "Third stage in Freud’s theory of personality development, in which erotic feelings center on the genitals."
+                },
+                {
+                    chapter: 0,
+                    term: "pleasure principle",
+                    definition: "According to Freud, the way in which the id seeks immediate gratification of an instinct."
+                },
+                {
+                    chapter: 0,
+                    term: "projective tests",
+                    definition: "Personality tests, such as the Rorschach inkblot test, consisting of ambiguous or unstructured material."
+                },
+                {
+                    chapter: 0,
+                    term: "psychoanalysis",
+                    definition: "The theory of personality Freud developed, as well as the form of therapy he invented."
+                },
+                {
+                    chapter: 0,
+                    term: "reality principle",
+                    definition: "According to Freud, the way in which the ego seeks to satisfy instinctual demands safely and effectively in the real world."
+                },
+                {
+                    chapter: 0,
+                    term: "Rorschach test",
+                    definition: "A projective test composed of ambiguous inkblots; the way people interpret the blots is thought to reveal aspects of their personality."
+                },
+                {
+                    chapter: 0,
+                    term: "self-actualizing tendency",
+                    definition: "According to Rogers, the drive of human beings to fulfill their self-concepts, or the images they have of themselves."
+                },
+                {
+                    chapter: 0,
+                    term: "self-efficacy",
+                    definition: "According to Bandura, the expectancy that one’s efforts will be successful."
+                },
+                {
+                    chapter: 0,
+                    term: "Sixteen Personality Factor Questionnaire",
+                    definition: "Objective personality test created by Cattell that provides scores on the 16 traits he identified."
+                },
+                {
+                    chapter: 0,
+                    term: "superego",
+                    definition: "According to Freud, the social and parental standards the individual has internalized; the conscience and the ego ideal."
+                },
+                {
+                    chapter: 0,
+                    term: "Thematic Apperception Test (TAT)",
+                    definition: "A projective test composed of ambiguous pictures about which a person is asked to write a complete story."
+                },
+                {
+                    chapter: 0,
+                    term: "unconditional positive regard",
+                    definition: "In Rogers’s theory, the full acceptance and love of another person regardless of his or her behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "unconscious",
+                    definition: "In Freud’s theory, all the ideas, thoughts, and feelings of which we are not and normally cannot become aware."
+                }
+            ]
+        });
+    })
+</script>
+
+</body>
+</html>

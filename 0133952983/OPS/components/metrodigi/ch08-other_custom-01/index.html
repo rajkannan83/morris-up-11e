@@ -1,0 +1,773 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Cahpter 07 Survey</title>
+    <link rel="stylesheet" href="styles/template.css">
+    <link rel="stylesheet" href="styles/survey.css">
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+    <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+    <script type="text/javascript" src="javascript/survey.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="Survey">
+            <div class="widget-content">
+                <nav class="widget-header">
+                    <ul>
+                        <li class="slide-intro slide-intro-2 active"><button tabindex="0">Introduction</button></li>
+                        <li class="slide-question-1 slide-question-2 slide-question-3 slide-question-4 slide-question-5 slide-question-6 slide-question-7 slide-question-8 slide-question-9 slide-question-10 slide-question-11 slide-question-12 slide-question-13 slide-question-14 slide-question-15 slide-question-16 slide-question-17 slide-question-18 slide-question-19 slide-question-20 slide-question-21 slide-question-22 slide-question-23 slide-question-24 slide-question-25"><button tabindex="0">Survey</button></li>
+                        <li class="slide-results slide-results-2"><button tabindex="0" class="results">Results</button></li>
+                    </ul>
+                </nav>
+                <section class="widget-body">
+
+                    <article class="slide-intro active" data-next-slide="intro-2">
+                        <img src="images/petLogo.png" alt="lightbulb" />
+                        <p tabindex="0">This is a non-scientific survey about your thoughts, experiences, and understanding of psychological concepts.</p>
+                        <p tabindex="0">Your responses to this survey are <strong>completely anonymous</strong>.  Data will be reported only in survey format and no individual responses will be revealed to your instructor or anyone else.</p>
+                        <p tabindex="0"><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                    </article>
+
+                    <article class="slide-intro-2" data-prev-slide="intro" data-next-slide="question-1">
+                        <img src="images/petLogo.png" alt="lightbulb" />
+                        <p tabindex="0">Intelligence refers to the ability or abilities involved in learning and adaptive behavior.</p>
+                        <p tabindex="0">This survey asks you about your experiences exploring your own intelligence as well as your attitudes about the nature of intelligence and its outcomes.</p>
+                        <p tabindex="0"><strong><span class="responsive-call-to-action">Click or tap</span> Next to begin the survey.</strong></p>
+                    </article>
+
+                    <article class="slide-results scroll">
+                        <p class="status bigger">Congratulations! You have finished this survey.</p>
+                        <p class="status bigger">Take a look at how your answers compare to your peers’ answers.<br><br></p>
+                        <div class="chart"></div>
+                    </article>
+
+                </section>
+                <footer class="widget-footer">
+                    <button class="next">Next</button>
+                    <button class="previous">Previous</button>
+                    <button class="next-result">Next</button>
+                    <button class="reset">Repeat Survey</button>
+                    <span class="status"></span>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        window.addEvent('domready', function() {
+            var data = {
+                questions: [
+    { //01
+        "question": "<p>Have you EVER taken a formal intelligence test, such as the Stanford-Binet or the WAIS-R?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+           { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "15.3%"},
+             { "percentage": "66.7%"},
+             { "percentage": "17.8%"},
+             { "percentage": "0.2%"}
+        ]
+    },
+
+    { //02
+        "question": "<p>Have you EVER taken a fun quiz about “how intelligent are you?” online, in a magazine, etc.?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+           { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "68.4%"},
+             { "percentage": "23.9%"},
+             { "percentage": "7.1%"},
+             { "percentage": "0.6%"}
+        ]
+    },
+
+    { //03
+        "question": "<p>Do you think a person can change his/her intelligence and get smarter?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+           { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "81.6%"},
+             { "percentage": "9.4%"},
+             { "percentage": "8%"},
+             { "percentage": "1%"}
+        ]
+    },
+
+    { //04
+        "question": "<p>Do you think your level of intelligence is related to your success in life?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+           { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "54.1%"},
+             { "percentage": "34.4%"},
+             { "percentage": "10.2%"},
+             { "percentage": "1.2%"}
+        ]
+    },
+
+    { //05
+        "question": "<p>If you could change your level of intelligence by waving a magic wand, would you?</p>",
+        "radioButtons": [
+            { "label": "Yes - I'd make myself more intelligent."},
+            { "label": "Yes - I'd make myself less intelligent."},
+            { "label": "No - I'm happy with my current level of intelligence." },
+            { "label": "No - I'd rather become more intelligent by learning and trying new things." },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes - I'd make myself more intelligent."},
+            { "label": "Yes - I'd make myself less intelligent."},
+            { "label": "No - I'm happy with my current level of intelligence." },
+            { "label": "No - I'd rather become more intelligent by learning and trying new things." },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "60%"},
+             { "percentage": "1%"},
+             { "percentage": "7%"},
+             { "percentage": "29.5%"},
+             { "percentage": "2.3%"},
+             { "percentage": "0.2%"}
+        ]
+    },
+
+    { //06
+        "question": "<p>Psychological theory suggests there are many different types of intelligence. Which of the following types of intelligence do you agree exist?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Linguistic (intelligence involved in speaking, reading, writing)"},
+            { "label": "Logical/Mathematical (ability to do abstract reasoning)" },
+            { "label": "Spatial (ability to mentally visualize objects)"},
+            { "label": "Musical (ability to appreciate the tonal qualities of sound, compose, play an instrument)"},
+            { "label": "Analytic (ability to apply mental steps to solve problems)"},
+            { "label": "Creative (use of experience in ways that foster insight; ability to deal with new and different concepts)"},
+            { "label": "Practical (ability to read and adapt to the contexts of everyday life; street smarts)"},
+            { "label": "Emotional (self-control of emotions, empathy for own and others' emotions)"},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Linguistic (intelligence involved in speaking, reading, writing)"},
+            { "label": "Logical/Mathematical (ability to do abstract reasoning)" },
+            { "label": "Spatial (ability to mentally visualize objects)"},
+            { "label": "Musical (ability to appreciate the tonal qualities of sound, compose, play an instrument)"},
+            { "label": "Analytic (ability to apply mental steps to solve problems)"},
+            { "label": "Creative (use of experience in ways that foster insight; ability to deal with new and different concepts)"},
+            { "label": "Practical (ability to read and adapt to the contexts of everyday life; street smarts)"},
+            { "label": "Emotional (self-control of emotions, empathy for own and others' emotions)"},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "85.8%"},
+             { "percentage": "82.1%"},
+             { "percentage": "73.6%"},
+             { "percentage": "76.1%"},
+             { "percentage": "80.6%"},
+             { "percentage": "80%"},
+             { "percentage": "83.5%"},
+             { "percentage": "24.7%"},
+             { "percentage": "1%"}
+        ]
+    },
+
+    { //07
+        "question": "<p>Many factors can affect intelligence. Some are supported by research, others are popular ideas that just “feel” right to people. Which of the following factors do you agree affect an individual's level of intelligence?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Genetics (intelligence is based on inherited genes)"},
+            { "label": "Attendance at school (going to school increases intelligence)" },
+            { "label": "Level of schooling achieved (more schooling leads to higher levels of intelligence)"},
+            { "label": "Birth order (for example, first born children are more intelligent)"},
+            { "label": "Breast feeding (breast feeding during infancy increases intelligence)"},
+            { "label": "Head size (bigger head means more intelligence)"},
+            { "label": "Context (a person can be smart in one area, but not so intelligent in another)"},
+            { "label": "Nutrition (eating nutritious food and getting enough to eat make you smarter)"},
+            { "label": "Having books in the home (having books around is related to intelligence)"},
+            { "label": "Other"},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Genetics (intelligence is based on inherited genes)"},
+            { "label": "Attendance at school (going to school increases intelligence)" },
+            { "label": "Level of schooling achieved (more schooling leads to higher levels of intelligence)"},
+            { "label": "Birth order (for example, first born children are more intelligent)"},
+            { "label": "Breast feeding (breast feeding during infancy increases intelligence)"},
+            { "label": "Head size (bigger head means more intelligence)"},
+            { "label": "Context (a person can be smart in one area, but not so intelligent in another)"},
+            { "label": "Nutrition (eating nutritious food and getting enough to eat make you smarter)"},
+            { "label": "Having books in the home (having books around is related to intelligence)"},
+            { "label": "Other"},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "74.4%"},
+             { "percentage": "67.8%"},
+             { "percentage": "76.1%"},
+             { "percentage": "12.6%"},
+             { "percentage": "21.6%"},
+             { "percentage": "6.2%"},
+             { "percentage": "78.6%"},
+             { "percentage": "43.1%"},
+             { "percentage": "30.2%"},
+             { "percentage": "1.6%"},
+             { "percentage": "1.4%"}
+        ]
+    },
+
+    { //08
+        "question": "<p>Whether animals are intelligent in the same way as humans is an ongoing research question. Many people believe that animals do possess intelligence. Which of the following animals do you think behave intelligently?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Cats"},
+            { "label": "Dogs" },
+            { "label": "Rats"},
+            { "label": "Birds"},
+            { "label": "Primates (monkeys, gorillas, etc.)"},
+            { "label": "Dolphins"},
+            { "label": "Whales"},
+            { "label": "Other"},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Cats"},
+            { "label": "Dogs" },
+            { "label": "Rats"},
+            { "label": "Birds"},
+            { "label": "Primates (monkeys, gorillas, etc.)"},
+            { "label": "Dolphins"},
+            { "label": "Whales"},
+            { "label": "Other"},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "66.6%"},
+             { "percentage": "83.7%"},
+             { "percentage": "43.1%"},
+             { "percentage": "52.4%"},
+             { "percentage": "85.4%"},
+             { "percentage": "85.4%"},
+             { "percentage": "51.1%"},
+             { "percentage": "27.4%"},
+             { "percentage": "1%"}
+        ]
+    },
+
+    { //09
+        "question": "<p>Do two people need to have a similar level of intelligence in order to have a happy long-term relationship or marriage?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "15.3%"},
+             { "percentage": "66.7%"},
+             { "percentage": "17.8%"},
+             { "percentage": "0.2%"}
+        ]
+    },
+
+    { //10
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Get better grades</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "6.6%"},
+             { "percentage": "11.5%"},
+             { "percentage": "17.7%"},
+             { "percentage": "39%"},
+             { "percentage": "24.4%"},
+             { "percentage": "0.8%"}
+        ]
+    },
+
+    { //11
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Finish high school</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "6.8%"},
+             { "percentage": "11.9%"},
+             { "percentage": "17.9%"},
+             { "percentage": "33.9%"},
+             { "percentage": "28.3%"},
+             { "percentage": "1.2%"}
+        ]
+    },
+
+    { //12
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Graduate from college</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "4.5%"},
+             { "percentage": "8.4%"},
+             { "percentage": "19.1%"},
+             { "percentage": "39.8%"},
+             { "percentage": "26.7%"},
+             { "percentage": "1.4%"}
+        ]
+    },
+
+    { //13
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Make better life decisions</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "4.5%"},
+             { "percentage": "14.2%"},
+             { "percentage": "35.1%"},
+             { "percentage": "30%"},
+             { "percentage": "15.6%"},
+             { "percentage": "0.6%"}
+        ]
+    },
+
+    { //14
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Be happier in general</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "10.9%"},
+             { "percentage": "23.2%"},
+             { "percentage": "43.5%"},
+             { "percentage": "16.2%"},
+             { "percentage": "4.9%"},
+             { "percentage": "1.2%"}
+        ]
+    },
+
+    { //15
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Be more satisfied with their careers/jobs</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "6.4%"},
+             { "percentage": "23%"},
+             { "percentage": "35.1%"},
+             { "percentage": "26.1%"},
+             { "percentage": "8%"},
+             { "percentage": "1.4%"}
+        ]
+    },
+
+    { //16
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Be healthier</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "9%"},
+             { "percentage": "22.8%"},
+             { "percentage": "39.6%"},
+             { "percentage": "20.7%"},
+             { "percentage": "6.2%"},
+             { "percentage": "1.6%"}
+        ]
+    },
+
+    { //17
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Be more physically attractive</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "27.1%"},
+             { "percentage": "24%"},
+             { "percentage": "37.8%"},
+             { "percentage": "7.4%"},
+             { "percentage": "1.2%"},
+             { "percentage": "1.2%"}
+        ]
+    },
+
+    { //18
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Be more successful in life overall</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "6.8%"},
+             { "percentage": "15.8%"},
+             { "percentage": "28.1%"},
+             { "percentage": "36.8%"},
+             { "percentage": "11.7%"},
+             { "percentage": "0.8%"}
+        ]
+    },
+
+    { //19
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Be more creative</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "9%"},
+             { "percentage": "20.3%"},
+             { "percentage": "34.5%"},
+             { "percentage": "26.3%"},
+             { "percentage": "8.4%"},
+             { "percentage": "1.4%"}
+        ]
+    },
+
+    { //20
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Have good relationships</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "11.1%"},
+             { "percentage": "23.2%"},
+             { "percentage": "45%"},
+             { "percentage": "30%"},
+             { "percentage": "12.1%"},
+             { "percentage": "1%"}
+        ]
+    },
+
+    { //21
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Have more fun</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "15.2%"},
+             { "percentage": "28.7%"},
+             { "percentage": "45.4%"},
+             { "percentage": "7.8%"},
+             { "percentage": "1.4%"},
+             { "percentage": "1.4%"}
+        ]
+    },
+
+    { //22
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Do great things</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "8.8%"},
+             { "percentage": "15.8%"},
+             { "percentage": "32.2%"},
+             { "percentage": "30%"},
+             { "percentage": "12.1%"},
+             { "percentage": "1%"}
+        ]
+    },
+    
+    { //25 moved from end (Tom Scalzo comments)
+        "question": "<p>Many people consider intelligence to be a positive personal quality that leads to desirable outcomes. Please indicate the extent of your agreement with the statement below.</p><p>People with higher intelligence are more likely to:<br />Make more money in their career</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "5.7%"},
+             { "percentage": "14.8%"},
+             { "percentage": "26.3%"},
+             { "percentage": "39.8%"},
+             { "percentage": "12.3%"},
+             { "percentage": "1%"}
+        ]
+    },
+		
+    { //23
+        "question": "<p>Popular movies and TV shows often portray very smart people as having a psychological disorder (schizophrenia, obsessive-compulsive disorder, bipolar disorder, etc.).  Do you think people that are geniuses are more likely to have significant mental health problems?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "26.9%"},
+             { "percentage": "39.2%"},
+             { "percentage": "32%"},
+             { "percentage": "1.8%"}
+        ]
+    },
+
+    { //24
+        "question": "<p>Do you think your level of intelligence is related to your success in school?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "53.2%"},
+             { "percentage": "33.3%"},
+             { "percentage": "11.5%"},
+             { "percentage": "2.1%"}
+        ]
+    }
+
+]
+,
+            };
+
+            // Widget initialization
+            widget = new Survey({
+                container: $$('.Survey')[0],
+                initialSlide: 'intro',
+                delay: 1000,
+                data: data
+            });
+        })
+    </script>
+
+</body>
+</html>

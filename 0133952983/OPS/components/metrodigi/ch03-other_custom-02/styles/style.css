@@ -1,0 +1,322 @@
+@-webkit-keyframes blink {
+    0% {background-color: red}
+50% {background-color: black}
+}
+@keyframes blink {
+    0% {background-color: red}
+50% {background-color: black}
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    background-color:rgba(180,180,180,.5);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.MetrodigiWidget {
+    position: relative;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.MetrodigiWidget .widget-content {
+    z-index: 1;
+}
+.MetrodigiWidget .widget-body {
+    position: relative;
+    overflow: hidden;
+}
+.MetrodigiWidget section.widget-body article.question,
+.MetrodigiWidget section.widget-body article .bigger {
+    font-size: 1.1em;
+}
+.MetrodigiWidget section.widget-body article.adjust-text p {
+    width: 50%;
+}
+.MetrodigiWidget section.widget-body article .status {
+    color: #902789;
+}
+.MetrodigiWidget section.widget-body article ul {
+    padding: 0;
+    line-height: 1.8em;
+}
+.MetrodigiWidget section.widget-body article.slide .img-wrapper img {
+    max-width: 611px;
+    width: 100%;
+}
+.MetrodigiWidget footer button.close-img-overlay {
+    display: none;
+}
+.MetrodigiWidget.img-overlay footer button.next,
+.MetrodigiWidget.img-overlay footer button.previous {
+    display: none;
+}
+.MetrodigiWidget.img-overlay footer button.close-img-overlay {
+    display: block;
+}
+
+.MetrodigiWidget .controls-wrapper {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 9em;
+    font-size: 0.75em;
+    text-align: center;
+    color: white;
+}
+.MetrodigiWidget .controls-wrapper .instructions,
+.MetrodigiWidget .controls-wrapper .instructions-next {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+.MetrodigiWidget .controls-wrapper[data-state="choose-answer"] .instructions-next,
+.MetrodigiWidget .controls-wrapper[data-state="choose-answer"] .next-word,
+.MetrodigiWidget .controls-wrapper[data-state="next-word"] .instructions,
+.MetrodigiWidget .controls-wrapper[data-state="next-word"] [data-answer] {
+    display: none;
+}
+.MetrodigiWidget .controls-wrapper button {
+    font-size: 0.9em;
+}
+
+.MetrodigiWidget .dot {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -7px;
+    background-color: red;
+    border-radius: 15px;
+}
+.MetrodigiWidget .dot.animate {
+    -webkit-animation: blink 0.5s step-end 3;
+    animation: blink 0.5s step-end 3;
+}
+.MetrodigiWidget .overlay .word-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1em;
+    position: absolute;
+}
+.MetrodigiWidget .overlay .word {
+    display: none;
+    line-height: 1em;
+    font-size: 1em;
+    color: white;
+    list-style: none;
+    width: 50%;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.MetrodigiWidget .overlay .word.align-left {
+    float: left;
+    padding-right: 14%;
+}
+
+.MetrodigiWidget .overlay .word.align-right {
+    float: right;
+    padding-left: 14%;
+}
+.MetrodigiWidget .overlay .word > span {
+    display: block;
+    width: 100%;
+}
+.MetrodigiWidget .overlay .word.align-left > span {
+    text-align: right;
+}
+.MetrodigiWidget .overlay .word.align-right > span {
+    text-align: left;
+}
+
+.MetrodigiWidget ul.results {
+    margin: 0 0 1em;
+    padding: 0;
+    line-height: 1.2em;
+}
+.MetrodigiWidget .slide-11 ul.results {
+    overflow: auto;
+    max-height: 6.4em;
+}
+.MetrodigiWidget ul.results li.result-element {
+    padding: 0;
+    font-size: .9em;
+    line-height: 1.4em;
+}
+.MetrodigiWidget section.widget-body article.slide.slide-2 .img-wrapper {
+    max-width: 42%;
+    margin-left: calc(100% - 266px);
+    position: absolute;
+}
+.MetrodigiWidget section.widget-body article.slide.slide-2.adjust-text p {
+    width: 64%;
+}
+.MetrodigiWidget section.widget-body article.slide.slide-7 .img-wrapper,
+.MetrodigiWidget section.widget-body article.slide.slide-6 .img-wrapper {
+    max-width: 42%;
+    margin-left: calc(100% - 310px);
+    position: absolute;
+}
+.MetrodigiWidget section.widget-body article.slide.slide-7.adjust-text p {
+    width: 55%;
+}
+.MetrodigiWidget section.widget-body article.slide.slide-6.adjust-text p{
+    width: 100%;
+}
+.MetrodigiWidget section.widget-body article.slide.slide-13 img {
+    max-width: 35%;
+    margin-left: 0;
+}
+.MetrodigiWidget section.widget-body article.slide.slide-11 p,
+.MetrodigiWidget section.widget-body article.slide.slide-12 p{
+    width: 43%;
+    display: inline-block;
+    vertical-align: top;
+}
+figure{
+    width: 55%;
+    height: 295px;
+    text-align: center;
+    font-size: 0.7em;
+    display: inline-block;
+    float: right;
+}
+figure .title{
+    margin-top: 0px;
+    font-family: "HelveticaNeueETW01-75Bd";
+}
+figure .main-graph{
+    height: 220px;
+    background-color: white;
+    position: relative;
+    margin: 0px 10px 30px 50px;
+    display: block;
+    -webkit-transform: rotate(180deg);
+    border-top: 1px solid #8e8e8e;
+    border-right: 1px solid #8e8e8e;
+}
+figure .axis-y{
+    float: left;
+    margin-top: -248px;
+    width: 50px;
+    height: 230px;
+    text-align: right;
+}
+figure .axis-x span{
+    margin: auto;
+}
+figure .axis-y li{
+    float: left;    
+    width: 95%;
+    height: 18%;
+}
+figure#graph1 .axis-y li{    
+    width: 92%;
+}
+figure .axis-x{
+    margin-top: -30px;    
+    margin-left: 70px;
+    width: 91%;
+    text-align: center;
+}
+figure .legend{ 
+    background-color: white;   
+    border: 1px solid #8e8e8e;
+    width: 80%;
+    text-align: justify;
+    padding-left: 5px;
+    height: 24px;
+    margin-bottom: 16px;
+    margin-left: 56px;
+}
+figure .legend div{
+    float: left;
+}
+figure .legend div:before {
+    content: " ";
+    background: black;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    margin-right: 5px;
+}
+figure .legend div:first-child{
+    margin-right: 7px;
+}
+figure .legend div:before {
+    background-color: #21539d;
+}
+figure .legend div:last-child:before {
+    background-color: #5b9bcc;
+}
+.bar{
+    float: left;    
+    width: 17%;
+    background: #2b69ae;
+    margin-top: -1px;
+    position: relative;
+}
+.bar span{
+    display: block;
+    -webkit-transform: rotate(180deg);
+    position: absolute;
+    height: calc(100% + 16px);
+    margin-left: 19px;
+}
+.bar1{
+    min-height: 2px;
+
+    margin-left: 85px;
+}
+.bar2{
+    margin-left: 30px;        
+    background: #5b9bcc;
+}
+.bar3{
+    margin-left: 22%;
+
+    min-height: 2px;
+}
+.bar4{ 
+    background: #5b9bcc;
+}
+#graph2 .bar2{
+    height: 54.5714286%;
+}
+.bar4{
+    height: 55.3428571%;
+    margin-left: 22px;
+}
+#graph1 .bar2{
+    height: 91.3%;
+}
+#graph1 .bar4{
+    height: 88.3%;
+}
+.axis-x div{
+    width: 140px;    
+    display: inline-block;
+    margin-left: -32px;
+    margin-right: 30px;
+    line-height: 1.3;
+}
+div.legend-axis-y {
+    position: absolute;
+    top: 120px;
+    -webkit-transform: rotate(270deg);
+    margin-left: -17px;
+}
+.MetrodigiWidget header.widget-header nav ul li button{
+		text-transform:uppercase;
+		font-size:11px;	
+}

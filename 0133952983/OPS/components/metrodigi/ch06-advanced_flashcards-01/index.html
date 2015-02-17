@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+    <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="container has-instructions">
+
+    <div class="Flashcards">
+
+        <nav class="main-nav">
+            <button tabindex="0" class="current-chapter-cards"></button>
+            <button tabindex="0" class="all-chapters-cards"></button>
+            <div class="right-helper">
+                <button tabindex="0" class="flip right">Flip Cards</button>
+                <button tabindex="0" class="restart right">Start Over</button>
+            </div>
+        </nav>
+
+        <section class="cards">
+
+            <div class="end-screen">
+                <div class="content-wrapper">
+                    <h2>All done!</h2>
+                    <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                    <ul class="repeated-cards"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+            <button tabindex="0" class="skip right">Skip</button>
+        </nav>
+
+    </div>
+
+</div> <!-- container -->
+
+<script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+<script type="text/javascript">
+
+    window.addEvent('domready', function() {
+        // Widget initialization
+        window.widget_instance = new Flashcards({
+            container: $$('.Flashcards')[0],
+            currentChapter: 0, displayCurrentChapterButton: false,
+            cards: [
+                {
+                    chapter: 0,
+                    term: "biofeedback",
+                    definition: "A technique that uses monitoring devices to provide precise information about internal physiological processes, such as heart rate or blood pressure, to teach people to gain voluntary control over these functions."
+                },
+                {
+                    chapter: 0,
+                    term: "blocking",
+                    definition: "A process whereby prior conditioning prevents conditioning to a second stimulus even when the two stimuli are presented simultaneously."
+                },
+                {
+                    chapter: 0,
+                    term: "classical (or Pavlovian) conditioning",
+                    definition: "The type of learning in which a response naturally elicited by one stimulus comes to be elicited by a different, formerly neutral, stimulus."
+                },
+                {
+                    chapter: 0,
+                    term: "cognitive learning",
+                    definition: "Learning that depends on mental processes that are not directly observable."
+                },
+                {
+                    chapter: 0,
+                    term: "cognitive map",
+                    definition: "A learned mental image of a spatial environment that may be called on to solve problems when stimuli in the environment change."
+                },
+                {
+                    chapter: 0,
+                    term: "conditioned response (CR)",
+                    definition: "After conditioning, the response an organism produces when a conditioned stimulus is presented."
+                },
+                {
+                    chapter: 0,
+                    term: "conditioned stimulus (CS)",
+                    definition: "An originally neutral stimulus that is paired with an unconditioned stimulus and eventually produces the desired response in an organism when presented alone."
+                },
+                {
+                    chapter: 0,
+                    term: "conditioned taste aversion",
+                    definition: "Conditioned avoidance of certain foods even if there is only one pairing of conditioned and unconditioned stimuli."
+                },
+                {
+                    chapter: 0,
+                    term: "contingency",
+                    definition: "A reliable “if–then” relationship between two events, such as a CS and a US."
+                },
+                {
+                    chapter: 0,
+                    term: "desensitization therapy",
+                    definition: "A conditioning technique designed to gradually reduce anxiety about a particular object or situation."
+                },
+                {
+                    chapter: 0,
+                    term: "extinction",
+                    definition: "A decrease in the strength or frequency, or stopping, of a learned response because of failure to continue pairing the US and CS (classical conditioning) or withholding of reinforcement (operant conditioning)."
+                },
+                {
+                    chapter: 0,
+                    term: "fixed-interval schedule",
+                    definition: "A reinforcement schedule in which the correct response is reinforced after a fixed length of time since the last reinforcement."
+                },
+                {
+                    chapter: 0,
+                    term: "fixed-ratio schedule",
+                    definition: "A reinforcement schedule in which the correct response is reinforced after a fixed number of correct responses."
+                },
+                {
+                    chapter: 0,
+                    term: "higher order conditioning",
+                    definition: "Conditioning based on previous learning; the conditioned stimulus serves as an unconditioned stimulus for further training."
+                },
+                {
+                    chapter: 0,
+                    term: "insight",
+                    definition: "Awareness of previously unconscious feelings and memories and how they influence present feelings and behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "insight",
+                    definition: "Learning that occurs rapidly as a result of understanding all the elements of a problem."
+                },
+                {
+                    chapter: 0,
+                    term: "intermittent pairing",
+                    definition: "Pairing the conditioned stimulus and the unconditioned stimulus on only a portion of the learning trials."
+                },
+                {
+                    chapter: 0,
+                    term: "latent learning",
+                    definition: "Learning that is not immediately reflected in a behavior change."
+                },
+                {
+                    chapter: 0,
+                    term: "law of effect (principle of reinforcement)",
+                    definition: "Thorndike’s theory that behavior consistently rewarded will be “stamped in” as learned behavior, and behavior that brings about discomfort will be “stamped out.”"
+                },
+                {
+                    chapter: 0,
+                    term: "learned helplessness",
+                    definition: "Failure to take steps to avoid or escape from an unpleasant or aversive stimulus that occurs as a result of previous exposure to unavoidable painful stimuli."
+                },
+                {
+                    chapter: 0,
+                    term: "learning set",
+                    definition: "The ability to become increasingly more effective in solving problems as more problems are solved."
+                },
+                {
+                    chapter: 0,
+                    term: "learning",
+                    definition: "The process by which experience or practice results in a relatively permanent change in behavior or potential behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "negative reinforcers",
+                    definition: "Events whose reduction or termination increases the likelihood that ongoing behavior will recur."
+                },
+                {
+                    chapter: 0,
+                    term: "neurofeedback",
+                    definition: "A biofeedback technique that monitors brain waves with the use of an EEG to teach people to gain voluntary control over their brain wave activity."
+                },
+                {
+                    chapter: 0,
+                    term: "observational (or vicarious) learning",
+                    definition: "Learning by observing other people’s behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "operant (or instrumental) conditioning",
+                    definition: "The type of learning in which behaviors are emitted (in the presence of specific stimuli) to earn rewards or avoid punishments."
+                },
+                {
+                    chapter: 0,
+                    term: "operant behaviors",
+                    definition: "Behaviors designed to operate on the environment in a way that will gain something desired or avoid something unpleasant."
+                },
+                {
+                    chapter: 0,
+                    term: "positive reinforcers",
+                    definition: "Events whose presence increases the likelihood that ongoing behavior will recur."
+                },
+                {
+                    chapter: 0,
+                    term: "preparedness",
+                    definition: "A biological readiness to learn certain associations because of their survival advantages."
+                },
+                {
+                    chapter: 0,
+                    term: "primary reinforcers",
+                    definition: "Reinforcers that are rewarding in themselves, such as food, water, or sex."
+                },
+                {
+                    chapter: 0,
+                    term: "punishers",
+                    definition: "Stimuli that follow a behavior and decrease the likelihood that the behavior will be repeated."
+                },
+                {
+                    chapter: 0,
+                    term: "punishment",
+                    definition: "Any event whose presence decreases the likelihood that ongoing behavior will recur."
+                },
+                {
+                    chapter: 0,
+                    term: "reinforcers",
+                    definition: "Stimuli that follow a behavior and increase the likelihood that the behavior will be repeated."
+                },
+                {
+                    chapter: 0,
+                    term: "response generalization",
+                    definition: "Giving a response that is somewhat different from the response originally learned to that stimulus."
+                },
+                {
+                    chapter: 0,
+                    term: "schedule of reinforcement",
+                    definition: "In operant conditioning, the rule for determining when and how often reinforcers will be delivered."
+                },
+                {
+                    chapter: 0,
+                    term: "secondary reinforcers",
+                    definition: "Reinforcers whose value is acquired through association with other primary or secondary reinforcers."
+                },
+                {
+                    chapter: 0,
+                    term: "shaping",
+                    definition: "Reinforcing successive approximations to a desired behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "Skinner box",
+                    definition: "A box often used in operant conditioning of animals; it limits the available responses and thus increases the likelihood that the desired response will occur."
+                },
+                {
+                    chapter: 0,
+                    term: "social learning theorists",
+                    definition: "Psychologists whose view of learning emphasizes the ability to learn by observing a model or receiving instructions, without firsthand experience by the learner."
+                },
+                {
+                    chapter: 0,
+                    term: "spontaneous recovery",
+                    definition: "The reappearance of an extinguished response after the passage of time, without training."
+                },
+                {
+                    chapter: 0,
+                    term: "stimulus control",
+                    definition: "Control of conditioned responses by cues or stimuli in the environment."
+                },
+                {
+                    chapter: 0,
+                    term: "stimulus discrimination",
+                    definition: "Learning to respond to only one stimulus and to inhibit the response to all other stimuli."
+                },
+                {
+                    chapter: 0,
+                    term: "stimulus generalization",
+                    definition: "The transfer of a learned response to different but similar stimuli."
+                },
+                {
+                    chapter: 0,
+                    term: "unconditioned response (UR)",
+                    definition: "A response that takes place in an organism whenever an unconditioned stimulus occurs."
+                },
+                {
+                    chapter: 0,
+                    term: "unconditioned stimulus (US)",
+                    definition: "A stimulus that invariably causes an organism to respond in a specific way."
+                },
+                {
+                    chapter: 0,
+                    term: "variable-interval schedule",
+                    definition: "A reinforcement schedule in which the correct response is reinforced after varying lengths of time following the last reinforcement."
+                },
+                {
+                    chapter: 0,
+                    term: "variable-ratio schedule",
+                    definition: "A reinforcement schedule in which a varying number of correct responses must occur before reinforcement is presented."
+                },
+                {
+                    chapter: 0,
+                    term: "vicarious reinforcement (or punishment)",
+                    definition: "Reinforcement or punishment experienced by models that affects the willingness of others to perform the behaviors they learned by observing those models."
+                }
+            ]
+        });
+    })
+</script>
+
+</body>
+</html>

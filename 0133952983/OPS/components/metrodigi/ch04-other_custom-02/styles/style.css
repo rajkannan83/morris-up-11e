@@ -1,0 +1,165 @@
+.MetrodigiWidget.challenge header.widget-header .notes .note.initial,
+.MetrodigiWidget.challenge-complete header.widget-header .notes .note.initial,
+.MetrodigiWidget header.widget-header .notes .note.term,
+.MetrodigiWidget header.widget-header .notes .note.definition,
+.MetrodigiWidget header.widget-header .notes .note.header-feedback {
+    display: none;
+}
+.MetrodigiWidget header.widget-header .notes .note.initial{
+    display: block;
+}
+.MetrodigiWidget[data-challenge="term"] header.widget-header .notes .note.term,
+.MetrodigiWidget[data-challenge="definition"] header.widget-header .notes .note.definition,
+.MetrodigiWidget header.widget-header .notes .note.header-feedback.visible {
+    display: block;
+}
+.MetrodigiWidget section.widget-body .feedback{
+    padding-left: 0;
+    left: 29px;
+}
+.MetrodigiWidget section.widget-body .draw-area {
+    background-image: url(../images/background.png);
+    background-position: center center;
+    background-size: 488px 460px;
+    margin: 0 0 0 -15px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="0"],
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="5"],
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="3"],
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="2"] {
+    width: 170px;
+}
+.MetrodigiWidget section.widget-body .draw-area .term,
+.MetrodigiWidget section.widget-body .draw-area .definition {
+    display: block;
+}
+.MetrodigiWidget section.widget-body .challenge-term,
+.MetrodigiWidget section.widget-body .challenge-term li {
+    width: 130px;
+    height: 77px;
+}
+.MetrodigiWidget section.widget-body .challenge-term li{
+    width: 120px;
+}
+.MetrodigiWidget[data-challenge="term"] section.widget-body .challenge-term,
+.MetrodigiWidget[data-challenge="term"] section.widget-body .challenge-term li,
+.MetrodigiWidget[data-challenge="term"] section.widget-body .challenge-term li.term span {
+    width: 130px;
+    height: 45px;
+}
+.MetrodigiWidget[data-challenge="term"] section.widget-body .challenge-term li{
+    width: 120px;
+}
+.MetrodigiWidget[data-challenge="term"] section.widget-body .challenge-term li.term span{
+    height: 2.5em;
+}
+.MetrodigiWidget section.widget-body .challenge-term {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    background-color: #dedede;
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 3px 5px;
+}
+.MetrodigiWidget section.widget-body .challenge-term ul {
+    margin: 0;
+    padding: 0;
+}
+.MetrodigiWidget[data-challenge="definition"] section.widget-body .feedback{
+    top: 92px;
+}
+
+.MetrodigiWidget .end-challenge,
+.MetrodigiWidget.challenge .start-term-challenge,
+.MetrodigiWidget.challenge .start-definition-challenge {
+    display: none;
+}
+.MetrodigiWidget.challenge .end-challenge {
+    display: inline-block;
+}
+.MetrodigiWidget.challenge[data-challenge="term"] section.widget-body .draw-area .term-list .term,
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .term-list .definition {
+    display: none;
+}
+.MetrodigiWidget.challenge[data-challenge="term"] section.widget-body .draw-area .term-list .answered .term,
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .term-list .answered .definition {
+    display: block;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item .term {
+    position: absolute;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item.answered .term {
+    position: static;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="0"] .term {
+    bottom: 0;
+    left: 4em;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="9"] .term {
+    bottom: 1.5em;
+    right: 2.5em;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="8"] .term {
+    bottom: 1.5em;
+    left: 1em;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="7"] .term,
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="6"] .term,
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="5"] .term {
+    top: 0;
+    left: 0;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="4"] .term {
+    top: 1.5em;
+    left: 0;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="3"] .term,
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="2"] .term {
+    top: 1.1em;
+    left: 0;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] section.widget-body .draw-area .list-item[data-term-id="1"] .term {
+    top: 2.5em;
+    left: 0;
+}
+.MetrodigiWidget section.widget-body .draw-area .draggable{
+    left: 176px;
+}
+
+.MetrodigiWidget .list-item.list-item-1 .definition{
+	width: 131px;	
+}
+.MetrodigiWidget.Accessibility.challenge section.widget-body .draw-area .draggable,
+.MetrodigiWidget.Accessibility.challenge .challenge-term,
+.MetrodigiWidget.Accessibility.challenge-complete .challenge-term{
+    display: none;
+}
+/*
+.MetrodigiWidget.Accessibility.challenge[data-challenge="term"] header.widget-header .notes .note.accessibility:before{
+    content: "Term Challenge: "
+}
+.MetrodigiWidget.Accessibility.challenge[data-challenge="definition"] header.widget-header .notes .note.accessibility:before{
+    content: "Definition Challenge: "
+}*/
+.MetrodigiWidget.Accessibility li.droppable{
+    cursor: pointer
+}
+
+.offscreen {
+    display:block;
+    position: absolute;
+    clip: rect(1px1px1px1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    z-index: -1000;
+}
+
+.MetrodigiWidget button.accessibility:focus{
+  outline-style: auto !important;
+}

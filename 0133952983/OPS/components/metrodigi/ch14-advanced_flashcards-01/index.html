@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+    <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="container has-instructions">
+
+    <div class="Flashcards">
+
+        <nav class="main-nav">
+            <button tabindex="0" class="current-chapter-cards"></button>
+            <button tabindex="0" class="all-chapters-cards"></button>
+            <div class="right-helper">
+                <button tabindex="0" class="flip right">Flip Cards</button>
+                <button tabindex="0" class="restart right">Start Over</button>
+            </div>
+        </nav>
+
+        <section class="cards">
+
+            <div class="end-screen">
+                <div class="content-wrapper">
+                    <h2>All done!</h2>
+                    <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                    <ul class="repeated-cards"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+            <button tabindex="0" class="skip right">Skip</button>
+        </nav>
+
+    </div>
+
+</div> <!-- container -->
+
+<script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+<script type="text/javascript">
+
+    window.addEvent('domready', function() {
+        // Widget initialization
+        window.widget_instance = new Flashcards({
+            container: $$('.Flashcards')[0],
+            currentChapter: 0, displayCurrentChapterButton: false,
+            cards: [
+                {
+                    chapter: 0,
+                    term: "antipsychotic drugs",
+                    definition: "Drugs used to treat very severe psychological disorders, particularly schizophrenia."
+                },
+                {
+                    chapter: 0,
+                    term: "aversive conditioning",
+                    definition: "Behavioral therapy techniques aimed at eliminating undesirable behavior patterns by teaching the person to associate them with pain and discomfort."
+                },
+                {
+                    chapter: 0,
+                    term: "behavior contracting",
+                    definition: "Form of operant conditioning therapy in which the client and therapist set behavioral goals and agree on reinforcements that the client will receive on reaching those goals."
+                },
+                {
+                    chapter: 0,
+                    term: "behavior therapies",
+                    definition: "Therapeutic approaches that are based on the belief that all behavior, normal and abnormal, is learned, and that the objective of therapy is to teach people new, more satisfying ways of behaving."
+                },
+                {
+                    chapter: 0,
+                    term: "biological treatments",
+                    definition: "A group of approaches, including medication, electroconvulsive therapy, and neurosurgery, that are sometimes used to treat psychological disorders in conjunction with, or instead of, psychotherapy."
+                },
+                {
+                    chapter: 0,
+                    term: "client-centered (or person-centered) therapy",
+                    definition: "Nondirectional form of therapy developed by Carl Rogers that calls for unconditional positive regard of the client by the therapist with the goal of helping the client become fully functioning."
+                },
+                {
+                    chapter: 0,
+                    term: "cognitive therapies",
+                    definition: "Psychotherapies that emphasize changing clients’ perceptions of their life situation as a way of modifying their behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "cognitive therapy",
+                    definition: "Therapy that depends on identifying and changing inappropriately negative and self-critical patterns of thought."
+                },
+                {
+                    chapter: 0,
+                    term: "couple therapy",
+                    definition: "A form of group therapy intended to help troubled partners improve their problems of communication and interaction."
+                },
+                {
+                    chapter: 0,
+                    term: "deinstitutionalization",
+                    definition: "Policy of treating people with severe psychological disorders in the larger community or in small residential centers such as halfway houses, rather than in large public hospitals."
+                },
+                {
+                    chapter: 0,
+                    term: "eclecticism",
+                    definition: "Psychotherapeutic approach that recognizes the value of a broad treatment package over a rigid commitment to one particular form of therapy."
+                },
+                {
+                    chapter: 0,
+                    term: "electroconvulsive therapy (ECT)",
+                    definition: "Biological therapy in which a mild electrical current is passed through the brain for a short period, often producing convulsions and temporary coma; used to treat severe, prolonged depression."
+                },
+                {
+                    chapter: 0,
+                    term: "family therapy",
+                    definition: "A form of group therapy that sees the family as at least partly responsible for the individual’s problems and that seeks to change all family members’ behaviors to the benefit of the family unit as well as the troubled individual."
+                },
+                {
+                    chapter: 0,
+                    term: "free association",
+                    definition: "A psychoanalytic technique that encourages the person to talk without inhibition about whatever thoughts or fantasies come to mind."
+                },
+                {
+                    chapter: 0,
+                    term: "group therapy",
+                    definition: "Type of psychotherapy in which clients meet regularly to interact and help one another achieve insight into their feelings and behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "insight therapies",
+                    definition: "A variety of individual psychotherapies designed to give people a better awareness and understanding of their feelings, motivations, and actions in the hope that this will help them to adjust."
+                },
+                {
+                    chapter: 0,
+                    term: "modeling",
+                    definition: "A behavior therapy in which the person learns desired behaviors by watching others perform those behaviors."
+                },
+                {
+                    chapter: 0,
+                    term: "neurosurgery",
+                    definition: "Brain surgery performed to change a person’s behavior and emotional state; a biological therapy rarely used today."
+                },
+                {
+                    chapter: 0,
+                    term: "primary prevention",
+                    definition: "Techniques and programs to improve the social environment so that new cases of mental disorders do not develop."
+                },
+                {
+                    chapter: 0,
+                    term: "psychotherapy",
+                    definition: "The use of psychological techniques to treat personality and behavior disorders."
+                },
+                {
+                    chapter: 0,
+                    term: "rational–emotive therapy (RET)",
+                    definition: "A directive cognitive therapy based on the idea that clients’ psychological distress is caused by irrational and self-defeating beliefs and that the therapist’s job is to challenge such dysfunctional beliefs."
+                },
+                {
+                    chapter: 0,
+                    term: "secondary prevention",
+                    definition: "Programs to identify groups that are at high risk for mental disorders and to detect maladaptive behavior in these groups and treat it promptly."
+                },
+                {
+                    chapter: 0,
+                    term: "short-term psychodynamic therapy",
+                    definition: "Insight therapy that is time limited and focused on trying to help clients correct the immediate problems in their lives."
+                },
+                {
+                    chapter: 0,
+                    term: "stress-inoculation therapy",
+                    definition: "A type of cognitive therapy that trains clients to cope with stressful situations by learning a more useful pattern of self-talk."
+                },
+                {
+                    chapter: 0,
+                    term: "systematic desensitization",
+                    definition: "A behavioral technique for reducing a person’s fear and anxiety by gradually associating a new response (relaxation) with stimuli that have been causing the fear and anxiety."
+                },
+                {
+                    chapter: 0,
+                    term: "tertiary prevention",
+                    definition: "Programs to help people adjust to community life after release from a mental hospital."
+                },
+                {
+                    chapter: 0,
+                    term: "token economy",
+                    definition: "An operant conditioning therapy in which people earn tokens (reinforcers) for desired behaviors and exchange them for desired items or privileges."
+                },
+                {
+                    chapter: 0,
+                    term: "transference",
+                    definition: "The client’s carrying over to the analyst feelings held toward childhood authority figures."
+                }
+            ]
+        });
+    })
+</script>
+
+</body>
+</html>

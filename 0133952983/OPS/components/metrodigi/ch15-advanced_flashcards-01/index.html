@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+    <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="container has-instructions">
+
+    <div class="Flashcards">
+
+        <nav class="main-nav">
+            <button tabindex="0" class="current-chapter-cards"></button>
+            <button tabindex="0" class="all-chapters-cards"></button>
+            <div class="right-helper">
+                <button tabindex="0" class="flip right">Flip Cards</button>
+                <button tabindex="0" class="restart right">Start Over</button>
+            </div>
+        </nav>
+
+        <section class="cards">
+
+            <div class="end-screen">
+                <div class="content-wrapper">
+                    <h2>All done!</h2>
+                    <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                    <ul class="repeated-cards"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+            <button tabindex="0" class="skip right">Skip</button>
+        </nav>
+
+    </div>
+
+</div> <!-- container -->
+
+<script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+<script type="text/javascript">
+
+    window.addEvent('domready', function() {
+        // Widget initialization
+        window.widget_instance = new Flashcards({
+            container: $$('.Flashcards')[0],
+            currentChapter: 0, displayCurrentChapterButton: false,
+            cards: [
+                {
+                    chapter: 0,
+                    term: "altruistic behavior",
+                    definition: "Helping behavior that is not linked to personal gain."
+                },
+                {
+                    chapter: 0,
+                    term: "attitude",
+                    definition: "Relatively stable organization of beliefs, feelings, and behavior tendencies directed toward something or someone—the attitude object."
+                },
+                {
+                    chapter: 0,
+                    term: "attribution theory",
+                    definition: "The theory that addresses the question of how people make judgments about the causes of behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "authoritarian personality",
+                    definition: "A personality pattern characterized by rigid conventionality, exaggerated respect for authority, and hostility toward those who defy society’s norms."
+                },
+                {
+                    chapter: 0,
+                    term: "bystander effect",
+                    definition: "The tendency for an individual’s helpfulness in an emergency to decrease as the number of passive bystanders increases."
+                },
+                {
+                    chapter: 0,
+                    term: "cognitive dissonance",
+                    definition: "Perceived inconsistency between two cognitions."
+                },
+                {
+                    chapter: 0,
+                    term: "compliance",
+                    definition: "Change of behavior in response to an explicit request from another person or group."
+                },
+                {
+                    chapter: 0,
+                    term: "conformity",
+                    definition: "Voluntarily yielding to social norms, even at the expense of one’s preferences."
+                },
+                {
+                    chapter: 0,
+                    term: "cultural truisms",
+                    definition: "Beliefs that most members of a society accept as self-evidently true."
+                },
+                {
+                    chapter: 0,
+                    term: "defensive attribution",
+                    definition: "The tendency to attribute our successes to our own efforts or qualities and our failures to external factors."
+                },
+                {
+                    chapter: 0,
+                    term: "deindividuation",
+                    definition: "A loss of personal sense of responsibility in a group."
+                },
+                {
+                    chapter: 0,
+                    term: "discrimination",
+                    definition: "An unfair act or series of acts taken toward an entire group of people or individual members of that group."
+                },
+                {
+                    chapter: 0,
+                    term: "frustration–aggression theory",
+                    definition: "The theory that, under certain circumstances, people who are frustrated in their goals turn their anger away from the proper, powerful target and toward another, less powerful target that is safer to attack."
+                },
+                {
+                    chapter: 0,
+                    term: "fundamental attribution error",
+                    definition: "The tendency of people to overemphasize personal causes for other people’s behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "great-person theory",
+                    definition: "The theory that leadership is a result of personal qualities and traits that qualify one to lead others."
+                },
+                {
+                    chapter: 0,
+                    term: "groupthink",
+                    definition: "A process that occurs when the members of a group like one another, have similar goals and are isolated, leading them to ignore alternatives and not criticize group consensus."
+                },
+                {
+                    chapter: 0,
+                    term: "just-world hypothesis",
+                    definition: "Attribution error based on the assumption that bad things happen to bad people and good things happen to good people."
+                },
+                {
+                    chapter: 0,
+                    term: "norm",
+                    definition: "A shared idea or expectation about how to behave."
+                },
+                {
+                    chapter: 0,
+                    term: "obedience",
+                    definition: "Change of behavior in response to a command from another person, typically an authority figure."
+                },
+                {
+                    chapter: 0,
+                    term: "prejudice",
+                    definition: "An unfair, intolerant, or unfavorable attitude toward a group of people."
+                },
+                {
+                    chapter: 0,
+                    term: "primacy effect",
+                    definition: "The fact that early information about someone weighs more heavily than later information in influencing one’s impression of that person."
+                },
+                {
+                    chapter: 0,
+                    term: "proximity",
+                    definition: "How close two people live to each other."
+                },
+                {
+                    chapter: 0,
+                    term: "racism",
+                    definition: "Prejudice and discrimination directed at a particular racial group."
+                },
+                {
+                    chapter: 0,
+                    term: "risky shift",
+                    definition: "Greater willingness of a group than an individual to take substantial risks."
+                },
+                {
+                    chapter: 0,
+                    term: "self-fulfilling prophecy",
+                    definition: "The process in which a person’s expectation about another elicits behavior from the second person that confirms the expectation."
+                },
+                {
+                    chapter: 0,
+                    term: "self-monitoring",
+                    definition: "The tendency for an individual to observe the situation for cues about how to react."
+                },
+                {
+                    chapter: 0,
+                    term: "social cognition",
+                    definition: "Knowledge and understanding concerning the social world and the people in it (including oneself)."
+                },
+                {
+                    chapter: 0,
+                    term: "social influence",
+                    definition: "The process by which others individually or collectively affect one’s perceptions, attitudes, and actions."
+                },
+                {
+                    chapter: 0,
+                    term: "social neuroscience",
+                    definition: "The application of brain imaging and other neuroscience methods to social psychology."
+                },
+                {
+                    chapter: 0,
+                    term: "social psychology",
+                    definition: "The scientific study of the ways in which the thoughts, feelings, and behaviors of one individual are influenced by the real, imagined, or inferred behavior or characteristics of other people."
+                },
+                {
+                    chapter: 0,
+                    term: "stereotype",
+                    definition: "A set of characteristics presumed to be shared by all members of a social category."
+                }
+            ]
+        });
+    })
+</script>
+
+</body>
+</html>

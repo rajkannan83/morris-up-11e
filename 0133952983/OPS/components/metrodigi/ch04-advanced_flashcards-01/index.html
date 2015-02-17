@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+  <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+  <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+   <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="Flashcards">
+
+            <nav class="main-nav">
+                <button tabindex="0" class="current-chapter-cards"></button>
+                <button tabindex="0" class="all-chapters-cards"></button>
+                <div class="right-helper">
+                    <button tabindex="0" class="flip right">Flip Cards</button>
+                    <button tabindex="0" class="restart right">Start Over</button>
+                </div>
+            </nav>
+
+            <section class="cards">
+
+                <div class="end-screen">
+                    <div class="content-wrapper">
+                        <h2>All done!</h2>
+                        <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                        <ul class="repeated-cards"></ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+                <button tabindex="0" class="skip right">Skip</button>
+            </nav>
+
+        </div>
+
+    </div> <!-- container -->
+
+    <script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+    <script type="text/javascript">
+
+        window.addEvent('domready', function() {
+            // Widget initialization
+            window.widget_instance = new Flashcards({
+                container: $$('.Flashcards')[0],
+                currentchapter: 1, displayCurrentChapterButton: false,
+                cards: [
+                    {
+                        chapter: 1,
+                        term: "absolute threshold",
+                        definition: "The least amount of energy that can be detected as a stimulation 50% of the time."
+                    },
+                    {
+                        chapter: 1,
+                        term: "adaptation",
+                        definition: "An adjustment of the senses to the level of stimulation they are receiving."
+                    },
+                    {
+                        chapter: 1,
+                        term: "additive color mixing",
+                        definition: "The process of mixing lights of different wavelengths to create new hues."
+                    },
+                    {
+                        chapter: 1,
+                        term: "aerial perspective",
+                        definition: "Monocular cue to distance and depth based on the fact that more distant objects are likely to appear hazy and blurred."
+                    },
+                    {
+                        chapter: 1,
+                        term: "afterimage",
+                        definition: "Sense experience that occurs after a visual stimulus has been removed."
+                    },
+                    {
+                        chapter: 1,
+                        term: "amplitude",
+                        definition: "The magnitude of a wave; in sound, the primary determinant of loudness."
+                    },
+                    {
+                        chapter: 1,
+                        term: "auditory nerve",
+                        definition: "The bundle of axons that carries signals from each ear to the brain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "autokinetic illusion",
+                        definition: "The perception that a stationary object is actually moving."
+                    },
+                    {
+                        chapter: 1,
+                        term: "basilar membrane",
+                        definition: "Vibrating membrane in the cochlea of the inner ear; it contains sense receptors for sound."
+                    },
+                    {
+                        chapter: 1,
+                        term: "binaural cues",
+                        definition: "Cues to sound location that involve both ears working together."
+                    },
+                    {
+                        chapter: 1,
+                        term: "binocular cues",
+                        definition: "Visual cues requiring the use of both eyes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "binocular disparity",
+                        definition: "Binocular distance cue based on the difference between the images cast on the two retinas when both eyes are focused on the same object."
+                    },
+                    {
+                        chapter: 1,
+                        term: "biopsychosocial theory",
+                        definition: "The theory that the interaction of biological, psychological, and cultural factors influences the intensity and duration of pain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "bipolar cells",
+                        definition: "Neurons that have only one axon and one dendrite; in the eye, these neurons connect the receptors on the retina to the ganglion cells."
+                    },
+                    {
+                        chapter: 1,
+                        term: "blind spot",
+                        definition: "The place on the retina where the axons of all the ganglion cells leave the eye and where there are no receptors."
+                    },
+                    {
+                        chapter: 1,
+                        term: "brightness constancy",
+                        definition: "The perception of brightness as the same, even though the amount of light reaching the retina changes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "brightness",
+                        definition: "The nearness of a color to white as opposed to black."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cochlea",
+                        definition: "Part of the inner ear containing fluid that vibrates, which in turn causes the basilar membrane to vibrate."
+                    },
+                    {
+                        chapter: 1,
+                        term: "color constancy",
+                        definition: "An inclination to perceive familiar objects as retaining their color despite changes in sensory information."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cones",
+                        definition: "Receptor cells in the retina responsible for color vision."
+                    },
+                    {
+                        chapter: 1,
+                        term: "convergence",
+                        definition: "A visual depth cue that comes from muscles controlling eye movement as the eyes turn inward to view a nearby stimulus."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cornea",
+                        definition: "The transparent protective coating over the front part of the eye."
+                    },
+                    {
+                        chapter: 1,
+                        term: "dark adaptation",
+                        definition: "Increased sensitivity of rods and cones in darkness."
+                    },
+                    {
+                        chapter: 1,
+                        term: "decibel",
+                        definition: "Unit of measurement for the loudness of sounds."
+                    },
+                    {
+                        chapter: 1,
+                        term: "difference threshold or just-noticeable difference (jnd)",
+                        definition: "The smallest change in stimulation that can be detected 50% of the time."
+                    },
+                    {
+                        chapter: 1,
+                        term: "elevation",
+                        definition: "Monocular cue to distance and depth based on the fact that the higher on the horizontal plane an object is, the farther away it appears."
+                    },
+                    {
+                        chapter: 1,
+                        term: "feature detectors",
+                        definition: "Specialized brain cells that only respond to particular elements in the visual field such as movement or lines of specific orientation."
+                    },
+                    {
+                        chapter: 1,
+                        term: "fovea",
+                        definition: "The area of the retina that is the center of the visual field."
+                    },
+                    {
+                        chapter: 1,
+                        term: "frequency",
+                        definition: "The number of cycles per second in a wave; in sound, the primary determinant of pitch."
+                    },
+                    {
+                        chapter: 1,
+                        term: "frequency theory",
+                        definition: "Theory that pitch is determined by the frequency with which hair cells in the cochlea fire."
+                    },
+                    {
+                        chapter: 1,
+                        term: "ganglion cells",
+                        definition: "Neurons that connect the bipolar cells in the eyes to the brain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "gate-control theory",
+                        definition: "The theory that a “neurological gate” in the spinal cord controls the transmission of pain messages to the brain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hertz (Hz)",
+                        definition: "Cycles per second; unit of measurement for the frequency of sound waves."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hues",
+                        definition: "The aspects of color that correspond to names such as red, green, and blue."
+                    },
+                    {
+                        chapter: 1,
+                        term: "interposition",
+                        definition: "Monocular distance cue in which one object, by partly blocking a second object, is perceived as being closer."
+                    },
+                    {
+                        chapter: 1,
+                        term: "iris",
+                        definition: "The colored part of the eye that regulates the size of the pupil."
+                    },
+                    {
+                        chapter: 1,
+                        term: "kinesthetic senses",
+                        definition: "Senses of muscle movement, posture, and strain on muscles and joints."
+                    },
+                    {
+                        chapter: 1,
+                        term: "lens",
+                        definition: "The transparent part of the eye behind the pupil that focuses light onto the retina."
+                    },
+                    {
+                        chapter: 1,
+                        term: "light adaptation",
+                        definition: "Decreased sensitivity of rods and cones in bright light."
+                    },
+                    {
+                        chapter: 1,
+                        term: "linear perspective",
+                        definition: "Monocular cue to distance and depth based on the fact that two parallel lines seem to come together at the horizon."
+                    },
+                    {
+                        chapter: 1,
+                        term: "monaural cues",
+                        definition: "Cues to sound location that require just one ear."
+                    },
+                    {
+                        chapter: 1,
+                        term: "monocular cues",
+                        definition: "Visual cues requiring the use of one eye."
+                    },
+                    {
+                        chapter: 1,
+                        term: "motion parallax",
+                        definition: "Monocular distance cue in which objects closer than the point of visual focus seem to move in the direction opposite to the viewer’s moving head, and objects beyond the focus point appear to move in the same direction as the viewer’s head."
+                    },
+                    {
+                        chapter: 1,
+                        term: "olfactory bulb",
+                        definition: "The processing center for smell located between the nose and the brain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "opponent-process theory",
+                        definition: "Theory of color vision that holds that three sets of color receptors (yellow–blue, red–green, black–white) respond to determine the color you experience."
+                    },
+                    {
+                        chapter: 1,
+                        term: "optic chiasm",
+                        definition: "The point near the base of the brain where some fibers in the optic nerve from each eye cross to the other side of the brain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "optic nerve",
+                        definition: "The bundle of axons of ganglion cells that carries neural messages from each eye to the brain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "organ of Corti",
+                        definition: "Structure on the surface of the basilar membrane that contains the receptor cells for hearing."
+                    },
+                    {
+                        chapter: 1,
+                        term: "oval window",
+                        definition: "Membrane across the opening between the middle ear and inner ear that conducts vibrations to the cochlea."
+                    },
+                    {
+                        chapter: 1,
+                        term: "overtones",
+                        definition: "Tones that result from sound waves that are multiples of the basic tone; primary determinant of timbre."
+                    },
+                    {
+                        chapter: 1,
+                        term: "perception",
+                        definition: "The brain’s interpretation of sensory information so as to give it meaning."
+                    },
+                    {
+                        chapter: 1,
+                        term: "perceptual constancy",
+                        definition: "A tendency to perceive objects as stable and unchanging despite changes in sensory stimulation."
+                    },
+                    {
+                        chapter: 1,
+                        term: "pheromones",
+                        definition: "Chemicals that communicate information to other organisms through smell."
+                    },
+                    {
+                        chapter: 1,
+                        term: "phi phenomenon",
+                        definition: "Apparent movement caused by flashing lights in sequence, as on theater marquees."
+                    },
+                    {
+                        chapter: 1,
+                        term: "pitch",
+                        definition: "Auditory experience corresponding primarily to frequency of sound vibrations, resulting in a higher or lower tone."
+                    },
+                    {
+                        chapter: 1,
+                        term: "place theory",
+                        definition: "Theory that pitch is determined by the location of greatest vibration on the basilar membrane."
+                    },
+                    {
+                        chapter: 1,
+                        term: "placebo effect",
+                        definition: "Pain relief that occurs when a person believes a pill or procedure will reduce pain. The actual cause of the relief seems to come from endorphins."
+                    },
+                    {
+                        chapter: 1,
+                        term: "pupil",
+                        definition: "A small opening in the iris through which light enters the eye."
+                    },
+                    {
+                        chapter: 1,
+                        term: "receptor cell",
+                        definition: "A specialized cell that responds to a particular type of energy."
+                    },
+                    {
+                        chapter: 1,
+                        term: "retina",
+                        definition: "The lining of the eye containing receptor cells that are sensitive to light."
+                    },
+                    {
+                        chapter: 1,
+                        term: "rods",
+                        definition: "Receptor cells in the retina responsible for night vision and perception of brightness."
+                    },
+                    {
+                        chapter: 1,
+                        term: "saturation",
+                        definition: "The vividness or richness of a hue."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sensation",
+                        definition: "The experience of sensory stimulation."
+                    },
+                    {
+                        chapter: 1,
+                        term: "shadowing",
+                        definition: "Monocular cue to distance and depth based on the fact that shadows often appear on the parts of objects that are more distant."
+                    },
+                    {
+                        chapter: 1,
+                        term: "shape constancy",
+                        definition: "A tendency to see an object as the same shape no matter what angle it is viewed from."
+                    },
+                    {
+                        chapter: 1,
+                        term: "size constancy",
+                        definition: "The perception of an object as the same size regardless of the distance from which it is viewed."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sound",
+                        definition: "A psychological experience created by the brain in response to changes in air pressure that are received by the auditory system."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sound waves",
+                        definition: "Changes in pressure caused when molecules of air or fluid collide with one another and then move apart again."
+                    },
+                    {
+                        chapter: 1,
+                        term: "stereoscopic vision",
+                        definition: "Combination of two retinal images to give a three-dimensional perceptual experience."
+                    },
+                    {
+                        chapter: 1,
+                        term: "stroboscopic motion",
+                        definition: "Apparent movement that results from flashing a series of still pictures in rapid succession, as in a motion picture."
+                    },
+                    {
+                        chapter: 1,
+                        term: "subtractive color mixing",
+                        definition: "The process of mixing pigments, each of which absorbs some wavelengths of light and reflects others."
+                    },
+                    {
+                        chapter: 1,
+                        term: "taste buds",
+                        definition: "Structures on the tongue that contain the receptor cells for taste."
+                    },
+                    {
+                        chapter: 1,
+                        term: "texture gradient",
+                        definition: "Monocular cue to distance and depth based on the fact that objects seen at greater distances appear to be smoother and less textured."
+                    },
+                    {
+                        chapter: 1,
+                        term: "timbre",
+                        definition: "The quality or texture of sound; caused by overtones."
+                    },
+                    {
+                        chapter: 1,
+                        term: "transduction",
+                        definition: "The conversion of physical energy into coded neural signals."
+                    },
+                    {
+                        chapter: 1,
+                        term: "trichromatic (or three-color) theory",
+                        definition: "The theory of color vision that holds that all color perception derives from three different color receptors in the retina (usually red, green, and blue receptors)."
+                    },
+                    {
+                        chapter: 1,
+                        term: "vestibular senses",
+                        definition: "The senses of equilibrium and body position in space."
+                    },
+                    {
+                        chapter: 1,
+                        term: "visual acuity",
+                        definition: "The ability to distinguish fine details visually."
+                    },
+                    {
+                        chapter: 1,
+                        term: "volley principle",
+                        definition: "Refinement of frequency theory; it suggests that receptors in the ear fire in sequence, with one group responding, then a second, then a third, and so on, so that the complete pattern of firing corresponds to the frequency of the sound wave."
+                    },
+                    {
+                        chapter: 1,
+                        term: "wavelengths",
+                        definition: "The different energies represented in the electromagnetic spectrum."
+                    },
+                    {
+                        chapter: 1,
+                        term: "Weber’s law",
+                        definition: "The principle that the jnd for any given sense is a constant fraction or proportion of the stimulation being judged."
+                    },
+                ]
+            });
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+.MetrodigiWidget {
+    position: relative;
+    font-size: 1em;
+    line-height: 1.4em;
+    -webkit-transform: translate3d(0,0,0);
+}
+.MetrodigiWidget.Experiment {
+    height: 556px;
+}
+.MetrodigiWidget.Experiment section.widget-body {
+    height: 483px;
+}
+.MetrodigiWidget article.question,
+.MetrodigiWidget article .bigger {
+    font-size: 1.1em;
+}
+.MetrodigiWidget article button {
+    font-size: 0.9em;
+}
+.MetrodigiWidget article .chart {
+    width: 50%;
+    float: right;
+}
+.MetrodigiWidget article .chart circle {
+    fill: #dedede;
+    stroke: none;
+    opacity: 1;
+}
+.MetrodigiWidget article .chart circle.series1 {
+    fill: #000000;
+}
+.MetrodigiWidget article .status {
+    color: #902789;
+}
+.MetrodigiWidget article ul {
+    padding: 0;
+    line-height: 1.8em;
+}
+.MetrodigiWidget article ol {
+    padding: 0 0 0 20px
+}
+.MetrodigiWidget article ul li {
+    list-style: none;
+    font-family: "HelveticaNeueETW01-55Rg";
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.MetrodigiWidget article .incorrect-prefix {
+    display: none;
+}
+.MetrodigiWidget article .incorrect .incorrect-prefix {
+    display: inline;
+}
+
+.MetrodigiWidget input {
+    cursor: pointer;
+}
+
+.MetrodigiWidget label {
+    cursor: pointer;
+}
+
+.MetrodigiWidget .trial-count {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    color: white;
+    font-size: 0.75em;
+}
+.MetrodigiWidget .controls-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 13em;
+    font-size: 0.75em;
+    text-align: center;
+    color: white;
+}
+
+.MetrodigiWidget section.overlay {
+		height: 522px;
+}
+.MetrodigiWidget .intermediate-overlay .controls-wrapper {
+    height: 7em;
+    width: 30em;
+    bottom: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -15em;
+    margin-top: -3.5em;
+}
+.MetrodigiWidget .controls-wrapper .instructions,
+.MetrodigiWidget .controls-wrapper .instructions-next {
+    margin-bottom: 1em;
+}
+.MetrodigiWidget .controls-wrapper[data-state="choose-answer"] .instructions-next,
+.MetrodigiWidget .controls-wrapper[data-state="choose-answer"] .next-word,
+.MetrodigiWidget .controls-wrapper[data-state="next-word"] .instructions,
+.MetrodigiWidget .controls-wrapper[data-state="next-word"] [data-answer] {
+    display: none;
+}
+.MetrodigiWidget .controls-wrapper button {
+    font-size: 0.9em;
+}
+.MetrodigiWidget .controls-wrapper .slider {
+    position: relative;
+    width: 59%;
+    height: 25px;
+    margin: 0 auto 1em;
+}
+.MetrodigiWidget .controls-wrapper .slider .slider-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 12px;
+    left: 0;
+    background-color: white;
+}
+.MetrodigiWidget .controls-wrapper .slider .knob {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 25px;
+}
+.MetrodigiWidget .controls-wrapper .slider .knob * {
+    position: absolute;
+}
+.MetrodigiWidget .controls-wrapper .slider .knob-1 {
+    width: 19px;
+    height: 19px;
+    background-color: black;
+    border-radius: 19px;
+    top: 3px;
+    left: 3px;
+}
+.MetrodigiWidget .controls-wrapper .slider .knob-2 {
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border-radius: 13px;
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+}
+.MetrodigiWidget .overlay canvas {
+    display: block;
+    margin: 20px auto;
+}
+
+.MetrodigiWidget .dot {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -7px;
+    background-color: red;
+    border-radius: 15px;
+}
+.MetrodigiWidget .dot.animate {
+    -webkit-animation: blink 0.5s step-end 3;
+    animation: blink 0.5s step-end 3;
+}
+.MetrodigiWidget .overlay .word-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1em;
+    position: absolute;
+}
+.MetrodigiWidget .overlay .word {
+    display: none;
+    line-height: 1em;
+    font-size: 1em;
+    color: white;
+    list-style: none;
+    width: 50%;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.MetrodigiWidget .overlay .word.align-left {
+    float: left;
+    padding-right: 15px;
+}
+
+.MetrodigiWidget .overlay .word.align-right {
+    float: right;
+    padding-left: 15px;
+}
+.MetrodigiWidget .overlay .word > span {
+    display: block;
+    width: 100%;
+}
+.MetrodigiWidget .overlay .word.align-left > span {
+    text-align: right;
+}
+.MetrodigiWidget .overlay .word.align-right > span {
+    text-align: left;
+}
+
+.MetrodigiWidget ul.results {
+    margin: 0 0 1em;
+    padding: 0;
+    line-height: 1.2em;
+}
+.MetrodigiWidget .slide-11 ul.results {
+    overflow: auto;
+    max-height: 7em;
+}
+.MetrodigiWidget .result-element {
+    margin: 0 0 0.25em;
+    padding: 0;
+}
+.MetrodigiWidget .result-element.correct {
+    color: #00882b;
+}
+.MetrodigiWidget .result-element.incorrect {
+    color: #c82606;
+}
+
+.container[data-stage='overlay'] .ui { display: none; }
+.container[data-stage='overlay'] .overlay { display: block; }
+
+
+/*---------- experment css -------------*/
+/*--------------------------------------*/
+.quiz {
+    color: white;
+    width: 100%;
+    height: 436px;
+}
+
+.img-frame {
+    width: 96%;
+    height: 85%;
+    margin: 10px;
+}
+
+.display {
+    display: none;
+    width: 100%;
+    height: 436px;
+}
+
+.answers {
+    display: none;
+    width: 100%;
+    max-width: 333px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+
+.text-frame {
+    display: none;
+    text-align: center;
+    padding-top: 180px;
+    font-size: 3em;
+    width: 100%;
+    height: 436px;
+}
+
+.trial-count, .img-count {
+    width: 100%;
+    text-align: center;
+    padding: 3px 0 0 0;
+}
+
+.quiz[data-stage='text'] .text-frame { display: block; }
+.quiz[data-stage='display'] .display { display: block; }
+.quiz[data-stage='answers'] .answers { display: block; }
+
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+
+.scroll {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.results-panel-wrap {
+    width: 100%;
+    margin: 10px auto;
+}
+
+/*--------------------------------------*/
+
+.MetrodigiWidget footer button.close-img-overlay{
+    display: none;
+}
+ 
+/*--------------------------------------*/
+
+.MetrodigiWidget .overlay canvas{
+    display: block;
+    margin: 0.9em auto;
+}
+    
+.result-area {
+	width: 100%;
+	clear: both;
+}
+.result-area > div {
+	float: left;
+	width: 80%;
+}
+.result-area > .chart-type {
+	width: 20%;
+	font-family: "HelveticaNeueETW01-75Bd";
+	padding-top: 3.5em;
+}
+.offscreen {
+	display: block;
+	position: absolute;
+	clip: rect(1px1px1px1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	z-index: -1000;
+}

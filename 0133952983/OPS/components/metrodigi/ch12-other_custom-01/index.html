@@ -1,0 +1,528 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/template.css">
+    <link rel="stylesheet" href="styles/survey.css">
+
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+    <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="Survey">
+            <div class="widget-content">
+                <nav class="widget-header">
+                    <ul>
+                        <li class="slide-intro slide-intro-2 active"><button tabindex="0">Introduction</button></li>
+                        <li class="slide-question-1 slide-question-2 slide-question-3 slide-question-4 slide-question-5 slide-question-6 slide-question-7 slide-question-8 slide-question-9 slide-question-10 slide-question-11 slide-question-12 slide-question-13 slide-question-14"><button tabindex="0">Survey</button></li>
+                        <li class="slide-results slide-results-2"><button tabindex="0" class="results">Results</button></li>
+                    </ul>
+                </nav>
+                <section class="widget-body">
+
+                    <article class="slide-intro active" data-next-slide="intro-2">
+                        <img src="images/petLogo.png" alt="" />
+                        <p tabindex="0">This is a non-scientific survey about your thoughts, experiences, and understanding of psychological concepts.</p>
+                        <p tabindex="0">Your responses to this survey are <strong>completely anonymous</strong>.  Data will be reported only in survey format and no individual responses will be revealed to your instructor or anyone else.</p>
+                        <p tabindex="0"><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                    </article>
+
+                    <article class="slide-intro-2" data-prev-slide="intro" data-next-slide="question-1">
+                        <img src="images/petLogo.png" alt="" />
+                        <p tabindex="0">This survey asks about your experiences with stress and the things that stress you out (also called "stressors"), and about the techniques you use for managing stress.</p>
+                        <p tabindex="0">Stress is a physical and mental response to threatening or challenging events.</p>
+                        <p tabindex="0"><strong><span class="responsive-call-to-action">Click or tap</span> Next to begin the survey.</strong></p>
+                    </article>
+
+                    <article class="slide-results scroll">
+                        <p class="status bigger">Congratulations! You have finished this survey.</p>
+                        <p class="status bigger">Take a look at how your answers compare to your peers’ answers.<br><br></p>
+                        <div class="chart"></div>
+                    </article>
+
+                </section>
+                <footer class="widget-footer">
+                    <button class="next">Next</button>
+                    <button class="previous">Previous</button>
+                    <button class="next-result">Next</button>
+                    <button class="reset">Repeat Survey</button>
+                    <span class="status"></span>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="javascript/survey.js"></script>
+    <script type="text/javascript">
+        window.addEvent('domready', function() {
+            var data = {
+                questions: [
+    { //01
+        "question": "<p>How “stressed-out” were you LAST week?</p>",
+        "radioButtons": [
+            { "label": "Not stressed out at all"},
+            { "label": "A little but stressed"},
+            { "label": "Somewhat stressed"},
+            { "label": "Very stressed out"}
+        ],
+        "resultLabels": [
+            { "label": "Not stressed out at all"},
+            { "label": "A little but stressed"},
+            { "label": "Somewhat stressed"},
+            { "label": "Very stressed out"}
+        ],
+        "resultPercentages": [
+             { "percentage": "6.2%"},
+             { "percentage": "29.8%"},
+             { "percentage": "33.4%"},
+             { "percentage": "30.6%"}
+        ]
+    },
+
+    { //02
+        "question": "<p>How likely is it that you will feel stressed THIS week?</p>",
+        "radioButtons": [
+            { "label": "Very Probably Not"},
+            { "label": "Probably Not"},
+            { "label": "Possibly"},
+            { "label": "Probably"},
+            { "label": "Very Probably"},
+            { "label": "Definitely"}
+        ],
+        "resultLabels": [
+            { "label": "Very Probably Not"},
+            { "label": "Probably Not"},
+            { "label": "Possibly"},
+            { "label": "Probably"},
+            { "label": "Very Probably"},
+            { "label": "Definitely"}
+        ],
+        "resultPercentages": [
+             { "percentage": "2.8%"},
+             { "percentage": "9.4%"},
+             { "percentage": "22.4%"},
+             { "percentage": "25.7%"},
+             { "percentage": "21%"},
+             { "percentage": "18.4%"}
+        ]
+    },
+
+    { //03
+        "question": "<p>A “Hassle” is a minor nuisance that, when combined with other small problems can create as stressful situation. We all experience hassles every day. Which of the following hassles have you experienced in the LAST TWO WEEKS?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Forgot to do homework"},
+            { "label": "Forgot to run an important errand" },
+            { "label": "Got yelled at/reprimanded by boss or parents"},
+            { "label": "Was late for an appointment/class"},
+            { "label": "Had to stop for gas when you needed to be on your way"},
+            { "label": "Had to arrange for a babysitter at the last minute"},
+            { "label": "Had an unpleasant service experience while shopping, banking, etc."},
+            { "label": "Had to do tasks/chores that you really didn't have time to do"},
+            { "label": "Had a major appliance break (washing machine, vacuum, etc.)"},
+            { "label": "Didn't have your favorite snack food on hand when you really wanted it"},
+            { "label": "Other"},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Forgot to do homework"},
+            { "label": "Forgot to run an important errand" },
+            { "label": "Got yelled at/reprimanded by boss or parents"},
+            { "label": "Was late for an appointment/class"},
+            { "label": "Had to stop for gas when you needed to be on your way"},
+            { "label": "Had to arrange for a babysitter at the last minute"},
+            { "label": "Had an unpleasant service experience while shopping, banking, etc."},
+            { "label": "Had to do tasks/chores that you really didn't have time to do"},
+            { "label": "Had a major appliance break (washing machine, vacuum, etc.)"},
+            { "label": "Didn't have your favorite snack food on hand when you really wanted it"},
+            { "label": "Other"},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "57.3%"},
+             { "percentage": "36.2%"},
+             { "percentage": "32.9%"},
+             { "percentage": "41%"},
+             { "percentage": "27.2%"},
+             { "percentage": "5.7%"},
+             { "percentage": "22.7%"},
+             { "percentage": "57.7%"},
+             { "percentage": "8.4%"},
+             { "percentage": "7.6%"},
+             { "percentage": "11.4%"},
+             { "percentage": "5.4%"}
+        ]
+    },
+
+    { //04
+        "question": "<p>Significant life changes - even positive ones - can be stressful. Which of the following significant life changes have you experienced in the LAST YEAR?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Got married / started a long-term relationship"},
+            { "label": "Got divorced /separated / ended a long-term relationship" },
+            { "label": "Had a death in the family"},
+            { "label": "Had a family member deported"},
+            { "label": "Had a family member go to jail / get out of jail"},
+            { "label": "Had a family member go/come back from military service away from home"},
+            { "label": "Personally came back from military service away from home"},
+            { "label": "Was personally sick for more than a week"},
+            { "label": "Had an illness in the family that lasted more than one week"},
+            { "label": "Got a new job"},
+            { "label": "Lost a job"},
+            { "label": "Had to move into a new home"},
+            { "label": "Other"},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Got married / started a long-term relationship"},
+            { "label": "Got divorced /separated / ended a long-term relationship" },
+            { "label": "Had a death in the family"},
+            { "label": "Had a family member deported"},
+            { "label": "Had a family member go to jail / get out of jail"},
+            { "label": "Had a family member go/come back from military service away from home"},
+            { "label": "Personally came back from military service away from home"},
+            { "label": "Was personally sick for more than a week"},
+            { "label": "Had an illness in the family that lasted more than one week"},
+            { "label": "Got a new job"},
+            { "label": "Lost a job"},
+            { "label": "Had to move into a new home"},
+            { "label": "Other"},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "15.6%"},
+             { "percentage": "15.2%"},
+             { "percentage": "26.1%"},
+             { "percentage": "3.2%"},
+             { "percentage": "10.3%"},
+             { "percentage": "5.9%"},
+             { "percentage": "1.5%"},
+             { "percentage": "32.9%"},
+             { "percentage": "12.9%"},
+             { "percentage": "6.9%"},
+             { "percentage": "4.6%"},
+             { "percentage": "7.3%"},
+             { "percentage": "3.2%"},
+             { "percentage": "27%"}
+        ]
+    },
+
+    { //05
+        "question": "<p>Catastrophes are unpredictable large scale events that can be stressful in a variety of ways. Which of the following types of catastrophes have you EVER personally experienced in your life?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Natural disaster (flood, earthquake, hurricane, fire, etc.)"},
+            { "label": "War" },
+            { "label": "Terrorist attack"},
+            { "label": "Bomb threat"},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Natural disaster (flood, earthquake, hurricane, fire, etc.)"},
+            { "label": "War" },
+            { "label": "Terrorist attack"},
+            { "label": "Bomb threat"},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "39.6%"},
+             { "percentage": "10.5%"},
+             { "percentage": "12.7%"},
+             { "percentage": "14.9%"},
+             { "percentage": "51.2%"}
+        ]
+    },
+
+    { //06
+        "question": "<p>Have you EVER personally experienced any of the following stressful events?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Armed robbery (at a bank, store, etc. where you were working or shopping)."},
+            { "label": "Victim of a crime" },
+            { "label": "Emotional bullying"},
+            { "label": "Physical bullying"},
+            { "label": "Suicide of a friend or family member"},
+            { "label": "Relocating to a new state or country"},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            {"label": "Armed robbery (at a bank, store, etc. where you were working or shopping)."},
+            { "label": "Victim of a crime" },
+            { "label": "Emotional bullying"},
+            { "label": "Physical bullying"},
+            { "label": "Suicide of a friend or family member"},
+            { "label": "Relocating to a new state or country"},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "5.6%"},
+             { "percentage": "20.1%"},
+             { "percentage": "55.5%"},
+             { "percentage": "24.4%"},
+             { "percentage": "21%"},
+             { "percentage": "29.3%"},
+             { "percentage": "23.4%"}
+        ]
+    },
+
+    { //07
+        "question": "<p>Are you responsible for caring for a seriously ill or disabled person?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "10.5%"},
+             { "percentage": "85%"},
+             { "percentage": "4.5%"}
+        ]
+    },
+
+    { //08
+        "question": "<p>Are you responsible for caring for someone who is in hospice (dying)?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "3.7%"},
+             { "percentage": "93.2%"},
+             { "percentage": "3.1%"}
+        ]
+    },
+
+    { //09
+        "question": "<p>To what extent is the following statement TRUE about you: When faced with a potentially stressful situation, I try to predict what might happen, think about how I've handled this stressor before, and try to minimize the stress that this thing/event/person might cause me.</p>",
+        "radioButtons": [
+            { "label": "Almost Always True"},
+            { "label": "Usually True" },
+            { "label": "Often True"},
+            { "label": "Occasionally True"},
+            { "label": "Sometimes But Infrequently True"},
+            { "label": "Usually Not True"},
+            { "label": "Almost Never True"}
+        ],
+        "resultLabels": [
+            { "label": "Almost Always True"},
+            { "label": "Usually True" },
+            { "label": "Often True"},
+            { "label": "Occasionally True"},
+            { "label": "Sometimes But Infrequently True"},
+            { "label": "Usually Not True"},
+            { "label": "Almost Never True"}
+        ],
+        "resultPercentages": [
+             { "percentage": "16.7%"},
+             { "percentage": "24.3%"},
+             { "percentage": "19.3%"},
+             { "percentage": "21.3%"},
+             { "percentage": "10%"},
+             { "percentage": "5.7%"},
+             { "percentage": "2.6%"}
+        ]
+    },
+
+    { //10
+        "question": "<p>To what extent is the following statement TRUE about you: When faced with a stressful situation, I try to change the situation or fix the problem, to directly eliminate or alter the thing/event/person that is stressful.</p>",
+        "radioButtons": [
+            { "label": "Almost Always True"},
+            { "label": "Usually True" },
+            { "label": "Often True"},
+            { "label": "Occasionally True"},
+            { "label": "Sometimes But Infrequently True"},
+            { "label": "Usually Not True"},
+            { "label": "Almost Never True"}
+        ],
+        "resultLabels": [
+            { "label": "Almost Always True"},
+            { "label": "Usually True" },
+            { "label": "Often True"},
+            { "label": "Occasionally True"},
+            { "label": "Sometimes But Infrequently True"},
+            { "label": "Usually Not True"},
+            { "label": "Almost Never True"}
+        ],
+        "resultPercentages": [
+             { "percentage": "17.8%"},
+             { "percentage": "22%"},
+             { "percentage": "24%"},
+             { "percentage": "20.9%"},
+             { "percentage": "9.7%"},
+             { "percentage": "4.4%"},
+             { "percentage": "1.2%"}
+        ]
+    },
+
+    { //11
+        "question": "<p>To what extent is the following statement TRUE about you: When faced with a stressful situation, I try to avoid the thing/event/person that is stressing me out and to soothe my stress-related emotions.</p>",
+        "radioButtons": [
+            { "label": "Almost Always True"},
+            { "label": "Usually True" },
+            { "label": "Often True"},
+            { "label": "Occasionally True"},
+            { "label": "Sometimes But Infrequently True"},
+            { "label": "Usually Not True"},
+            { "label": "Almost Never True"}
+        ],
+        "resultLabels": [
+            { "label": "Almost Always True"},
+            { "label": "Usually True" },
+            { "label": "Often True"},
+            { "label": "Occasionally True"},
+            { "label": "Sometimes But Infrequently True"},
+            { "label": "Usually Not True"},
+            { "label": "Almost Never True"}
+        ],
+        "resultPercentages": [
+             { "percentage": "12.4%"},
+             { "percentage": "18.2%"},
+             { "percentage": "16.7%"},
+             { "percentage": "22.4%"},
+             { "percentage": "16.4%"},
+             { "percentage": "10.9%"},
+             { "percentage": "3%"}
+        ]
+    },
+
+    { //12
+        "question": "<p>Do you consider yourself an optimistic person?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "60.9%"},
+             { "percentage": "14.9%"},
+             { "percentage": "21.1%"},
+             { "percentage": "3.1%"}
+        ]
+    },
+
+    { //13
+        "question": "<p>How much control do you have over the main stressors in your life?</p>",
+        "radioButtons": [
+            { "label": "None"},
+            { "label": "A Little" },
+            { "label": "Some" },
+            { "label": "A Lot"},
+            { "label": "A Great Deal"}
+        ],
+        "resultLabels": [
+            { "label": "None"},
+            { "label": "A Little" },
+            { "label": "Some" },
+            { "label": "A Lot"},
+            { "label": "A Great Deal"}
+        ],
+        "resultPercentages": [
+             { "percentage": "5.2%"},
+             { "percentage": "21.5%"},
+             { "percentage": "40.9%"},
+             { "percentage": "25.7%"},
+             { "percentage": "6.7%"},
+        ]
+    },
+
+    { //14
+        "question": "<p>Which of the following techniques have you used in the LAST TWO WEEKS to manage your stress?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Exercise"},
+            { "label": "Play Sports" },
+            { "label": "Play computer games"},
+            { "label": "Meditation"},
+            { "label": "Get more/enough sleep"},
+            { "label": "Eat healthy"},
+            { "label": "Take vitamins"},
+            { "label": "Have a vacation"},
+            { "label": "Have a night out"},
+            { "label": "Spend time with friends"},
+            { "label": "Talk to someone I trust about what's stressing me out"},
+            { "label": "Go to psychotherapy"},
+            { "label": "Do biofeedback"},
+            { "label": "Read a book"},
+            { "label": "Watch TV"},
+            { "label": "Listen to music"},
+            { "label": "Doing something just for pure fun"},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Exercise"},
+            { "label": "Play Sports" },
+            { "label": "Play computer games"},
+            { "label": "Meditation"},
+            { "label": "Get more/enough sleep"},
+            { "label": "Eat healthy"},
+            { "label": "Take vitamins"},
+            { "label": "Have a vacation"},
+            { "label": "Have a night out"},
+            { "label": "Spend time with friends"},
+            { "label": "Talk to someone I trust about what's stressing me out"},
+            { "label": "Go to psychotherapy"},
+            { "label": "Do biofeedback"},
+            { "label": "Read a book"},
+            { "label": "Watch TV"},
+            { "label": "Listen to music"},
+            { "label": "Doing something just for pure fun"},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "59.2%"},
+             { "percentage": "23.1%"},
+             { "percentage": "34.7%"},
+             { "percentage": "20.2%"},
+             { "percentage": "67.8%"},
+             { "percentage": "45.7%"},
+             { "percentage": "25.3%"},
+             { "percentage": "8.1%"},
+             { "percentage": "47.4%"},
+             { "percentage": "65.1%"},
+             { "percentage": "61.7%"},
+             { "percentage": "3.9%"},
+             { "percentage": "0.1%"},
+             { "percentage": "2.1%"},
+             { "percentage": "31.8%"},
+             { "percentage": "15.2%"},
+             { "percentage": "2.8%"},
+             { "percentage": "2.2%"}
+        ]
+    }
+
+]
+,
+            };
+
+            // Widget initialization
+            widget = new Survey({
+                container: $$('.Survey')[0],
+                initialSlide: 'intro',
+                delay: 1000,
+                data: data
+            });
+        })
+    </script>
+
+</body>
+</html>

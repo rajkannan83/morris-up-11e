@@ -1,0 +1,100 @@
+.slider {
+    position: relative;
+    width: 576px;
+    height: 21px;
+    margin: 0 auto;
+    cursor: pointer;
+    top: 12px;
+    left: 2px;
+    /* overflow: hidden; */
+}
+.slider .line {
+    width: 99%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+}
+.slider .knob {
+    width: 20px;
+    height: 337px;
+    top: 0px;
+    cursor: pointer;
+    position: relative; 
+    z-index: 1;
+    overflow: hidden;     
+    margin-left: -8px;
+}
+
+#fontSize {
+    height: 50px;
+    line-height: 50px;
+}
+#legend {
+    position:absolute;
+    top: 95px;
+    left: 200px;
+    background-color:#246684;
+    color: white;
+    padding:10px;
+    width: 250px;
+    margin-left: 15px;
+    z-index: 2;
+}
+
+#graphbg,
+#graphimg,
+#graphover {
+    width: 100%;
+    max-width: 680px;
+    height: 333px;
+    margin: auto;
+    position: relative;
+}
+#graphover {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#graphimg {
+    background: url(../images/sleep-and-age-bw@2x.png) no-repeat scroll 0 0 transparent;
+    background-size: 680px;
+    margin-top: 20px;
+}
+#graphover {
+    background: url(../images/sleep-and-age@2x_2.png) no-repeat scroll 0 0 transparent;
+    background-size: 680px;
+}
+#vertical-line{
+    height: 319px;
+    width: 0px;
+    margin-left: 200px;
+    position: absolute;
+    top: -11px;
+}
+.MetrodigiWidget header.widget-header .notes .note{
+    font-family: "HelveticaNeueETW01-55Rg";
+    display: block;
+}
+
+.MetrodigiWidget section.widget-body{
+    padding-top: 0;
+}
+.MetrodigiWidget section.widget-body button.start-animation,
+.MetrodigiWidget section.widget-body button.reset-animation{
+    padding: 0.3em 0;
+    width: 30px;
+    position: absolute;
+    z-index: 100;
+    height: 26px;
+    top: 6px;
+}
+.knob img{
+    width: 20px;
+    margin-left: 0px;
+}
+.animation-wrapper{
+    position: relative;
+    margin: 0 auto;
+    width: 680px;
+}

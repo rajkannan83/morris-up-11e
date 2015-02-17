@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/template.css">
+        <link rel="stylesheet" href="../_framework/_base_pearson/button-bar.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="../_framework/_base_pearson/config.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+        <script src='../_framework/_base_pearson/score.js' type='text/javascript'></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="MetrodigiWidget">
+                <div id='container' class="widget-content">
+                    <header class="widget-header">
+                        <div class="notes">
+                            
+                            <div class='note regular' data-state="1" tabindex="0">Binocular cues to depth perception include convergence and binocular disparity. Observe how each of these cues is impacted by the distance between our eyes and a given object, such as a cube.</div>
+                        </div>
+                    </header>
+                    <section id="panels" class="widget-body">
+                        <div class="instruction" data-state="1" aria-hidden="true"><strong>Drag the red cube along the surface of the table and notice when the eyes move together, or converge, and when they are more relaxed.</strong></div>
+                        <div class="instruction" data-state="2" aria-hidden="true"><strong>Drag the red cube along the surface of the table and notice when the images seen by each eye are most similar, and when they are most different.</strong></div>
+                        <article class="panel" tabindex="0" aria-label="When an object approaches the eyes, the eyes move together, or converge. When the object recedes to the distance, the eyes relax and look straight ahead.">
+                            <div class="center">
+                                <div id="table"></div>
+                                <div id="lefteye"></div>
+                                <div id="righteye"></div>
+                                <div id="eyes">
+                                    <div id="eyewrapper">
+                                        <img src="images/neareyes.png" />
+                                        <img id="fareyes" src="images/fareyes.png" />
+                                    </div>  <!-- eyewrapper -->
+                                </div>  <!-- eyes -->
+                                <div id="slider1" class="slider slider1">
+                                    <div class="knob" tabindex="0"></div>
+                                </div> <!-- slider -->
+                            </div>
+                            <div id="definitions" tabindex="0">
+                                <p>Convergence is a depth cue that involves the muscles of the eye.</p>
+                            </div>  <!-- definitions -->
+                        </article>  <!-- panel -->
+                        <article class="panel">
+                            <div class="center">
+                                <div id="table"></div>
+                                <div id="boxes">
+                                    <div id="leftboxwrapper">
+                                        <img src="images/cubeview.png" />
+                                        <span class="dynamic-object outside"><span class="dynamic-object inside"></span></span>
+                                    </div>
+                                    <span class="imgdesc" tabindex="0" aria-hidden="true">left eye image</span>
+                                    <div id="rightboxwrapper">
+                                        <img src="images/cubeview.png" />
+                                        <span class="dynamic-object outside"><span class="dynamic-object inside"></span></span>
+                                    </div>
+                                    <span class="imgdesc" tabindex="0" aria-hidden="true">right eye image</span>
+                                </div> <!-- boxes -->
+                                <div id="slider2" class="slider slider2">
+                                    <div class="knob" tabindex="0"></div>
+                                </div> <!-- slider -->
+                            </div>
+                            <div id="definitions" tabindex="0">
+                                <p>Because your eyes are separated by several centimeters, each eye sees a different image of the object in front of you. This is referred to as the binocular disparity.</p>
+                            </div>  <!-- definitions -->
+                        </article>  <!-- panel -->
+                        <article class="panel">
+                            <div class="qa">
+                                <p class="question" tabindex="0">When do the eyes see the most similar views of objects?</p>
+                                <p class="answer" tabindex="0">The eyes see the most similar views of objects when they are <em>nearby</em>.<div class="checkmark"></div></p>
+                                <p class="answer _correct" tabindex="0">The eyes see the most similar views of objects when they are <em>far away</em>.<div class="xmark"></div></p>
+                                <span class="feedback" aria-live="assertive"></span>
+                            </div> <!-- qa -->
+                        </article>  <!-- panel -->
+                        <article class="panel">
+                            <div class="qa">
+                                <p class="question" tabindex="0">When do the eyes converge (move together)?</p>
+                                <p class="answer _correct" tabindex="0">The eyes converge to focus on objects when they are <em>nearby</em>.<div class="checkmark"></div></p>
+                                <p class="answer" tabindex="0">The eyes converge to focus on objects when they are <em>far away</em>.<div class="xmark"></div></p>
+                                <span class="feedback" aria-live="assertive"></span>
+                            </div> <!-- qa -->
+                        </article>  <!-- panel -->
+                    </section>
+                    
+                    <div class='note result' data-state="4"  aria-live="assertive"></div>
+                    <footer class="widget-footer no-float">
+                        <div class="next-previous">
+                            <button class="reset" disabled='false' tabindex="0">Start Over</button>
+                            <button class="previous" tabindex="0">Previous</button>
+                            <button class="next" tabindex="0">Next</button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+
+        </div>
+
+        <script type='text/javascript' src='javascript/script.js'></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+        <script type="text/javascript">
+            window.addEvent('domready', function() {
+                var data = [
+                    // Enter widget data here
+                ];
+
+                // Widget initialization
+                widget_instance = new BinocularVision({
+                    container: $$('.MetrodigiWidget')[0],
+                    data: data
+                });
+            })
+        </script>
+
+    </body>
+</html>

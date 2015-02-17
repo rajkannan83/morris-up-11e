@@ -1,0 +1,245 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../_framework/_base_pearson/button-bar.css">
+        <link rel="stylesheet" href="styles/template.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+        <script src="javascript/experiment.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../_framework/_base_external/d3.v3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../_framework/_base_external/dimple.v1.1.2.min.js" charset="utf-8"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="MetrodigiWidget Experiment">
+                <article class="widget-content">
+                    <header class="widget-header">
+                        <nav class="widget-header-menu">
+                            <ul class="elements-5">
+                                <li class="slide-1 active" tabindex="0"><div class="arrowtab">Introduction</div></li>
+                                <li class="slide-2" tabindex="0"><div class="arrowtab">Instructions</div></li>
+                                <li class="slide-3 slide-4 slide-5 slide-6" tabindex="0"><div class="arrowtab">Experiment</div></li>
+                                <li class="slide-7 slide-8 results" tabindex="0"><div class="arrowtab">Results</div></li>
+                                <li class="slide-9 slide-10 slide-11" tabindex="0"><div class="arrowtab">Discussion</div></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <section class="widget-body">
+
+                        <article class="slide slide-1 active" data-next-slide="2" tabindex="0">
+                            <img class="constrain-height" src="images/Shopping_list.jpg" alt="Shopping list with 7 common grocery items." />
+                            <p>Research shows that most people can remember about 7 items from a list and it is your working memory that is most critical in doing so.  As to which items you are likely to forget, there likely will be differences between your memory for some items over others because of personal preferences.  However, something else will also affect your memory, as you will see when you complete this experiment.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                            <p class="undo_label">Your previous results have been cleared. <a href="#" class="undo">Undo</a></p>
+                        </article>
+
+                        <article class="slide slide-2" data-next-slide="3" data-prev-slide="1" tabindex="0">
+                            <img class="constrain-height" src="images/default.png" alt="" />
+                            <p>In this experiment, you will view 5 lists of words.  Each list will consist of 12 words and each word will appear for 1 second.</p>
+                            <p>After all words have been presented for each list, you will be asked to recall as many of the words as possible.  Type them in the text box as carefully as you can.  Misspelled words will not be recognized, so take care to spell them correctly.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                        </article>
+
+                        <article class="slide slide-3 practice experiment" data-prev-slide="2" tabindex="0">
+                            <img class="constrain-height" src="images/petLogo.png" alt="" />
+                            <p>Before continuing to the full experiment, let's try a practice experiment first, so you can make yourself comfortable with the experiment's interface.  In this practice experiment, your responses will not be saved, and you will be given only one trial.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> the “Start Practice Experiment” button to begin.</strong></p>
+                        </article>
+
+                        <article class="slide slide-4" data-next-slide="5" tabindex="0">
+                            <p>Here is a summary of the trial experiment:</p>
+                            <p class="bigger"><strong>Words you recalled</strong></p>
+                            <p class="bigger recalled-words">Words you recalled</p>
+
+                            <p class="bigger"><strong>12 words you were asked to recall</strong></p>
+                            <p class="bigger asked-words">Asked Words</p>
+                            <!--</ol>-->
+                        </article>
+
+                        <article class="slide slide-5 actual experiment" data-prev-slide="4" tabindex="0">
+                            <img class="constrain-height" src="images/petLogo.png" alt="" />
+                            <p>Now that you've completed the practice experiment with one trial, and understand how to interact with it, now it's time for the full experiment, with five trials.  If you want more practice, return to the previous page.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> the “Start Experiment” button to begin.</strong></p>
+
+                        </article>
+
+                        <article class="slide slide-6" data-next-slide="7" tabindex="0">
+                            <img class="constrain-height" src="images/petLogo.png" alt="" />
+                            <p>Congratulations, you have completed all five trials of presentations.</p>
+                            <p>Chances are great that your data replicate a well known phenomenon in memory research called the <strong>serial position effect</strong>.</p>
+                            <p>In general terms, the serial position effect is that people tend to have better memory for items at the beginning and end of a list than they do for items in the middle of the list.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                        </article>
+
+                        <article class="slide slide-7" data-next-slide="8" tabindex="0">
+                            <p>In the graph of your results, you can see how your memory for the different items depended on the position of the item in the list. Remember that each list had 12 items and you went through 5 lists. Each bar ranges from 0 to 5 and represents how many of the 5 items in that position you recalled.</p>
+                            <p>What most people discover is that they had better memory for the first few items and the last couple of items than they did for the items in the middle of the list. This is known as the Serial Position Effect.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                            <span id='graph-text' class='graph-text offscreen' ></span>
+                            <div tabindex="0" class="graph" aria-describedby='graph-text'></div>
+                        </article>
+
+                        <article class="slide slide-8" data-next-slide="9" data-prev-slide="7" tabindex="0">
+                            <p>There are two characteristics of memory that come together to create the serial position effect. The first is the primacy effect. Quite simply, the primacy effect is the idea that items at the beginning of the list are more easily remembered. In your results, if the sum of bars 1 through 4 is greater than the sum of bars 5 through 8, then you showed the primacy effect.</p>
+                            <p>The second characteristic is the recency effect. The recency effect is the idea that remembering items at the end of the list is easier. If the sum of bars 9 through 12 is greater than the sum of bars 5 through 8 then you showed the recency effect.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                            <div class="graph"></div>
+                        </article>
+
+<!--                        <article class="slide slide-9" data-next-slide="10" data-prev-slide="8">
+                            <img class="constrain-height" src="images/default-1.png" alt="" />
+                            <p>Potential explanations for this effect include:</p>
+                            <p>1. Early items have been practiced enough that they are moving into long-term memory while items at the end of the list are freshest in short-term memory.</p>
+                            <p>2. Early items have no proactive interference from previous items, so are more easily recalled; and, items at the end of the list are freshest in short-term memory.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                        </article>-->
+
+                        <article class="slide slide-9" data-next-slide="10" data-prev-slide="8" tabindex="0">
+                            <img class="constrain-height" src="images/default.png" alt="" />
+                            <p>So what causes the serial position effect? A potential explanation for the primacy effect is that the early items got rehearsed more than the middle items. This occurs when someone simply repeats the items as many times as they can. Importantly, the first few items get extra rehearsal because there aren’t many items to remember yet. By the time you get to the middle items, each item only gets a little rehearsal. The extra rehearsal that the first few items get helps move them into long term memory where you have a better chance of recalling them.</p>
+                            <p>The recency effect is explained differently. The last few items, like the middle items, also get very little rehearsal. However, in the recall task you are able to recall the words in any order you like. Many participants choose to write down first the most recent items they saw (the items in the last few positions) while those items are still fresh in their short term memory. Because the recall task occurs immediately after the presentation of the last item, remembering that item requires no rehearsal at all.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                        </article>
+                        <article class="slide slide-10 last" data-prev-slide="9" tabindex="0">
+                            <img class="constrain-height" src="images/default.png" alt="" />
+                            <p>Finally, it is important to note that the serial position effect is influenced by how you rehearse the items. Some people, when given a task like this, use imagery and association to learn the list. For example, instead of mentally saying "fly, fly, fly, book, fly, book, fly, book, fly, book, grape...." to rehearse, they instead mentally picture a fly when they see that word. When "book" appears they associate the two by imagining themselves swatting the fly with a book. Then they imagine opening the book to see a picture of grapes. Using an imagery and association method should lead to better recall than using rote rehearsal, and would not necessarily lead to a serial position effect.</p>
+                        </article>
+
+                    </section>
+                    <footer class="widget-footer">
+                        <button class="reset">Restart Experiment</button>
+                        <button class="start-experiment practice">Start Practice Experiment</button>
+                        <button class="start-experiment actual">Start Experiment</button>
+                        <button class="next">Next</button>
+                        <button class="previous">Previous</button>
+                    </footer>
+                    <div class='offscreen shout' aria-live="assertive"></div>
+                </article>
+            </div>
+        </div>
+        <script type="text/javascript" src="javascript/script.js"></script>
+        <script type="text/javascript">
+            window.addEvent('domready', function() {
+            var data = {
+            sets: [
+            {
+            trial: [
+            {"word": "HORSE"},
+            {"word": "EAR"},
+            {"word": "WIT"},
+            {"word": "PILE"},
+            {"word": "SAT"},
+            {"word": "NEAR"},
+            {"word": "RAIL"},
+            {"word": "RIP"},
+            {"word": "GRAB"},
+            {"word": "PIG"},
+            {"word": "HAT"},
+            {"word": "TREE"}
+            ]
+            },
+            {
+            trial: [
+            {"word": "BUS"},
+            {"word": "BLOCK"},
+            {"word": "TAG"},
+            {"word": "GRAPE"},
+            {"word": "DRIP"},
+            {"word": "ROPE"},
+            {"word": "TAN"},
+            {"word": "PEN"},
+            {"word": "POT"},
+            {"word": "TAP"},
+            {"word": "BALL"},
+            {"word": "GATE"}
+            ]
+            },
+            {
+            trial: [
+            {"word": "FLY"},
+            {"word": "BOOK"},
+            {"word": "DOG"},
+            {"word": "JUG"},
+            {"word": "CALL"},
+            {"word": "CAP"},
+            {"word": "TALL"},
+            {"word": "FRUIT"},
+            {"word": "PAIL"},
+            {"word": "HEN"},
+            {"word": "PAN"},
+            {"word": "KITE"}
+            ]
+
+            },
+            {
+            trial: [
+            {"word": "CAN"},
+            {"word": "TEN"},
+            {"word": "MILK"},
+            {"word": "CRY"},
+            {"word": "GOAT"},
+            {"word": "GAS"},
+            {"word": "COP"},
+            {"word": "CAT"},
+            {"word": "SMALL"},
+            {"word": "TON"},
+            {"word": "CALL"},
+            {"word": "FLIP"}
+            ]
+            },
+            {
+            trial: [
+            {"word": "SLAP"},
+            {"word": "MOP"},
+            {"word": "FOG"},
+            {"word": "BOOT"},
+            {"word": "RAN"},
+            {"word": "FOOD"},
+            {"word": "TACK"},
+            {"word": "TAIL"},
+            {"word": "SLIP"},
+            {"word": "ONE"},
+            {"word": "TRAIL"},
+            {"word": "WIG"}
+            ]
+
+            },
+            {
+            trial: [
+            {"word": "PLUG"},
+            {"word": "FIG"},
+            {"word": "DROP"},
+            {"word": "NUT"},
+            {"word": "MAP"},
+            {"word": "SHOE"},
+            {"word": "FALL"},
+            {"word": "APPLE"},
+            {"word": "WON"},
+            {"word": "BUY"},
+            {"word": "SELL"},
+            {"word": "PAT"}
+            ]
+
+            }
+            ]
+
+
+            };
+
+            // Widget initialization
+            widget = new Learning_Experiment({
+            container: $$('.widget-content')[0],
+            delay: 1000,
+            data: data
+            });
+            })
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+    <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="container has-instructions">
+
+    <div class="Flashcards">
+
+        <nav class="main-nav">
+            <button tabindex="0" class="current-chapter-cards"></button>
+            <button tabindex="0" class="all-chapters-cards"></button>
+            <div class="right-helper">
+                <button tabindex="0" class="flip right">Flip Cards</button>
+                <button tabindex="0" class="restart right">Start Over</button>
+            </div>
+        </nav>
+
+        <section class="cards">
+
+            <div class="end-screen">
+                <div class="content-wrapper">
+                    <h2>All done!</h2>
+                    <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                    <ul class="repeated-cards"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+            <button tabindex="0" class="skip right">Skip</button>
+        </nav>
+
+    </div>
+
+</div> <!-- container -->
+
+<script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+<script type="text/javascript">
+
+    window.addEvent('domready', function() {
+        // Widget initialization
+        window.widget_instance = new Flashcards({
+            container: $$('.Flashcards')[0],
+            currentChapter: 0, displayCurrentChapterButton: false,
+            cards: [
+                {
+                    chapter: 0,
+                    term: "adjustment",
+                    definition: "Any effort to cope with stress."
+                },
+                {
+                    chapter: 0,
+                    term: "approach/approach conflict",
+                    definition: "According to Lewin, the result of simultaneous attraction to two appealing possibilities, neither of which has any negative qualities."
+                },
+                {
+                    chapter: 0,
+                    term: "approach/avoidance conflict",
+                    definition: "According to Lewin, the result of being simultaneously attracted to and repelled by the same goal."
+                },
+                {
+                    chapter: 0,
+                    term: "avoidance/avoidance conflict",
+                    definition: "According to Lewin, the result of facing a choice between two undesirable possibilities, neither of which has any positive qualities."
+                },
+                {
+                    chapter: 0,
+                    term: "compromise",
+                    definition: "Deciding on a more realistic solution or goal when an ideal solution or goal is not practical."
+                },
+                {
+                    chapter: 0,
+                    term: "conflict",
+                    definition: "Simultaneous existence of incompatible demands, opportunities, needs, or goals."
+                },
+                {
+                    chapter: 0,
+                    term: "confrontation",
+                    definition: "Acknowledging a stressful situation directly and attempting to find a solution to the problem or to attain the difficult goal."
+                },
+                {
+                    chapter: 0,
+                    term: "defense mechanisms",
+                    definition: "Self-deceptive techniques for reducing stress, including denial, repression, projection, identification, regression, intellectualization, reaction formation, displacement, and sublimation."
+                },
+                {
+                    chapter: 0,
+                    term: "denial",
+                    definition: "Refusal to acknowledge a painful or threatening reality."
+                },
+                {
+                    chapter: 0,
+                    term: "displacement",
+                    definition: "Shifting repressed motives and emotions from an original object to a substitute object."
+                },
+                {
+                    chapter: 0,
+                    term: "frustration",
+                    definition: "The feeling that occurs when a person is prevented from reaching a goal."
+                },
+                {
+                    chapter: 0,
+                    term: "general adaptation syndrome (GAS)",
+                    definition: "According to Selye, the three stages the body passes through as it adapts to stress: alarm reaction, resistance, and exhaustion."
+                },
+                {
+                    chapter: 0,
+                    term: "health psychology",
+                    definition: "A subfield of psychology concerned with the relationship between psychological factors and physical health and illness."
+                },
+                {
+                    chapter: 0,
+                    term: "identification",
+                    definition: "Taking on the characteristics of someone else to avoid feeling incompetent."
+                },
+                {
+                    chapter: 0,
+                    term: "intellectualization",
+                    definition: "Thinking abstractly about stressful problems as a way of detaching oneself from them."
+                },
+                {
+                    chapter: 0,
+                    term: "posttraumatic growth (PTG)",
+                    definition: "Positive personal growth that may follow an extremely stressful event."
+                },
+                {
+                    chapter: 0,
+                    term: "posttraumatic stress disorder (PTSD)",
+                    definition: "Psychological disorder characterized by episodes of anxiety, sleeplessness, and nightmares resulting from some disturbing past event."
+                },
+                {
+                    chapter: 0,
+                    term: "pressure",
+                    definition: "A feeling that one must speed up, intensify, or change the direction of one’s behavior or live up to a higher standard of performance."
+                },
+                {
+                    chapter: 0,
+                    term: "projection",
+                    definition: "Attributing one’s repressed motives, feelings, or wishes to others."
+                },
+                {
+                    chapter: 0,
+                    term: "psychoneuroimmunology (PNI)",
+                    definition: "A new field that studies the interaction between stress on the one hand and immune, endocrine, and nervous system activity on the other."
+                },
+                {
+                    chapter: 0,
+                    term: "reaction formation",
+                    definition: "Expression of exaggerated ideas and emotions that are the opposite of one’s repressed beliefs or feelings."
+                },
+                {
+                    chapter: 0,
+                    term: "regression",
+                    definition: "Reverting to childlike behavior and defenses."
+                },
+                {
+                    chapter: 0,
+                    term: "repression",
+                    definition: "Excluding uncomfortable thoughts, feelings, and desires from consciousness."
+                },
+                {
+                    chapter: 0,
+                    term: "stress",
+                    definition: "A state of psychological tension or strain."
+                },
+                {
+                    chapter: 0,
+                    term: "stressor",
+                    definition: "Any environmental demand that creates a state of tension or threat and requires change or adaptation."
+                },
+                {
+                    chapter: 0,
+                    term: "sublimation",
+                    definition: "Redirecting repressed motives and feelings into more socially acceptable channels."
+                },
+                {
+                    chapter: 0,
+                    term: "withdrawal",
+                    definition: "Avoiding a situation when other forms of coping are not practical."
+                }
+            ]
+        });
+    })
+</script>
+
+</body>
+</html>

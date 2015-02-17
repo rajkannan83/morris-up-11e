@@ -1,0 +1,255 @@
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 2em;
+    -webkit-margin-start: 10px;
+    -webkit-margin-end: 10px;
+}
+.MetrodigiWidget h2 {
+    display: block;
+    font-size: 1em;
+    -webkit-margin-after: 2em;
+    -webkit-margin-end: 10px;
+    font-weight: normal;
+    line-height: 1.3em;
+}
+.MetrodigiWidget header.widget-header {
+    height: 86px;
+}
+
+.MetrodigiWidget section.widget-body{
+    height: 364px;
+    padding-top: 60px;
+}
+.imgdesc {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.widget-body {
+    height: 450px;
+    overflow: hidden;
+}
+.panel  {
+    display: none;
+}
+.center {
+    position: relative;
+    margin: 0 auto;
+    width: 570px;
+    height: 320px;
+}
+#lefteye {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    background-image: url('../images/reyeball.png');
+    background-repeat: no-repeat;
+}
+#boxes {
+    width: 150px;
+    height: 275px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+#rightboxwrapper , #leftboxwrapper {
+    position: relative;
+    height: 50px;
+}
+#boxes .dynamic-object {
+    display: block;
+    position: absolute;
+}
+#boxes .outside {
+    width: 37px;
+    height: 37px;
+    bottom: 13px;
+    right: 104px;
+    background: url(../images/cubeview-left-back.png) no-repeat scroll 0 0 transparent;
+}
+#boxes .inside {
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    right: 0;
+    background-color: #c82506;
+}
+#boxes #rightboxwrapper .outside {
+    right: auto;
+    left: 26px;
+    background-image: url(../images/cubeview-right-back.png);
+    background-position: top right;
+}
+#boxes #rightboxwrapper .inside {
+    right: auto;
+    left: 0;
+}
+#eyes {
+    width: 150px;
+    height: 75px;
+    position: absolute;
+    top: 230px;
+    left: 0;
+}
+#eyewrapper {
+    position: relative;
+}
+#eyewrapper img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#righteye {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 120px;
+    left: 18px;
+    background-image: url('../images/leyeball.png');
+    background-repeat: no-repeat;
+}
+#table {
+    width: 350px;
+    height: 225px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../images/table.png');
+    background-repeat: no-repeat;
+}
+#container {
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+}
+#definitions {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    line-height: 1.3em;
+}
+#definitions  p{
+    margin:0;
+    padding:0;
+}
+.slider {
+    width: 300px;
+    position: absolute;
+    top: 77px;
+    right: 40px;
+}
+.slider .knob {
+    background-image: url('../images/cube.png');
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.nav {
+    position: absolute;
+    top: 500px;
+    left: 520px;
+}
+.qa {
+    margin: 60px;
+    margin-top: 0;
+}
+.qa p.question {
+    font-size: 1em;
+}
+
+.qa p.answer {
+    display: block;
+    position: relative;
+    padding: 8px;
+    border: 1px rgb(160, 160, 160) solid;
+    background-color: #eee;
+    margin: 10px;
+    cursor: pointer;
+    width: 446px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-bottom: -13px;
+}
+.qa p.answer.selected {
+    background-color: #fec5c4;
+}
+.qa p.answer.selected._correct {
+    background-color: #c8e3b8;
+}
+.qa p.answer .xmark {
+    visibility: hidden;
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    background-image:url('../../common-images/quiz-x-mark@2x.png');
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+}
+.qa p.answer.selected .xmark {
+    visibility: visible;
+}
+.qa p.answer .checkmark {
+    visibility: hidden;
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    background-image:url('../../common-images/quiz-check-mark@2x.png');
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+}
+.qa p.answer.selected .checkmark {
+    visibility: visible;
+}
+.feedback {
+    display: inline-block;
+    padding: 2em 0.5em;
+    color: #c82606;
+}
+.feedback.correct {
+    color: #00882b;
+}
+#container[data-show="1"] .panel:nth-of-type(1) { display: block; }
+#container[data-show="2"] .panel:nth-of-type(2) { display: block; }
+#container[data-show="3"] .panel:nth-of-type(3) { display: block; }
+#container[data-show="4"] .panel:nth-of-type(4) { display: block; }
+
+.widget-footer button[disabled]{
+    display: none !important;
+}
+
+.MetrodigiWidget section.widget-body .feedback{
+    position: static;
+}
+#container .instruction{
+    display: none;
+    position: absolute;
+top: 0;
+}
+#container[data-show="1"] header.widget-header .notes .note[data-state="1"],
+#container[data-show="1"] .instruction[data-state="1"],
+#container[data-show="2"] .instruction[data-state="2"]{
+    display: block;
+}
+#container[data-show="2"] .instruction[data-state="2"]{
+    top: -70px;
+}
+
+.widget-footer button[disabled].visible{
+    display: inline-block !important;
+}
+.note.result{
+    font-family:"HelveticaNeueETW01-75Bd", sans-serif;
+    font-weight:700;
+    position: absolute;
+    padding: 15px;
+    top: 401px;	
+}

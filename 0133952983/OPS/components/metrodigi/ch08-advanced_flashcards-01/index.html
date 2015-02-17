@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+    <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="container has-instructions">
+
+    <div class="Flashcards">
+
+        <nav class="main-nav">
+            <button tabindex="0" class="current-chapter-cards"></button>
+            <button tabindex="0" class="all-chapters-cards"></button>
+            <div class="right-helper">
+                <button tabindex="0" class="flip right">Flip Cards</button>
+                <button tabindex="0" class="restart right">Start Over</button>
+            </div>
+        </nav>
+
+        <section class="cards">
+
+            <div class="end-screen">
+                <div class="content-wrapper">
+                    <h2>All done!</h2>
+                    <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                    <ul class="repeated-cards"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+            <button tabindex="0" class="skip right">Skip</button>
+        </nav>
+
+    </div>
+
+</div> <!-- container -->
+
+<script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+<script type="text/javascript">
+
+    window.addEvent('domready', function() {
+        // Widget initialization
+        window.widget_instance = new Flashcards({
+            container: $$('.Flashcards')[0],
+            currentChapter: 0, displayCurrentChapterButton: false,
+            cards: [
+                {
+                    chapter: 0,
+                    term: "algorithm",
+                    definition: "A step-by-step method of problem solving that guarantees a correct solution."
+                },
+                {
+                    chapter: 0,
+                    term: "availability",
+                    definition: "A heuristic by which a judgment or decision is based on information that is most easily retrieved from memory."
+                },
+                {
+                    chapter: 0,
+                    term: "brainstorming",
+                    definition: "A problem-solving strategy in which an individual or a group produces numerous ideas and evaluates them only after all ideas have been collected."
+                },
+                {
+                    chapter: 0,
+                    term: "cognition",
+                    definition: "The processes whereby we acquire and use knowledge."
+                },
+                {
+                    chapter: 0,
+                    term: "compensatory model",
+                    definition: "A rational decision-making model in which choices are systematically evaluated on various criteria."
+                },
+                {
+                    chapter: 0,
+                    term: "concepts",
+                    definition: "Mental categories for classifying objects, people, or experiences."
+                },
+                {
+                    chapter: 0,
+                    term: "confirmation bias",
+                    definition: "The tendency to look for evidence in support of a belief and to ignore evidence that would disprove a belief."
+                },
+                {
+                    chapter: 0,
+                    term: "content validity",
+                    definition: "Refers to a test’s having an adequate sample of questions measuring the skills or knowledge it is supposed to measure."
+                },
+                {
+                    chapter: 0,
+                    term: "convergent thinking",
+                    definition: "Thinking that is directed toward one correct solution to a problem."
+                },
+                {
+                    chapter: 0,
+                    term: "correlation coefficients",
+                    definition: "Statistical measures of the degree of association between two variables."
+                },
+                {
+                    chapter: 0,
+                    term: "counterfactual thinking",
+                    definition: "Thinking about alternative realities and things that never happened."
+                },
+                {
+                    chapter: 0,
+                    term: "creativity",
+                    definition: "The ability to produce novel and socially valued ideas or objects"
+                },
+                {
+                    chapter: 0,
+                    term: "criterion-related validity",
+                    definition: "Validity of a test as measured by a comparison of the test score and independent measures of what the test is designed to measure."
+                },
+                {
+                    chapter: 0,
+                    term: "culture-fair tests",
+                    definition: "Intelligence tests designed to eliminate cultural bias by minimizing skills and values that vary from one culture to another."
+                },
+                {
+                    chapter: 0,
+                    term: "divergent thinking",
+                    definition: "Thinking that meets the criteria of originality, inventiveness, and flexibility."
+                },
+                {
+                    chapter: 0,
+                    term: "emotional intelligence",
+                    definition: "According to Goleman, a form of intelligence that refers to how effectively people perceive and understand their own emotions and the emotions of others, and can regulate and manage their emotional behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "framing",
+                    definition: "The perspective from which we interpret information before making a decision."
+                },
+                {
+                    chapter: 0,
+                    term: "functional fixedness",
+                    definition: "The tendency to perceive only a limited number of uses for an object, thus interfering with the process of problem solving."
+                },
+                {
+                    chapter: 0,
+                    term: "giftedness",
+                    definition: "Refers to superior IQ combined with demonstrated or potential ability in such areas as academic aptitude, creativity, and leadership."
+                },
+                {
+                    chapter: 0,
+                    term: "grammar",
+                    definition: "The language rules that determine how sounds and words can be combined and used to communicate meaning within a language."
+                },
+                {
+                    chapter: 0,
+                    term: "group tests",
+                    definition: "Written intelligence tests administered by one examiner to many people at one time."
+                },
+                {
+                    chapter: 0,
+                    term: "heuristics",
+                    definition: "Rules of thumb that help in simplifying and solving problems, although they do not guarantee a correct solution."
+                },
+                {
+                    chapter: 0,
+                    term: "hill climbing",
+                    definition: "A heuristic, problem-solving strategy in which each step moves you progressively closer to the final goal."
+                },
+                {
+                    chapter: 0,
+                    term: "hindsight bias",
+                    definition: "The tendency to see outcomes as inevitable and predictable after we know the outcome."
+                },
+                {
+                    chapter: 0,
+                    term: "image",
+                    definition: "A mental representation of a sensory experience."
+                },
+                {
+                    chapter: 0,
+                    term: "intellectual disability",
+                    definition: "Condition of significantly subaverage intelligence combined with deficiencies in adaptive behavior, originating during the developmental period."
+                },
+                {
+                    chapter: 0,
+                    term: "intelligence",
+                    definition: "A general term referring to the ability or abilities involved in learning and adaptive behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "intelligence quotient (IQ)",
+                    definition: "A numerical value given to intelligence that is determined from the scores on an intelligence test on the basis of a score of 100 for average intelligence."
+                },
+                {
+                    chapter: 0,
+                    term: "language",
+                    definition: "A flexible system of communication that uses sounds, rules, gestures, or symbols to convey information."
+                },
+                {
+                    chapter: 0,
+                    term: "linguistic determinism",
+                    definition: "The belief that thought and experience are determined by language."
+                },
+                {
+                    chapter: 0,
+                    term: "linguistic relativity hypothesis",
+                    definition: "Whorf’s idea that patterns of thinking are determined by the specific language one speaks."
+                },
+                {
+                    chapter: 0,
+                    term: "means-end analysis",
+                    definition: "A heuristic strategy that aims to reduce the discrepancy between the current situation and the desired goal at a number of intermediate points."
+                },
+                {
+                    chapter: 0,
+                    term: "mental set",
+                    definition: "The tendency to perceive and to approach problems in certain ways."
+                },
+                {
+                    chapter: 0,
+                    term: "morphemes",
+                    definition: "The smallest meaningful units of speech, such as simple words, prefixes, and suffixes."
+                },
+                {
+                    chapter: 0,
+                    term: "performance tests",
+                    definition: "Intelligence tests that minimize the use of language."
+                },
+                {
+                    chapter: 0,
+                    term: "phonemes",
+                    definition: "The basic sounds that make up any language."
+                },
+                {
+                    chapter: 0,
+                    term: "problem representation",
+                    definition: "The first step in solving a problem; it involves interpreting or defining the problem."
+                },
+                {
+                    chapter: 0,
+                    term: "prototype (or model)",
+                    definition: "According to Rosch, a mental model containing the most typical features of a concept."
+                },
+                {
+                    chapter: 0,
+                    term: "reliability",
+                    definition: "Ability of a test to produce consistent and stable scores."
+                },
+                {
+                    chapter: 0,
+                    term: "representativeness",
+                    definition: "A heuristic by which a new situation is judged on the basis of its resemblance to a stereotypical model."
+                },
+                {
+                    chapter: 0,
+                    term: "signs",
+                    definition: "Stereotyped communications about an animal’s current state."
+                },
+                {
+                    chapter: 0,
+                    term: "split-half reliability",
+                    definition: "A method of determining test reliability by dividing the test into two parts and checking the agreement of scores on both parts."
+                },
+                {
+                    chapter: 0,
+                    term: "subgoals",
+                    definition: "Intermediate, more manageable goals used in one heuristic strategy to make it easier to reach the final goal."
+                },
+                {
+                    chapter: 0,
+                    term: "theory of multiple intelligences",
+                    definition: "Howard Gardner’s theory that there is not one intelligence, but rather many intelligences, each of which is relatively independent of the others."
+                },
+                {
+                    chapter: 0,
+                    term: "triarchic theory of intelligence",
+                    definition: "Sternberg’s theory that intelligence involves mental skills (analytical intelligence), insight and creative adaptability (creative intelligence), and environmental responsiveness (practical intelligence)."
+                },
+                {
+                    chapter: 0,
+                    term: "validity",
+                    definition: "Ability of a test to measure what it has been designed to measure."
+                },
+                {
+                    chapter: 0,
+                    term: "Wechsler Adult Intelligence Scale—Fourth Edition (WAIS-IV)",
+                    definition: "An individual intelligence test developed especially for adults."
+                },
+                {
+                    chapter: 0,
+                    term: "Wechsler Intelligence Scale for Children—Fourth Edition (WISC-IV)",
+                    definition: "An individual intelligence test developed especially for school-age children."
+                },
+                {
+                    chapter: 0,
+                    term: "working backward",
+                    definition: "A heuristic strategy in which one works backward from the desired goal to the given conditions."
+                }
+            ]
+        });
+    })
+</script>
+
+</body>
+</html>

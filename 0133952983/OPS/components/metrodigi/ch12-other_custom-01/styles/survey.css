@@ -1,0 +1,349 @@
+/* Poe eBook Framework
+ Copyright 2011-2014 Metrodigi, Inc. All rights reserved. */
+
+html,
+body {
+	margin: 0px !important;
+	overflow: hidden;
+}
+.Survey {
+	position: relative;
+	line-height: 1.4em;
+}
+
+
+
+.Survey .widget-content {
+	z-index: 1;
+}
+
+.Survey nav {
+	position: relative;
+	height: 33px;
+}
+.Survey nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none outside none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 33px;
+	overflow: hidden;
+}
+.Survey nav li {
+	width: 33.33%;
+	font-size: 13px;
+	line-height: 15px;
+	height: 100%;
+	display: block;
+	float: left;
+	text-align: center;
+	padding-top: 10px;
+	box-sizing: border-box;
+	-mox-box-sizing: border-box;
+	position: relative;
+	background-color: #a0a0a0;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.Survey nav li.active {
+	background-color: #e5e5e5;
+}
+.Survey nav li:after,
+.Survey nav li:before {
+	content: ' ';
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: -14px;
+	right: 2px;
+	z-index: 100;
+	border-width: 30px 0 30px 21px;
+	border-style: solid;
+	border-color: transparent transparent transparent #a0a0a0;
+}
+.Survey nav li.active:after,
+.Survey nav li.active:before {
+	border-color: transparent transparent transparent #e5e5e5;
+}
+.Survey nav li:before {
+	left: 101.77%;
+	border-color: transparent transparent transparent #ffffff;
+}
+.Survey nav li.active:before {
+	left: 101.37%;
+	border-color: transparent transparent transparent #ffffff;
+}
+.Survey nav li:after {
+	left: 99.76%;
+	border-color: transparent transparent transparent #a0a0a0;
+}
+.Survey nav li.active:first-child:after {
+	left: 99.06%%;
+}
+
+
+.Survey article {
+	display: none;
+	padding: 15px;
+	height: 433px;
+}
+.Survey article.active {
+	display: block;
+}
+.Survey article.question,
+.Survey article .bigger {
+	font-size: 1em;
+	line-height: 1.4em;
+}
+.Survey article button {
+	font-size: 0.9em;
+}
+.Survey article p {
+	margin: 0 0 7px;
+	font-size: 14px;
+	line-height: 1.4em;
+}
+.Survey article img {
+	float: right;
+	max-width: 260px;
+	margin-left: 1.5em;
+}
+.Survey article ul {
+	padding: 0;
+	font-size: 1em;
+}
+.Survey article ol {
+	padding: 0 0 0 20px
+}
+.Survey article ul li {
+	list-style: none;
+}
+.Survey article .correct .answer-type {
+	color: #94C873;
+}
+.Survey article .incorrect .answer-type {
+	color: red;
+}
+.Survey article .incorrect-prefix {
+	display: none;
+}
+.Survey article .incorrect .incorrect-prefix {
+	display: inline;
+}
+.Survey label {
+	cursor: pointer;
+/*	display: block;*/
+	line-height: 1.1em;
+	margin-left: 20px;
+	padding-bottom: 10px;
+}
+.Survey input {
+	cursor: pointer;
+	margin-left: -19px;
+	display: inline-block;
+}
+
+.Survey .overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: 100;
+}
+.Survey .overlay .word {
+	display: none;
+	position: absolute;
+	top: 28%;
+	left: 50%;
+	width: 54%;
+	height: 44%;
+	margin-left: -27%;
+	background-color: #fff;
+	line-height: 6.6em;
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
+}
+.Survey .response {
+	width: 40%;
+	font-size: 0.9em;
+	line-height: 1.2em;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.Survey .results-question {
+	background-color: #eeeeee;
+	font-size: 0.9em;
+	padding-bottom: 0px;
+	padding-top: 5px;
+}
+.Survey .results-question span{
+	float: left;
+	margin-right: 5px;
+	line-height: 30px;
+	margin-left: 11px;
+	display: table-cell;
+}
+.Survey .results-question p{
+	padding-left: 5px;
+	display: table-cell;
+	padding-top: 5px;
+	padding-bottom: 6px;
+}
+.Survey .results-question p + p{
+	display:none;
+}
+.Survey .first-column-header {
+	border-bottom: solid 1px #eeeeee;
+	font-size: 0.9em;
+	line-height: 1.8em;
+	text-align:left;
+}
+.Survey .first-column-header + th{
+	border-bottom: solid 1px #eeeeee;
+}
+.Survey .last-column-header {
+	width: 20%;
+	border-bottom: solid 1px #eeeeee;
+	font-size: 0.9em;
+	line-height: 1.8em;
+	text-align: left;
+}
+.Survey .percentage {
+	width: 20%;
+}
+
+.Survey .spacer {
+	background-color: #fff;
+	height: 10px;
+	border: 0;
+}
+
+.Survey button {
+	font-family: "HelveticaNeueETW01-55Rg" , sans-serif;
+	text-align: center;
+	background: linear-gradient(#fcfcfc, #f1f1f1);
+	border-radius: 4px;
+	height: 30px;
+	border: 1px solid #c0c0c0;
+	padding: 0.3em 2.1em 0.3em;
+	font-size: 13px;
+	margin: 5px 11px 0 0;
+	cursor: pointer;
+}
+
+.Survey footer {
+	clear: both;
+	height: 40px;
+	background-color: #e3e3e3;
+	font-size: 1.1em;
+}
+.Survey footer button {
+	float: right;
+}
+.Survey footer button.next,
+.Survey footer button.previous {
+	width: 8.5em;
+	padding: 0.3em 0 0.3em;
+}
+.Survey footer .status {
+	float: left;
+	display: block;
+	padding: 0.7em 1em;
+	font-family: "HelveticaNeueETW01-55Rg" , sans-serif;
+	font-size: 0.75em;
+}
+.question{
+height: 85%;
+overflow-y: scroll !important;
+}
+
+.slide-results{
+	height: 85%;
+
+}
+
+.scroll {
+	overflow-y: scroll !important;
+}
+
+.chart td {
+	border-bottom: solid 1px #eeeeee;
+	font-family: "HelveticaNeueETW01-55Rg" , sans-serif;
+}
+
+ul.question-select li {
+	min-height: 25px;
+	margin-left: 20px;
+	display:table-row;
+}
+
+.Survey label {
+    font-size: 14px;
+	padding-left: 10px;
+	text-indent: -15px;
+	display:table-cell;
+}
+.Survey ul.question-select label {
+	padding-left: 10px;
+	text-indent: 0px;
+	display: table-cell;
+}
+.Survey input {
+	width: 13px;
+	height: 13px;
+	padding: 0;
+	margin:0;
+	position: relative;
+	top: 1px;
+	overflow: hidden;
+}
+.Survey p span.keyword{
+	display: block;
+	height: 31px;
+	line-height: 41px;
+}
+/*
+.Survey p:focus , table#optionstable td  {
+    outline: none;
+}
+*/
+.Survey .offscreen {
+	display:block;
+	position: absolute;
+	clip: rect(1px1px1px1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	z-index: -1000;
+}
+
+.Survey nav li button{
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  height: auto;
+  text-transform: uppercase;
+}
+
+.Survey article ul li button{
+  padding: 0;
+  margin: 0;
+  height: auto;
+  text-align: left;
+  color: inherit;
+  border: none;
+  background: none;
+  padding: 5px;
+}
+.Survey *{outline:none!important;}

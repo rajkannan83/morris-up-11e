@@ -1,0 +1,319 @@
+#playground-container {
+  padding-top: 15px;
+  position: relative;
+  margin: 0px auto;
+  width: 670px;
+}
+
+.checkBox span{
+  display: block;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+  height: 30px;
+  color: #ffffff;
+  padding: 4px;
+}
+.selected .checkBox span > i.fa-check {
+  display: inline;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.checkBox span > i.fa-check {
+  display: none;
+}
+
+#schedules-chart #controls {
+  display: inline-block;
+  width: 250px;
+  position: absolute;
+  top: 125px;
+  padding-left: 30px;
+}
+
+#infoWrapper{
+  display: inline-block;
+  position: absolute;
+  width: 131px;
+  right: 5px;
+  top: 100px;
+}
+#infoWrapper span.popup{
+  width: 131px;
+  position: absolute;
+  border: solid 1px rgb(216, 218, 218); 
+  border-radius: 5%;
+  background: #FBFBFB;
+  padding: 10px;
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+  z-index: 1;
+  font-size: 12px;
+  line-height: 15px;
+}
+#schedules-chart #controls .fa-info-circle{
+  font-size: 14px;
+  color: #a3a3a3;
+}
+
+.table-icon {
+  width: 25px;
+  height: 25px;
+  background-size:25px 25px;
+  background-position: 0% 100%;
+  background-repeat:no-repeat;
+}
+
+.table-icon.icon-1 {
+  background-image:url(../images/fixed_interval.png);
+}
+.table-icon.icon-2 {
+  background-image:url(../images/variable_interval.png);
+}
+.table-icon.icon-3 {
+  background-image:url(../images/fixed_ratio.png);
+}
+.table-icon.icon-4 {
+  background-image:url(../images/variable_ratio.png);
+}
+
+#schedules-chart #view {
+  position: relative;
+  height: 417px;
+  width: 324px;
+  display: inline-block;
+}
+
+#schedules-chart #labels {
+  position: absolute;
+  width: 270px;
+  height: 375px;
+  left: 48px;
+  bottom: 45px;
+  border: 2px solid #000;
+  background-color: white;
+}
+
+#schedules-chart .frame {
+  position: absolute;
+  bottom: 47px;
+  left: 22px;
+}
+
+#schedules-chart #sch-time {
+  position: absolute;
+  top: 380px;
+  left: 158px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#schedules-chart #resp {
+  position: absolute;
+  top: 181px;
+  left: -75px;
+  font-size: 14px;
+  -webkit-transform:rotate(-90deg);
+  -moz-transform:rotate(-90deg);
+  -ms-transform:rotate(-90deg);
+  -o-transform:rotate(-90deg);
+  transform:rotate(-90deg);
+  letter-spacing: 1px;
+}
+
+#schedules-chart .frame-bg {
+  background-size:297px 387px;
+  background-position: 0% 100%;
+  background-repeat:no-repeat;
+  width:297px;height:373px;
+}
+
+#schedules-chart .frame-1 {
+	background:url(../images/chart1-1.png);
+  background-size:297px 423px;
+  background-position: 0% 100%;
+  background-repeat:no-repeat;
+}
+
+#schedules-chart .frame-2 {
+	background:url(../images/chart1-2.png);
+  background-size:297px 423px;
+  background-position: 0% 100%;
+  background-repeat:no-repeat;
+  width: 0;
+  height: 0;
+}
+
+#schedules-chart .frame-3 {
+	background:url(../images/chart1-3.png);
+	background-size:297px 423px;
+	background-position: 0% 100%;
+	background-repeat:no-repeat;
+	width: 0;
+	height: 0;
+}
+
+#schedules-chart .frame-4 {
+  background:url(../images/chart1-4.png);
+  background-size:297px 423px;
+  background-position: 0% 100%;
+  background-repeat:no-repeat;
+  width: 0;
+  height: 0;
+}
+
+
+
+.txt {
+  padding: 8px 0px;
+  vertical-align: bottom;
+  font-size: 0.95em;
+  cursor: pointer;
+}
+label {
+  cursor: pointer;
+}
+#view .frame-1.selected {
+  width:297px;height:372px;
+  -webkit-animation:expand 1s ease-out backwards;
+  -moz-animation:expand 1s ease-out backwards;
+  -ms-animation:expand 1s ease-out backwards;
+  -o-animation:expand 1s ease-out backwards;
+  animation:expand 1s ease-out backwards;
+}
+
+#view .frame-2.selected {
+  width:297px;height:372px;
+  -webkit-animation:expand 1s ease-out backwards;
+  -moz-animation:expand 1s ease-out backwards;
+  -ms-animation:expand 1s ease-out backwards;
+  -o-animation:expand 1s ease-out backwards;
+  animation:expand 1s ease-out backwards;
+}
+
+#view .frame-3.selected {
+  width:297px;height:372px;
+  -webkit-animation:expand 1s ease-out backwards;
+  -moz-animation:expand 1s ease-out backwards;
+  -ms-animation:expand 1s ease-out backwards;
+  -o-animation:expand 1s ease-out backwards;
+  animation:expand 1s ease-out backwards;
+}
+
+#view .frame-4.selected {
+  width:297px;height:372px;
+  -webkit-animation:expand 1s ease-out backwards;
+  -moz-animation:expand 1s ease-out backwards;
+  -ms-animation:expand 1s ease-out backwards;
+  -o-animation:expand 1s ease-out backwards;
+  animation:expand 1s ease-out backwards;
+}
+
+#view .frame-1{
+  width:297px;height:423px;
+  -webkit-animation:retract 1s ease-out forwards;
+  -moz-animation:retract 1s ease-out forwards;
+  -ms-animation:retract 1s ease-out forwards;
+  -o-animation:retract 1s ease-out forwards;
+  animation:retract 1s ease-out forwards;
+}
+
+#view .frame-2{
+  width:297px;height:423px;
+  -webkit-animation:retract 1s ease-out forwards;
+  -moz-animation:retract 1s ease-out forwards;
+  -ms-animation:retract 1s ease-out forwards;
+  -o-animation:retract 1s ease-out forwards;
+  animation:retract 1s ease-out forwards;
+}
+
+#view .frame-3{
+  width:297px;height:423px;
+  -webkit-animation:retract 1s ease-out forwards;
+  -moz-animation:retract 1s ease-out forwards;
+  -ms-animation:retract 1s ease-out forwards;
+  -o-animation:retract 1s ease-out forwards;
+  animation:retract 1s ease-out forwards;
+}
+
+#view .frame-4{
+  width:297px;height:423px;
+  -webkit-animation:retract 1s ease-out forwards;
+  -moz-animation:retract 1s ease-out forwards;
+  -ms-animation:retract 1s ease-out forwards;
+  -o-animation:retract 1s ease-out forwards;
+  animation:retract 1s ease-out forwards;
+}
+
+.temp-hide {
+  -webkit-animation:temp-hide 1s;
+  -moz-animation:temp-hide 1s;
+  -ms-animation:temp-hide 1s;
+  -o-animation:temp-hide 1s;
+  animation:temp-hide 1s;
+}
+
+@-webkit-keyframes expand {
+  0% { width:0px; height: 0px;}
+  100% { width:297px;height:423px;}
+}
+
+@-moz-keyframes expand{
+  0% { width:0px; height: 0px;}
+  100% { width:297px;height:423px;}
+}
+
+@keyframes expand {
+  0% { width:0px; height: 0px;}
+  100% { width:297px;height:423px;}
+}
+
+@-webkit-keyframes retract {
+  0% { width:297px;height:423px;}
+  100% { width:0px; height: 0px;}
+}
+
+@-moz-keyframes retract{
+  0% { width:297px;height:423px;}
+  100% { width:0px; height: 0px;}
+}
+
+@keyframes {
+  0% { width:297px;height:423px;}
+  100% { width:0px; height: 0px;}
+}
+
+@-webkit-keyframes temp-hide {
+  0% { opacity: 0;}
+  99% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@-moz-keyframes temp-hide{
+  0% { opacity: 0;}
+  99% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@keyframes temp-hide {
+  0% { opacity: 0;}
+  99% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+.offscreen {
+  display:block;
+  position: absolute;
+  clip: rect(1px1px1px1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  z-index: -1000;
+}
+
+#description {
+  display: none;
+}

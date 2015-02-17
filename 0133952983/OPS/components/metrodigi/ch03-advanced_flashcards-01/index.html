@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+  <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+  <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+   <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="Flashcards">
+
+            <nav class="main-nav">
+                <button tabindex="0" class="current-chapter-cards"></button>
+                <button tabindex="0" class="all-chapters-cards"></button>
+                <div class="right-helper">
+                    <button tabindex="0" class="flip right">Flip Cards</button>
+                    <button tabindex="0" class="restart right">Start Over</button>
+                </div>
+            </nav>
+
+            <section class="cards">
+
+                <div class="end-screen">
+                    <div class="content-wrapper">
+                        <h2>All done!</h2>
+                        <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                        <ul class="repeated-cards"></ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+                <button tabindex="0" class="skip right">Skip</button>
+            </nav>
+
+        </div>
+
+    </div> <!-- container -->
+
+    <script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+    <script type="text/javascript">
+
+        window.addEvent('domready', function() {
+            // Widget initialization
+            window.widget_instance = new Flashcards({
+                container: $$('.Flashcards')[0],
+                currentchapter: 1, displayCurrentChapterButton: false,
+                cards: [
+                    {
+                        chapter: 1,
+                        term: "adoption studies",
+                        definition: "Research carried out on children, adopted at birth by parents not related to them, to determine the relative influence of heredity and environment on human behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "adrenal glands",
+                        definition: "Two endocrine glands located just above the kidneys."
+                    },
+                    {
+                        chapter: 1,
+                        term: "all-or-none law",
+                        definition: "Principle that the action potential in a neuron does not vary in strength; either the neuron fires at full strength, or it does not fire at all."
+                    },
+                    {
+                        chapter: 1,
+                        term: "amygdala",
+                        definition: "A limbic system structure involved in governing emotions and establishing emotional memories."
+                    },
+                    {
+                        chapter: 1,
+                        term: "aphasias",
+                        definition: "Impairments of the ability to use (expressive aphasia) or understand (receptive aphasia) language that usually results from brain damage."
+                    },
+                    {
+                        chapter: 1,
+                        term: "association areas",
+                        definition: "Areas of the cerebral cortex where incoming messages from the separate senses are combined into meaningful impressions and outgoing messages from the motor areas are integrated."
+                    },
+                    {
+                        chapter: 1,
+                        term: "autonomic nervous system",
+                        definition: "The part of the peripheral nervous system that carries messages between the central nervous system and the internal organs."
+                    },
+                    {
+                        chapter: 1,
+                        term: "axon",
+                        definition: "Single long fiber extending from the cell body; it carries outgoing messages."
+                    },
+                    {
+                        chapter: 1,
+                        term: "behavior genetics",
+                        definition: "Study of the relationship between heredity and behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "central nervous system (CNS)",
+                        definition: "Division of the nervous system that consists of the brain and spinal cord."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cerebellum",
+                        definition: "Structure in the hindbrain that controls certain reflexes and coordinates the body’s movements."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cerebral cortex",
+                        definition: "The outer surface of the two cerebral hemispheres that regulates most complex behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cerebrum",
+                        definition: "The main portion of the brain, occupying the upper part of the cranial cavity."
+                    },
+                    {
+                        chapter: 1,
+                        term: "chromosomes",
+                        definition: "Pairs of threadlike bodies within the cell nucleus that contain the genes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "corpus callosum",
+                        definition: "A thick band of nerve fibers connecting the left and right cerebral hemispheres."
+                    },
+                    {
+                        chapter: 1,
+                        term: "dendrites",
+                        definition: "Short fibers that branch out from the cell body and pick up incoming messages."
+                    },
+                    {
+                        chapter: 1,
+                        term: "deoxyribonucleic acid (DNA)",
+                        definition: "Complex molecule in a double-helix configuration that is the main ingredient of chromosomes and genes and that forms the code for all genetic information."
+                    },
+                    {
+                        chapter: 1,
+                        term: "dominant gene",
+                        definition: "Member of a gene pair that controls the appearance of a certain trait."
+                    },
+                    {
+                        chapter: 1,
+                        term: "endocrine glands",
+                        definition: "Glands of the endocrine system that release hormones into the bloodstream."
+                    },
+                    {
+                        chapter: 1,
+                        term: "evolutionary psychology",
+                        definition: "An approach to, and subfield of, psychology that is concerned with the evolutionary origins of behaviors and mental processes, their adaptive value, and the purposes they continue to serve."
+                    },
+                    {
+                        chapter: 1,
+                        term: "family studies",
+                        definition: "Studies of heritability in humans based on the assumption that if genes influence a certain trait, close relatives should be more similar on that trait than distant relatives."
+                    },
+                    {
+                        chapter: 1,
+                        term: "fraternal twins",
+                        definition: "Twins developed from two separate fertilized ova and therefore different in genetic makeup."
+                    },
+                    {
+                        chapter: 1,
+                        term: "frontal lobe",
+                        definition: "Part of the cerebrum that is responsible for voluntary movement; it is also important for attention, goal-directed behavior, and appropriate emotional experiences."
+                    },
+                    {
+                        chapter: 1,
+                        term: "Functional magnetic resonance imaging (fMRI)",
+                        definition: "An noninvasive imaging technique that measures the movement of blood molecules in the brain, pinpointing specific sites and details of neuronal activity."
+                    },
+                    {
+                        chapter: 1,
+                        term: "genes",
+                        definition: "Elements that control the transmission of traits; they are found on the chromosomes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "genetics",
+                        definition: "Study of how traits are transmitted from one generation to the next."
+                    },
+                    {
+                        chapter: 1,
+                        term: "genotype",
+                        definition: "An organism’s entire unique genetic makeup."
+                    },
+                    {
+                        chapter: 1,
+                        term: "glial cells (or glia)",
+                        definition: "Cells that insulate and support neurons by holding them together, provide nourishment and remove waste products, prevent harmful substances from passing into the brain, and form the myelin sheath."
+                    },
+                    {
+                        chapter: 1,
+                        term: "gonads",
+                        definition: "The reproductive glands—testes in males and ovaries in females."
+                    },
+                    {
+                        chapter: 1,
+                        term: "graded potential",
+                        definition: "A shift in the electrical charge in a tiny area of a neuron."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hindbrain",
+                        definition: "Area containing the medulla, pons, and cerebellum."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hippocampus",
+                        definition: "A limbic system structure which plays an important role in the formation of new memories."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hormones",
+                        definition: "Chemical substances released by the endocrine glands; they help regulate bodily activities."
+                    },
+                    {
+                        chapter: 1,
+                        term: "human genome",
+                        definition: "The full complement of genes within a human cell."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hypothalamus",
+                        definition: "Forebrain region that governs motivation and emotional responses."
+                    },
+                    {
+                        chapter: 1,
+                        term: "identical twins",
+                        definition: "Twins developed from a single fertilized ovum and therefore identical in genetic makeup at the time of conception."
+                    },
+                    {
+                        chapter: 1,
+                        term: "insula",
+                        definition: "An area of the brain between the parietal and temporal lobes involved in addiction and the conscious expression of emotion and desire."
+                    },
+                    {
+                        chapter: 1,
+                        term: "interneurons (or association neurons)",
+                        definition: "Neurons that carry messages from one neuron to another."
+                    },
+                    {
+                        chapter: 1,
+                        term: "ions",
+                        definition: "Electrically charged particles found both inside and outside the neuron."
+                    },
+                    {
+                        chapter: 1,
+                        term: "limbic system",
+                        definition: "Ring of structures that plays a role in learning and emotional behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "medulla",
+                        definition: "Structure in the hindbrain that controls essential life support functions including breathing, heart rate, and blood pressure."
+                    },
+                    {
+                        chapter: 1,
+                        term: "midbrain",
+                        definition: "Region between the hindbrain and the forebrain; it is important for hearing and sight, and it is one of several places in the brain where pain is registered."
+                    },
+                    {
+                        chapter: 1,
+                        term: "mirror neurons",
+                        definition: "Specialized neurons that respond when we observe others perform a behavior or express an emotion."
+                    },
+                    {
+                        chapter: 1,
+                        term: "motor (or efferent) neurons",
+                        definition: "Neurons that carry messages from the spinal cord or brain to the muscles and glands."
+                    },
+                    {
+                        chapter: 1,
+                        term: "myelin sheath",
+                        definition: "White fatty covering found on some axons."
+                    },
+                    {
+                        chapter: 1,
+                        term: "natural selection",
+                        definition: "The mechanism proposed by Darwin in his theory of evolution, which states that organisms best adapted to their environment tend to survive, transmitting their genetic characteristics to succeeding generations, whereas organisms with less adaptive characteristics tend to vanish from the earth."
+                    },
+                    {
+                        chapter: 1,
+                        term: "nerve (or tract)",
+                        definition: "Group of axons bundled together."
+                    },
+                    {
+                        chapter: 1,
+                        term: "neural impulse (or action potential)",
+                        definition: "The firing of a nerve cell."
+                    },
+                    {
+                        chapter: 1,
+                        term: "neural network",
+                        definition: "A group of neurons that are functionally connected."
+                    },
+                    {
+                        chapter: 1,
+                        term: "neural plasticity",
+                        definition: "The ability of the brain to change in response to experience."
+                    },
+                    {
+                        chapter: 1,
+                        term: "neurogenesis",
+                        definition: "The growth of new neurons."
+                    },
+                    {
+                        chapter: 1,
+                        term: "neurons",
+                        definition: "Individual cells that are the smallest unit of the nervous system."
+                    },
+                    {
+                        chapter: 1,
+                        term: "neuroscience",
+                        definition: "The study of the brain and the nervous system."
+                    },
+                    {
+                        chapter: 1,
+                        term: "neurotransmitters",
+                        definition: "Chemicals released by the synaptic vesicles that travel across the synaptic space and affect adjacent neurons."
+                    },
+                    {
+                        chapter: 1,
+                        term: "occipital lobe",
+                        definition: "Part of the cerebrum that receives and interprets visual information."
+                    },
+                    {
+                        chapter: 1,
+                        term: "pancreas",
+                        definition: "Organ lying between the stomach and small intestine; it secretes insulin and glucagon to regulate blood-sugar levels."
+                    },
+                    {
+                        chapter: 1,
+                        term: "parasympathetic division",
+                        definition: "Branch of the autonomic nervous system; it calms and relaxes the body."
+                    },
+                    {
+                        chapter: 1,
+                        term: "parathyroids",
+                        definition: "Four tiny glands embedded in the thyroid."
+                    },
+                    {
+                        chapter: 1,
+                        term: "parietal lobe",
+                        definition: "Part of the cerebrum that receives sensory information from throughout the body."
+                    },
+                    {
+                        chapter: 1,
+                        term: "peripheral nervous system (PNS)",
+                        definition: "Division of the nervous system that connects the central nervous system to the rest of the body."
+                    },
+                    {
+                        chapter: 1,
+                        term: "phenotype",
+                        definition: "The characteristics of an organism; determined by both genetics and experience."
+                    },
+                    {
+                        chapter: 1,
+                        term: "pineal gland",
+                        definition: "A gland located roughly in the center of the brain that appears to regulate activity levels over the course of a day."
+                    },
+                    {
+                        chapter: 1,
+                        term: "pituitary gland",
+                        definition: "Gland located on the underside of the brain; it produces the largest number of the body’s hormones."
+                    },
+                    {
+                        chapter: 1,
+                        term: "polarization",
+                        definition: "Shift in attitudes by members of a group toward more extreme positions than the ones held before group discussion."
+                    },
+                    {
+                        chapter: 1,
+                        term: "polarization",
+                        definition: "The condition of a neuron when the inside is negatively charged relative to the outside; for example, when the neuron is at rest."
+                    },
+                    {
+                        chapter: 1,
+                        term: "polygenic inheritance",
+                        definition: "Process by which several genes interact to produce a certain trait; responsible for our most important traits."
+                    },
+                    {
+                        chapter: 1,
+                        term: "pons",
+                        definition: "Structure in the midbrain that regulates sleep and wake cycles."
+                    },
+                    {
+                        chapter: 1,
+                        term: "prefrontal cortex",
+                        definition: "The forward-most region of the frontal lobe involved in impulse control, judgment, and conscious awareness."
+                    },
+                    {
+                        chapter: 1,
+                        term: "primary motor cortex",
+                        definition: "The section of the frontal lobe responsible for voluntary movement."
+                    },
+                    {
+                        chapter: 1,
+                        term: "primary somatosensory cortex",
+                        definition: "Area of the parietal lobe where messages from the sense receptors are registered."
+                    },
+                    {
+                        chapter: 1,
+                        term: "psychobiology",
+                        definition: "The area of psychology that focuses on the biological foundations of behavior and mental processes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "receptor sites",
+                        definition: "Locations on a receptor neuron into which a specific neurotransmitter fits like a key into a lock."
+                    },
+                    {
+                        chapter: 1,
+                        term: "recessive gene",
+                        definition: "Member of a gene pair that can control the appearance of a certain trait only if it is paired with another recessive gene."
+                    },
+                    {
+                        chapter: 1,
+                        term: "resting potential",
+                        definition: "Electrical charge across a neuron membrane resulting from more positive ions concentrated on the outside and more negative ions on the inside."
+                    },
+                    {
+                        chapter: 1,
+                        term: "reticular formation (RF)",
+                        definition: "Network of neurons in the hindbrain, the midbrain, and part of the forebrain, whose primary function is to alert and arouse the higher parts of the brain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "selection studies",
+                        definition: "Studies that estimate the heritability of a trait by breeding animals with other animals that have the same trait."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sensory (or afferent) neurons",
+                        definition: "Neurons that carry messages from sense organs to the spinal cord or brain."
+                    },
+                    {
+                        chapter: 1,
+                        term: "somatic nervous system",
+                        definition: "The part of the peripheral nervous system that carries messages from the senses to the central nervous system and between the central nervous system and the skeletal muscles."
+                    },
+                    {
+                        chapter: 1,
+                        term: "spinal cord",
+                        definition: "Complex cable of neurons that runs down the spine, connecting the brain to most of the rest of the body."
+                    },
+                    {
+                        chapter: 1,
+                        term: "strain studies",
+                        definition: "Studies of the heritability of behavioral traits using animals that have been inbred to produce strains that are genetically similar to one another."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sympathetic division",
+                        definition: "Branch of the autonomic nervous system; it prepares the body for quick action in an emergency."
+                    },
+                    {
+                        chapter: 1,
+                        term: "synapse",
+                        definition: "Area composed of the axon terminal of one neuron, the synaptic space, and the dendrite or cell body of the next neuron."
+                    },
+                    {
+                        chapter: 1,
+                        term: "synaptic space (or synaptic cleft)",
+                        definition: "Tiny gap between the axon terminal of one neuron and the dendrites or cell body of the next neuron."
+                    },
+                    {
+                        chapter: 1,
+                        term: "synaptic vesicles",
+                        definition: "Tiny sacs in a terminal button that release chemicals into the synapse."
+                    },
+                    {
+                        chapter: 1,
+                        term: "temporal lobe",
+                        definition: "Part of the cerebral hemisphere that helps regulate hearing, balance and equilibrium, and certain emotions and motivations."
+                    },
+                    {
+                        chapter: 1,
+                        term: "terminal button (or synaptic knob)",
+                        definition: "Structure at the end of an axon terminal branch."
+                    },
+                    {
+                        chapter: 1,
+                        term: "thalamus",
+                        definition: "Forebrain region that relays and translates incoming messages from the sense receptors, except those for smell."
+                    },
+                    {
+                        chapter: 1,
+                        term: "threshold of excitation",
+                        definition: "The level an impulse must exceed to cause a neuron to fire."
+                    },
+                    {
+                        chapter: 1,
+                        term: "thyroid gland",
+                        definition: "Endocrine gland located below the voice box; it produces the hormone thyroxin."
+                    },
+                    {
+                        chapter: 1,
+                        term: "twin studies",
+                        definition: "Studies of identical and fraternal twins to determine the relative influence of heredity and environment on human behavior."
+                    },
+                ]
+            });
+        })
+    </script>
+
+</body>
+</html>

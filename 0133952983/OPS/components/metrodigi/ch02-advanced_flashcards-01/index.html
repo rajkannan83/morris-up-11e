@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+  <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+  <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+   <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="Flashcards">
+
+            <nav class="main-nav">
+                <button tabindex="0" class="current-chapter-cards"></button>
+                <button tabindex="0" class="all-chapters-cards"></button>
+                <div class="right-helper">
+                    <button tabindex="0" class="flip right">Flip Cards</button>
+                    <button tabindex="0" class="restart right">Start Over</button>
+                </div>
+            </nav>
+
+            <section class="cards">
+
+                <div class="end-screen">
+                    <div class="content-wrapper">
+                        <h2>All done!</h2>
+                        <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                        <ul class="repeated-cards"></ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+                <button tabindex="0" class="skip right">Skip</button>
+            </nav>
+
+        </div>
+
+    </div> <!-- container -->
+
+    <script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+    <script type="text/javascript">
+
+        window.addEvent('domready', function() {
+            // Widget initialization
+            window.widget_instance = new Flashcards({
+                container: $$('.Flashcards')[0],
+                currentchapter: 1, displayCurrentChapterButton: false,
+                cards: [
+                    {
+                        chapter: 1,
+                        term: "behaviorism",
+                        definition: "School of psychology that studies only observable and measurable behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "case study",
+                        definition: "Intensive description and analysis of a single individual or just a few individuals."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cognitive psychology",
+                        definition: "School of psychology devoted to the study of mental processes in the broadest sense."
+                    },
+                    {
+                        chapter: 1,
+                        term: "control group",
+                        definition: "In a controlled experiment, the group not subjected to a change in the independent variable; used for comparison with the experimental group."
+                    },
+                    {
+                        chapter: 1,
+                        term: "correlational research",
+                        definition: "Research technique based on the naturally occurring relationship between two or more variables."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cross-cultural research",
+                        definition: "Research involving the exploration of the extent to which people differ from one culture to another."
+                    },
+                    {
+                        chapter: 1,
+                        term: "culture",
+                        definition: "The tangible goods and the values, attitudes, behaviors, and beliefs that are passed from one generation to another."
+                    },
+                    {
+                        chapter: 1,
+                        term: "dependent variable",
+                        definition: "In an experiment, the variable that is measured to see how it is changed by manipulations in the independent variable."
+                    },
+                    {
+                        chapter: 1,
+                        term: "Dualism",
+                        definition: "View that thoughts and feelings (the mind) are distinct from the world of real objects and our bodies."
+                    },
+                    {
+                        chapter: 1,
+                        term: "ethnicity",
+                        definition: "A common cultural heritage—including religion, language, or ancestry—that is shared by a group of individuals."
+                    },
+                    {
+                        chapter: 1,
+                        term: "evolutionary psychology",
+                        definition: "Study of the evolutionary roots of behaviors and mental processes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "experimental group",
+                        definition: "In a controlled experiment, the group subjected to a change in the independent variable."
+                    },
+                    {
+                        chapter: 1,
+                        term: "experimental method",
+                        definition: "Research technique in which an investigator deliberately manipulates selected events or circumstances and then measures the effects of those manipulations on subsequent behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "feminist theory",
+                        definition: "Feminist theories offer a wide variety of views on the social roles of women and men, the problems and rewards of those roles, and prescriptions for changing those roles."
+                    },
+                    {
+                        chapter: 1,
+                        term: "functionalist theory",
+                        definition: "Theory of mental life and behavior that is concerned with how an organism uses its perceptual abilities to function in its environment."
+                    },
+                    {
+                        chapter: 1,
+                        term: "gender",
+                        definition: "The psychological and social meanings attached to being biologically male or female."
+                    },
+                    {
+                        chapter: 1,
+                        term: "Gestalt psychology",
+                        definition: "School of psychology that studies how people perceive and experience objects as whole patterns."
+                    },
+                    {
+                        chapter: 1,
+                        term: "humanistic psychology",
+                        definition: "School of psychology that emphasizes nonverbal experience and altered states of consciousness as a means of realizing one’s full human potential."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hypotheses",
+                        definition: "Specific, testable predictions derived from a theory."
+                    },
+                    {
+                        chapter: 1,
+                        term: "independent variable",
+                        definition: "In an experiment, the variable that is manipulated to test its effects on the other, dependent variables."
+                    },
+                    {
+                        chapter: 1,
+                        term: "naturalistic observation",
+                        definition: "Research method involving the systematic study of animal or human behavior in natural settings rather than in the laboratory."
+                    },
+                    {
+                        chapter: 1,
+                        term: "observer bias",
+                        definition: "Expectations or biases of the observer that might distort or influence his or her interpretation of what was actually observed."
+                    },
+                    {
+                        chapter: 1,
+                        term: "positive psychology",
+                        definition: "An emerging field of psychology that focuses on positive experiences, including subjective well-being, self-determination, the relationship between positive emotions and physical health, and the factors that allow individuals, communities, and societies to flourish."
+                    },
+                    {
+                        chapter: 1,
+                        term: "psychodynamic theories",
+                        definition: "Personality theories contending that behavior results from psychological factors that interact within the individual, often outside conscious awareness."
+                    },
+                    {
+                        chapter: 1,
+                        term: "psychology",
+                        definition: "The scientific study of behavior and mental processes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "race",
+                        definition: "A subpopulation of a species, defined according to an identifiable characteristic (that is, geographic location, skin color, hair texture, genes, facial features, and so forth)."
+                    },
+                    {
+                        chapter: 1,
+                        term: "random sample",
+                        definition: "Sample in which each potential participant has an equal chance of being selected."
+                    },
+                    {
+                        chapter: 1,
+                        term: "representative sample",
+                        definition: "Sample carefully chosen so that the characteristics of the participants correspond closely to the characteristics of the larger population."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sample",
+                        definition: "A subgroup of a population."
+                    },
+                    {
+                        chapter: 1,
+                        term: "scientific method",
+                        definition: "An approach to knowledge that relies on collecting data, generating a theory to explain the data, producing testable hypotheses based on the theory, and testing those hypotheses empirically."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sexual orientation",
+                        definition: "Refers to the direction of one’s sexual interest toward members of the same sex, the other sex, or both sexes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "structuralism",
+                        definition: "School of psychology that stresses the basic units of experience and the combinations in which they occur."
+                    },
+                    {
+                        chapter: 1,
+                        term: "survey research",
+                        definition: "Research technique in which questionnaires or interviews are administered to a selected group of people."
+                    },
+                    {
+                        chapter: 1,
+                        term: "theory",
+                        definition: "Systematic explanation of a phenomenon; it organizes known facts, allows us to predict new facts, and permits us to exercise a degree of control over the phenomenon."
+                    },
+                ]
+            });
+        })
+    </script>
+
+</body>
+</html>

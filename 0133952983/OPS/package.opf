@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?><package xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="pub-id">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+			<dc:title>Understanding Psychology</dc:title>
+			<dc:source>9780133908923</dc:source>
+			<dc:identifier id="pub-id">test-sample-uc</dc:identifier>
+			<dc:language>en</dc:language>
+		<meta property="dcterms:modified">2012-03-08T05:57:24Z</meta>
+</metadata>
+<manifest>
+<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+<item id="cover" href="xhtml/pg0001.xhtml" media-type="application/xhtml+xml"/>
+<item id="toc" href="xhtml/toc.xhtml" properties="nav" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000005" href="xhtml/pg0002.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000135B9" href="xhtml/pg0003.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000135BB" href="xhtml/pg0004.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000001B" href="xhtml/pg0005.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000004C" href="xhtml/pg0006.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000001361B" href="xhtml/pg0007.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000076" href="xhtml/pg0008.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000001397D" href="xhtml/pg0009.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000424" href="xhtml/pg0010.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000005F0" href="xhtml/pg0011.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000064E" href="xhtml/pg0012.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000079B" href="xhtml/pg0013.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000008B6" href="xhtml/pg0014.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000963" href="xhtml/pg0015.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000A89" href="xhtml/pg0016.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000AFE" href="xhtml/pg0017.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000B1C" href="xhtml/pg0018.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000B46" href="xhtml/pg0019.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000BBA" href="xhtml/pg0020.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000C85" href="xhtml/pg0021.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000CD8" href="xhtml/pg0022.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000CE3" href="xhtml/pg0023.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000000E7D" href="xhtml/pg0024.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001072" href="xhtml/pg0025.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000010F1" href="xhtml/pg0026.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001186" href="xhtml/pg0027.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000D022" href="xhtml/pg0028.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000012C5" href="xhtml/pg0029.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001304" href="xhtml/pg0030.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000013CF" href="xhtml/pg0031.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001409" href="xhtml/pg0032.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000014BA" href="xhtml/pg0033.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001690" href="xhtml/pg0034.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000017AB" href="xhtml/pg0035.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000189C" href="xhtml/pg0036.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001AAE" href="xhtml/pg0037.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001B0A" href="xhtml/pg0038.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001BD5" href="xhtml/pg0039.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001C1A" href="xhtml/pg0040.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001D1D" href="xhtml/pg0041.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001D68" href="xhtml/pg0042.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001F55" href="xhtml/pg0043.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001FA9" href="xhtml/pg0044.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000001FED" href="xhtml/pg0045.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002030" href="xhtml/pg0046.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000020FB" href="xhtml/pg0047.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002143" href="xhtml/pg0048.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002215" href="xhtml/pg0049.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002354" href="xhtml/pg0050.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000024B4" href="xhtml/pg0051.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000258E" href="xhtml/pg0052.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000025EF" href="xhtml/pg0053.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000026BA" href="xhtml/pg0054.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002702" href="xhtml/pg0055.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000277E" href="xhtml/pg0056.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000281C" href="xhtml/pg0057.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002981" href="xhtml/pg0058.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000029FD" href="xhtml/pg0059.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002AAF" href="xhtml/pg0060.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002B44" href="xhtml/pg0061.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002B89" href="xhtml/pg0062.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002BEE" href="xhtml/pg0063.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002CB9" href="xhtml/pg0064.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002D04" href="xhtml/pg0065.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002DC8" href="xhtml/pg0066.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002E22" href="xhtml/pg0067.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002E7B" href="xhtml/pg0068.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000002F95" href="xhtml/pg0069.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000305E" href="xhtml/pg0070.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003089" href="xhtml/pg0071.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003245" href="xhtml/pg0072.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003320" href="xhtml/pg0073.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000334D" href="xhtml/pg0074.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000337A" href="xhtml/pg0075.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003391" href="xhtml/pg0076.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000033FE" href="xhtml/pg0077.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000034E7" href="xhtml/pg0078.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000352F" href="xhtml/pg0079.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003610" href="xhtml/pg0080.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003707" href="xhtml/pg0081.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000037E5" href="xhtml/pg0082.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000389A" href="xhtml/pg0083.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003928" href="xhtml/pg0084.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000039D9" href="xhtml/pg0085.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003A26" href="xhtml/pg0086.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003AF1" href="xhtml/pg0087.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003B4E" href="xhtml/pg0088.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003BDD" href="xhtml/pg0089.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003C45" href="xhtml/pg0090.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003CDF" href="xhtml/pg0091.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003F0D" href="xhtml/pg0092.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000003FE8" href="xhtml/pg0093.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000040CC" href="xhtml/pg0094.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000414A" href="xhtml/pg0095.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004181" href="xhtml/pg0096.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000041FF" href="xhtml/pg0097.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000042CB" href="xhtml/pg0098.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000042FC" href="xhtml/pg0099.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000430D" href="xhtml/pg0100.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000449E" href="xhtml/pg0101.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004523" href="xhtml/pg0102.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000045CC" href="xhtml/pg0103.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004648" href="xhtml/pg0104.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004704" href="xhtml/pg0105.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000473B" href="xhtml/pg0106.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000479B" href="xhtml/pg0107.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004865" href="xhtml/pg0108.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004893" href="xhtml/pg0109.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004980" href="xhtml/pg0110.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004A76" href="xhtml/pg0111.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004AEE" href="xhtml/pg0112.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004B56" href="xhtml/pg0113.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004BD1" href="xhtml/pg0114.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004BF3" href="xhtml/pg0115.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004C10" href="xhtml/pg0116.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004C5C" href="xhtml/pg0117.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004D27" href="xhtml/pg0118.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004D5F" href="xhtml/pg0119.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004E65" href="xhtml/pg0120.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004F31" href="xhtml/pg0121.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000004FD8" href="xhtml/pg0122.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005074" href="xhtml/pg0123.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000050C7" href="xhtml/pg0124.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000510F" href="xhtml/pg0125.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005147" href="xhtml/pg0126.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000051CC" href="xhtml/pg0127.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000524F" href="xhtml/pg0128.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000052A9" href="xhtml/pg0129.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000052C1" href="xhtml/pg0130.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000052DE" href="xhtml/pg0131.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005355" href="xhtml/pg0132.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005420" href="xhtml/pg0133.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005456" href="xhtml/pg0134.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000551D" href="xhtml/pg0135.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000055B6" href="xhtml/pg0136.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005620" href="xhtml/pg0137.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000056B2" href="xhtml/pg0138.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005717" href="xhtml/pg0139.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000580D" href="xhtml/pg0140.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000587B" href="xhtml/pg0141.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000058CB" href="xhtml/pg0142.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005936" href="xhtml/pg0143.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005A01" href="xhtml/pg0144.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005A49" href="xhtml/pg0145.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005B44" href="xhtml/pg0146.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005C65" href="xhtml/pg0147.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005D3A" href="xhtml/pg0148.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005DD2" href="xhtml/pg0149.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005E16" href="xhtml/pg0150.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005E5A" href="xhtml/pg0151.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005F2B" href="xhtml/pg0152.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005F53" href="xhtml/pg0153.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000005F86" href="xhtml/pg0154.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000006035" href="xhtml/pg0155.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000060AF" href="xhtml/pg0156.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000060D1" href="xhtml/pg0157.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000060E4" href="xhtml/pg0158.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000006101" href="xhtml/pg0159.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000006137" href="xhtml/pg0160.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000061B7" href="xhtml/pg0161.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000061E5" href="xhtml/pg0162.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000061F5" href="xhtml/pg0163.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000006289" href="xhtml/pg0164.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000062AA" href="xhtml/pg0165.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000006848" href="xhtml/pg0166.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000704F" href="xhtml/pg0167.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000820A" href="xhtml/pg0168.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000001891A" href="xhtml/pg0169.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000826B" href="xhtml/pg0170.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000083B3" href="xhtml/pg0171.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000008679" href="xhtml/pg0172.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000088A4" href="xhtml/pg0173.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000008A09" href="xhtml/pg0174.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000008AB7" href="xhtml/pg0175.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000008BC8" href="xhtml/pg0176.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000008D90" href="xhtml/pg0177.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000008F93" href="xhtml/pg0178.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000008FC7" href="xhtml/pg0179.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000009094" href="xhtml/pg0180.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000009246" href="xhtml/pg0181.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000009439" href="xhtml/pg0182.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000096F8" href="xhtml/pg0183.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000979B" href="xhtml/pg0184.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000982B" href="xhtml/pg0185.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000099C2" href="xhtml/pg0186.xhtml" media-type="application/xhtml+xml"/>
+<item id="P70004931900000000000000000099D4" href="xhtml/pg0187.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000009B5A" href="xhtml/pg0188.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000009EC4" href="xhtml/pg0189.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000009FCC" href="xhtml/pg0190.xhtml" media-type="application/xhtml+xml"/>
+<item id="P7000493190000000000000000009FF0" href="xhtml/pg0191.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000A0A8" href="xhtml/pg0192.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000A23F" href="xhtml/pg0193.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000A245" href="xhtml/pg0194.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000A28D" href="xhtml/pg0195.xhtml" media-type="application/xhtml+xml"/>
+<item id="P700049319000000000000000000A2E5" href="xhtml/pg0196.xhtml" media-type="application/xhtml+xml"/>
+<item href="images/Pearson_logo_interior.png" media-type="image/png" id="idPearson_logo_interior_png"/>
+<item href="images/CO_01_001.jpg" media-type="image/jpeg" id="idCO_01_001_jpg"/>
+<item href="images/cc.jpg" media-type="image/jpeg" id="idcc_jpg"/>
+<item href="images/PH_01_002.jpg" media-type="image/jpeg" id="idPH_01_002_jpg"/>
+<item href="images/Ch_1_The_Challenege_of_Critical_Thinking.jpg" media-type="image/jpeg" id="idCh_1_The_Challenege_of_Critical_Thinking_jpg"/>
+<item href="images/Watch_video.png" media-type="image/png" id="idWatch_video_png"/>
+<item href="images/PH_01_003.jpg" media-type="image/jpeg" id="idPH_01_003_jpg"/>
+<item href="images/FG_01_001.png" media-type="image/png" id="idFG_01_001_png"/>
+<item href="images/Ch_1_Research_Methods.jpg" media-type="image/jpeg" id="idCh_1_Research_Methods_jpg"/>
+<item href="images/Ch_1_The_Experimental_Method.jpg" media-type="image/jpeg" id="idCh_1_The_Experimental_Method_jpg"/>
+<item href="images/Ch_1_Participating_in_a_Research_Survey_pg26.png" media-type="image/png" id="idCh_1_Participating_in_a_Research_Survey_pg26_png"/>
+<item href="images/Simulate_video.png" media-type="image/png" id="idSimulate_video_png"/>
+<item href="images/PH_01_004.jpg" media-type="image/jpeg" id="idPH_01_004_jpg"/>
+<item href="images/CAR_01_002.jpg" media-type="image/jpeg" id="idCAR_01_002_jpg"/>
+<item href="images/Ch_1_Ethics_in_Animal_Research.jpg" media-type="image/jpeg" id="idCh_1_Ethics_in_Animal_Research_jpg"/>
+<item href="images/CO_02_001.jpg" media-type="image/jpeg" id="idCO_02_001_jpg"/>
+<item href="images/Ch_2_Parts_of_the_neuron.jpg" media-type="image/jpeg" id="idCh_2_Parts_of_the_neuron_jpg"/>
+<item href="images/Ch_2_The_Neural_impulse.jpg" media-type="image/jpeg" id="idCh_2_The_Neural_impulse_jpg"/>
+<item href="images/PH_02_001.jpg" media-type="image/jpeg" id="idPH_02_001_jpg"/>
+<item href="images/Ch_2_Neurotransmitters.jpg" media-type="image/jpeg" id="idCh_2_Neurotransmitters_jpg"/>
+<item href="images/Ch_2_Dopamine_in_synapse.jpg" media-type="image/jpeg" id="idCh_2_Dopamine_in_synapse_jpg"/>
+<item href="images/FG_02_001.png" media-type="image/png" id="idFG_02_001_png"/>
+<item href="images/Ch_2_Neural_Plasticity.jpg" media-type="image/jpeg" id="idCh_2_Neural_Plasticity_jpg"/>
+<item href="images/FG_02_002.jpg" media-type="image/jpeg" id="idFG_02_002_jpg"/>
+<item href="images/PH_02_002.jpg" media-type="image/jpeg" id="idPH_02_002_jpg"/>
+<item href="images/FG_02_003.jpg" media-type="image/jpeg" id="idFG_02_003_jpg"/>
+<item href="images/FG_02_004.jpg" media-type="image/jpeg" id="idFG_02_004_jpg"/>
+<item href="images/Major-Structures-of-the-Human-Brain.jpg" media-type="image/jpeg" id="idMajor-Structures-of-the-Human-Brain_jpg"/>
+<item href="images/Explore.png" media-type="image/png" id="idExplore_png"/>
+<item href="images/FG_02_005.jpg" media-type="image/jpeg" id="idFG_02_005_jpg"/>
+<item href="images/FG_02_006.jpg" media-type="image/jpeg" id="idFG_02_006_jpg"/>
+<item href="images/Ch_2_Hemisphere_Specialization.png" media-type="image/png" id="idCh_2_Hemisphere_Specialization_png"/>
+<item href="images/FG_02_007.jpg" media-type="image/jpeg" id="idFG_02_007_jpg"/>
+<item href="images/PH_02_003.jpg" media-type="image/jpeg" id="idPH_02_003_jpg"/>
+<item href="images/FG_02_008.jpg" media-type="image/jpeg" id="idFG_02_008_jpg"/>
+<item href="images/The-Spinal-Cord-Reflex.jpg" media-type="image/jpeg" id="idThe-Spinal-Cord-Reflex_jpg"/>
+<item href="images/FG_02_009.jpg" media-type="image/jpeg" id="idFG_02_009_jpg"/>
+<item href="images/FUNCTIONS-OF-THE-PARASYMPATHETIC.jpg" media-type="image/jpeg" id="idFUNCTIONS-OF-THE-PARASYMPATHETIC_jpg"/>
+<item href="images/FG_02_010.jpg" media-type="image/jpeg" id="idFG_02_010_jpg"/>
+<item href="images/FG_02_011.jpg" media-type="image/jpeg" id="idFG_02_011_jpg"/>
+<item href="images/FG_02_012.jpg" media-type="image/jpeg" id="idFG_02_012_jpg"/>
+<item href="images/Ch_2_David_Buss_discussing_Evolutionary_Psychology.jpg" media-type="image/jpeg" id="idCh_2_David_Buss_discussing_Evolutionary_Psychology_jpg"/>
+<item href="images/CO_03_001.jpg" media-type="image/jpeg" id="idCO_03_001_jpg"/>
+<item href="images/PH_03_001.jpg" media-type="image/jpeg" id="idPH_03_001_jpg"/>
+<item href="images/FG_03_001.jpg" media-type="image/jpeg" id="idFG_03_001_jpg"/>
+<item href="images/Which_Senses_Do_You_Use.png" media-type="image/png" id="idWhich_Senses_Do_You_Use_png"/>
+<item href="images/PH_03_002.jpg" media-type="image/jpeg" id="idPH_03_002_jpg"/>
+<item href="images/Interactive-Eye-anatomy.jpg" media-type="image/jpeg" id="idInteractive-Eye-anatomy_jpg"/>
+<item href="images/FG_03_002.jpg" media-type="image/jpeg" id="idFG_03_002_jpg"/>
+<item href="images/FG_03_003.jpg" media-type="image/jpeg" id="idFG_03_003_jpg"/>
+<item href="images/FG_03_004.jpg" media-type="image/jpeg" id="idFG_03_004_jpg"/>
+<item href="images/FG_03_006.jpg" media-type="image/jpeg" id="idFG_03_006_jpg"/>
+<item href="images/FG_03_005.jpg" media-type="image/jpeg" id="idFG_03_005_jpg"/>
+<item href="images/FG_03_007.jpg" media-type="image/jpeg" id="idFG_03_007_jpg"/>
+<item href="images/FG_03_008.jpg" media-type="image/jpeg" id="idFG_03_008_jpg"/>
+<item href="images/FG_03_009.jpg" media-type="image/jpeg" id="idFG_03_009_jpg"/>
+<item href="images/FG_03_010.jpg" media-type="image/jpeg" id="idFG_03_010_jpg"/>
+<item href="images/FG_03_011.jpg" media-type="image/jpeg" id="idFG_03_011_jpg"/>
+<item href="images/FG_03_012.jpg" media-type="image/jpeg" id="idFG_03_012_jpg"/>
+<item href="images/FG_03_013.jpg" media-type="image/jpeg" id="idFG_03_013_jpg"/>
+<item href="images/FG_03_014.jpg" media-type="image/jpeg" id="idFG_03_014_jpg"/>
+<item href="images/FG_03_015.jpg" media-type="image/jpeg" id="idFG_03_015_jpg"/>
+<item href="images/FG_03_016.jpg" media-type="image/jpeg" id="idFG_03_016_jpg"/>
+<item href="images/FG_03_017.jpg" media-type="image/jpeg" id="idFG_03_017_jpg"/>
+<item href="images/PH_03_003.jpg" media-type="image/jpeg" id="idPH_03_003_jpg"/>
+<item href="images/Cochlear-implant-animation.jpg" media-type="image/jpeg" id="idCochlear-implant-animation_jpg"/>
+<item href="images/FG_03_018.jpg" media-type="image/jpeg" id="idFG_03_018_jpg"/>
+<item href="images/PH_03_004.jpg" media-type="image/jpeg" id="idPH_03_004_jpg"/>
+<item href="images/FG_03_019.jpg" media-type="image/jpeg" id="idFG_03_019_jpg"/>
+<item href="images/PH_03_005.jpg" media-type="image/jpeg" id="idPH_03_005_jpg"/>
+<item href="images/FG_03_020.jpg" media-type="image/jpeg" id="idFG_03_020_jpg"/>
+<item href="images/Ch_3_Gate_Control_Theory_of_Pain.png" media-type="image/png" id="idCh_3_Gate_Control_Theory_of_Pain_png"/>
+<item href="images/FG_03_021.jpg" media-type="image/jpeg" id="idFG_03_021_jpg"/>
+<item href="images/FG_03_022.jpg" media-type="image/jpeg" id="idFG_03_022_jpg"/>
+<item href="images/FG_03_023.jpg" media-type="image/jpeg" id="idFG_03_023_jpg"/>
+<item href="images/FG_03_024.jpg" media-type="image/jpeg" id="idFG_03_024_jpg"/>
+<item href="images/FG_03_025.jpg" media-type="image/jpeg" id="idFG_03_025_jpg"/>
+<item href="images/CAR_03_001.jpg" media-type="image/jpeg" id="idCAR_03_001_jpg"/>
+<item href="images/FG_03_026.jpg" media-type="image/jpeg" id="idFG_03_026_jpg"/>
+<item href="images/FG_03_027.jpg" media-type="image/jpeg" id="idFG_03_027_jpg"/>
+<item href="images/FG_03_028.jpg" media-type="image/jpeg" id="idFG_03_028_jpg"/>
+<item href="images/FG_03_029.jpg" media-type="image/jpeg" id="idFG_03_029_jpg"/>
+<item href="images/FG_03_030.jpg" media-type="image/jpeg" id="idFG_03_030_jpg"/>
+<item href="images/Ch_3_Visual_Cues.png" media-type="image/png" id="idCh_3_Visual_Cues_png"/>
+<item href="images/FG_03_031.jpg" media-type="image/jpeg" id="idFG_03_031_jpg"/>
+<item href="images/FG_03_032.jpg" media-type="image/jpeg" id="idFG_03_032_jpg"/>
+<item href="images/FG_03_033.jpg" media-type="image/jpeg" id="idFG_03_033_jpg"/>
+<item href="images/FG_03_034.jpg" media-type="image/jpeg" id="idFG_03_034_jpg"/>
+<item href="images/BINOCULAR-CUES-TO-DEPTH-PERCEPTION.png" media-type="image/png" id="idBINOCULAR-CUES-TO-DEPTH-PERCEPTION_png"/>
+<item href="images/FG_03_035.jpg" media-type="image/jpeg" id="idFG_03_035_jpg"/>
+<item href="images/PH_03_006.jpg" media-type="image/jpeg" id="idPH_03_006_jpg"/>
+<item href="images/FG_03_036.jpg" media-type="image/jpeg" id="idFG_03_036_jpg"/>
+<item href="images/FG_03_037.jpg" media-type="image/jpeg" id="idFG_03_037_jpg"/>
+<item href="images/CO_04_001.jpg" media-type="image/jpeg" id="idCO_04_001_jpg"/>
+<item href="images/Ch_4_Sleep_Regulaton.jpg" media-type="image/jpeg" id="idCh_4_Sleep_Regulaton_jpg"/>
+<item href="images/Ch_4_Sleep_Stages.jpg" media-type="image/jpeg" id="idCh_4_Sleep_Stages_jpg"/>
+<item href="images/Ch_4_The_Effects_of_Sleep_Deprivation_on_Learning_and_Memory.jpg" media-type="image/jpeg" id="idCh_4_The_Effects_of_Sleep_Deprivation_on_Learning_and_Memory_jpg"/>
+<item href="images/PH_04_001.jpg" media-type="image/jpeg" id="idPH_04_001_jpg"/>
+<item href="images/Ch_4_Sleep_Disorders.jpg" media-type="image/jpeg" id="idCh_4_Sleep_Disorders_jpg"/>
+<item href="images/The-Brain-and-Activation-Synthesis-Theory.jpg" media-type="image/jpeg" id="idThe-Brain-and-Activation-Synthesis-Theory_jpg"/>
+<item href="images/FG_04_001.jpg" media-type="image/jpeg" id="idFG_04_001_jpg"/>
+<item href="images/FG_04_002.jpg" media-type="image/jpeg" id="idFG_04_002_jpg"/>
+<item href="images/FG_04_003.jpg" media-type="image/jpeg" id="idFG_04_003_jpg"/>
+<item href="images/FG_04_004.jpg" media-type="image/jpeg" id="idFG_04_004_jpg"/>
+<item href="images/FG_04_005.jpg" media-type="image/jpeg" id="idFG_04_005_jpg"/>
+<item href="images/PH_04_002.jpg" media-type="image/jpeg" id="idPH_04_002_jpg"/>
+<item href="images/Ch_4_The_Uses_and_Limitations_of_Hypnosis.jpg" media-type="image/jpeg" id="idCh_4_The_Uses_and_Limitations_of_Hypnosis_jpg"/>
+<item href="images/CO_05_001.jpg" media-type="image/jpeg" id="idCO_05_001_jpg"/>
+<item href="images/Ch_5_Classical_Conditioning.png" media-type="image/png" id="idCh_5_Classical_Conditioning_png"/>
+<item href="images/FG_05_001.jpg" media-type="image/jpeg" id="idFG_05_001_jpg"/>
+<item href="images/Ch_5_Intrative_Classical_Conditioning.jpg" media-type="image/jpeg" id="idCh_5_Intrative_Classical_Conditioning_jpg"/>
+<item href="images/FG_05_002.jpg" media-type="image/jpeg" id="idFG_05_002_jpg"/>
+<item href="images/FG_05_003.jpg" media-type="image/jpeg" id="idFG_05_003_jpg"/>
+<item href="images/Car_05_001.png" media-type="image/png" id="idCar_05_001_png"/>
+<item href="images/Ch_5_Punishment.jpg" media-type="image/jpeg" id="idCh_5_Punishment_jpg"/>
+<item href="images/Ch_5_Schedules_of_Reinforcement.png" media-type="image/png" id="idCh_5_Schedules_of_Reinforcement_png"/>
+<item href="images/Schedules-of-Reinforcement.jpg" media-type="image/jpeg" id="idSchedules-of-Reinforcement_jpg"/>
+<item href="images/FG_05_004.jpg" media-type="image/jpeg" id="idFG_05_004_jpg"/>
+<item href="images/PH_05_001.jpg" media-type="image/jpeg" id="idPH_05_001_jpg"/>
+<item href="images/Ch_5_rat_maze.png" media-type="image/png" id="idCh_5_rat_maze_png"/>
+<item href="images/FG_05_005.jpg" media-type="image/jpeg" id="idFG_05_005_jpg"/>
+<item href="images/FG_05_006.jpg" media-type="image/jpeg" id="idFG_05_006_jpg"/>
+<item href="images/CO_06_001.jpg" media-type="image/jpeg" id="idCO_06_001_jpg"/>
+<item href="images/Ch_6_The_woman_who_cannot_forget.jpg" media-type="image/jpeg" id="idCh_6_The_woman_who_cannot_forget_jpg"/>
+<item href="images/FG_06_001.jpg" media-type="image/jpeg" id="idFG_06_001_jpg"/>
+<item href="images/PH_06_001.jpg" media-type="image/jpeg" id="idPH_06_001_jpg"/>
+<item href="images/Serial_position_effect_page_198.png" media-type="image/png" id="idSerial_position_effect_page_198_png"/>
+<item href="images/FG_06_002.jpg" media-type="image/jpeg" id="idFG_06_002_jpg"/>
+<item href="images/FG_06_003.jpg" media-type="image/jpeg" id="idFG_06_003_jpg"/>
+<item href="images/SUMTB_pg201_001.png" media-type="image/png" id="idSUMTB_pg201_001_png"/>
+<item href="images/Ch_6_When_memory_fails_.jpg" media-type="image/jpeg" id="idCh_6_When_memory_fails__jpg"/>
+<item href="images/FG_06_004.jpg" media-type="image/jpeg" id="idFG_06_004_jpg"/>
+<item href="images/FG_06_005.jpg" media-type="image/jpeg" id="idFG_06_005_jpg"/>
+<item href="images/FG_06_006.jpg" media-type="image/jpeg" id="idFG_06_006_jpg"/>
+<item href="images/FG_06_07.jpg" media-type="image/jpeg" id="idFG_06_07_jpg"/>
+<item href="images/PH_06_002.jpg" media-type="image/jpeg" id="idPH_06_002_jpg"/>
+<item href="images/PH_06_003.jpg" media-type="image/jpeg" id="idPH_06_003_jpg"/>
+<item href="images/Ch_6_Eyewitness_Testimony.jpg" media-type="image/jpeg" id="idCh_6_Eyewitness_Testimony_jpg"/>
+<item href="images/CO_07_001.jpg" media-type="image/jpeg" id="idCO_07_001_jpg"/>
+<item href="images/UNFG_07_001.jpg" media-type="image/jpeg" id="idUNFG_07_001_jpg"/>
+<item href="images/Car_07_001.png" media-type="image/png" id="idCar_07_001_png"/>
+<item href="images/PH_07_002.jpg" media-type="image/jpeg" id="idPH_07_002_jpg"/>
+<item href="images/PH_07_003.jpg" media-type="image/jpeg" id="idPH_07_003_jpg"/>
+<item href="images/FG_07_002.jpg" media-type="image/jpeg" id="idFG_07_002_jpg"/>
+<item href="images/FG_07_003.jpg" media-type="image/jpeg" id="idFG_07_003_jpg"/>
+<item href="images/FG_07_004.jpg" media-type="image/jpeg" id="idFG_07_004_jpg"/>
+<item href="images/FG_07_005.jpg" media-type="image/jpeg" id="idFG_07_005_jpg"/>
+<item href="images/Ch_7_Representative_Heuristic.png" media-type="image/png" id="idCh_7_Representative_Heuristic_png"/>
+<item href="images/Ch_7_Availability_Heuristic.jpg" media-type="image/jpeg" id="idCh_7_Availability_Heuristic_jpg"/>
+<item href="images/Intelligence_survey_Ch_7_page_244.png" media-type="image/png" id="idIntelligence_survey_Ch_7_page_244_png"/>
+<item href="images/UNFG_07_002.jpg" media-type="image/jpeg" id="idUNFG_07_002_jpg"/>
+<item href="images/UNFG_07_003.jpg" media-type="image/jpeg" id="idUNFG_07_003_jpg"/>
+<item href="images/Ch_7_Sternbergs_Theory_of_Intelligence.jpg" media-type="image/jpeg" id="idCh_7_Sternbergs_Theory_of_Intelligence_jpg"/>
+<item href="images/Ch_7_Gardners_Theory_of_Intelligence.jpg" media-type="image/jpeg" id="idCh_7_Gardners_Theory_of_Intelligence_jpg"/>
+<item href="images/FG_07_006.jpg" media-type="image/jpeg" id="idFG_07_006_jpg"/>
+<item href="images/FG_07_007.jpg" media-type="image/jpeg" id="idFG_07_007_jpg"/>
+<item href="images/Creativity_survey_Ch_7_page_262.png" media-type="image/png" id="idCreativity_survey_Ch_7_page_262_png"/>
+<item href="images/FG_07_008.jpg" media-type="image/jpeg" id="idFG_07_008_jpg"/>
+<item href="images/FG_07_009.jpg" media-type="image/jpeg" id="idFG_07_009_jpg"/>
+<item href="images/FG_07_010.jpg" media-type="image/jpeg" id="idFG_07_010_jpg"/>
+<item href="images/FG_07_011.jpg" media-type="image/jpeg" id="idFG_07_011_jpg"/>
+<item href="images/FG_07_012.jpg" media-type="image/jpeg" id="idFG_07_012_jpg"/>
+<item href="images/CO_08_001.jpg" media-type="image/jpeg" id="idCO_08_001_jpg"/>
+<item href="images/FG_08_001.jpg" media-type="image/jpeg" id="idFG_08_001_jpg"/>
+<item href="images/Ch_8_Maslows_Hierarchy_of_Needs.png" media-type="image/png" id="idCh_8_Maslows_Hierarchy_of_Needs_png"/>
+<item href="images/FG_08_002.jpg" media-type="image/jpeg" id="idFG_08_002_jpg"/>
+<item href="images/Ch_8_Treating_eating_disorders.jpg" media-type="image/jpeg" id="idCh_8_Treating_eating_disorders_jpg"/>
+<item href="images/FG_08_003.jpg" media-type="image/jpeg" id="idFG_08_003_jpg"/>
+<item href="images/Ch_8_Sexual_Orientation.png" media-type="image/png" id="idCh_8_Sexual_Orientation_png"/>
+<item href="images/PH_08_001.jpg" media-type="image/jpeg" id="idPH_08_001_jpg"/>
+<item href="images/Ch_8_Harlows_Monkeys.jpg" media-type="image/jpeg" id="idCh_8_Harlows_Monkeys_jpg"/>
+<item href="images/PH_08_002.jpg" media-type="image/jpeg" id="idPH_08_002_jpg"/>
+<item href="images/Ch_8_Theories_of_Emotion.jpg" media-type="image/jpeg" id="idCh_8_Theories_of_Emotion_jpg"/>
+<item href="images/Ch_8_Detecting_Lies.jpg" media-type="image/jpeg" id="idCh_8_Detecting_Lies_jpg"/>
+<item href="images/CO_09_001.jpg" media-type="image/jpeg" id="idCO_09_001_jpg"/>
+<item href="images/PH_09_001.jpg" media-type="image/jpeg" id="idPH_09_001_jpg"/>
+<item href="images/PH_09_002.jpg" media-type="image/jpeg" id="idPH_09_002_jpg"/>
+<item href="images/FG_09_001.jpg" media-type="image/jpeg" id="idFG_09_001_jpg"/>
+<item href="images/FG_09_002.jpg" media-type="image/jpeg" id="idFG_09_002_jpg"/>
+<item href="images/Ch_9_Object_Permanence.jpg" media-type="image/jpeg" id="idCh_9_Object_Permanence_jpg"/>
+<item href="images/PH_09_003.jpg" media-type="image/jpeg" id="idPH_09_003_jpg"/>
+<item href="images/PH_09_004.jpg" media-type="image/jpeg" id="idPH_09_004_jpg"/>
+<item href="images/Ch_9_Parenting_Styles.jpg" media-type="image/jpeg" id="idCh_9_Parenting_Styles_jpg"/>
+<item href="images/Ch_9_Sex-Typed_Behaviors.jpg" media-type="image/jpeg" id="idCh_9_Sex-Typed_Behaviors_jpg"/>
+<item href="images/PH_09_005.jpg" media-type="image/jpeg" id="idPH_09_005_jpg"/>
+<item href="images/FG_09_003.jpg" media-type="image/jpeg" id="idFG_09_003_jpg"/>
+<item href="images/Car_09_001.jpg" media-type="image/jpeg" id="idCar_09_001_jpg"/>
+<item href="images/Ch_9_page_336.png" media-type="image/png" id="idCh_9_page_336_png"/>
+<item href="images/FG_09_004.jpg" media-type="image/jpeg" id="idFG_09_004_jpg"/>
+<item href="images/Ch_9_Midlife_Transition.jpg" media-type="image/jpeg" id="idCh_9_Midlife_Transition_jpg"/>
+<item href="images/Ch_9_Adulthood.jpg" media-type="image/jpeg" id="idCh_9_Adulthood_jpg"/>
+<item href="images/FG_09_005.jpg" media-type="image/jpeg" id="idFG_09_005_jpg"/>
+<item href="images/PH_09_006.jpg" media-type="image/jpeg" id="idPH_09_006_jpg"/>
+<item href="images/FG_09_006.jpg" media-type="image/jpeg" id="idFG_09_006_jpg"/>
+<item href="images/Ch_9_Late_Adulthood_Relationships.jpg" media-type="image/jpeg" id="idCh_9_Late_Adulthood_Relationships_jpg"/>
+<item href="images/CO_10_001.jpg" media-type="image/jpeg" id="idCO_10_001_jpg"/>
+<item href="images/Ch_10_Freuds_Theory_of_Personality.jpg" media-type="image/jpeg" id="idCh_10_Freuds_Theory_of_Personality_jpg"/>
+<item href="images/FG_10_001.jpg" media-type="image/jpeg" id="idFG_10_001_jpg"/>
+<item href="images/PH_10_001.jpg" media-type="image/jpeg" id="idPH_10_001_jpg"/>
+<item href="images/Car_10_001.jpg" media-type="image/jpeg" id="idCar_10_001_jpg"/>
+<item href="images/PH_10_002.jpg" media-type="image/jpeg" id="idPH_10_002_jpg"/>
+<item href="images/FG_10_002.jpg" media-type="image/jpeg" id="idFG_10_002_jpg"/>
+<item href="images/Ch_10_Humanistic_Theories.jpg" media-type="image/jpeg" id="idCh_10_Humanistic_Theories_jpg"/>
+<item href="images/Ch_10_Trait_Theories.jpg" media-type="image/jpeg" id="idCh_10_Trait_Theories_jpg"/>
+<item href="images/Ch_10_Behavioral_Theories_of_Personality.jpg" media-type="image/jpeg" id="idCh_10_Behavioral_Theories_of_Personality_jpg"/>
+<item href="images/Ch_10_MMPI-2.jpg" media-type="image/jpeg" id="idCh_10_MMPI-2_jpg"/>
+<item href="images/Ch_10_Rorschach.jpg" media-type="image/jpeg" id="idCh_10_Rorschach_jpg"/>
+<item href="images/FG_10_003.jpg" media-type="image/jpeg" id="idFG_10_003_jpg"/>
+<item href="images/FG_10_004a.jpg" media-type="image/jpeg" id="idFG_10_004a_jpg"/>
+<item href="images/FG_10_004b.jpg" media-type="image/jpeg" id="idFG_10_004b_jpg"/>
+<item href="images/CO_11_001.jpg" media-type="image/jpeg" id="idCO_11_001_jpg"/>
+<item href="images/PH_11_001.jpg" media-type="image/jpeg" id="idPH_11_001_jpg"/>
+<item href="images/FG_11_001.jpg" media-type="image/jpeg" id="idFG_11_001_jpg"/>
+<item href="images/PH_11_002.jpg" media-type="image/jpeg" id="idPH_11_002_jpg"/>
+<item href="images/Ch_11_Undergraduate_Stress_QuestionnaireASSET43028.png" media-type="image/png" id="idCh_11_Undergraduate_Stress_QuestionnaireASSET43028_png"/>
+<item href="images/PH_11_003.jpg" media-type="image/jpeg" id="idPH_11_003_jpg"/>
+<item href="images/Ch_11_Post_Traumatic_Stress_Disorder.jpg" media-type="image/jpeg" id="idCh_11_Post_Traumatic_Stress_Disorder_jpg"/>
+<item href="images/Ch_11_Why_Is_It_Difficult_to_Change_Unhealthy_Habits.jpg" media-type="image/jpeg" id="idCh_11_Why_Is_It_Difficult_to_Change_Unhealthy_Habits_jpg"/>
+<item href="images/FG_11_002.jpg" media-type="image/jpeg" id="idFG_11_002_jpg"/>
+<item href="images/CO_12_001.jpg" media-type="image/jpeg" id="idCO_12_001_jpg"/>
+<item href="images/FG_12_001.jpg" media-type="image/jpeg" id="idFG_12_001_jpg"/>
+<item href="images/Ch_12_Depression.jpg" media-type="image/jpeg" id="idCh_12_Depression_jpg"/>
+<item href="images/FG_12_002.jpg" media-type="image/jpeg" id="idFG_12_002_jpg"/>
+<item href="images/Ch_12_Filiziano_Bipolar_Disorder.jpg" media-type="image/jpeg" id="idCh_12_Filiziano_Bipolar_Disorder_jpg"/>
+<item href="images/Ch_12_Anxiety-Disorders.jpg" media-type="image/jpeg" id="idCh_12_Anxiety-Disorders_jpg"/>
+<item href="images/FG_12_003.jpg" media-type="image/jpeg" id="idFG_12_003_jpg"/>
+<item href="images/Ch_12_Schizophrenia.jpg" media-type="image/jpeg" id="idCh_12_Schizophrenia_jpg"/>
+<item href="images/Ch_12_Genetic_Research_in_Schizophrenia.jpg" media-type="image/jpeg" id="idCh_12_Genetic_Research_in_Schizophrenia_jpg"/>
+<item href="images/PH_12_001.jpg" media-type="image/jpeg" id="idPH_12_001_jpg"/>
+<item href="images/Ch_12_Austistic_Spectrum_Disorder.jpg" media-type="image/jpeg" id="idCh_12_Austistic_Spectrum_Disorder_jpg"/>
+<item href="images/CO_13_001.jpg" media-type="image/jpeg" id="idCO_13_001_jpg"/>
+<item href="images/Ch_13_Psychoanlysis.jpg" media-type="image/jpeg" id="idCh_13_Psychoanlysis_jpg"/>
+<item href="images/PH_13_001.jpg" media-type="image/jpeg" id="idPH_13_001_jpg"/>
+<item href="images/Car_13_001.jpg" media-type="image/jpeg" id="idCar_13_001_jpg"/>
+<item href="images/Ch_13_Person_Centered_Therapy.jpg" media-type="image/jpeg" id="idCh_13_Person_Centered_Therapy_jpg"/>
+<item href="images/Ch_13_Behavior_Therapies.jpg" media-type="image/jpeg" id="idCh_13_Behavior_Therapies_jpg"/>
+<item href="images/PH_13_002a.jpg" media-type="image/jpeg" id="idPH_13_002a_jpg"/>
+<item href="images/PH_13_002b.jpg" media-type="image/jpeg" id="idPH_13_002b_jpg"/>
+<item href="images/PH_13_002c.jpg" media-type="image/jpeg" id="idPH_13_002c_jpg"/>
+<item href="images/Ch_13_Cognitive_Therapies.jpg" media-type="image/jpeg" id="idCh_13_Cognitive_Therapies_jpg"/>
+<item href="images/FG_13_001.jpg" media-type="image/jpeg" id="idFG_13_001_jpg"/>
+<item href="images/Ch_13_Drug_Therapies.jpg" media-type="image/jpeg" id="idCh_13_Drug_Therapies_jpg"/>
+<item href="images/FG_13_002.jpg" media-type="image/jpeg" id="idFG_13_002_jpg"/>
+<item href="images/PH_13_003.jpg" media-type="image/jpeg" id="idPH_13_003_jpg"/>
+<item href="images/Ch_13_Diversity.jpg" media-type="image/jpeg" id="idCh_13_Diversity_jpg"/>
+<item href="images/Ch_13_How_Do_You_Take_Care_of_Your_Mental_Health_ASSET43032.png" media-type="image/png" id="idCh_13_How_Do_You_Take_Care_of_Your_Mental_Health_ASSET43032_png"/>
+<item href="images/CO_14_001.jpg" media-type="image/jpeg" id="idCO_14_001_jpg"/>
+<item href="images/PH_14_001.jpg" media-type="image/jpeg" id="idPH_14_001_jpg"/>
+<item href="images/PH_14_002.jpg" media-type="image/jpeg" id="idPH_14_002_jpg"/>
+<item href="images/Ch_14_Speed_Dating.jpg" media-type="image/jpeg" id="idCh_14_Speed_Dating_jpg"/>
+<item href="images/PH_14_003.jpg" media-type="image/jpeg" id="idPH_14_003_jpg"/>
+<item href="images/PH_14_004.jpg" media-type="image/jpeg" id="idPH_14_004_jpg"/>
+<item href="images/UNPH_14_001.jpg" media-type="image/jpeg" id="idUNPH_14_001_jpg"/>
+<item href="images/Ch_14_Cognitive_Dissoance_and_Attitudes_toward_Smoking.jpg" media-type="image/jpeg" id="idCh_14_Cognitive_Dissoance_and_Attitudes_toward_Smoking_jpg"/>
+<item href="images/FG_14_001.jpg" media-type="image/jpeg" id="idFG_14_001_jpg"/>
+<item href="images/PH_14_005.jpg" media-type="image/jpeg" id="idPH_14_005_jpg"/>
+<item href="images/PH_14_006.jpg" media-type="image/jpeg" id="idPH_14_006_jpg"/>
+<item href="images/14_Bystander_Effect.jpg" media-type="image/jpeg" id="id14_Bystander_Effect_jpg"/>
+<item href="images/PH_14_007.jpg" media-type="image/jpeg" id="idPH_14_007_jpg"/>
+<item href="images/FG_APPA_001.jpg" media-type="image/jpeg" id="idFG_APPA_001_jpg"/>
+<item href="images/FG_APPA_002.jpg" media-type="image/jpeg" id="idFG_APPA_002_jpg"/>
+<item href="images/FG_APPA_003.jpg" media-type="image/jpeg" id="idFG_APPA_003_jpg"/>
+<item href="images/FG_APPA_004.jpg" media-type="image/jpeg" id="idFG_APPA_004_jpg"/>
+<item href="images/FG_APPA_005.jpg" media-type="image/jpeg" id="idFG_APPA_005_jpg"/>
+<item href="images/FG_APPA_006.jpg" media-type="image/jpeg" id="idFG_APPA_006_jpg"/>
+<item href="images/FG_APPA_007.jpg" media-type="image/jpeg" id="idFG_APPA_007_jpg"/>
+<item href="images/FG_APPA_008.jpg" media-type="image/jpeg" id="idFG_APPA_008_jpg"/>
+<item href="images/FG_APPA_009.jpg" media-type="image/jpeg" id="idFG_APPA_009_jpg"/>
+<item href="images/FG_APPA_010.jpg" media-type="image/jpeg" id="idFG_APPA_010_jpg"/>
+<item href="images/FG_APPA_011.jpg" media-type="image/jpeg" id="idFG_APPA_011_jpg"/>
+<item href="images/FG_APPA_012.jpg" media-type="image/jpeg" id="idFG_APPA_012_jpg"/>
+<item href="images/FG_APPB_001.jpg" media-type="image/jpeg" id="idFG_APPB_001_jpg"/>
+<item href="css/main.css" id="css_0" media-type="text/css"/>
+<item href="css/night.css" id="css_1" media-type="text/css"/>
+<item href="css/sepia.css" id="css_2" media-type="text/css"/>
+<item href="css/images/iconmonstr-info-8-icon-20x20.png" id="css_3" media-type="image/png"/>
+<item href="css/images/iconmonstr-info-8-icon.png" id="css_4" media-type="image/png"/>
+<item href="css/images/iconmonstr-window-new-icon-20x20.png" id="css_5" media-type="image/png"/>
+<item href="css/images/iconmonstr-window-new-icon.png" id="css_6" media-type="image/png"/>
+<item href="css/theme/default.css" id="css_7" media-type="text/css"/>
+<item href="css/theme/night.css" id="css_8" media-type="text/css"/>
+<item href="css/theme/sepia.css" id="css_9" media-type="text/css"/>
+<item href="images/cover.jpg" media-type="image/jpeg" id="cover-image" properties="cover-image"/>
+</manifest>
+<spine toc="ncx">
+<itemref idref="cover"/>
+<itemref idref="P7000493190000000000000000000005"/>
+<itemref idref="P70004931900000000000000000135B9"/>
+<itemref idref="P70004931900000000000000000135BB"/>
+<itemref idref="P700049319000000000000000000001B"/>
+<itemref idref="P700049319000000000000000000004C"/>
+<itemref idref="P700049319000000000000000001361B"/>
+<itemref idref="P7000493190000000000000000000076"/>
+<itemref idref="P700049319000000000000000001397D"/>
+<itemref idref="P7000493190000000000000000000424"/>
+<itemref idref="P70004931900000000000000000005F0"/>
+<itemref idref="P700049319000000000000000000064E"/>
+<itemref idref="P700049319000000000000000000079B"/>
+<itemref idref="P70004931900000000000000000008B6"/>
+<itemref idref="P7000493190000000000000000000963"/>
+<itemref idref="P7000493190000000000000000000A89"/>
+<itemref idref="P7000493190000000000000000000AFE"/>
+<itemref idref="P7000493190000000000000000000B1C"/>
+<itemref idref="P7000493190000000000000000000B46"/>
+<itemref idref="P7000493190000000000000000000BBA"/>
+<itemref idref="P7000493190000000000000000000C85"/>
+<itemref idref="P7000493190000000000000000000CD8"/>
+<itemref idref="P7000493190000000000000000000CE3"/>
+<itemref idref="P7000493190000000000000000000E7D"/>
+<itemref idref="P7000493190000000000000000001072"/>
+<itemref idref="P70004931900000000000000000010F1"/>
+<itemref idref="P7000493190000000000000000001186"/>
+<itemref idref="P700049319000000000000000000D022"/>
+<itemref idref="P70004931900000000000000000012C5"/>
+<itemref idref="P7000493190000000000000000001304"/>
+<itemref idref="P70004931900000000000000000013CF"/>
+<itemref idref="P7000493190000000000000000001409"/>
+<itemref idref="P70004931900000000000000000014BA"/>
+<itemref idref="P7000493190000000000000000001690"/>
+<itemref idref="P70004931900000000000000000017AB"/>
+<itemref idref="P700049319000000000000000000189C"/>
+<itemref idref="P7000493190000000000000000001AAE"/>
+<itemref idref="P7000493190000000000000000001B0A"/>
+<itemref idref="P7000493190000000000000000001BD5"/>
+<itemref idref="P7000493190000000000000000001C1A"/>
+<itemref idref="P7000493190000000000000000001D1D"/>
+<itemref idref="P7000493190000000000000000001D68"/>
+<itemref idref="P7000493190000000000000000001F55"/>
+<itemref idref="P7000493190000000000000000001FA9"/>
+<itemref idref="P7000493190000000000000000001FED"/>
+<itemref idref="P7000493190000000000000000002030"/>
+<itemref idref="P70004931900000000000000000020FB"/>
+<itemref idref="P7000493190000000000000000002143"/>
+<itemref idref="P7000493190000000000000000002215"/>
+<itemref idref="P7000493190000000000000000002354"/>
+<itemref idref="P70004931900000000000000000024B4"/>
+<itemref idref="P700049319000000000000000000258E"/>
+<itemref idref="P70004931900000000000000000025EF"/>
+<itemref idref="P70004931900000000000000000026BA"/>
+<itemref idref="P7000493190000000000000000002702"/>
+<itemref idref="P700049319000000000000000000277E"/>
+<itemref idref="P700049319000000000000000000281C"/>
+<itemref idref="P7000493190000000000000000002981"/>
+<itemref idref="P70004931900000000000000000029FD"/>
+<itemref idref="P7000493190000000000000000002AAF"/>
+<itemref idref="P7000493190000000000000000002B44"/>
+<itemref idref="P7000493190000000000000000002B89"/>
+<itemref idref="P7000493190000000000000000002BEE"/>
+<itemref idref="P7000493190000000000000000002CB9"/>
+<itemref idref="P7000493190000000000000000002D04"/>
+<itemref idref="P7000493190000000000000000002DC8"/>
+<itemref idref="P7000493190000000000000000002E22"/>
+<itemref idref="P7000493190000000000000000002E7B"/>
+<itemref idref="P7000493190000000000000000002F95"/>
+<itemref idref="P700049319000000000000000000305E"/>
+<itemref idref="P7000493190000000000000000003089"/>
+<itemref idref="P7000493190000000000000000003245"/>
+<itemref idref="P7000493190000000000000000003320"/>
+<itemref idref="P700049319000000000000000000334D"/>
+<itemref idref="P700049319000000000000000000337A"/>
+<itemref idref="P7000493190000000000000000003391"/>
+<itemref idref="P70004931900000000000000000033FE"/>
+<itemref idref="P70004931900000000000000000034E7"/>
+<itemref idref="P700049319000000000000000000352F"/>
+<itemref idref="P7000493190000000000000000003610"/>
+<itemref idref="P7000493190000000000000000003707"/>
+<itemref idref="P70004931900000000000000000037E5"/>
+<itemref idref="P700049319000000000000000000389A"/>
+<itemref idref="P7000493190000000000000000003928"/>
+<itemref idref="P70004931900000000000000000039D9"/>
+<itemref idref="P7000493190000000000000000003A26"/>
+<itemref idref="P7000493190000000000000000003AF1"/>
+<itemref idref="P7000493190000000000000000003B4E"/>
+<itemref idref="P7000493190000000000000000003BDD"/>
+<itemref idref="P7000493190000000000000000003C45"/>
+<itemref idref="P7000493190000000000000000003CDF"/>
+<itemref idref="P7000493190000000000000000003F0D"/>
+<itemref idref="P7000493190000000000000000003FE8"/>
+<itemref idref="P70004931900000000000000000040CC"/>
+<itemref idref="P700049319000000000000000000414A"/>
+<itemref idref="P7000493190000000000000000004181"/>
+<itemref idref="P70004931900000000000000000041FF"/>
+<itemref idref="P70004931900000000000000000042CB"/>
+<itemref idref="P70004931900000000000000000042FC"/>
+<itemref idref="P700049319000000000000000000430D"/>
+<itemref idref="P700049319000000000000000000449E"/>
+<itemref idref="P7000493190000000000000000004523"/>
+<itemref idref="P70004931900000000000000000045CC"/>
+<itemref idref="P7000493190000000000000000004648"/>
+<itemref idref="P7000493190000000000000000004704"/>
+<itemref idref="P700049319000000000000000000473B"/>
+<itemref idref="P700049319000000000000000000479B"/>
+<itemref idref="P7000493190000000000000000004865"/>
+<itemref idref="P7000493190000000000000000004893"/>
+<itemref idref="P7000493190000000000000000004980"/>
+<itemref idref="P7000493190000000000000000004A76"/>
+<itemref idref="P7000493190000000000000000004AEE"/>
+<itemref idref="P7000493190000000000000000004B56"/>
+<itemref idref="P7000493190000000000000000004BD1"/>
+<itemref idref="P7000493190000000000000000004BF3"/>
+<itemref idref="P7000493190000000000000000004C10"/>
+<itemref idref="P7000493190000000000000000004C5C"/>
+<itemref idref="P7000493190000000000000000004D27"/>
+<itemref idref="P7000493190000000000000000004D5F"/>
+<itemref idref="P7000493190000000000000000004E65"/>
+<itemref idref="P7000493190000000000000000004F31"/>
+<itemref idref="P7000493190000000000000000004FD8"/>
+<itemref idref="P7000493190000000000000000005074"/>
+<itemref idref="P70004931900000000000000000050C7"/>
+<itemref idref="P700049319000000000000000000510F"/>
+<itemref idref="P7000493190000000000000000005147"/>
+<itemref idref="P70004931900000000000000000051CC"/>
+<itemref idref="P700049319000000000000000000524F"/>
+<itemref idref="P70004931900000000000000000052A9"/>
+<itemref idref="P70004931900000000000000000052C1"/>
+<itemref idref="P70004931900000000000000000052DE"/>
+<itemref idref="P7000493190000000000000000005355"/>
+<itemref idref="P7000493190000000000000000005420"/>
+<itemref idref="P7000493190000000000000000005456"/>
+<itemref idref="P700049319000000000000000000551D"/>
+<itemref idref="P70004931900000000000000000055B6"/>
+<itemref idref="P7000493190000000000000000005620"/>
+<itemref idref="P70004931900000000000000000056B2"/>
+<itemref idref="P7000493190000000000000000005717"/>
+<itemref idref="P700049319000000000000000000580D"/>
+<itemref idref="P700049319000000000000000000587B"/>
+<itemref idref="P70004931900000000000000000058CB"/>
+<itemref idref="P7000493190000000000000000005936"/>
+<itemref idref="P7000493190000000000000000005A01"/>
+<itemref idref="P7000493190000000000000000005A49"/>
+<itemref idref="P7000493190000000000000000005B44"/>
+<itemref idref="P7000493190000000000000000005C65"/>
+<itemref idref="P7000493190000000000000000005D3A"/>
+<itemref idref="P7000493190000000000000000005DD2"/>
+<itemref idref="P7000493190000000000000000005E16"/>
+<itemref idref="P7000493190000000000000000005E5A"/>
+<itemref idref="P7000493190000000000000000005F2B"/>
+<itemref idref="P7000493190000000000000000005F53"/>
+<itemref idref="P7000493190000000000000000005F86"/>
+<itemref idref="P7000493190000000000000000006035"/>
+<itemref idref="P70004931900000000000000000060AF"/>
+<itemref idref="P70004931900000000000000000060D1"/>
+<itemref idref="P70004931900000000000000000060E4"/>
+<itemref idref="P7000493190000000000000000006101"/>
+<itemref idref="P7000493190000000000000000006137"/>
+<itemref idref="P70004931900000000000000000061B7"/>
+<itemref idref="P70004931900000000000000000061E5"/>
+<itemref idref="P70004931900000000000000000061F5"/>
+<itemref idref="P7000493190000000000000000006289"/>
+<itemref idref="P70004931900000000000000000062AA"/>
+<itemref idref="P7000493190000000000000000006848"/>
+<itemref idref="P700049319000000000000000000704F"/>
+<itemref idref="P700049319000000000000000000820A"/>
+<itemref idref="P700049319000000000000000001891A"/>
+<itemref idref="P700049319000000000000000000826B"/>
+<itemref idref="P70004931900000000000000000083B3"/>
+<itemref idref="P7000493190000000000000000008679"/>
+<itemref idref="P70004931900000000000000000088A4"/>
+<itemref idref="P7000493190000000000000000008A09"/>
+<itemref idref="P7000493190000000000000000008AB7"/>
+<itemref idref="P7000493190000000000000000008BC8"/>
+<itemref idref="P7000493190000000000000000008D90"/>
+<itemref idref="P7000493190000000000000000008F93"/>
+<itemref idref="P7000493190000000000000000008FC7"/>
+<itemref idref="P7000493190000000000000000009094"/>
+<itemref idref="P7000493190000000000000000009246"/>
+<itemref idref="P7000493190000000000000000009439"/>
+<itemref idref="P70004931900000000000000000096F8"/>
+<itemref idref="P700049319000000000000000000979B"/>
+<itemref idref="P700049319000000000000000000982B"/>
+<itemref idref="P70004931900000000000000000099C2"/>
+<itemref idref="P70004931900000000000000000099D4"/>
+<itemref idref="P7000493190000000000000000009B5A"/>
+<itemref idref="P7000493190000000000000000009EC4"/>
+<itemref idref="P7000493190000000000000000009FCC"/>
+<itemref idref="P7000493190000000000000000009FF0"/>
+<itemref idref="P700049319000000000000000000A0A8"/>
+<itemref idref="P700049319000000000000000000A23F"/>
+<itemref idref="P700049319000000000000000000A245"/>
+<itemref idref="P700049319000000000000000000A28D"/>
+<itemref idref="P700049319000000000000000000A2E5"/>
+
+</spine>
+</package>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+    <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="container has-instructions">
+
+    <div class="Flashcards">
+
+        <nav class="main-nav">
+            <button tabindex="0" class="current-chapter-cards"></button>
+            <button tabindex="0" class="all-chapters-cards"></button>
+            <div class="right-helper">
+                <button tabindex="0" class="flip right">Flip Cards</button>
+                <button tabindex="0" class="restart right">Start Over</button>
+            </div>
+        </nav>
+
+        <section class="cards">
+
+            <div class="end-screen">
+                <div class="content-wrapper">
+                    <h2>All done!</h2>
+                    <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                    <ul class="repeated-cards"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+            <button tabindex="0" class="skip right">Skip</button>
+        </nav>
+
+    </div>
+
+</div> <!-- container -->
+
+<script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+<script type="text/javascript">
+
+    window.addEvent('domready', function() {
+        // Widget initialization
+        window.widget_instance = new Flashcards({
+            container: $$('.Flashcards')[0],
+            currentChapter: 0, displayCurrentChapterButton: false,
+            cards: [
+                {
+                    chapter: 0,
+                    term: "agoraphobia",
+                    definition: "An anxiety disorder that involves multiple, intense fears of crowds, public places, and other situations that require separation from a source of security such as the home."
+                },
+                {
+                    chapter: 0,
+                    term: "antisocial personality disorder",
+                    definition: "Personality disorder that involves a pattern of violent, criminal, or unethical and exploitative behavior and an inability to feel affection for others."
+                },
+                {
+                    chapter: 0,
+                    term: "anxiety disorders",
+                    definition: "Disorders in which anxiety is a characteristic feature or the avoidance of anxiety seems to motivate abnormal behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "attention-deficit/hyperactivity disorder (ADHD)",
+                    definition: "A childhood disorder characterized by inattention, impulsiveness, and hyperactivity."
+                },
+                {
+                    chapter: 0,
+                    term: "autistic spectrum disorder (ASD)",
+                    definition: "A wide range of disorders that emerge during early childhood characterized by varying degrees of impairment in communication skills, and social functioning."
+                },
+                {
+                    chapter: 0,
+                    term: "avoidant personality disorder",
+                    definition: "Personality disorder in which the person’s fears of rejection by others lead to social isolation."
+                },
+                {
+                    chapter: 0,
+                    term: "biological model",
+                    definition: "View that psychological disorders have a biochemical or physiological basis."
+                },
+                {
+                    chapter: 0,
+                    term: "bipolar disorder",
+                    definition: "A mood disorder in which periods of mania and depression may alternate, sometimes with periods of normal mood intervening."
+                },
+                {
+                    chapter: 0,
+                    term: "body dysmorphic disorder",
+                    definition: "A somatoform disorder in which a person becomes so preoccupied with his or her imagined ugliness that normal life is impossible."
+                },
+                {
+                    chapter: 0,
+                    term: "borderline personality disorder",
+                    definition: "Personality disorder characterized by marked instability in self-image, mood, and interpersonal relationships."
+                },
+                {
+                    chapter: 0,
+                    term: "cognitive distortions",
+                    definition: "Illogical and maladaptive responses to early negative life events that lead to feelings of incompetence and unworthiness that are reactivated whenever a new situation arises that resembles the original events."
+                },
+                {
+                    chapter: 0,
+                    term: "cognitive–behavioral model",
+                    definition: "View that psychological disorders result from learning maladaptive ways of thinking and behaving."
+                },
+                {
+                    chapter: 0,
+                    term: "conversion disorders",
+                    definition: "Disorders in which a dramatic specific disability has no physical cause but instead seems related to psychological problems."
+                },
+                {
+                    chapter: 0,
+                    term: "delusions",
+                    definition: "False beliefs about reality that have no basis in fact."
+                },
+                {
+                    chapter: 0,
+                    term: "dependent personality disorder",
+                    definition: "Personality disorder in which the person is unable to make choices and decisions independently and cannot tolerate being alone."
+                },
+                {
+                    chapter: 0,
+                    term: "depersonalization/derealization disorder",
+                    definition: "A dissociative disorder whose essential feature is that the person suddenly feels changed or different in a strange way."
+                },
+                {
+                    chapter: 0,
+                    term: "depressive disorders",
+                    definition: "Mood disorders often characterized by overwhelming feelings of sadness, lack of interest in activities, and perhaps excessive guilt or feelings of worthlessness."
+                },
+                {
+                    chapter: 0,
+                    term: "diathesis",
+                    definition: "Biological predisposition."
+                },
+                {
+                    chapter: 0,
+                    term: "diathesis–stress model",
+                    definition: "View that people biologically predisposed to a mental disorder (those with a certain diathesis) will tend to exhibit that disorder when particularly affected by stress."
+                },
+                {
+                    chapter: 0,
+                    term: "dissociative amnesia",
+                    definition: "A disorder characterized by loss of memory for past events without organic cause."
+                },
+                {
+                    chapter: 0,
+                    term: "dissociative disorders",
+                    definition: "Disorders in which some aspect of the personality seems separated from the rest."
+                },
+                {
+                    chapter: 0,
+                    term: "dissociative fugue",
+                    definition: "A symptom of dissociative amnesia that involves flight from home and the assumption of a new identity with amnesia for past identity and events."
+                },
+                {
+                    chapter: 0,
+                    term: "dissociative identity disorder",
+                    definition: "(Also called multiple personality disorder.) Disorder characterized by the separation of the personality into two or more distinct personalities."
+                },
+                {
+                    chapter: 0,
+                    term: "erectile disorder (or erectile dysfunction) (ED)",
+                    definition: "The inability of a man to achieve or maintain an erection."
+                },
+                {
+                    chapter: 0,
+                    term: "exhibitionism",
+                    definition: "Exposing one’s genitals in public to achieve sexual arousal."
+                },
+                {
+                    chapter: 0,
+                    term: "female sexual interest/arousal disorder",
+                    definition: "The inability of a woman to become sexually aroused or to reach orgasm."
+                },
+                {
+                    chapter: 0,
+                    term: "fetishism",
+                    definition: "A nonhuman object is the preferred or exclusive method of achieving sexual excitement."
+                },
+                {
+                    chapter: 0,
+                    term: "frotteurism",
+                    definition: "Achieving sexual arousal by touching or rubbing against a nonconsenting person in public situations."
+                },
+                {
+                    chapter: 0,
+                    term: "gender dysphoria",
+                    definition: "Disorders that involve the strong desire to become, or the insistence that one really is, a member of the other biological sex."
+                },
+                {
+                    chapter: 0,
+                    term: "generalized anxiety disorder",
+                    definition: "An anxiety disorder characterized by prolonged vague but intense fears that are not attached to any particular object or circumstance."
+                },
+                {
+                    chapter: 0,
+                    term: "genito-pelvic pain/penetration disorder",
+                    definition: "Involuntary muscle spasms in the outer part of the vagina that make intercourse impossible."
+                },
+                {
+                    chapter: 0,
+                    term: "hallucinations",
+                    definition: "Sensory experiences in the absence of external stimulation."
+                },
+                {
+                    chapter: 0,
+                    term: "illness anxiety disorder",
+                    definition: "Disorder in which a person interprets insignificant symptoms as signs of serious illness in the absence of any organic evidence of such illness."
+                },
+                {
+                    chapter: 0,
+                    term: "insanity",
+                    definition: "Legal term applied to defendants who do not know right from wrong or are unable to control their behavior."
+                },
+                {
+                    chapter: 0,
+                    term: "major depressive disorder",
+                    definition: "A depressive disorder characterized by an episode of intense sadness, depressed mood, or marked loss of interest or pleasure in nearly all activities."
+                },
+                {
+                    chapter: 0,
+                    term: "manic episodes",
+                    definition: "Characterized by euphoric states, extreme physical activity, excessive talkativeness, distractedness, and sometimes grandiosity."
+                },
+                {
+                    chapter: 0,
+                    term: "mood disorders",
+                    definition: "Disturbances in mood or prolonged emotional state."
+                },
+                {
+                    chapter: 0,
+                    term: "narcissistic personality disorder",
+                    definition: "Personality disorder in which the person has an exaggerated sense of self-importance and needs constant admiration."
+                },
+                {
+                    chapter: 0,
+                    term: "obsessive–compulsive disorder (OCD)",
+                    definition: "An anxiety-related disorder in which a person feels driven to think disturbing thoughts or to perform senseless rituals."
+                },
+                {
+                    chapter: 0,
+                    term: "orgasmic disorders",
+                    definition: "Inability to reach orgasm in a person able to experience sexual desire and maintain arousal."
+                },
+                {
+                    chapter: 0,
+                    term: "panic disorder",
+                    definition: "An anxiety disorder characterized by recurrent panic attacks in which the person suddenly experiences intense fear or terror without any reasonable cause."
+                },
+                {
+                    chapter: 0,
+                    term: "paranoid personality disorder",
+                    definition: "Personality disorder in which the person is inappropriately suspicious and mistrustful of others."
+                },
+                {
+                    chapter: 0,
+                    term: "paraphilias",
+                    definition: "Use of unconventional objects or situations to achieve sexual arousal."
+                },
+                {
+                    chapter: 0,
+                    term: "paraphilic disorder",
+                    definition: "Use of unconventional objects or situations for sexual arousal that cause either stress, harm, impairment or bring about personal risk."
+                },
+                {
+                    chapter: 0,
+                    term: "pedophilic disorder",
+                    definition: "Desire to have sexual relations with children as the preferred or exclusive method of achieving sexual excitement."
+                },
+                {
+                    chapter: 0,
+                    term: "persistent depressive disorder",
+                    definition: "A depressive disorder where the symptoms are generally less severe than for major depressive disorder, but are present most days and persist for at least 2 years."
+                },
+                {
+                    chapter: 0,
+                    term: "personality disorders",
+                    definition: "Disorders in which inflexible and maladaptive ways of thinking and behaving learned early in life cause distress to the person or conflicts with others."
+                },
+                {
+                    chapter: 0,
+                    term: "premature ejaculation",
+                    definition: "Inability of man to inhibit orgasm as long as desired."
+                },
+                {
+                    chapter: 0,
+                    term: "psychoanalytic model",
+                    definition: "View that psychological disorders result from unconscious internal conflicts."
+                },
+                {
+                    chapter: 0,
+                    term: "psychosomatic illness",
+                    definition: "A real physical illness that is largely caused by psychological factors such as stress and anxiety."
+                },
+                {
+                    chapter: 0,
+                    term: "psychostimulant",
+                    definition: "Drugs that increase ability to focus attention in people with ADHD."
+                },
+                {
+                    chapter: 0,
+                    term: "psychotic",
+                    definition: "Behavior characterized by a loss of touch with reality."
+                },
+                {
+                    chapter: 0,
+                    term: "schizoid personality disorder",
+                    definition: "Personality disorder in which a person is withdrawn and lacks feelings for others."
+                },
+                {
+                    chapter: 0,
+                    term: "schizophrenic spectrum disorders",
+                    definition: "Severe disorders in which there are disturbances of thoughts, communications, and emotions, including delusions and hallucinations."
+                },
+                {
+                    chapter: 0,
+                    term: "sexual desire disorders",
+                    definition: "Disorders in which the person lacks sexual interest or has an active distaste for sex."
+                },
+                {
+                    chapter: 0,
+                    term: "sexual dysfunction",
+                    definition: "Loss or impairment of the ordinary physical responses of sexual function for at least six months."
+                },
+                {
+                    chapter: 0,
+                    term: "sexual masochism",
+                    definition: "Inability to enjoy sex without accompanying emotional or physical pain."
+                },
+                {
+                    chapter: 0,
+                    term: "sexual sadism",
+                    definition: "Obtaining sexual gratification from humiliating or physically harming a sex partner."
+                },
+                {
+                    chapter: 0,
+                    term: "social anxiety disorder",
+                    definition: "Anxiety disorders characterized by excessive, inappropriate fears connected with social situations or performances in front of other people."
+                },
+                {
+                    chapter: 0,
+                    term: "somatic symptom and related disorders",
+                    definition: "Disorders in which there is an apparent physical illness for which there is no organic basis."
+                },
+                {
+                    chapter: 0,
+                    term: "somatic symptom disorder",
+                    definition: "Disorder characterized by recurrent vague somatic complaints without a physical cause."
+                },
+                {
+                    chapter: 0,
+                    term: "specific phobia",
+                    definition: "Anxiety disorder characterized by an intense, paralyzing fear of something."
+                },
+                {
+                    chapter: 0,
+                    term: "systems approach",
+                    definition: "View that biological, psychological, and social risk factors combine to produce psychological disorders. Also known as the biopsychosocial model of psychological disorders."
+                },
+                {
+                    chapter: 0,
+                    term: "transvestic fetishism",
+                    definition: "Wearing the clothes of the opposite sex to achieve sexual gratification."
+                },
+                {
+                    chapter: 0,
+                    term: "voyeurism",
+                    definition: "Desire to watch others having sexual relations or to spy on nude people."
+                }
+            ]
+        });
+    })
+</script>
+
+</body>
+</html>

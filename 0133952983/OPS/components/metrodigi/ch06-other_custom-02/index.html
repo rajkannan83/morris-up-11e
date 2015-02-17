@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Pearson Ciccarelli Chapter 5 Sample</title>
+        <link rel="stylesheet" href="styles/template.css">
+        <link rel="stylesheet" href="styles/style.css" type="text/css" />
+        <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="MetrodigiWidget">
+                <article class="widget-content">
+                    <section id="schedules-chart" class="widget-body">
+                        <div class="notes">
+                            <div class="note">
+                                <p>
+                                    <span tabindex="0">There are four schedules of reinforcement, each with its own typical pattern of responding. The responses are cumulative, which means new responses are added to those that come before, and all graphs begin after the learned pattern is well established. Slash marks mean that a reinforcement has been given.</span>
+                                    <br><span class="offscreen">Graph shows lines plotting cumulative responses on the Y axis and time on the X axis.</span><br>
+                                    <strong tabindex="0"><span class="responsive-call-to-action">Click or tap</span> on the colored legend boxes to see the pattern of responding with each schedule of reinforcement.</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="playground-container">
+                            <div id="view" tabindex="0" aria-labelledby="description">
+                                <div id="labels"></div>
+                                <p id="sch-time"><strong>TIME</strong></p>
+                                <p id="resp"><strong>CUMULATIVE RESPONSES</strong></p>
+                                <div class="frame frame-bg "></div>
+                                <div class="frame frame-1 selected"></div>
+                                <div class="temp-hide">
+                                    <div class="frame frame-2"></div>
+                                    <div class="frame frame-3"></div>
+                                    <div class="frame frame-4"></div>
+                                </div>
+                            </div>
+                            <p id="description" aria-hidden="false">Graph shows lines plotting cumulative responses on the Y axis and time on the X axis. 
+                                Fixed Interval reinforcement is a scalloped line rising left to right at 45 degrees.
+                                Variable Interval reinforcement is a smother line rising left to right at slightly more than 45 degrees.
+                                Fixed Ratio is a somewhat scalloped steep line rising left to right at about 5 degrees.
+                                Variable Ratio is almost a straight line rising left to right at about 5 degrees.
+                                Tables to follow with data used in the graph.</p>
+                            <div id="controls">
+                                <table>
+                                    <tbody>
+                                        <tr class="switch-frame selected" data-frame="frame-1">
+                                            <td>
+                                                <div class="table-icon icon-1"></div>
+                                            </td>
+                                            <td class="checkBox">
+                                                <span class="check" tabindex="0" role="checkbox" aria-checked="true" aria-label="Fixed Interval" style="background-color: #F65D2F;"><i class="fa fa-check fa-1"></i></span><span class="offscreen">Fixed Interval reinforcement is a scalloped line rising left to right at 45 degrees.</span>
+                                            </td>
+                                            <td class="txt">Fixed Interval
+                                            </td>
+                                        </tr>
+
+                                        <tr class="switch-frame" data-frame="frame-2">
+                                            <td>
+                                                <div class="table-icon icon-2"></div>
+                                            </td>
+                                            <td class="checkBox">
+                                                <span class="check" tabindex="0" role="checkbox" aria-checked="false" aria-label="Variable Interval"  style="background-color: #198D00;"><i class="fa fa-check fa-1"></i></span><span class="offscreen">Variable Interval reinforcement is a smother line rising left to right at slightly more than 45 degrees.</span>
+                                            </td>
+                                            <td class="txt">Variable Interval
+                                            </td>
+                                        </tr>
+
+                                        <tr class="switch-frame" data-frame="frame-3">
+                                            <td>
+                                                <div class="table-icon icon-3"></div>
+                                            </td>
+                                            <td class="checkBox">
+                                                <span class="check" tabindex="0" role="checkbox" aria-checked="false" aria-label="Fixed Ratio" style="background-color: #00BFFF;"><i class="fa fa-check fa-1"></i></span><span class="offscreen">Fixed Ratio is a somewhat scalloped steep line rising left to right at about 5 degrees.</span>
+                                            </td>
+                                            <td class="txt">Fixed Ratio
+                                            </td>
+                                        </tr>
+
+                                        <tr class="switch-frame" data-frame="frame-4">
+                                            <td>
+                                                <div class="table-icon icon-4"></div>
+                                            </td>
+                                            <td class="checkBox">
+                                                <span class="check" tabindex="0" role="checkbox" aria-checked="false" aria-label="Variable Ratio" style="background-color: #69008C;"><i class="fa fa-check fa-1"></i></span><span class="offscreen">Variable Ratio is almost a straight line rising left to right at about 5 degrees.</span>
+                                            </td>
+                                            <td class="txt">Variable Ratio
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="infoWrapper" class="main-childs"></div>
+                        </div>                            
+                    </section>
+                </article>
+            </div>
+        </div>
+
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+        <script type="text/javascript" src="javascript/script.js"></script>
+        <script type='text/javascript' src="javascript/popup.js"></script>
+        <script type="text/javascript">
+             window.addEvent('domready', function() {    
+                var data = {
+                    popups: [
+                        {x: 0, y:0, text: 'Cindy Rucker, 29 years old, recently took time off from her job in the New Orleans public school system to have her first child.'},
+                        {x: 0, y:0, text: 'Although she is only 28 years old, Baktnizar Kahn has six children, a common pattern in Afghanistan.'},
+                        {x: 0, y:0, text: 'She 29 years old, recently took time off from her job in the New Orleans public.'},
+                        {x: 0, y:0, text: 'Baktnizar Kahn has six children, a common pattern in Afghanistan Kahn has six children, a common pattern in Afghanistan.'}
+                    ]
+                };
+                window.main_widget = new PopUp({                    
+                    data: data,
+                });
+            });
+        </script>
+    </body>
+</html>

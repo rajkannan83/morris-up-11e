@@ -1,0 +1,5670 @@
+@charset "UTF-8";
+/*doc
+---
+title: Shared Components
+name: shared_components
+category: Themes
+---
+*/
+/*doc
+---
+title: Colors
+name: colors_shared
+category: Themes
+parent: shared_components
+---
+
+The following color variables are inlcuded automatically via `_shared.scss`.
+These variables can be overridden in a custom theme.
+
+variable       | value | color
+-------------- | ----- | -----
+`$white`       | `#fff`  | <span class="color-bar__white"></span>
+`$almost_white`| `#eee`  | <span class="color-bar__almost_white"></span>
+`$light_grey`  | `#ddd`  | <span class="color-bar__light_grey"></span>
+`$mid_grey`    | `#aaa`  | <span class="color-bar__mid_grey"></span>
+`$dark_grey`   | `#666`  | <span class="color-bar__dark_grey"></span>
+`$almost_black`| `#333`  | <span class="color-bar__almost_black"></span>
+`$black`       | `#000`  | <span class="color-bar__black"></span>
+*/
+/*doc
+---
+title: Fonts
+name: fonts_shared
+category: Themes
+parent: shared_components
+---
+
+### Font Family Variables
+Several typeface stacks are included by default via `shared/_typography.scss`.
+
+variable | typeface stack
+--- | ---
+`$font_helvetica`| "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+`$font_arial` | Arial, Helvetica, sans-serif;
+`$font_georgia` | Georgia, serif;
+`$font_courier` | Courier, "Courier New", monospace;
+
+### Abstract Font Family Variables
+In addition to the specific font variables, there are also abstracted font
+variables. Using these makes it easier to quickly change a font family without
+having to find/replace all instances of the specific font variable name.
+
+variable | description
+--- | ---
+`$font_sans`| The default sans-serif typeface
+`$font_serif` | The default serif typeface
+`$font_mono` |The default mono-spaced typeface
+
+If you are using a custom font family in your theme, you can override any of
+ these variables to use your new font family.
+
+```
+// Define a new font-family stack
+$font_palatino: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+// Define the new Palatino stack as the defaul serif font
+$font_serif: $font_palatino;
+```
+
+In the example above, whenever the `$font_serif` variable is used, it will use 
+the new Palatino family.
+*/
+pxe_core {
+  version: "v3.3.1";
+}
+
+/*doc
+---
+title: Functions
+name: functions_shared
+category: Themes
+parent: shared_components
+
+Several custom [Sass functions](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives) are included via `shared/_functions.scss`.
+
+### strip-units()
+Strip the unit from a value.
+
+```
+line-height: strip-units(1.2em);
+
+// line-height: 1.2;
+```
+
+### em()
+Convert px font size to ems based on the `$base_font_size`
+
+```
+$base_font_size: 16px;
+font-size: em(40px);
+
+// font-size: 2.5em;
+```
+
+### rem()
+Convert px font size to rems based on the `$base_font_size`
+
+```
+$base_font_size: 16px;
+font-size: rem(40px);
+
+// font-size: 2.5rem;
+```
+*/
+html {
+  color: #000;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio,
+b, big, blockquote, body, canvas, caption, center, cite,
+code, dd, del, details, dfn, dl, dt, em, embed, fieldset,
+figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
+header, hgroup, i, iframe, img, ins, kbd, label,
+legend, li, mark, menu, nav, object, ol, output, p, pre,
+q, ruby, s, samp, section, small, strike, strong, sub,
+summary, sup, table, tbody, td, tfoot, th, thead, time,
+tr, tt, u, ul, var, video, :before, :after, .content,
+.media, .step-title, .step-info, .title-info, .chapter-number,
+.grid, .grid-item {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+}
+
+html {
+  font-size: 17px;
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+body {
+  background: #fff !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333 !important;
+  line-height: 1.5em;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+body > section,
+body > nav,
+body > footer {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding: 0 80px;
+  margin: 57px 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+@media (max-width: 709px) {
+  body > section,
+  body > nav,
+  body > footer {
+    padding: 0 40px;
+    margin: 57px 0;
+  }
+}
+@media (max-width: 480px) {
+  body > section,
+  body > nav,
+  body > footer {
+    padding: 0 20px;
+    margin: 28.5px 0;
+  }
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  background: transparent;
+}
+
+/*doc
+---
+title: Aside
+name: aside
+category: Patterns
+---
+
+Asides are block-level supplemental content that may present in a number 
+of ways.
+
+**aside requires a class attribute. an aside element with no class 
+attribute will be treated as invalid.**
+
+*/
+aside {
+  clear: both;
+  margin-bottom: 1.5em;
+}
+aside:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+aside p {
+  margin-bottom: 0.75em;
+}
+
+/*doc
+---
+title: Endnote
+name: endnote
+category: Patterns
+parent: aside
+---
+
+An endnote is an aside associated with a specific range of text. As 
+with the footnote, it is indicated by a marker in the text known as 
+the footnote reference, typically a raised number or symbol, and the 
+presentation of the endnote itself is dependent on the presentation 
+medium. Whereas a footnote in print appears at the bottom of a page 
+or object, an endnote typically appears at the end of a chapter or 
+the product itself. In a digital product, the endnote reference is a 
+hyperlink which may launch a popup window or re-direct the user to 
+another location in the publication. The hyperlink to the endnote 
+receives a special class, "noteref endnote", so that software 
+applications and designers can treat them uniquely from other 
+hyperlinks. In the example below, the endnote reference resolves to 
+an endnote section at the end of this chapter.
+
+See [Endnote Lists](#Endnotes List)
+
+```html_example
+<p xmlns="http://www.w3.org/1999/xhtml">
+    This is body text containing an endnote reference<a class="noteref noteref_rearnote" epub:type="noteref" xmlns:epub="http://www.idpf.org/2007/ops" href="#"><span class="number">1</span></a>. Lorem ipsum...
+</p>
+```
+
+*/
+/*doc
+---
+title: marginalia
+name: marginalia
+category: Patterns
+parent: aside
+---
+
+```html_example
+<aside class="marginalia">
+    <p><img alt="" src="http://placehold.it/100x100" /></p>
+    <p>Skillful readers typically skip some of the words on the page and yet accurately understand what they read.</p>
+</aside>
+```
+
+*/
+.marginalia {
+  background: rgba(204, 102, 0, 0.15);
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: rgba(70, 129, 115, 0.15);
+  padding: 1.5em;
+  margin: 3em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.marginalia img {
+  float: left;
+  padding-right: 1.5em;
+  width: auto;
+}
+.marginalia p {
+  margin-bottom: 1.5em;
+}
+.marginalia p:last-child {
+  margin-bottom: 0;
+}
+.marginalia :first-child {
+  margin-top: 0;
+}
+.marginalia :last-child {
+  margin-bottom: 0;
+}
+.marginalia .glossary p:last-child {
+  margin-bottom: 0;
+}
+.marginalia .glossary {
+  background: transparent;
+}
+
+/*doc
+---
+title: pullquote
+name: pullquote
+category: Patterns
+parent: aside
+---
+
+```html_example
+<aside class="pullquote">
+    <div class="blockquotegroup">
+        <blockquote> 
+            <p>The Constitution only gives people the right to pursue happiness. You have to catch it yourself.</p>
+        </blockquote>
+        <div class="source">
+            <p>-Benjamin Franklin</p>
+        </div> 
+    </div>
+</aside>
+```
+*/
+.pullquote {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 1.26316em;
+  font-weight: 300;
+  font-family: Georgia, serif;
+  color: #468173;
+}
+
+/*doc
+---
+title: sidebar
+name: sidebar_noclass
+category: Patterns
+parent: aside
+---
+
+A sidebar is a titled aside that is typically several paragraphs in 
+length and may contain images and media and even small titled sections 
+and a practice section at the end. It is typically thought of as a 
+"boxed feature", owing to a common design treatment it receives to 
+set it apart from the running text. It intrinsically floats; like a 
+typical figure or table, it is allowed to be presented away from any 
+text reference. Sidebars commonly have a label in addition to a title.
+
+```html_example
+<aside class="sidebar">
+    <header>
+        <h1><span class="label">Sidebar Label</span>Sidebar Title</h1>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam fermentum libero, a adipiscing nunc congue a. Etiam ullamcorper tellus urna, quis hendrerit dui scelerisque in.</p>
+</aside>
+```
+
+*/
+.sidebar {
+  background: transparent;
+  border-style: solid;
+  border-width: 0 0 0 2px;
+  border-color: #468173;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: inherit;
+}
+.sidebar header .label,
+.sidebar hgroup .label {
+  background: transparent;
+  color: inherit;
+  display: inline;
+  font-size: 1em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  text-transform: none;
+}
+.sidebar > hgroup h1,
+.sidebar > header h1 {
+  color: #333;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+.sidebar > hgroup h2,
+.sidebar > hgroup .subtitle,
+.sidebar > header h2,
+.sidebar > header .subtitle {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  font-weight: bold;
+}
+.sidebar > section > header h1,
+.sidebar > section > hgroup h1 {
+  color: #585858;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+.sidebar > p:last-child {
+  margin-bottom: 0;
+}
+
+/*doc
+---
+title: sidebar_1
+name: sidebar_1
+category: Patterns
+parent: aside
+---
+
+```html_example
+<aside class="sidebar sidebar_1">
+    <header>
+        <h1><span class="label">Sidebar Label</span>Sidebar Title</h1>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam fermentum libero, a adipiscing nunc congue a. Etiam ullamcorper tellus urna, quis hendrerit dui scelerisque in.</p>
+</aside>
+```
+
+*/
+.sidebar_1 {
+  background: rgba(70, 129, 115, 0.15);
+  border-style: none;
+  border-width: 0;
+  border-color: #468173;
+  padding: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: inherit;
+  border: 1px solid transparent;
+}
+.sidebar_1 hgroup .label,
+.sidebar_1 header .label {
+  background: #468173;
+  color: #fff;
+  display: block;
+  font-size: 0.56667em ;
+  line-height: 1.67647em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  letter-spacing: 2px;
+  line-height: normal;
+  padding: 0.83824em 1.67647em;
+  text-transform: uppercase;
+  margin-left: -1.67647em;
+  margin-right: -1.67647em;
+}
+.sidebar_1 > hgroup h1,
+.sidebar_1 > header h1 {
+  color: #333;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+.sidebar_1 > hgroup h2,
+.sidebar_1 > hgroup .subtitle,
+.sidebar_1 > header h2,
+.sidebar_1 > header .subtitle {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  font-weight: bold;
+}
+.sidebar_1 > section > header h1,
+.sidebar_1 > section > hgroup h1 {
+  color: #585858;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+
+/*doc
+---
+title: sidebar_2
+name: sidebar_2
+category: Patterns
+parent: aside
+---
+
+```html_example
+<aside class="sidebar sidebar_2">
+    <header>
+        <h1><span class="label">Sidebar Label</span>Sidebar Title</h1>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam fermentum libero, a adipiscing nunc congue a. Etiam ullamcorper tellus urna, quis hendrerit dui scelerisque in.</p>
+</aside>
+```
+
+*/
+.sidebar_2 {
+  background: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #468173;
+  padding: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: inherit;
+}
+.sidebar_2 hgroup .label,
+.sidebar_2 header .label {
+  background: transparent;
+  color: inherit;
+  display: inline;
+  font-size: 1em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  letter-spacing: 0;
+  line-height: normal;
+  padding-left: 0em;
+  padding-right: 0em;
+  text-transform: none;
+}
+.sidebar_2 > hgroup h1,
+.sidebar_2 > header h1 {
+  color: #333;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0.95em ;
+  font-weight: 400;
+}
+.sidebar_2 > hgroup h2,
+.sidebar_2 > hgroup .subtitle,
+.sidebar_2 > header h2,
+.sidebar_2 > header .subtitle {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  font-weight: bold;
+}
+.sidebar_2 > section > header h1,
+.sidebar_2 > section > hgroup h1 {
+  color: #585858;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+
+/*doc
+---
+title: sidebar_3
+name: sidebar_3
+category: Patterns
+parent: aside
+---
+
+```html_example
+<aside class="sidebar sidebar_3">
+    <header>
+        <h1><span class="label">Sidebar Label</span>Sidebar Title</h1>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam fermentum libero, a adipiscing nunc congue a. Etiam ullamcorper tellus urna, quis hendrerit dui scelerisque in.</p>
+</aside>
+```
+
+*/
+.sidebar_3 {
+  background: rgba(204, 102, 0, 0.15);
+  border-style: none;
+  border-width: 1px;
+  border-color: #468173;
+  padding: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: inherit;
+  border: 1px solid transparent;
+}
+.sidebar_3 hgroup .label,
+.sidebar_3 header .label {
+  background: transparent;
+  color: inherit;
+  display: inline;
+  font-size: 1em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  letter-spacing: 0;
+  line-height: normal;
+  padding-left: 0em;
+  padding-right: 0em;
+  text-transform: none;
+}
+.sidebar_3 > hgroup h1,
+.sidebar_3 > header h1 {
+  color: #cc6600;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0.95em ;
+  font-weight: 400;
+}
+.sidebar_3 > hgroup h2,
+.sidebar_3 > hgroup .subtitle,
+.sidebar_3 > header h2,
+.sidebar_3 > header .subtitle {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  font-weight: bold;
+}
+.sidebar_3 > section > header h1,
+.sidebar_3 > section > hgroup h1 {
+  color: #585858;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+
+/*doc
+---
+title: marginalia_1
+name: marginalia_1
+category: Patterns
+parent: aside
+---
+
+```html_example
+<aside class="marginalia marginalia_1">
+    <p><img alt="" src="http://placehold.it/100x100" /></p>
+    <p>Skillful readers typically skip some of the words on the page and yet accurately understand what they read.</p>
+</aside>
+```
+
+*/
+.marginalia_1 {
+  background: rgba(204, 102, 0, 0.15);
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: rgba(70, 129, 115, 0.15);
+  padding: 1.5em;
+  margin: 3em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.marginalia_1 img {
+  float: left;
+  padding-right: 1.5em;
+  width: auto;
+}
+.marginalia_1 p {
+  margin-bottom: 1.5em;
+}
+.marginalia_1 p:last-child {
+  margin-bottom: 0;
+}
+.marginalia_1 :first-child {
+  margin-top: 0;
+}
+.marginalia_1 :last-child {
+  margin-bottom: 0;
+}
+.marginalia_1 .glossary p:last-child {
+  margin-bottom: 0;
+}
+.marginalia_1 .glossary {
+  background: transparent;
+}
+
+/*doc
+---
+title: marginalia_2
+name: marginalia_2
+category: Patterns
+parent: aside
+---
+
+```html_example
+<aside class="marginalia marginalia_2">
+    <p><img alt="" src="http://placehold.it/100x100" /></p>
+    <p>Skillful readers typically skip some of the words on the page and yet accurately understand what they read.</p>
+</aside>
+```
+
+*/
+.marginalia_2 {
+  background: rgba(204, 102, 0, 0.15);
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: rgba(70, 129, 115, 0.15);
+  padding: 1.5em;
+  margin: 3em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.marginalia_2 img {
+  float: left;
+  padding-right: 1.5em;
+  width: auto;
+}
+.marginalia_2 p {
+  margin-bottom: 1.5em;
+}
+.marginalia_2 p:last-child {
+  margin-bottom: 0;
+}
+.marginalia_2 :first-child {
+  margin-top: 0;
+}
+.marginalia_2 :last-child {
+  margin-bottom: 0;
+}
+.marginalia_2 .glossary p:last-child {
+  margin-bottom: 0;
+}
+.marginalia_2 .glossary {
+  background: transparent;
+}
+
+/*doc
+---
+title: Vignette
+name: vignette
+category: Patterns
+parent: aside
+---
+
+A vignette is a short descriptive scene, sometimes fictional, related as a story to set the stage for the chapter's focus. Typically used in the chapter frontmatter and set differently from the surrounding text.
+
+```html_example
+<aside class="vignette">
+    <header>
+        <h1>Making your own luck</h1>
+    </header>
+    <p>Frank Jao worked as a translator for the American military during the war in Vietnam, and when Saigon fell in 1975, he and his wife, Kathy, were flown out of the country to Camp Pendleton, California. They had the clothes on their backs and about 20 dollars.</p>
+    <p>Because of Frank and Kathy’s creativity, courage, and persistence over the years, their company, Bridgecreek, has developed more than 2 million square feet of retail, condo, and apartment space. It owns and manages 1.5 million square feet of space in Southern California and employs 18 people.</p>
+</aside>
+```
+*/
+.vignette {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.vignette > hgroup > h1,
+.vignette > header > h1 {
+  font-size: 1.89474em ;
+  line-height: 1.58333em ;
+  margin-top: 0em ;
+  margin-bottom: 0.39583em ;
+  font-weight: bold;
+  font-style: normal;
+  color: #585858;
+  margin-top: 0;
+}
+
+/*doc
+---
+title: Buttons
+name: buttons
+category: Patterns
+---
+
+```html_example
+<button type="submit" value="submit">Submit</button>
+<button type="reset" value="reset">Reset</button>
+```
+
+*/
+button {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  background: #eee;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+  color: #585858;
+  font-weight: 700;
+}
+button:hover {
+  color: #585858;
+  background: #ddd;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+button:active {
+  color: #eee;
+  background: #585858;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/*doc
+---
+title: Equations
+name: equations
+category: Patterns
+---
+
+```html_example
+<div class="equation">
+  <m:math display="block"
+      alttext="Frac Root a EndRoot Over b EndFrac"
+      altimg="../images/eq21.png" altwidth="400" altheight="400" 
+      >
+      <m:mfrac>
+          <m:msqrt>
+              <m:mtext>a</m:mtext>
+          </m:msqrt>
+          <m:mi>b</m:mi>
+      </m:mfrac>
+  </m:math>
+  <span class="number">1.5</span>
+</div>
+```
+
+*/
+.equation,
+.informalequation,
+.inlineequation {
+  position: relative;
+}
+.equation img,
+.informalequation img,
+.inlineequation img {
+  width: auto;
+}
+
+.equation,
+.informalequation {
+  margin-bottom: 1.5em;
+}
+.equation .number,
+.equation .label,
+.informalequation .number,
+.informalequation .label {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*doc
+---
+title: inline equation
+name: inline_equation
+category: Patterns
+parent: equations
+---
+
+inlineequation is an inline math equation.
+
+```html_example
+This problem could have been done another way by simplifying <span class="inlineequation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mrow><mfrac><mrow><mn>1</mn></mrow> <mrow><mfrac><mrow><mn>3</mn></mrow> <mrow><mn>4</mn></mrow></mfrac></mrow></mfrac></mrow></mrow></math></span> first.
+```
+
+*/
+.eq-h1 {
+  height: 1em;
+  width: auto;
+}
+
+.eq-h2 {
+  height: 2em;
+  width: auto;
+}
+
+.eq-h3 {
+  height: 3em;
+  width: auto;
+}
+
+/*doc
+---
+title: MathML
+name: mathml_equation
+category: Patterns
+parent: equations
+---
+
+```html_example
+<math>
+  <mrow>
+    <mrow>
+      <msup>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <mo>=</mo>
+    <msup>
+      <mi>c</mi>
+      <mn>2</mn>
+    </msup>
+  </mrow>
+</math>
+```
+
+*/
+/*doc
+---
+title: PowerMath
+name: power_math
+category: Patterns
+parent: equations
+---
+*/
+.powermath {
+  display: none;
+}
+
+/*doc
+---
+title: Figure
+name: figure
+category: Patterns
+---
+
+An illustration, diagram, photo, etc, that is typically referenced 
+from the main flow of the document and that can, without affecting 
+the flow of the document, be moved away from that main flow, e.g. to 
+the side of the page, or to dedicated pages.
+
+Although the primary content of a figure is usually a graphic, the 
+contents of a figure may also be textual or tabular.
+
+```html_example
+<figure class="figure">
+    <img alt="" src="http://placehold.it/640x480" />
+    <figcaption>
+        <div class="caption">
+            <header>
+                <h1><span class="label">Label</span>  <span class="number">2.1</span> Sample figure caption</h1>
+            </header>
+        </div>
+    </figcaption>
+</figure>
+```
+
+*/
+.figure,
+figure {
+  clear: both;
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding: 0em;
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 1.5em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.figure:after,
+figure:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.figure hgroup,
+.figure header,
+figure hgroup,
+figure header {
+  margin-bottom: 0;
+}
+.figure hgroup h1,
+.figure header h1,
+figure hgroup h1,
+figure header h1 {
+  margin-bottom: 0;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 1em;
+  color: #585858;
+  font-weight: 700;
+}
+.figure hgroup h1 .label,
+.figure header h1 .label,
+figure hgroup h1 .label,
+figure header h1 .label {
+  font-size: 1em !important;
+}
+.figure figcaption,
+figure figcaption {
+  margin-top: 0.75em;
+  color: #585858;
+  font-weight: 300;
+}
+.figure figcaption .caption .source,
+figure figcaption .caption .source {
+  margin-bottom: 0;
+}
+.figure figcaption .caption :last-child,
+figure figcaption .caption :last-child {
+  margin-bottom: 0;
+}
+.figure :last-child,
+figure :last-child {
+  margin-bottom: 0;
+}
+
+/*doc 
+---
+title: Informal Figure
+name: informal_figure
+category: Patterns
+parent: figure
+---
+
+A class of figure that floats, is not referenced in the text, is usually a photograph, and is un-numbered.
+
+```html_example
+<figure class="informal"> 
+    <img alt="" src="http://placehold.it/640x480" />
+    <figcaption>
+        <div class="caption">
+            <p>Sample figure caption</p>
+        </div>
+    </figcaption>
+</figure>
+```
+
+*/
+/*doc
+---
+title: Inline Figure
+name: inline_figure
+category: Patterns
+parent: figure
+---
+
+A special class of figure that is required to be placed 
+inline with running text, is always titled or captioned, is a graphic, 
+and is not labeled or numbered. When a graphic is used alone with no 
+caption, use the img element.
+
+```html_example
+<figure class="inline"> 
+    <img alt="" src="http://placehold.it/100x50" />
+    <figcaption>
+        <div class="caption">
+            <p>A visual image for encoding a list of 12 words</p>
+        </div>
+    </figcaption>
+</figure>
+
+Lorem ipsum <img class="inline" src="http://placehold.it/100x50" /> dolor sit amet
+```
+
+*/
+.inline,
+.figure-inline {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.inline hgroup,
+.inline header,
+.figure-inline hgroup,
+.figure-inline header {
+  margin-bottom: 0;
+}
+.inline h1,
+.figure-inline h1 {
+  font-size: 1em;
+  color: #585858;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.inline figcaption,
+.figure-inline figcaption {
+  margin-top: 0.75em;
+}
+
+img.inline {
+  vertical-align: middle;
+}
+
+/*doc
+---
+title: Opener Figure
+name: opener_figure
+category: Patterns
+parent: figure
+---
+
+A class of figure that is used as part or chapter opening art. 
+Opening art is often specially positioned relative to a design. 
+It does not arbitrarily float, nor is it always inline. It often has 
+a designated special position within the overall opening layout.
+
+```html_example
+<figure class="opener"> 
+    <img alt="" src="http://placehold.it/640x480" />
+    <figcaption>
+        <div class="caption">
+            <p>A visual image for encoding a list of 12 words</p>
+        </div>
+    </figcaption>
+</figure>
+```
+
+*/
+/*doc
+---
+title: Table Figure
+name: table_figure
+category: Patterns
+parent: figure
+---
+
+```html_example
+<figure xmlns="http://www.w3.org/1999/xhtml" class="table">
+  <figcaption>
+    <header>
+      <h1><span class="label">Table</span> <span class="number">3.1</span> Table Title</h1>
+    </header>
+  </figcaption>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Maximize a window</td>
+
+        <td>Windows key 1 Up Arrow ⇑</td>
+      </tr>
+
+      <tr>
+        <td>Snap to the left side</td>
+
+        <td>Windows key 1 Left Arrow ⇐</td>
+      </tr>
+
+      <tr>
+        <td>Snap to the right</td>
+
+        <td>Windows key 1 Right Arrow ⇒</td>
+      </tr>
+
+      <tr>
+        <td>Peek (quick preview of a program)</td>
+
+        <td>Windows key 1 T</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+```
+
+*/
+/*doc
+---
+title: Image Figure
+name: image_figure
+category: Patterns
+parent: figure
+---
+
+An inline image with no caption is simply coded as image
+
+```html_example
+<p><img src="http://placehold.it/450x300" /></p>
+```
+
+*/
+/*doc
+---
+title: Footer
+name: footer
+category: Patterns
+---
+
+footer is a special section that contains content that will need to be positioned following the design theme and/or aggregated with other chapter content and presented in aggregate form elsewhere in the product.
+
+The footer element can contain only the following content (in any order):
+
+- answerset
+- bibliography
+- glossary
+- footnote
+- endnote
+- creditset
+
+*/
+/*doc
+---
+title: Heading Levels
+name: heading_levels
+category: Patterns
+---
+
+Headings can be specified either by the cascade or by a class specification.
+
+The class will override the nesting, but if there is no class then the headings will simply respect the nesting of sections, as shown below.
+
+```html_example
+<section class="level1">
+    <header>
+        <h1 class="title">Level 1 Heading</h1>
+    </header>
+    <section class="level2">
+        <header>
+            <h1 class="title">Level 2 Heading</h1>
+        </header>
+        <section class="level3">
+            <header>
+                <h1 class="title">Level 3 Heading</h1>
+            </header>
+            <section class="level4">
+                <header>
+                    <h1 class="title">Level 4 Heading</h1>
+                </header>
+                <section class="level5">
+                    <header>
+                        <h1 class="title">Level 5 Heading</h1>
+                    </header>
+                    <section class="level6">
+                        <header>
+                            <h1 class="title">Level 6 Heading</h1>
+                        </header>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+```
+
+*/
+h1 {
+  line-height: 1.5;
+}
+
+section > hgroup,
+section > header, section.level1 > hgroup,
+section.level1 > header,
+section nav > hgroup,
+section nav > header,
+nav > hgroup,
+nav > header,
+nav.level1 > hgroup,
+nav.level1 > header,
+nav nav > hgroup,
+nav nav > header {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+section > hgroup h1,
+section > header h1, section.level1 > hgroup h1,
+section.level1 > header h1,
+section nav > hgroup h1,
+section nav > header h1,
+nav > hgroup h1,
+nav > header h1,
+nav.level1 > hgroup h1,
+nav.level1 > header h1,
+nav nav > hgroup h1,
+nav nav > header h1 {
+  font-size: 2.52632em ;
+  margin-top: 1.1875em ;
+  margin-bottom: 0.59375em ;
+  color: #468173;
+  font-style: normal;
+  font-weight: 300;
+}
+section > hgroup h2,
+section > header .subtitle, section.level1 > hgroup h2,
+section.level1 > header .subtitle,
+section nav > hgroup h2,
+section nav > header .subtitle,
+nav > hgroup h2,
+nav > header .subtitle,
+nav.level1 > hgroup h2,
+nav.level1 > header .subtitle,
+nav nav > hgroup h2,
+nav nav > header .subtitle {
+  font-size: 1.57895em ;
+  margin-top: 0em ;
+  margin-bottom: 0.95em ;
+  color: #585858;
+  font-style: italic;
+  font-weight: 300;
+}
+section section > hgroup,
+section section > header, section.level2 > hgroup,
+section.level2 > header,
+nav section > hgroup,
+nav section > header,
+nav.level2 > hgroup,
+nav.level2 > header {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+section section > hgroup h1,
+section section > header h1, section.level2 > hgroup h1,
+section.level2 > header h1,
+nav section > hgroup h1,
+nav section > header h1,
+nav.level2 > hgroup h1,
+nav.level2 > header h1 {
+  font-size: 1.89474em ;
+  margin-top: 1.1875em ;
+  margin-bottom: 0.79167em ;
+  color: #585858;
+  font-style: normal;
+  font-weight: 300;
+}
+section section > hgroup h2,
+section section > header .subtitle, section.level2 > hgroup h2,
+section.level2 > header .subtitle,
+nav section > hgroup h2,
+nav section > header .subtitle,
+nav.level2 > hgroup h2,
+nav.level2 > header .subtitle {
+  font-size: 1.26316em ;
+  margin-top: 0em ;
+  margin-bottom: 1.1875em ;
+  color: #585858;
+  font-style: normal;
+  font-weight: 500;
+}
+section section section > hgroup,
+section section section > header, section.level3 > hgroup,
+section.level3 > header,
+nav section section > hgroup,
+nav section section > header,
+nav.level3 > hgroup,
+nav.level3 > header {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+section section section > hgroup h1,
+section section section > header h1, section.level3 > hgroup h1,
+section.level3 > header h1,
+nav section section > hgroup h1,
+nav section section > header h1,
+nav.level3 > hgroup h1,
+nav.level3 > header h1 {
+  font-size: 1.57895em ;
+  margin-top: 0.95em ;
+  margin-bottom: 0.475em ;
+  color: #585858;
+  font-style: italic;
+  font-weight: 300;
+}
+section section section > hgroup h2,
+section section section > header .subtitle, section.level3 > hgroup h2,
+section.level3 > header .subtitle,
+nav section section > hgroup h2,
+nav section section > header .subtitle,
+nav.level3 > hgroup h2,
+nav.level3 > header .subtitle {
+  font-size: 1em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  color: #585858;
+  font-style: italic;
+  font-weight: 300;
+}
+section section section section > hgroup,
+section section section section > header, section.level4 > hgroup,
+section.level4 > header,
+nav section section section > hgroup,
+nav section section section > header,
+nav.level4 > hgroup,
+nav.level4 > header {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+section section section section > hgroup h1,
+section section section section > header h1, section.level4 > hgroup h1,
+section.level4 > header h1,
+nav section section section > hgroup h1,
+nav section section section > header h1,
+nav.level4 > hgroup h1,
+nav.level4 > header h1 {
+  font-size: 1.26316em ;
+  margin-top: 1.1875em ;
+  margin-bottom: 0.59375em ;
+  color: #585858;
+  font-style: normal;
+  font-weight: 500;
+}
+section section section section > hgroup h2,
+section section section section > header .subtitle, section.level4 > hgroup h2,
+section.level4 > header .subtitle,
+nav section section section > hgroup h2,
+nav section section section > header .subtitle,
+nav.level4 > hgroup h2,
+nav.level4 > header .subtitle {
+  font-size: 1em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  color: #468173;
+  font-style: normal;
+  font-weight: 500;
+}
+section section section section section > hgroup,
+section section section section section > header, section.level5 > hgroup,
+section.level5 > header,
+nav section section section section > hgroup,
+nav section section section section > header,
+nav.level5 > hgroup,
+nav.level5 > header {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+section section section section section > hgroup h1,
+section section section section section > header h1, section.level5 > hgroup h1,
+section.level5 > header h1,
+nav section section section section > hgroup h1,
+nav section section section section > header h1,
+nav.level5 > hgroup h1,
+nav.level5 > header h1 {
+  font-size: 1em ;
+  margin-top: 1.5em ;
+  margin-bottom: 0em ;
+  color: #585858;
+  font-style: italic;
+  font-weight: 300;
+}
+section section section section section > hgroup h2,
+section section section section section > header .subtitle, section.level5 > hgroup h2,
+section.level5 > header .subtitle,
+nav section section section section > hgroup h2,
+nav section section section section > header .subtitle,
+nav.level5 > hgroup h2,
+nav.level5 > header .subtitle {
+  font-size: 1em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  color: #468173;
+  font-style: normal;
+  font-weight: 500;
+}
+section section section section section section > hgroup,
+section section section section section section > header, section.level6 > hgroup,
+section.level6 > header,
+nav section section section section section > hgroup,
+nav section section section section section > header,
+nav.level6 > hgroup,
+nav.level6 > header {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+section section section section section section > hgroup h1,
+section section section section section section > header h1, section.level6 > hgroup h1,
+section.level6 > header h1,
+nav section section section section section > hgroup h1,
+nav section section section section section > header h1,
+nav.level6 > hgroup h1,
+nav.level6 > header h1 {
+  font-size: 1em ;
+  margin-top: 1.5em ;
+  margin-bottom: 0em ;
+  color: #468173;
+  font-style: normal;
+  font-weight: 500;
+}
+section section section section section section > hgroup h2,
+section section section section section section > header .subtitle, section.level6 > hgroup h2,
+section.level6 > header .subtitle,
+nav section section section section section > hgroup h2,
+nav section section section section section > header .subtitle,
+nav.level6 > hgroup h2,
+nav.level6 > header .subtitle {
+  font-size: 0.89474em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+}
+
+body > h1,
+nav > h1 {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 2.52632em ;
+  margin-top: 1.1875em ;
+  margin-bottom: 0.59375em ;
+  color: #468173;
+  font-style: normal;
+  font-weight: 300;
+}
+body > h2,
+nav > h2 {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 1.89474em ;
+  margin-top: 1.1875em ;
+  margin-bottom: 0.79167em ;
+  color: #585858;
+  font-style: normal;
+  font-weight: 300;
+}
+body > h3,
+nav > h3 {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 1.57895em ;
+  margin-top: 0.95em ;
+  margin-bottom: 0.475em ;
+  color: #585858;
+  font-style: italic;
+  font-weight: 300;
+}
+body > h4,
+nav > h4 {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 1.26316em ;
+  margin-top: 1.1875em ;
+  margin-bottom: 0.59375em ;
+  color: #585858;
+  font-style: normal;
+  font-weight: 500;
+}
+body > h5,
+nav > h5 {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 1em ;
+  margin-top: 1.5em ;
+  margin-bottom: 0em ;
+  color: #585858;
+  font-style: italic;
+  font-weight: 300;
+}
+body > h6,
+nav > h6 {
+  background: transparent;
+  border-style: none;
+  border-width: none;
+  border-color: none;
+  padding: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 1em ;
+  margin-top: 1.5em ;
+  margin-bottom: 0em ;
+  color: #468173;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/*doc
+---
+title: Header
+name: header
+category: Patterns
+---
+
+header is a wrapper element for an element's headings. Its contents 
+includes a title (h1), subtitle (h2) and (via nesting in the h1) the 
+element's generated label and number (e.g., "Chapter 2", "Figure 2.1", 
+"Conclusion").
+
+The header is a required wrapper even if there is only one heading 
+element. header represents the heading structure for all elements 
+that can have labels or prefixes (e.g., figure, part, chapter, 
+section, aside).
+
+Note: One exception to the use of header for headings. Some lists 
+are structured with an emphasized leadin-phrase followed by a 
+paragraph. We have traditionally called that lead-in phrase the 
+listitem title. In that context only, we are spelling the title as 
+span class="title", not hgroup/h1.
+
+```html_example
+<section class="level1">
+    <header>
+        <h1>This is an title (h1)</h1>
+        <p class="subtitle">This is a subtitle</p>
+    </header>
+</section>
+```
+
+*/
+/*doc
+---
+title: Inline Styles
+name: inline_styles
+category: Patterns
+---
+
+*/
+/*doc
+---
+title: abbr
+name: inline_styles
+category: Patterns
+parent: inline_styles
+---
+
+Used to mark abbreviations.
+
+```html_example
+<abbr>Sass</abbr> stands for Syntactically-awesome style sheets.
+```
+
+*/
+/*doc
+---
+title: b
+name: b_inline
+category: Patterns
+parent: inline_styles
+---
+
+Use span class=strong" for most cases. Use b only when the rendering must be bold and no other semantic markup applies.
+
+```html_example
+<b>This text</b> that is marked with b tag and should appear as bold.
+```
+
+*/
+b {
+  font-weight: 700;
+}
+
+/*doc
+---
+title: br
+name: br_inline
+category: Patterns
+parent: inline_styles
+---
+
+A line break
+
+```html_example
+This is text with a forced linebreak right here<br/>
+This text starts on next line
+```
+
+*/
+/*doc
+---
+title: code
+name: code_inline
+category: Patterns
+parent: inline_styles
+---
+
+```html_example
+This is a sample of <code>inline code.</code>  
+Press <kbd>cmd</kbd> to continue.  
+The program will output <samp>error 101</samp> if something is wrong.  
+<pre>
+This is a 
+  sample of 
+    block code.
+</pre>
+```
+
+*/
+code, pre, kbd, samp {
+  font-family: Courier, "Courier New", monospace;
+  font-size: 0.84211em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  color: #468173;
+  padding: 2px 4px;
+}
+
+code {
+  background: rgba(70, 129, 115, 0.15);
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding-top: 0.10526em;
+  padding-right: 0.21053em;
+  padding-left: 0.21053em;
+  padding-bottom: 0em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+pre {
+  background: rgba(70, 129, 115, 0.15);
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding-top: 1.5em;
+  padding-right: 0em;
+  padding-bottom: 1.5em;
+  padding-left: 2.02632em;
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 1.5em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  white-space: pre-wrap;
+}
+pre kbd, pre samp {
+  font-size: 1em;
+}
+
+/*doc
+---
+title: em
+name: em_inline
+category: Patterns
+parent: inline_styles
+---
+
+Use span class="emphasis" for most cases. Use em only when the 
+rendering must be italic or the content will lose its meaning and 
+no other semantic markup applies.
+
+```html_example
+<em>This text</em> is visually emphasized.
+```
+
+*/
+/*doc
+---
+title: emphasis
+name: emphasis_inline
+category: Patterns
+parent: inline_styles
+---
+
+Emphasized text. It is typically rendered as italics. Use span class="emphasis" rather than i to indicate emphasis.
+
+```html_example
+<span class="emphasis">This text</span> is emphasized.
+```
+
+*/
+span.emphasis,
+span.source,
+em {
+  /*font-weight: $emphasis_font_weight;*/
+  font-style: italic;
+}
+
+/*doc
+---
+title: i
+name: i_inline
+category: Patterns
+parent: inline_styles
+---
+
+Use span class="emphasis" or em as appropriate.
+
+```html_example
+<i>This text</i> is visually italicized.
+```
+
+*/
+i {
+  font-style: italic;
+}
+
+/*doc
+---
+title: keyword
+name: keyword_inline
+category: Patterns
+parent: inline_styles
+---
+
+Use span class="emphasis" or em as appropriate.
+
+```html_example
+This is the <span class="keyword">keyword</span> marked as a span not as a hyperlink.
+```
+
+*/
+span.keyword,
+span.pronunciation {
+  font-weight: 700;
+  color: #1E7AB9;
+  text-decoration: none;
+}
+
+/*doc
+---
+title: label
+name: label_inline
+category: Patterns
+parent: inline_styles
+---
+
+span class="label" represents how an element or class is referenced 
+(i.e., is labeled). For example, if a figure is called an "Exhibit", 
+then "Exhibit" is the figure's label. Any time an element is 
+referenced by its label, the reference is marked with span 
+class="label".
+
+```html_example
+<aside class="sidebar">
+    <header>
+        <h1><span class="label">Sidebar Label</span>Sidebar Title</h1>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam fermentum libero, a adipiscing nunc congue a. Etiam ullamcorper tellus urna, quis hendrerit dui scelerisque in.</p>
+</aside>
+```
+
+*/
+/*doc
+---
+title: leadin
+name: leadin_inline
+category: Patterns
+parent: inline_styles
+---
+
+leadin is heavily emphasized text at the start of a title, or lead-in of a paragraph. leadin is typically rendered as bold but may also be rendered as a different color or typeface to add further typographic emphasis.
+
+```html_example
+<p xmlns="http://www.w3.org/1999/xhtml">
+  <span class="leadin">This is the leadin text at beginning of paragraph of listitem. For this CSS, it should be bold and and italic.</span>This is normal body text within a listitem. In other contexts, a span class="leadin" may format differently.
+</p>
+```
+
+*/
+span.leadin {
+  font-weight: 700;
+}
+
+/*doc
+---
+title: leadin
+name: leadin_inline
+category: Patterns
+parent: inline_styles
+---
+
+span class="number" represents how an element or class is numbered. 
+For example, if a figure is referenced as "Exhibit 2.2", then 2.2 is 
+the figure's span class="number" (while "Exhibit" is the figure's 
+label). Any time an element is referenced by its number, the number 
+portion of the reference is marked with span class="number".
+
+```html_example
+<p xmlns="http://www.w3.org/1999/xhtml">This is the hyperlink to <a class="xref" href="[page/anchor link]"><span class="label">chapter</span> <span class="number">4</span></a>. When you click on the link, it should jump to Chapter 4. The cross-ref to the chapter should have a special blue icon.</p>
+```
+
+*/
+/*doc
+---
+title: small
+name: small_inline
+category: Patterns
+parent: inline_styles
+---
+
+Use small when content must be set smaller than current context for 
+semantic purposes, e.g., as a side comment.
+
+```html_example
+<small>This text</small> is the text set as small.
+```
+
+*/
+small {
+  font-size: 16px;
+}
+
+/*doc
+---
+title: smallcaps
+name: smallcaps_inline
+category: Patterns
+parent: inline_styles
+---
+
+smallcaps is a typographic style that sets uppercase letters at lowercase letters height. smallcaps are typically stylistic rather than semantic markup
+
+```html_example
+<span class="smallcaps">This text is all smallcaps with an initial cap</span>. A real world example would be: At 5<span class="smallcaps">am</span> Sam gets up to go to work everyday.</p>
+```
+
+*/
+span.smallcaps {
+  font-variant: small-caps;
+}
+
+/*doc
+---
+title: strong
+name: strong_inline
+category: Patterns
+parent: inline_styles
+---
+
+Use to indicate strong emphasis. `strong` is typically 
+rendered as bold but may also be rendered as a different color or 
+typeface to add further typographic emphasis. Contrast strong with 
+span class="emphasis", which is a lighter form of emphasis and is 
+typically rendered as italics. Use `strong` only when a 
+more semantic or structural markup--e.g., span class="leadtext", 
+span class="title", a class="keyword"--is not appropriate.
+
+```html_example
+<strong>This text</strong> is strongly emphasized.
+```
+
+*/
+strong,
+span.strong {
+  font-weight: 700;
+}
+
+/*doc
+---
+title: s
+name: s_inline
+category: Patterns
+parent: inline_styles
+---
+
+Use this element to strike out text that is not needed.
+
+```html_example
+<s>This text</s> is visually struckout.
+```
+
+*/
+s {
+  text-decoration: line-through;
+}
+
+/*doc
+---
+title: sub
+name: sub_inline
+category: Patterns
+parent: inline_styles
+---
+
+Per the spec, sub should be used only to "mark up typographical conventions with specific meanings, not for typographical presentation for presentation's sake."
+
+```html_example
+<p><sub>This is subscript.</sub> This is normal text.</p>
+```
+
+*/
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: 0.75em;
+}
+
+/*doc
+---
+title: sup
+name: sup_inline
+category: Patterns
+parent: inline_styles
+---
+
+Per the spec, sub should be used only to "mark up typographical conventions with specific meanings, not for typographical presentation for presentation's sake."
+
+```html_example
+<p><sup>This is superscript.</sup> This is normal text.</p>
+```
+
+*/
+sub {
+  top: 0.2em;
+}
+
+/*doc
+---
+title: u
+name: u_inline
+category: Patterns
+parent: inline_styles
+---
+
+Use `u` only when you must specifically apply underline to convey the author's meaning vs using it as an arbitrary design choice for emphasis.
+
+```html_example
+<u>This text</u> is visually underlined.
+```
+
+*/
+u {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*doc
+---
+title: doubleunderscore
+name: u_double_inline
+category: Patterns
+parent: inline_styles
+---
+
+doubleunderscore (double underline) is content that has two underlines spanning beneath the text. It is sometimes used to markup certain phrases of text.
+
+```html_example
+<span class="doubleunderscore">This text</span> is visually underlined.
+```
+
+*/
+.doubleunderscore {
+  border-bottom: 4px double #333;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+mark {
+  background: #fffdc9;
+}
+
+span.label,
+span.number,
+.inlineequation,
+.speaker,
+.index-term,
+.index-locator-range,
+.index-xref-related,
+.index-xref-preferred {
+  text-transform: none;
+}
+
+/*doc
+---
+title: var
+name: var_inline
+category: Patterns
+parent: inline_styles
+---
+
+The var element represents a variable.
+
+```html_example
+The variable <var>x</var>.
+```
+
+*/
+var {
+  font-style: italic;
+}
+
+/*doc
+---
+title: write-on line
+name: wol_inline
+category: Patterns
+parent: inline_styles
+---
+
+The class `wol` represents a write-on line and is typically used in assessment content.
+
+```html_example
+The text that follows is a write-on line. It should present with no text above it and with a continuous underscore: <span class="wol">          </span> .
+```
+
+*/
+span.wol {
+  text-decoration: underline;
+}
+
+/*doc
+---
+title: Links
+name: links
+category: Patterns
+---
+
+`a` can represent a hyperlink or an anchor. If the a element has an 
+href attribute, then it represents a hyperlink. If the `a` element has 
+no `href` attribute, then the element represents an anchor. If the 
+content is a url and the url does not resolve, use `class="url-obsolete"`. 
+If the content is a url and the url is for example only and should 
+not resolve and/or is a url to a local resource such as 
+`localhost` or `192.168.x.x.` or `10.0.x.x`, use `class="url-example"`.
+
+tag | type | description
+--- | ---  | ---
+`<a href="[link]">[link text]</a>` | hyperlink | links to pages and ids
+`<a id="[anchor id]" class="[anchor class]">[anchor text]</a>` | anchor | page anchors
+
+*/
+a {
+  color: #1E7AB9;
+  text-decoration: none;
+  font-weight: 700;
+}
+a:hover, a:focus, a:active {
+  color: #175d8d;
+}
+
+/*doc
+---
+title: Bibliography Link
+name: bibliography_link
+category: Patterns
+parent: links
+---
+
+```html_example
+<p>In addition, placement in special education was to be based upon a multifactored evaluation that included multiple assessments across more than one environment (<a class="biblioref" href="[page/anchor link]">C. K. Bennett, Journal of Staff Development, Winter 1984</a>).</p>
+```
+
+*/
+/*doc
+---
+title: Cross-reference Link
+name: cross_reference_link
+category: Patterns
+parent: links
+---
+
+### cross-reference to an object in same file
+```html_example
+<p>..how this may have had an impact on the service user (see <a href="#id" class="xref"><span class="label">Box Feature </span><span class="number">1.2</span></a>). . . </p>
+```
+
+### cross-reference to an object in different file
+```html_example
+<p>In <a href="filename.html#id" class="xref"><span class="label">Chapter </span><span class="label">4</span></a>, we will cover. . . </p>
+```
+
+*/
+.xref {
+  background: url(../images/iconmonstr-window-new-icon-20x20.png) no-repeat right center;
+  display: inline-block;
+  padding: 0 23px 0 0;
+}
+
+/*doc
+---
+title: Keyword Link
+name: keyword_link
+category: Patterns
+parent: links
+---
+
+### keyword that hyperlinks to glossary term in same file
+
+```html_example
+<p>A <a href="#id" class="keyword">DSLR</a> is a category of camera that...</p>
+```
+
+*/
+a.keyword {
+  font-weight: bold;
+  color: #1E7AB9;
+  text-decoration: none;
+  display: inline-block;
+  background: url(../images/iconmonstr-info-8-icon-20x20.png) no-repeat right center;
+  padding: 0 23px 0 0;
+}
+
+/*doc
+---
+title: Object Cross-reference
+name: cross_reference_object
+category: Patterns
+parent: links
+---
+
+Objective cross-reference is a hyperlink to a learning objective in the chapter objectivelist. It is not currently being applied as part of the spec.
+
+*/
+/*doc
+---
+title: Page Cross-reference
+name: cross_reference_page
+category: Patterns
+parent: links
+---
+
+A pageref class is a link to a page number. Used in legacy conversions from a print version of the content. In the example below, "15" is the page cross-reference.
+
+```html_example
+<p>When you click on the link for page <a class="pageref" href="[id link]">11</a>, it will jump to <a class="pageref" href="[id link]"><span class="label">section</span> <span class="number">4.5</span></a>.</p>
+```
+
+*/
+/*doc
+---
+title: Index Locator
+name: index_locator
+category: Patterns
+parent: links
+---
+
+Reference to a location within the body of the work but outside any 
+index. See [index chapter](#Index Chapter) for this example.
+
+*/
+/*doc
+---
+title: Index Anchor
+name: index_anchor
+category: Patterns
+parent: links
+---
+
+```html_example
+<p>Lorem consectetur numquam sapiente vero corrupti quisquam recusandae 
+deserunt commodi veniam est animi nemo laboriosam beatae sed quo harum.</p>
+<p><a class="pagebreak" title="13" id="P70004858060000000000000000000B1"></a>This is the start of page 13</p>
+</p>Lorem ipsum dolor sit amet, consectetur adipis...</p>
+```
+
+*/
+/*doc
+---
+title: Endnote Link
+name: endnote_ref
+category: Patterns
+parent: links
+---
+
+See endnote reference example in the chapter on [Asides](#Footnotes)
+
+*/
+/*doc
+---
+title: Footnote Link
+name: footnote_ref
+category: Patterns
+parent: links
+---
+
+See footnote reference example in the chapter on [Asides](#Endnotes)
+
+*/
+.noteref_footnote,
+.noteref_endnote,
+.noteref_rearnote {
+  font-size: 85%;
+  position: relative;
+  top: -0.4em;
+}
+
+/*doc
+---
+title: Internet Link
+name: internet_link
+category: Patterns
+parent: links
+---
+
+### hyperlink to external web page
+
+```html_example
+The address is <a class="ulink" href="http://fairmodel.econ.yale.edu">http:/<wbr />/<wbr />fairmodel.econ.yale.edu</a>.
+```
+
+### hyperlink to external web page that is no longer valid
+
+```html_example
+<p>The now defunct website <a class="url-obsolete" href="http://gowalla.com/">gowalla.com</a> is no longer online.</p>
+```
+
+*/
+/*doc
+---
+title: Example URL
+name: example_url
+category: Patterns
+parent: links
+---
+
+Use when the author is describing a hypothetical example–e.g., 
+yourwebsite.com, which should not resolve to anything but might be 
+specially formatted.
+
+```html_example
+This is the example website marked span url-example: <span class="url-example">yourwebsite.com</span>.
+```
+
+*/
+.url-example,
+.ulink-example {
+  text-transform: none;
+}
+
+/*doc
+---
+title: Obsolete URL
+name: obsolete_url
+category: Patterns
+parent: links
+---
+
+Used where the author refers to a website or page which is no longer 
+accessible. Compare to ulink and url-example.
+
+```html_example
+<p>© Chin Yuen. <span class="url-obsolete">www.chinyuenart.com</span></p>
+```
+
+*/
+.url-obsolete,
+.ulink-obsolete {
+  color: #aaa;
+}
+
+/*doc
+---
+title: Pagebreak
+name: pagebreak_link
+category: Patterns
+parent: links
+---
+
+A pagebreak is an empty element indicating where a page break occurred in a print version of the content.
+
+```html_example
+<a id="pagei" class="pagebreak" title="i"/>
+```
+
+*/
+.pagebreak {
+  color: inherit;
+}
+
+/*doc
+---
+title: Web Resource
+name: web_resource
+category: Patterns
+parent: links
+---
+
+A webresource represents Pearson trackable web asset specific to a 
+Pearson product. Contrast webresource with a regular ulink. In the 
+example below, www.myeconlab.com is the webresource.
+
+```html_example
+<p>Log onto Pearson&#39;s <a class="webresource" href="http://www.myeconlab.com">www.myeconlab.com</a> to learn more.</p>
+```
+
+**Note:** A general Pearson website such as pearsoned.com is a marketing 
+website so is a regular ulink, not a webresource.
+
+*/
+/*doc
+---
+title: Lists
+name: lists
+category: Patterns
+---
+
+Lists are one of the most commonly used structures to represent author 
+ideas, and they can appear in almost any context in PXE. PXE uses `ol` 
+and `ul` to represent ordered and unorderedlists respectively and treats 
+many Pearson structures as forms of an orderedlist.
+
+The lists in this chapter are organized so that they appear in the 
+contexts in which they would appear in a typical chapter.
+
+**Note** Besides appearing in chapter frontmatter, bodymatter, and backmatter 
+running text, lists also often appear nested in other structures, e.g., 
+sidebars, figures, and tables. See the individual chapters on asides, 
+figures, and tables for examples of lists formatted in those contexts.
+
+*/
+/*doc
+---
+title: Answer List
+name: answer_list
+category: Patterns
+parent: lists
+---
+
+An orderedlist that contains answers to questions posed in assessment/practicelist sections.
+
+**chapter-level reuse**
+
+- each answer in the list must be marked with a hyperlink back to the id of the problem to which it corresponds
+- the answerlist is stored in the footer of the document. If the answerlist is contained within a section class="answerset", the section should be located in the footer as well.
+- if there are multiple practicesets with multiple answerlists, each answerlist should be stored in its own ol.
+
+```html_example
+<footer>
+    <section class="answerset">
+        <ol class="answerlist">
+        <li class="answer"><a href="id">Brooklyn</a></li>
+        <li class="answer"><a href="id">1942</a></li>
+        <li class="answer"><a href="id">False</a></li>
+        <li class="answer"><a href="id">c</a></li>
+        <li class="answer"><a href="id">True</a></li>
+        <li class="answer"><a href="id">d</a></li>
+        <li class="answer"><a href="id">Koch</a></li></ol>
+    </section>
+</footer>
+```
+
+**product-level reuse**
+
+- for legacy conversion jobs, answers do not have to be marked with a hyperlink back to the id of the problem to which it corresponds
+- answerlist is stored wherever it appears in the target product, not in the chapter footer.
+- if there are multiple practicesets with multiple answerlists, each answerlist should be stored in its own ol.
+
+```html_example
+<section class="answerset">
+    <header>
+        <h1><span class="label">Answers to Questions</span></h1>
+    </header>
+    <section class="answersetdiv"><header><h1><span class="label">Chapter </span><span class="number">1</span></h1></header>
+        <ol class="answerlist">
+            <li class="answer"><a href="filename.html#id">Brooklyn</a></li>
+            <li class="answer"><a href="filename.html#id">1942</a></li>
+            <li class="answer"><a href="filename.html#id">False</a></li>
+            <li class="answer"><a href="filename.html#id">c</a></li>
+            <li class="answer"><a href="filename.html#id">True</a></li>
+            <li class="answer"><a href="filename.html#id">d</a></li>
+            <li class="answer"><a href="filename.html#id">Koch</a></li>
+        </ol>
+    </section>
+    <section class="answersetdiv"><header><h1><span class="label">Chapter </span><span class="number">2</span></h1></header>
+        <ol class="answerlist">
+            <li class="answer"><a href="filename.html#id">Queens</a></li>
+            <li class="answer"><a href="filename.html#id">1964</a></li>
+            <li class="answer"><a href="filename.html#id">pi</a></li>
+            <li class="answer"><a href="filename.html#id">Stalin</a></li>
+            <li class="answer"><a href="filename.html#id">Taiwan</a></li>
+            <li class="answer"><a href="filename.html#id">Buckeyes</a></li>
+            <li class="answer"><a href="filename.html#id">Reds</a></li>
+        </ol>
+    </section>
+</section>
+```
+
+*/
+/*doc
+---
+title: Bibliographic List
+name: bibliographic_list
+category: Patterns
+parent: lists
+---
+
+Section containing the biblioentrylist, which is the list of works cited 
+in the content, often listed at end of a chapter or product.
+
+```html_example
+<ol xmlns="http://www.w3.org/1999/xhtml" class="biblioentrylist">
+    <li class="biblioentry" epub:type="biblioentry" xmlns:epub="http://www.idpf.org/2007/ops">
+        <p>Hope, T. <cite>Medical Ethics: A Very Short Introduction</cite>. Oxford, NY: Oxford University Press, 2004.</p>
+    </li>
+    
+    <li class="biblioentry" epub:type="biblioentry" xmlns:epub="http://www.idpf.org/2007/ops">
+        <p>Larkin, G. L. and R. L. Fowler. "Essential Ethics for EMS: Cardinal Virtues and Core Principles." <cite>Emerg Med Clin North Am</cite> 20 (2002): 887–911.</p>
+    </li>
+</ol>
+```
+
+*/
+.biblioentrylist {
+  list-style: none;
+  margin: 0;
+}
+.biblioentrylist .biblioentry {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding-top: 0em;
+  padding-right: 0em;
+  padding-bottom: 1.5em;
+  padding-left: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 19px;
+  font-weight: normal;
+  color: #333;
+  text-indent: -1.5em;
+}
+
+/*doc
+---
+title: Practice Subset
+name: practice_list
+category: Patterns
+parent: lists
+---
+
+A container for assessment content, including optional title group, 
+introductory text, instructions, and problems.
+
+```html_example
+<ol xmlns="http://www.w3.org/1999/xhtml" class="practicelist">
+    <li class="general-problem">
+        <p>This is a general-problem that is auto-numbered by reading system appearing in a nested subsection</p>
+    </li>
+    
+    <li class="match-problem">
+        <div class="question">
+            <ol class="matchlist">
+                <li>
+                    <p>This is matchlist 1.</p>
+                </li>
+                
+                <li>
+                    <p>This is matchlist 1.</p>
+                </li>
+            </ol>
+        
+            <ol class="matchlist">
+                <li>
+                    <p>This is matchlist 2.</p>
+                </li>
+                
+                <li>
+                    <p>This is matchlist 2.</p>
+                </li>
+            </ol>
+        </div>
+    </li>
+
+    <li class="tf-problem">
+        <div class="question">
+            <p><a href="#">This is a general-problem that is auto-numbered by reading system. This links to answer 1 in answerlist later in chapter.</a></p>
+        </div>
+    </li>
+
+    <li class="fb-problem">
+        <div class="question">
+            <p><a href="#">This is a general-problem that is auto-numbered by reading system. This links to answer 1 in answerlist later in chapter.</a></p>
+        </div>
+    </li>
+
+    <li class="multiple-choice-problem">
+        <div class="question">
+            <p><a href="#">This is a general-problem that is auto-numbered by reading system. This links to answer 1 in answerlist later in chapter.</a></p>
+        <ol class="choices">
+            <li class="choice">
+                <p>Multiple choice option</p>
+            </li>
+            <li class="choice">
+                <p>Multiple choice option</p>
+            </li>
+            <li class="choice">
+                <p>Multiple choice option</p>
+            </li>
+            </ol>
+        </div>
+    </li>
+</ol>
+```
+*/
+.practicelist {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.practicelist > li,
+.practicelist > .general-problem {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.practicelist table {
+  float: left;
+}
+.practicelist table + ol,
+.practicelist table + ul {
+  clear: both;
+}
+
+/*doc
+---
+title: Ordered
+name: ordered_list
+category: Patterns
+parent: lists
+---
+
+A list of items where the items have been intentionally ordered, such that changing the order would change the meaning of the list.
+
+```html_example
+<ol>
+    <li>
+        <p>first item</p>
+    </li>
+    <li>
+        <p>second item</p>
+    </li>
+    <li>
+        <p>third item</p>
+    </li>
+</ol>
+```
+
+### Numbering
+
+Use one of the following classes to change the numbering style.
+
+#### Classes
+class       | description
+---         | ---
+[no class]  | Default. Decimal numbers (1, 2, 3, 4)
+`ol_1`      | Alphabetically ordered list, lowercase (a, b, c, d)
+`ol_2`      | Roman numbers, uppercase (I, II, III, IV)
+`ol_3`      | Square bullets
+`nomark`    | No numbering
+
+#### Type attribute [deprecated]
+
+For legacy content, `type` attribute can be used to specify the list style.
+
+type | description
+---- | ---
+`1`  | Default. Decimal numbers (1, 2, 3, 4)
+`a`  | Alphabetically ordered list, lowercase (a, b, c, d)
+`A`  | Alphabetically ordered list, uppercase (A, B, C, D)
+`i`  | Roman numbers, lowercase (i, ii, iii, iv)
+`I`  | Roman numbers, uppercase (I, II, III, IV)
+
+### Nesting
+
+Nested lists will automatically switch numbering styles.
+
+```html_example
+<ol>
+    <li>
+        <p>first item</p>
+        <ol>
+            <li>
+                <p>nested one deep</p>
+                <ol>
+                    <li>
+                        <p>nested two deep</p>
+                        <ol>
+                            <li>
+                                <p>nested three deep</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+</ol>
+```
+
+*/
+ol {
+  margin-left: 3em;
+  margin-bottom: 1.5em;
+}
+ol ol:not([type]) {
+  list-style-type: upper-latin;
+}
+ol ol ol:not([type]) {
+  list-style-type: decimal;
+}
+ol ol ol ol:not([type]) {
+  list-style-type: lower-latin;
+}
+ol ul {
+  list-style-type: square;
+}
+ol p {
+  margin-bottom: 0;
+}
+ol img {
+  margin-bottom: 1.5em;
+}
+
+ol:not([type]).ol_lower-alpha {
+  list-style-type: lower-alpha;
+}
+ol:not([type]).ol_upper-alpha {
+  list-style-type: upper-alpha;
+}
+ol:not([type]).ol_upper-roman {
+  list-style-type: upper-roman;
+}
+ol:not([type]).ol_lower-roman {
+  list-style-type: lower-roman;
+}
+ol:not([type]).ol_decimal {
+  list-style-type: decimal;
+}
+
+.ol_1:not([type]) {
+  list-style-type: lower-alpha;
+}
+
+.ol_1:not([type]) {
+  list-style-type: upper-roman;
+}
+
+.ol_3:not([type]) {
+  list-style-type: square;
+}
+
+/*doc
+---
+title: Unordered
+name: unordered_list
+category: Patterns
+parent: lists
+---
+
+The key characteristic of a ul is not so much that it is bulleted or 
+un-numbered but that its order does not matter. If a list's order 
+matters, then it should be marked as an ol, even if presentationally 
+the author prefers no numbers or letters.
+
+```html_example
+<ul>
+    <li>
+        <p>first item</p>
+    </li>
+    <li>
+        <p>second item</p>
+    </li>
+    <li>
+        <p>third item</p>
+    </li>
+</ul>
+```
+
+### Bullets
+
+#### Classes
+class       | description
+---         | ---
+[no class]  | Default. Solid bullets
+`nomark`    | No numbering
+
+### Nesting
+
+Nested lists will automatically switch bullet styles.
+
+```html_example
+<ul>
+    <li>
+        <p>first item</p>
+        <ul>
+            <li>
+                <p>nested one deep</p>
+                <ul>
+                    <li>
+                        <p>nested two deep</p>
+                        <ul>
+                            <li>
+                                <p>nested three deep</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+```
+
+*/
+ul {
+  list-style-type: disc;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+ul ul {
+  list-style-type: square;
+  margin-bottom: 0;
+}
+ul ul ul {
+  list-style-type: circle;
+}
+ul ul ul ul {
+  list-style-type: disc;
+}
+ul p {
+  margin-bottom: 0;
+}
+ul p + p {
+  margin-top: 0.75em;
+}
+
+.nomark,
+.none,
+.ul_none,
+.ol_none {
+  list-style-type: none;
+}
+.nomark p,
+.none p,
+.ul_none p,
+.ol_none p {
+  margin-bottom: 0.75em;
+}
+
+/*doc
+---
+title: TOC
+name: toc_list
+category: Patterns
+parent: lists
+---
+
+Need to create samples for all the toc types. chapter toc here. Put 
+part toc in part sample chapter and product level toc in product chapter.
+
+```html_example
+<ol class="tocentrylist">
+    <li class="toclevel1">
+        <p><a href="#"><span class="title">TOC Entry</span> <span class="pageref">1</span></a></p>
+    </li>
+
+    <li class="toclevel1">
+        <p><a href="#"><span class="title">TOC Entry</span> <span class="pageref">2</span></a></p>
+    </li>
+
+    <li class="toclevel1">
+        <p><a href="#"><span class="title">TOC Entry</span> <span class="pageref">3</span></a></p>
+    </li>
+
+    <li class="toclevel1">
+        <p><a href="#"><span class="title">TOC Entry</span> <span class="pageref">4</span></a></p>
+    </li>
+
+    <li class="toclevel1">
+        <p><a href="#"><span class="title">TOC Entry</span> <span class="pageref">5</span></a></p>
+    </li>
+</ol>
+```
+
+*/
+.tocentrylist,
+nav.toc ol {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding: 0em;
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 1.5em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.tocentrylist li,
+.tocentrylist .toclevel1,
+nav.toc ol li,
+nav.toc ol .toclevel1 {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding: 0em;
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.tocentrylist li p,
+.tocentrylist .toclevel1 p,
+nav.toc ol li p,
+nav.toc ol .toclevel1 p {
+  margin-bottom: 0;
+}
+.tocentrylist li a,
+.tocentrylist .toclevel1 a,
+nav.toc ol li a,
+nav.toc ol .toclevel1 a {
+  color: #468173;
+}
+.tocentrylist ol,
+nav.toc ol ol {
+  margin-left: 1.5em;
+}
+.tocentrylist ol li a,
+nav.toc ol ol li a {
+  color: #1E7AB9;
+}
+
+nav.toc ol:not(.tocentrylist) {
+  margin-left: 1.5em;
+}
+nav.toc ol:not(.tocentrylist) li {
+  margin-bottom: 0;
+}
+
+.index-entrylist ul,
+.index-entrylist ol,
+.index-entry-list ul,
+.index-entry-list ol {
+  margin-bottom: 0;
+}
+
+.chapter .tocentrylist {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding: 0em;
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 1.5em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.chapter .tocentrylist li,
+.chapter .tocentrylist .toclevel1 {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  padding: 0em;
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.chapter .tocentrylist li p,
+.chapter .tocentrylist .toclevel1 p {
+  margin-bottom: 0;
+}
+.chapter .tocentrylist li a,
+.chapter .tocentrylist .toclevel1 a {
+  color: #468173;
+}
+.chapter .tocentrylist ol {
+  margin-left: 1.5em;
+}
+.chapter .tocentrylist ol li a {
+  color: #1E7AB9;
+}
+
+/*doc
+---
+title: Learning Objective
+name: learning_objective_list
+category: Patterns
+parent: lists
+---
+
+Learning objectives are modeled as an orderedlist and are typically 
+contained in the chapter frontmatter in a section class="objectiveset". 
+Their default rendering CSS rendering is to be numbered with arabic 
+numerals but the list styling can be modified in any number of ways 
+to suit a product's needs.
+
+```html_example
+<ol xmlns="http://www.w3.org/1999/xhtml" class="objectivelist">
+    <li class="objective">
+        <p>This is learning objective text.</p>
+    </li>
+    
+    <li class="objective">
+        <p>Identify the purposes of health care facilities.</p>
+    </li>
+    
+    <li class="objective">
+        <p>List and describe different types of health care facilities.</p>
+    </li>
+</ol>
+```
+
+*/
+.objectivelist .objective {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #333;
+  font-size: 19px;
+  font-weight: normal;
+}
+.objectivelist .objective p {
+  color: #333;
+}
+.objectivelist .objective a {
+  color: #333;
+}
+.objectivelist .objective a:hover, .objectivelist .objective a:active, .objectivelist .objective a:focus {
+  color: #1a1a1a;
+}
+
+.biblioentrylist:not([type]),
+.keywordlist:not([type]),
+.tocpart:not([type]),
+.tocchapter:not([type]),
+.tocentrylist:not([type]),
+.dynamiclist:not([type]),
+.nomark:not([type]),
+.index-entrylist:not([type]),
+.index-entry-list:not([type]),
+.tocproductfrontmatter:not([type]),
+.tocproductbacktmatter:not([type]),
+.staticlist:not([type]) {
+  list-style: none;
+}
+
+/*doc
+---
+title: Endnotes List
+name: endnotes_list
+category: Patterns
+parent: lists
+---
+
+See [Endnotes](#endnotes) for details on using endnote lists.
+
+```html_example
+<aside xmlns="http://www.w3.org/1999/xhtml" class="rearnote" epub:type="rearnote" xmlns:epub="http://www.idpf.org/2007/ops">
+    <p>
+        <span class="number"><a href="#"><span class="number">1</span></a></span> This is chapter endnote text. This is chapter endnote text. This is chapter
+        endnote text. This is chapter endnote text. This is chapter endnote text.
+    </p>
+</aside>
+<aside xmlns="http://www.w3.org/1999/xhtml" class="rearnote" epub:type="rearnote" xmlns:epub="http://www.idpf.org/2007/ops">
+    <p>
+        <span class="number"><a href="#"><span class="number">2</span></a></span> This is chapter endnote text. This is chapter endnote text. This is chapter 
+        endnote text. This is chapter endnote text. This is chapter endnote text.
+    </p>
+</aside>
+```
+
+*/
+.rearnotelist,
+.endnotelist {
+  list-style-type: none;
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.rearnotelist li,
+.endnotelist li {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.rearnotelist li .number,
+.endnotelist li .number {
+  font-weight: bold;
+  margin-right: 1.5em;
+}
+
+/*doc
+---
+title: Keyword List
+name: keyword_list
+category: Patterns
+parent: lists
+---
+
+Keywordset is a container of the list of keywords used in the chapter. 
+Keywords in the keyword list link back to keywords in the body text. 
+Keywords in body text in turn map to glossary definitions.
+
+```html_example
+<ol xmlns="http://www.w3.org/1999/xhtml" class="keywordlist">
+    <li>
+        <p><a class="keyword" epub:type="keyword" xmlns:epub="http://www.idpf.org/2007/ops">keyword 1</a></p>
+    </li>
+
+    <li>
+        <p><a class="keyword" epub:type="keyword" xmlns:epub="http://www.idpf.org/2007/ops">keyword 2</a></p>
+    </li>
+    
+    <li>
+        <p><a class="keyword" epub:type="keyword" xmlns:epub="http://www.idpf.org/2007/ops">keyword 3</a></p>
+    </li>
+    
+    <li>
+        <p><a class="keyword" epub:type="keyword" xmlns:epub="http://www.idpf.org/2007/ops">keyword 4</a></p>
+    </li>
+</ol>
+```
+
+*/
+.keywordlist {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.keywordlist li {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/*doc
+---
+title: Static List
+name: static_list
+category: Patterns
+parent: lists
+---
+
+A staticlist is a ol that contains numbering that is static and will 
+never be re-numbered, regardless of the use case (e.g., example of an 
+actual form)
+
+```html_example
+<ol xmlns="http://www.w3.org/1999/xhtml" class="staticlist">
+    <li>
+        <span class="number">7.25.9.1</span>
+        <p>IRC 501(c)(9) exempts from Federal income ...</p>
+    </li>
+</ol>
+```
+*/
+.staticlist li {
+  margin-left: 28.5px;
+}
+
+/*doc
+---
+title: Step List
+name: step_list
+category: Patterns
+parent: lists
+---
+
+A list of operations to be performed in a well-defined sequence.
+
+```html_example
+<ol class="steplist">
+    <li>
+        <p>first item</p>
+    </li>
+    <li>
+        <p>second item</p>
+    </li>
+    <li>
+        <p>third item</p>
+    </li>
+</ol>
+```
+*/
+/*doc
+---
+title: Literature
+name: literature
+category: Patterns
+---
+*/
+/*doc
+---
+title: Epigraph
+name: epigraph
+category: Patterns
+parent: literature
+---
+
+epigraph source is not allowed within epigraph. if source exists, the epigraph and its `div class="source"` must be set within `div class="blockquotegroup"`
+
+```html_example
+<div class="blockquotegroup">
+    <blockquote class="epigraph">Far into chaos and the world unborn...</blockquote>
+    <div class="source">
+        <p>John Milton, <cite>Paradise Lost</cite></p>
+    </div>
+</div>
+```
+*/
+.epigraph {
+  padding: 0 3em;
+  border: none;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.epigraph + .source {
+  text-align: right;
+  padding: 0 3em;
+  font-style: inherit;
+  border: 0;
+}
+
+/*doc
+---
+title: Essay
+name: essay
+category: Patterns
+parent: literature
+---
+
+```html_example
+<p>The following student paper illustrates how writing is rewriting</p> 
+<div class="essay">
+    <p>On summer vacation I learned something about myself that i never thought i would learn and now i don't know what to do about it...</p>
+</div>
+```
+*/
+.essay {
+  padding: 0 3em;
+}
+
+/*doc
+---
+title: Letter
+name: letter
+category: Patterns
+parent: literature
+---
+
+```html_example
+<p>The case example is based on a letter written by a member of the research team (Roberta Garner) after the second year of the study to the individual who served as moderator in the first year.</p>
+<section class="letter">
+    <p>Dear Matt:</p>
+    <p>I thought you might be interested in hearing about the focus groups this year.... Remember how last year there was...</p>
+    <p>When we walked into the school, we saw the usual display of athletic trophies and anti-drug posters. But the "freaks" seemed more visible this year-an Anglo boy with turquoise hair, kids with bull-ring pierces through the nasal septum, two girls with dyed spiked hair and shredded leggings lying on the floor in the entrance hall....</p>
+</section>
+```
+
+*/
+.letter {
+  padding: 0 3em;
+}
+
+/*doc
+---
+title: Drama
+name: drama
+category: Patterns
+parent: literature
+---
+
+```html_example
+<section class="drama">
+  <div class="linegroup">
+    <span class="speaker">Hamlet</span>
+    <div class="line"><p>To be, or not to be: that is the 
+      question:</p></div>
+    <div class="line"><p>Whether 'tis nobler in the mind to 
+      suffer</p></div>
+    <div class="line"><p>The slings and arrows of outrageous 
+      fortune,</p></div>
+    <div class="line"><p>Or to take arms against a sea of 
+      troubles,</p></div>
+    <div class="line"><p>And by opposing end them?</p></div>
+  </div>
+</section>
+```
+*/
+.drama {
+  margin-left: 3em;
+}
+.drama .speaker {
+  font-weight: 700;
+}
+.drama > hgroup,
+.drama > header {
+  margin-bottom: 0.75em;
+}
+.drama > hgroup > h1,
+.drama > header > h1 {
+  font-size: 1em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: bold;
+}
+
+/*doc
+---
+title: Poem
+name: poem
+category: Patterns
+parent: literature
+---
+*/
+.poem {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/*doc
+---
+title: Dialogue
+name: dialogue
+category: Patterns
+parent: literature
+---
+
+```html_example
+<div class="dialogue">
+	<div class="speech">
+		<div class="speaker">Speaker:</div>
+		<div class="line">
+		    <p>
+		        Dialog text goes in here, inside the p tag. The speaker is positioned to the left of the p tag. 
+				It is the width of the indent and aligned right.
+		    </p>
+			<p>
+				Additional dialog text goes here, inside the p tags within the line div.
+			</p>
+		</div>
+	</div>
+</div>
+```
+---
+*/
+.dialog,
+.dialogue {
+  margin-bottom: 1.5em;
+}
+.dialog .speech,
+.dialogue .speech {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 0.75em;
+}
+.dialog .speech:last-of-type,
+.dialogue .speech:last-of-type {
+  margin-bottom: 0;
+}
+.dialog .line,
+.dialogue .line {
+  display: inline-block;
+}
+.dialog .line ~ .line,
+.dialogue .line ~ .line {
+  margin-top: 0.75em;
+}
+.dialog .speaker,
+.dialog .persona,
+.dialogue .speaker,
+.dialogue .persona {
+  font-weight: 700;
+  display: block;
+}
+.dialog .line ~ .speaker,
+.dialog .line ~ .persona,
+.dialogue .line ~ .speaker,
+.dialogue .line ~ .persona {
+  clear: both;
+  margin-top: 0.75em;
+}
+.dialog p,
+.dialogue p {
+  margin-bottom: 0;
+}
+
+/*doc
+---
+title: Line number
+name: linenumber
+category: Patterns
+parent: literature
+---
+
+Line numbers are used within all kinds of text to represent points for reference. They are usually used in prose, poetry and plays but can be used with any elements.
+
+```html_example
+<span class="line"><span class="linenumber">10</span> text here</span><br/>
+<span class="line">text here</span>
+```
+*/
+.linenumber {
+  position: absolute;
+  left: 0.75em;
+  font-size: 16px;
+  font-weight: normal;
+  color: #cc6600;
+}
+@media (max-width: 480px) {
+  .linenumber {
+    font-size: 11px;
+    left: 3px;
+  }
+}
+
+/*doc
+---
+title: Rebus
+name: rebus
+category: Patterns
+parent: literature
+---
+
+A rebus is an image device, used mostly in pre-K/K levels, where the image is placed above the text to represent something being spoken of.
+
+```html_example
+<div class="line rebus-line">
+	<p>
+		The <span class="rebus"><img src="#" class="rebus-image" />bananas</span> are yellow.
+	</p>
+</div>
+```
+---
+*/
+.rebus-line {
+  position: relative;
+}
+.rebus-line:before {
+  content: "\00A0";
+  display: table;
+  clear: both;
+}
+
+.rebus {
+  position: relative;
+}
+.rebus .rebus-image {
+  position: absolute;
+  width: 100%;
+  top: -100%;
+  text-align: center;
+}
+
+/*doc
+---
+title: Media
+name: media
+category: Patterns
+---
+*/
+/*doc
+---
+title: Audio
+name: audio
+category: Patterns
+parent: media
+---
+
+`div class="fallbackerror"` is required and should include an error message.
+
+```html_example
+<audio controls="controls">
+    <source src="audio/04_01.ogg" type="audio/ogg" /> 
+    <source src="audio/04_01.mp3" type="audio/mpeg" /> 
+    <div class="fallbackerror">
+        <p>Sorry, it appears your system either does not support audio playback or 
+        cannot play the MP3 format or OGG format provided. </p>
+    </div>
+</audio>
+```
+
+*/
+audio {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/*doc
+---
+title: iFrame
+name: iframe
+category: Patterns
+parent: media
+---
+
+```html_example
+<iframe src="http://pearson.com" width="300" height="300">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+```
+
+*/
+iframe,
+object {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/*doc
+---
+title: Video
+name: video
+category: Patterns
+parent: media
+---
+
+`div class="fallbackerror"` is required and should include an error message.
+
+```html_example
+<video controls="controls" poster="../images/fraser.jpg">
+    <source src="../video/fraser_amrev_720480.mp4" type="video/mp4"/>
+    <source src="../video/fraser_amrev_720480.webm" type="video/webm"/>
+    <track src="../video/fraser_amrev_720480.vtt" kind="captions" srclang="en" label="English"/>
+    <div class="fallbackerror">
+        <p>Sorry, it appears your system  either does not support video 
+        playback or cannot play the  MP4 format or WebM format provided.</p>
+    </div>
+</video>
+```
+
+*/
+video {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/* 
+## Un-classed nav - this seems unnecessary, I'm thinking
+that all nav's should be classed as TOC...
+```
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+```
+*/
+/* 
+## TOC
+```
+<nav class="toc">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+```
+*/
+p {
+  margin-bottom: 1.5em;
+}
+
+div.sample-indent > p {
+  text-indent: 28.5px;
+}
+div.sample-indent > h1 + p, div.sample-indent > h1 + *:not(p) + p, div.sample-indent > h1 + *:not(p) + *:not(p) + p, div.sample-indent > h1 + *:not(p) + *:not(p) + *:not(p) + p {
+  text-indent: 0;
+}
+div.sample-indent > h2 + p, div.sample-indent > h2 + *:not(p) + p, div.sample-indent > h2 + *:not(p) + *:not(p) + p, div.sample-indent > h2 + *:not(p) + *:not(p) + *:not(p) + p {
+  text-indent: 0;
+}
+div.sample-indent > h3 + p, div.sample-indent > h3 + *:not(p) + p, div.sample-indent > h3 + *:not(p) + *:not(p) + p, div.sample-indent > h3 + *:not(p) + *:not(p) + *:not(p) + p {
+  text-indent: 0;
+}
+div.sample-indent > h4 + p, div.sample-indent > h4 + *:not(p) + p, div.sample-indent > h4 + *:not(p) + *:not(p) + p, div.sample-indent > h4 + *:not(p) + *:not(p) + *:not(p) + p {
+  text-indent: 0;
+}
+div.sample-indent > h5 + p, div.sample-indent > h5 + *:not(p) + p, div.sample-indent > h5 + *:not(p) + *:not(p) + p, div.sample-indent > h5 + *:not(p) + *:not(p) + *:not(p) + p {
+  text-indent: 0;
+}
+div.sample-indent > h6 + p, div.sample-indent > h6 + *:not(p) + p, div.sample-indent > h6 + *:not(p) + *:not(p) + p, div.sample-indent > h6 + *:not(p) + *:not(p) + *:not(p) + p {
+  text-indent: 0;
+}
+div.sample-indent > p:first-of-type {
+  text-indent: 0;
+}
+div.sample-indent p {
+  margin-bottom: 0;
+}
+div.sample-indent p + *:not(p):not(div) {
+  margin-top: 1.5em;
+}
+
+hr {
+  border: 0px;
+  box-shadow: 0 -1px 0px 1px #aaa;
+  margin-top: -1px;
+  height: 1px;
+}
+
+ /*doc
+---
+title: Reference
+name: reference
+category: Patterns
+---
+*/
+/*doc
+---
+title: Abstract
+name: abstract
+category: Patterns
+parent: reference
+---
+
+```html_example
+<div class="abstract">
+    <p>Dave Isay, the founder of StoryCorps and the editor
+    of <cite>Listening Is an Act of Love</cite>, shares the experiences that led him
+    to begin the StoryCorps project in his essay “<cite>The Story of
+    StoryCorps</cite>.” Isay writes:</p> 
+<blockquote>
+    <p>One of the men looked at his story, took it in his hands, and literally danced through the halls of the
+    hotel shouting, “I exist! I exist!” I was stunned. I realized as never before
+    how many people among us feel completely invisible, believe their lives don’t
+    matter, and fear they’ll someday be forgotten.</p>
+</blockquote>
+    <p>The book is divided into five sections that group the StoryCorps interviews
+    by theme: Home and Family, Work and Dedication, Journeys, History and Struggle,
+    and Fire and Water.</p>
+</div>
+```
+*/
+.abstract {
+  padding: 0 1.5em;
+}
+
+/*doc
+---
+title: Annotation
+name: annotation
+category: Patterns
+parent: reference
+---
+
+An annotation is a block-level note that is made regarding the text. In a bibliography, it summarizes and evaluates the bibliographic entry. In other contexts, it may take the form of commentary (e.g., where an author's writing is in one column and commentary on the writing is in the other). Occasionally an annotation may required to be inline.
+
+*/
+.annotation {
+  color: #585858;
+}
+h1 .annotation {
+  font-size: small;
+}
+
+dfn {
+  font-style: italic;
+  font-weight: 600;
+}
+
+dt {
+  margin-bottom: 0;
+}
+
+.glossdef {
+  margin-left: 1.5em;
+}
+
+/*doc
+---
+title: Endnote
+name: endnote
+category: Patterns
+parent: reference
+---
+
+Section containing the biblioentrylist, which is the list of works cited in the content, often listed at end of a chapter or product.
+
+```html_example
+<section class="endnoteset">
+    <header>
+        <h1><span  class="label">Endnotes</span></h1>
+    </header>
+    <ol class="endnotelist"> 
+        <li id="id_of_aside_endnote"><p><span  class="number">1</span>Text of endnote.</p></li> 
+        <!-- add'l list items -->
+    </ol>
+</section>
+```
+
+*/
+.rearnotes,
+.endnoteset {
+  font-size: 0.89474em ;
+  line-height: 1.67647em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+}
+.rearnotes p,
+.endnoteset p {
+  margin: 0;
+}
+
+/*doc
+---
+title: Footnote
+name: footnote
+category: Patterns
+parent: reference
+---
+
+A footnote is an aside that appears at the bottom of a page/screen or
+of an object (e.g., table, sidebar, etc.). How a footnote should be 
+numbered and where it should appear is determined by context and the 
+theme applied for a specific product (e.g., epub, web page 
+rendering, pdf, etc). See also endnote.
+
+```html_example
+<footer>
+    <aside class="footnote" id="id1"><p><span class="number">1</span>The "Early Bird" pattern, in J. Bergin: "Fourteen pedagogical patterns for teaching computer science", <em>Proceedings of the Fifth European Conference on Pattern Languages of Programs</em> (EuroPLop 2000), Irsee, Germany, July 2000.</p></aside>
+</footer>
+```
+
+*/
+.footnote {
+  font-size: 0.89474em;
+  line-height: 1.67647em;
+  margin-bottom: 1.5em;
+}
+.footnote p {
+  margin: 0;
+}
+.footnote .number {
+  font-weight: bold;
+}
+
+/*doc
+---
+title: Summary/Detail
+name: footnote
+category: Patterns
+parent: reference
+---
+
+This is currently unsupported, please avoid using.
+
+```html_example
+<details>
+  <summary>Some details</summary>
+  <p>More info about the details.</p>
+</details>
+```
+
+*/
+summary:focus {
+  outline: 0;
+}
+
+details {
+  display: none !important;
+}
+
+/*doc
+---
+title: Blockquote
+name: blockquote
+category: Patterns
+parent: reference
+---
+
+Use `blockquotegroup` div when a relatable source is available
+
+```html_example
+<div class="blockquotegroup">
+    <blockquote class="extract">
+        <p>Though this be madness, yet there is method in't.</p>
+    </blockquote>
+    <div class="source">
+        <p>William Shakespeare</p>
+    </div>
+</div>
+```
+
+Omit `blockquotegroup` div when no source exists
+
+```html_example
+<blockquote class="extract">
+    <p>Though this be madness, yet there is method in't.</p>
+</blockquote>
+```
+*/
+blockquote {
+  background: transparent;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  border-color: #cc6600;
+  padding-top: 0em;
+  padding-right: 0em;
+  padding-bottom: 0em;
+  padding-left: 1.5em;
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 1.5em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 0.89474em ;
+  line-height: 1.67647em ;
+  margin-top: 0em ;
+  margin-bottom: 1.67647em ;
+  font-weight: 300;
+  line-height: 28.5px;
+}
+blockquote + .source {
+  font-style: italic;
+  padding-top: 0em;
+  padding-right: 0em;
+  padding-bottom: 0em;
+  padding-left: 1.5em;
+  border-color: #cc6600;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+}
+blockquote :last-child {
+  margin-bottom: 0;
+}
+
+.blockquotegroup {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 1.5em;
+  margin-left: 0em;
+}
+.blockquotegroup blockquote {
+  margin-bottom: 0;
+}
+.blockquotegroup .source {
+  padding-top: 0em;
+  padding-right: 0em;
+  padding-bottom: 0em;
+  padding-left: 1.5em;
+}
+
+/*doc
+---
+title: Citation
+name: citation
+category: Patterns
+parent: reference
+---
+
+The cite element represents the title of a work 
+(e.g. a book, a paper, an essay, a poem, a score, 
+a song, a script, a film, a TV show, a game, a 
+sculpture, a painting, a theatre production, a 
+play, an opera, a musical, an exhibition, a legal 
+case report, etc). This can be a work that is being 
+quoted or referenced in detail (i.e. a citation), 
+or it can just be a work that is mentioned in 
+passing.
+
+```html_example
+<cite>Mastering the Art of French Cooking</cite> by Julia Child
+```
+*/
+cite {
+  font-style: italic;
+}
+
+.cite_roman {
+  font-style: normal;
+}
+
+.cite_itlic {
+  font-style: italic;
+}
+
+/*doc
+---
+title: Source
+name: source
+category: Patterns
+parent: reference
+---
+
+```html_example
+<div class="source"> 
+    <span class="label">Sources:</span> Some strategies based on <a class="biblioref" href="">Di Vesta &amp; Gray,
+            1972</a>; <a class="biblioref" href="">Kiewra, 1989</a>; <a class="biblioref" href="">Ku, Chan, Wu, &amp; Chen, 2008</a>; <a class="biblioref" href="">Pellegrini &amp; Bjorklund, 1997</a>; <a class="biblioref" href="">Posner &amp; Rothbart, 2007</a>.
+</div>
+```
+
+*/
+.source {
+  font-style: italic;
+}
+.source p {
+  margin: 0;
+  font-size: 0.89474em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+}
+
+/*doc
+---
+title: Production Note
+name: prodNote
+category: Patterns
+parent: reference
+---
+```html_example
+<section class="production-note">
+	<p> ... </p>
+</section>
+```
+*/
+.production-note,
+.prod-note,
+.prodNote,
+.prodnote {
+  background: #fbd75b;
+  border: 1px solid #d1a305;
+  font-family: Verdana, sans serif !important;
+  color: #000 !important;
+  padding: 10px;
+  font-size: 14px !important;
+}
+
+/*doc
+---
+title: Table
+name: table
+category: Patterns
+---
+
+```html_example
+<table>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+    <tr>
+      <td>Body content 3</td>
+      <td>Body content 4</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+.table figcaption hgroup h1,
+.table figcaption header h1 {
+  font-weight: bold;
+}
+
+table {
+  background: transparent;
+  border-style: solid;
+  border-width: 2px 1px 2px;
+  border-color: #468173;
+  padding: 0em;
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 1.5em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 0.89474em ;
+  line-height: 1.67647em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+table thead {
+  border-bottom: 1px solid #468173;
+}
+table th {
+  background: rgba(70, 129, 115, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #468173;
+  padding: 0.75em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  vertical-align: top;
+  text-align: left;
+  color: #468173;
+  font-style: normal;
+  font-weight: 600;
+}
+table td {
+  background: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #468173;
+  padding: 0.75em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  vertical-align: top;
+  text-align: left;
+}
+table tfoot td {
+  background: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #468173;
+  padding: 0.75em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #585858;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+}
+table .source {
+  font-style: italic;
+}
+
+/*doc
+---
+title: Informal Table
+name: informal_table
+category: Patterns
+parent: table
+---
+
+An informaltable is a table that must be set inline to the running text. It is typically un-numbered.
+
+```html_example
+<table class="table-informal">
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+    <tr>
+      <td>Body content 3</td>
+      <td>Body content 4</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+.informaltable,
+.table-informal {
+  margin-bottom: 1.5em;
+}
+
+/*doc
+---
+title: Fixed Table
+name: fixed_table
+category: Patterns
+parent: table
+---
+
+```html_example
+<table>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+    <tr>
+      <td>Body content 3</td>
+      <td>Body content 4</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+/*doc
+---
+title: Author Profile
+name: author_profile
+category: Sections
+---
+
+### Product Frontmatter About the Author profile
+
+```html_example
+<section class="aboutauthorset">
+    <header>
+        <h1><span class="label">About the Author</span></h1>
+    </header>
+    <section class="aboutauthor">
+        <header><h1>Annette Brown</h1></header>
+        <p>. . .</p>
+    </section>
+    <section class="aboutauthor">
+        <header><h1>Janet Takovitz</h1></header>
+        <p>. . .</p>
+    </section>
+</section>
+```
+
+### About the Author profile in Sidebar
+
+```html_example
+<aside class="sidebar">
+    <header><h1><span class="label">My World and Welcome to It</span></h1></header>
+    <section class="aboutauthor">
+        <div class="authorgroup">
+        <div class="author"><p><span class="name">James Thurber</span></p>
+        <div class="div div_1"><p>1894-19761</p></div></div></div>
+        <p>...</p>
+    </section>
+</aside>
+```
+
+*/
+.aboutauthor {
+  margin-bottom: 3em;
+}
+.aboutauthor > hgroup > h1,
+.aboutauthor > header > h1 {
+  margin-bottom: 0.5em;
+}
+
+/*doc
+---
+title: Acknowledgements
+name: acknowledgments
+category: Sections
+---
+
+block level content that contains an author's "acknowledgments" to people who have helped contribute to the success of the product-reviewers, colleagues, etc. It often contains an un-numbered list of reviewers and their affiliations. It appears in the product frontmatter.
+
+```html_example
+<section class="acknowledgments">
+    <header>
+        <h1><span class="label">acknowledgments</span></h1>
+    </header>
+    ...
+</section>
+```
+*/
+/*doc
+---
+title: Answer Set
+name: answer_set
+category: Sections
+---
+
+### chapter-level reuse answers appear in chapter footer
+
+- each answer in the list must be marked with a hyperlink back to the id of the problem to which it corresponds
+- the answerlist is stored in the footer of the document. If the answerlist is contained within a section class="answerset", the section should be located in the footer as well.
+- if there are multiple practicesets with multiple answerlists, each answerlist should be stored in its own ol.
+
+```html_example
+<footer>
+    <section class="answerset">
+        <ol class="answerlist">
+            <li class="answer"><a href="id">Brooklyn</a></li>
+            <li class="answer"><a href="id">1942</a></li>
+            <li class="answer"><a href="id">False</a></li>
+            <li class="answer"><a href="id">c</a></li>
+            <li class="answer"><a href="id">True</a></li>
+            <li class="answer"><a href="id">d</a></li>
+            <li class="answer"><a href="id">Koch</a></li>
+        </ol>
+    </section>
+</footer>
+```
+
+### product-level reuse answers appear wherever they will appear in target product
+
+- for legacy conversion jobs, answers do not have to be marked with a hyperlink back to the id of the problem to which it corresponds
+- answerlist is stored wherever it appears in the target product, not in the chapter footer.
+- if there are multiple practicesets with multiple answerlists, each answerlist should be stored in its own ol.
+
+```html_example
+<section class="answerset"><header><h1><span class="label">Answers to Questions</span></h1></header>
+    <section class="answersetdiv"><header><h1><span class="label">Chapter </span><span class="number">1</span></h1></header>
+        <ol class="answerlist">
+            <li class="answer"><a href="filename.html#id">Brooklyn</a></li>
+            <li class="answer"><a href="filename.html#id">1942</a></li>
+            <li class="answer"><a href="filename.html#id">False</a></li>
+        </ol>
+    </section>
+    <section class="answersetdiv"><header><h1><span class="label">Chapter </span><span class="number">2</span></h1></header>
+        <ol class="answerlist">
+            <li class="answer"><a href="filename.html#id">Queens</a></li>
+            <li class="answer"><a href="filename.html#id">1964</a></li>
+            <li class="answer"><a href="filename.html#id">pi</a></li>
+        </ol>
+    </section>
+</section>
+```
+*/
+/*doc
+---
+title: Appendix
+name: appendix
+category: Sections
+---
+
+An appendix appears in the backmatter, typically of the product but it may also appear in the chapter's backmatter as well. Typical appendix structure contains:
+
+### appendix with friends
+
+```html_example
+<section class="appendix" id="id">
+    <header><h1><span class="label">Appendix</span> <span class="number">A</span></h1></header>
+    <section class="frontmatter">
+        <p>....</p>
+    </section>
+    <section class="bodymatter">
+        <section>
+            <header><h1>...</h1></header>
+            <p>....</p>
+            <p>....</p>
+        </section>
+    </section>
+    <section class="backmatter">
+        <section class="conclusion">...</section>
+    </section>
+</section>
+```
+
+*/
+/*doc
+---
+title: Bibliography
+name: bibliography
+category: Sections
+---
+
+Section containing the biblioentrylist, which is the list of works cited in the content, often listed at end of a chapter or product.
+
+### bibliography list with corresponding in-text biblioref citations for ChapterLevelReuse
+
+```html_example
+<section class="chapter">
+    <section class="frontmatter">
+        ...
+    </section>
+        <section class="bodymatter">
+            <section>
+                <p>Sleep is no laughing matter (<a href="id" class="biblioref">Aarons, 1976</a>).</p>
+            </section>
+        </section>
+    <section class="backmatter">
+        ...
+    </section>
+    <footer>
+    <section class="bibliography">
+        <header xmlns="http://www.w3.org/1999/xhtml">
+          <h1><span class="label">Bibliography Section</span></h1>
+        </header>
+        <ol class="biblioentrylist">
+            <li id="id" class="biblioentry"><p>Aamodt, S., and Wang, S. (2008). <cite>Welcome to your brain: Why you lose your car keys but never forget how to drive and other puzzles of everyday life.</cite>London: Bloomsbury.</p></li>
+            <li id="id1" class="biblioentry"><p>Aarons, L. (1976). Sleep-assisted instruction. <cite>Psychological Bulletin, 83</cite>, 1-40.</p></li>
+        </ol>
+    </section>
+    </footer>
+</section>
+```
+
+*/
+.bibliography {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.bibliography > hgroup h1,
+.bibliography > header h1 {
+  font-size: 1.89474em ;
+  line-height: 1.58333em ;
+  margin-top: 0.79167em ;
+  margin-bottom: 0.79167em ;
+  font-weight: 300;
+  font-style: normal;
+  color: #585858;
+}
+aside > .bibliography, footer > .bibliography {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+aside > .bibliography > header h1,
+aside > .bibliography > hgroup h1, footer > .bibliography > header h1,
+footer > .bibliography > hgroup h1 {
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0.95em ;
+  margin-bottom: 0.95em ;
+  font-weight: 300;
+  color: #585858;
+  font-style: italic;
+}
+
+/*doc
+---
+title: Card
+name: card
+category: Sections
+---
+
+An optional level used in digital themes and print products that identifies content visible to the student on a screen/page at some point in time during a lesson. This level may also carry layout specific classes for presentation.
+
+```html_example
+<section class="card">
+    <header><h1><span class="number">1.1 </span>Defining extensibility</h1></header>
+    <p>....</p>
+</section>
+```
+
+*/
+/*doc
+---
+title: Case
+name: card
+category: Sections
+---
+
+A case is a section in the main narrative that does not float but is typically visually set off from the running text.
+
+```html_example
+<section class="case" id="ch02cs01">
+    <header><h1><span class="label">Case Study </span><span class="number">2–1 </span>Developing a Safe Schools Plan</h1></header>
+    <p>Read the following case study, then answer the questions about it. Finally, read the comments of educators about the safe schools plan.</p>
+</section>
+```
+
+*/
+.case h1 {
+  color: #cc6600;
+}
+.case > hgroup,
+.case > header {
+  margin-bottom: 0.75em;
+}
+.case > hgroup > h1,
+.case > header > h1 {
+  font-size: 1.26316em ;
+  line-height: 1.1875em ;
+  margin-top: 1.1875em ;
+  margin-bottom: 1.1875em ;
+  font-weight: bold;
+}
+
+/*doc
+---
+title: Chapter
+name: chapter
+category: Sections
+---
+
+A chapter. Typical chapter structure contains:
+
+- chapter title
+- chapter frontmatter
+- chapter bodymatter
+- chapter backmatter
+- chapter footer
+
+```html_example
+<section class="chapter" id="id">
+    <header><h1>...</h1></header>
+    <section class="frontmatter">
+        <p>....</p>
+    </section>
+    <section class="bodymatter">
+        <section>
+            <header><h1>...</h1></header>
+            <p>....</p>
+            <p>....</p>
+        </section>
+    </section>
+    <section class="backmatter">
+        <section class="conclusion">...</section>
+    </section>
+    <footer>....</footer>
+</section>
+```
+
+*/
+.chapter > hgroup,
+.chapter > header {
+  background: transparent;
+  border-style: solid;
+  border-width: 2px 0 1px 0;
+  border-color: #468173;
+  padding: 0em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-right: 0em;
+  margin-left: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.chapter > hgroup h1,
+.chapter > header h1 {
+  color: #585858;
+  font-size: 2.52632em;
+  line-height: 1.2;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.chapter > hgroup h1 a,
+.chapter > header h1 a {
+  color: #585858;
+}
+.chapter > hgroup h1 .number,
+.chapter > header h1 .number {
+  color: #468173;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+/*doc
+---
+title: Copyright Page
+name: copyright_page
+category: Sections
+---
+
+```html_example
+<section class="product">
+    <section class="frontmatter">
+        <section class="copyright-page">...</section>
+    </section>
+</section>
+```
+*/
+/*doc
+---
+title: Dedication
+name: dedication
+category: Sections
+---
+
+```html_example
+<section class="dedicationset">
+    <section class="dedication">
+        <p>My deepest gratitude  to David Lykken,  Paul Meehl, 
+        Tom Bouchard,  Auke Tellegen, and my  other graduate mentors  for an invaluable
+        gift  that I will always cherish: scientific thinking.</p>
+        <div class="authorgroup">
+            <div class="author">
+              <p><span class="name">—Scott Lilienfeld</span></p>
+            </div>
+        </div>
+    </section>
+    <section class="dedication">
+        <p>To Fern Pritikin Lynn,  my heart and my soul.</p>
+        <div class="authorgroup">
+            <div class="author">
+                <p><span class="name">—Steve Lynn</span></p>
+            </div>
+        </div>
+    </section>
+</section>
+```
+
+ */
+.dedication {
+  margin-top: 3em;
+  padding: 0 57px;
+}
+
+/*doc
+---
+title: Feature
+name: feature
+category: Sections
+---
+
+```html_example
+<section class="feature">
+    <header>
+        <h1>
+            <span class="label">MyMarketingLab</span> 
+        </h1>
+    </header>
+    <ul>
+        <li> 
+            <p>Visit <a class="webresource" href="http://www.mymktlab.com">www.mymktlab.com</a> to find activities that help you learn and review in order to succeed in this chapter.</p>
+        </li>
+    </ul>
+</section>
+```
+
+*/
+.feature {
+  background: rgba(70, 129, 115, 0.15);
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  border-color: #468173;
+  padding: 3em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.feature > .marginalia {
+  margin: 0;
+}
+.feature hgroup,
+.feature header {
+  margin-bottom: 0.75em;
+}
+.feature hgroup > h1,
+.feature header > h1 {
+  font-size: 1.26316em !important;
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  color: #585858 !important;
+  margin-top: 0;
+}
+
+/* 
+### Bodymatter
+```
+<section class="bodymatter">
+  <header>
+    <h1>This is an H1</h1>
+  </header>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, ipsum, iusto, quisquam consectetur recusandae veritatis aperiam ea labore quis quam ullam itaque necessitatibus odio id rem sint totam ab eum.</p>
+</section>
+```
+*/
+/* 
+### Backmatter
+```
+<section class="backmatter">
+  <header>
+    <h1>This is an H1</h1>
+  </header>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, ipsum, iusto, quisquam consectetur recusandae veritatis aperiam ea labore quis quam ullam itaque necessitatibus odio id rem sint totam ab eum.</p>
+</section>
+```
+*/
+/*doc
+---
+title: Example
+name: example
+category: Sections
+---
+
+```html_example
+<section class="example">
+    <p>I wanted to welcome you ASAP to our little family
+    here in the States. It’s high time we shook hands in person and not just across
+    the sea. I’m pleased as punch about getting to know you all, and I for one will
+    do my level best to sell you on America.</p>
+</section>
+```
+
+*/
+.example {
+  color: #585858;
+  margin-left: 28.5px;
+}
+.example > hgroup,
+.example > header {
+  margin-bottom: 0.75em;
+}
+.example > hgroup > h1,
+.example > header > h1 {
+  font-size: 1.26316em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: bold;
+}
+
+/*doc
+---
+title: Example_1
+name: example_1
+category: Sections
+---
+
+```html_example
+<section class="example example_1">
+     <header>
+        <h1><span class="label">Sidebar Label</span>Sidebar Title</h1>
+    </header>
+    <p>I wanted to welcome you ASAP to our little family
+    here in the States. It’s high time we shook hands in person and not just across
+    the sea. I’m pleased as punch about getting to know you all, and I for one will
+    do my level best to sell you on America.</p>
+</section>
+```
+
+*/
+.example_1 {
+  background: rgba(70, 129, 115, 0.15);
+  border-style: none;
+  border-width: 0;
+  border-color: #468173;
+  padding: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: inherit;
+  border: 1px solid transparent;
+}
+.example_1 hgroup .label,
+.example_1 header .label {
+  background: #468173;
+  color: #fff;
+  display: block;
+  font-size: 0.56667em ;
+  line-height: 1.67647em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  letter-spacing: 2px;
+  line-height: normal;
+  padding: 0.83824em 1.67647em;
+  text-transform: uppercase;
+  margin-left: -1.67647em;
+  margin-right: -1.67647em;
+}
+.example_1 > hgroup h1,
+.example_1 > header h1 {
+  color: #333;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+.example_1 > hgroup h2,
+.example_1 > hgroup .subtitle,
+.example_1 > header h2,
+.example_1 > header .subtitle {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  font-weight: bold;
+}
+.example_1 > section > header h1,
+.example_1 > section > hgroup h1 {
+  color: #585858;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+
+/*doc
+---
+title: Example_2
+name: example_2
+category: Sections
+---
+
+```html_example
+<section class="example example_2">
+     <header>
+        <h1><span class="label">Sidebar Label</span>Sidebar Title</h1>
+    </header>
+    <p>I wanted to welcome you ASAP to our little family
+    here in the States. It’s high time we shook hands in person and not just across
+    the sea. I’m pleased as punch about getting to know you all, and I for one will
+    do my level best to sell you on America.</p>
+</section>
+```
+
+*/
+.example_2 {
+  background: rgba(70, 129, 115, 0.15);
+  border-style: none;
+  border-width: 0;
+  border-color: #468173;
+  padding: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: inherit;
+  border: 1px solid transparent;
+}
+.example_2 hgroup .label,
+.example_2 header .label {
+  background: #468173;
+  color: #fff;
+  display: block;
+  font-size: 0.56667em ;
+  line-height: 1.67647em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  letter-spacing: 2px;
+  line-height: normal;
+  padding: 0.83824em 1.67647em;
+  text-transform: uppercase;
+  margin-left: -1.67647em;
+  margin-right: -1.67647em;
+}
+.example_2 > hgroup h1,
+.example_2 > header h1 {
+  color: #333;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+.example_2 > hgroup h2,
+.example_2 > hgroup .subtitle,
+.example_2 > header h2,
+.example_2 > header .subtitle {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  font-weight: bold;
+}
+.example_2 > section > header h1,
+.example_2 > section > hgroup h1 {
+  color: #585858;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+
+/*doc
+---
+title: Example_3
+name: example_3
+category: Sections
+---
+
+```html_example
+<section class="example example_3">
+     <header>
+        <h1><span class="label">Sidebar Label</span>Sidebar Title</h1>
+    </header>
+    <p>I wanted to welcome you ASAP to our little family
+    here in the States. It’s high time we shook hands in person and not just across
+    the sea. I’m pleased as punch about getting to know you all, and I for one will
+    do my level best to sell you on America.</p>
+</section>
+```
+
+*/
+.example_3 {
+  background: rgba(70, 129, 115, 0.15);
+  border-style: none;
+  border-width: 0;
+  border-color: #468173;
+  padding: 1.5em;
+  margin: 0em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: inherit;
+  border: 1px solid transparent;
+}
+.example_3 hgroup .label,
+.example_3 header .label {
+  background: #468173;
+  color: #fff;
+  display: block;
+  font-size: 0.56667em ;
+  line-height: 1.67647em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  letter-spacing: 2px;
+  line-height: normal;
+  padding: 0.83824em 1.67647em;
+  text-transform: uppercase;
+  margin-left: -1.67647em;
+  margin-right: -1.67647em;
+}
+.example_3 > hgroup h1,
+.example_3 > header h1 {
+  color: #333;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+.example_3 > hgroup h2,
+.example_3 > hgroup .subtitle,
+.example_3 > header h2,
+.example_3 > header .subtitle {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0.75em;
+  margin-left: 0em;
+  font-weight: bold;
+}
+.example_3 > section > header h1,
+.example_3 > section > hgroup h1 {
+  color: #585858;
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: 400;
+}
+
+/*doc
+---
+title: Glossary
+name: glossary
+category: Sections
+---
+
+```html_example
+<section class="glossary" id="frontmgloss01">
+  <header>
+    <h1 id="frontmgloss01.title"><span class="label">Glossary</span></h1>
+  </header>
+  <section class="glossdiv">
+  <dl class="glossentrylist">
+    <dt class="glossterm" id="frontmgloss01_01">
+      <dfn>AAC:</dfn>
+    </dt>
+    <dd class="glossdef">
+      <p>All African Convention</p>
+    </dd>
+    <dt class="glossterm" id="frontmgloss01_02">
+      <dfn>ANC:</dfn>
+    </dt>
+ 
+    <dd class="glossdef">
+      <p>African National Congress (formerly SANNC: South African Native National Congress)</p>
+    </dd>
+   </dl>
+   </section>
+  <section class="glossdiv">
+    <dl class="glossentrylist"> 
+    <dt class="glossterm" id="frontmgloss01_03">
+      <dfn>CAD:</dfn>
+    </dt>
+    <dd class="glossdef">
+      <p>Coloured Affairs Department</p>
+    </dd>
+   </dl>
+   </section>
+</section>      
+```
+*/
+.glossary {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.glossary > hgroup h1,
+.glossary > header h1 {
+  font-size: 2.52632em ;
+  line-height: 1.1875em ;
+  margin-top: 0.59375em ;
+  margin-bottom: 0.59375em ;
+  font-style: normal;
+  font-weight: 300;
+  color: #468173;
+}
+aside > .glossary {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+aside > .glossary > hgroup h1,
+aside > .glossary > header h1 {
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0em ;
+  margin-bottom: 0.95em ;
+  font-style: italic;
+  font-weight: 300;
+  color: #585858;
+  margin-top: 0;
+}
+
+/*doc 
+---
+title: Introduction
+name: introduction
+category: Sections
+---
+
+text in the part or chapter frontmatter that provides a narrative 
+introduction to the part or chapter bodymatter content to follow. 
+Distinct from the toc, objectiveset, and keywordset, the introduction 
+sometimes occupies all the text in the chapter frontmatter or is 
+sometimes only one or two paragraphs of the overall frontmatter.
+
+```html_example
+<section class="frontmatter">
+  <section class="introduction">
+    <p>This chapter provides an introduction to the history and sources 
+    of law in Australia, the doctrine of reception and the growing importance of 
+    native title, Commonwealth and state powers, and the doctrine of 
+    separation of powers.</p>
+  </section>
+</section>
+```
+*/
+.introduction {
+  font-size: 1.26316em;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/*doc
+---
+title: Keyword Set
+name: keyword_set
+category: Sections
+---
+
+Container of generated list of keywords
+
+```html_example
+<section class="keywordset">
+  <header>
+    <h1>This is a heading.</h1>
+  </header>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, ipsum, iusto, quisquam consectetur recusandae veritatis aperiam ea labore quis quam ullam itaque necessitatibus odio id rem sint totam ab eum.</p>
+</section>
+```
+*/
+/*doc
+---
+title: List Group
+name: list_group
+category: Sections
+---
+
+```html_example
+<section class="listgroup">
+  <header>
+    <h1>This is a heading.</h1>
+  </header>
+  <ul>
+    <li>
+      <p>Fingers of one hand are brought together at the tips pointing upwards.</p>
+    </li>
+  </ul>
+</section>
+```
+
+*/
+.listgroup > hgroup,
+.listgroup > header {
+  margin-bottom: 0.75em;
+}
+.listgroup > hgroup > h1,
+.listgroup > header > h1 {
+  font-size: 1em ;
+  margin-top: 0em ;
+  margin-bottom: 0em ;
+  font-weight: bold;
+}
+
+/*doc
+---
+title: Module
+name: module
+category: Sections
+---
+
+```html_example
+<section class="module">
+    <header><h1><span class="label">Section </span><span class="number">1.1 </span>Defining extensibility</h1></header>
+    <p>....</p>
+</section
+```
+
+*/
+/*doc
+---
+title: Name Index
+name: name_index
+category: Sections
+---
+
+```html_example
+<section class="name-index" id="idx01a">
+    <header>
+        <h1>Name Index</h1>
+    </header>
+    <ul class="index-entrylist">
+        <li class="index-entry" id="ixx"><span class="index-term">ABC</span><a class="index-locator" href="x.xhtml#page152">152</a> </li>
+    </ul>
+</section>
+```
+
+*/
+/*doc
+---
+title: Notice
+name: notice
+category: Patterns
+---
+
+```html_example
+<section class="notice">
+  <header>
+    <h1><span class="label">Looking Back"</span></h1>
+  </header>
+  <p>In determining whether the study is inferential or descriptive, we assess whether Pepsi is interested in the responses of only the 1,000 sampled customers (descriptive statistics) or in the responses of the entire population of consumers (inferential statistics).</p>
+</section>
+```
+*/
+.notice {
+  padding: 1.5em 28.5px;
+  border: 1px solid;
+}
+.notice > hgroup,
+.notice > header {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+.notice > hgroup > h1,
+.notice > header > h1 {
+  font-size: 1.26316em ;
+  line-height: 1.1875em ;
+  margin-top: 0em ;
+  margin-bottom: 1.1875em ;
+  font-weight: bold;
+}
+
+/*doc
+---
+title: Objective Set
+name: objective_set
+category: Sections
+---
+
+```html_example
+<section class="objectiveset level1">
+    <header>
+        <h1 class="title">Big Ideas to Master in this Chapter</h1>
+    </header>
+    <!-- Objective list goes here -->
+</section>
+```
+*/
+.objectiveset {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.objectiveset > hgroup h1,
+.objectiveset > header h1 {
+  font-size: 1.89474em ;
+  line-height: 1.58333em ;
+  margin-top: 0.79167em ;
+  margin-bottom: 0.79167em ;
+  font-weight: 300;
+  font-style: normal;
+  color: #585858;
+}
+aside > .objectiveset {
+  background: transparent;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+aside > .objectiveset > header h1,
+aside > .objectiveset > hgroup h1 {
+  font-size: 1.57895em ;
+  line-height: 1.9em ;
+  margin-top: 0.95em ;
+  margin-bottom: 0.95em ;
+  font-weight: 300;
+  color: #585858;
+  font-style: italic;
+}
+
+/*doc
+---
+title: Part
+name: part
+category: Sections
+---
+
+```html_example
+<section class="part"><header>...</header>
+    <section class="frontmatter">
+        ....
+    </section>
+    <section class="bodymatter">
+        <a class="include" href="M04_DIVI520X_10_SE_C04.xhtml">M04_DIVI520X_10_SE_C04.xhtml</a><br/>
+        <a class="include" href="M05_DIVI520X_10_SE_C05.xhtml">M05_DIVI520X_10_SE_C05.xhtml</a><br/>
+    </section>
+</section>
+```
+
+*/
+/*doc
+---
+title: Practice
+name: practice
+category: Sections
+---
+
+A container for assessment content, including optional title group, introductory text, instructions, and problems.
+
+```html_example
+<section class="practice" id="id"><header><h1>Learning Activities</h1></header>
+<ol class="practicelist" type="1">
+  <li class="general-problem" id="id">
+    <div class="question">
+      <p>Which would be a better description of naive realism, "seeing is believing" or "believing is seeing"?</p>
+    </div>
+  </li>
+  <li class="general-problem" id="id">
+    <div class="question">
+      <p>What does Shepard's table illusion tell us about our ability to trust our own intuitions and experiences?</p>
+    </div>
+  </li>
+  <li class="fb-problem" id="id">
+    <div class="question">
+      <p>The name of the genre is <span class="wol">          </span>.</p>
+    </div>
+  </li>
+  <li class="tf-problem" id="id">
+    <div class="question">
+      <p>Shakespeare's last play was The Tempest.</p>
+    </div>
+  </li>
+  <li class="multiple-choice-problem" id="id">
+    <div class="question">
+      <p>Which New Yorker author also wrote children's books?</p>
+    </div>
+    <ol class="choices" type="a">
+    <li><p>James Thurber</p></li>
+    <li><p>E.B White</p></li>    
+    <li><p>Dorothy Parker</p></li>        
+    </ol>
+  </li>
+  <li class="match-problem" id="id">
+    <div class="question">
+      <ol class="matchlist">
+        <li><p>...</p></li>
+        <li><p>...</p></li>    
+      </ol>
+      <ol class="matchlist">
+        <li><p>...</p></li>
+        <li><p>...</p></li>    
+      </ol>
+
+    </div>
+  </li>
+</ol>
+</section>
+```
+*/
+/*doc
+---
+title: Preface
+name: preface
+category: Sections
+---
+
+Introductory matter that positions the product for its intended reading audience. It precedes the first chapter of the product and is located in the product frontmatter.
+
+```html_example
+<section class="preface">
+    <p>Every day, our students encounter a host of questions that challenge their
+    understanding of themselves and others. Whether it’s from the Internet,
+    television programs, radio call-in shows, movies, self-help books, or
+    advice from friends, our students’ daily lives are a steady stream of
+    information—and often misinformation—about intelligence testing,
+    parenting, romantic relationships, mental illness, drug abuse,
+    psychotherapy, and a host of other topics. Much of the time, the
+    questions about these issues that most fascinate students are precisely
+    those that psychologists routinely confront in their research, teaching,
+    and practice.</p>
+</section>
+```
+*/
+/*doc
+---
+title: Subject Index
+name: subject_index
+category: Sections
+
+### index with no groups
+```html_example
+<section class="subject-index" id="idx01a">
+  <header>
+    <h1>
+      Subject Index 
+    </h1>
+  </header>
+  <ul class="index-entrylist">
+    <li class="index-entry" id="ixx"><span class="index-term">Buying center,
+      </span><a class="index-locator" href="x.xhtml#page152">152</a> </li>
+  </ul>
+</section>
+```
+
+### index with groups
+
+```html_example
+<section class="subject-index" id="idx01a">
+  <header>
+    <h1>
+      Subject Index
+    </h1>
+  </header>
+  <section class="index-group" id="idxdiv1sec27">
+    <header>
+      <h1 id="idxdiv1sec27.title">
+        A
+      </h1>
+    </header>
+    <ul class="index-entrylist">
+      <li class="index-entry" id="ix"><span class="index-term">Actual product,
+        </span> <a class="index-locator" href="x.xhtml#page198">198</a> </li>
+    </ul>
+  </section>
+</section>
+```
+*/
+/*doc
+---
+title: Summary
+name: summary
+category: Sections
+---
+
+```html_example
+<section class="summary">
+  <header>
+    <h1>This is an H1</h1>
+  </header>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, ipsum, iusto, quisquam consectetur recusandae veritatis aperiam ea labore quis quam ullam itaque necessitatibus odio id rem sint totam ab eum.</p>
+</section>
+```
+*/
+/*doc
+---
+title: Title Page
+name: title_page
+category: Sections
+---
+
+### Simplified Author name tagging
+
+```html_example
+<section class="titlepage">
+    <header>
+        <h1>Oceanography</h1>
+    </header>
+    <div class="edition"><p>Third Edition</p></div>
+    <div class="authorgroup">
+        <div class="author">
+            <div class="name"><p>Sarah Walsh</p></div>
+        </div>
+        <div class="affiliation">
+            <div class="orgname"><p>University of South Carolina</p></div>
+            <div class="orgdiv">Application Development</div>
+        </div>
+    </div>
+    <div class="publisher">
+        <div class="publisherlocation">
+            <p>Boston Columbus Indianapolis New York San Francisco Upper Saddle River Amsterdam Cape Town Dubai London Madrid Milan Munich Paris Montreal Toronto Delhi Mexico City Sao Paulo Sydney Hong Kong Seoul Singapore Taipei Tokyo</p>
+        </div>
+    </div>
+</section>
+```
+
+### Detailed Author name tagging, publishername
+
+```html_example
+<section class="titlepage">
+    <header>
+        <h1>Oceanography</h1>
+    </header>
+    <div class="authorgroup">
+        <div class="author">
+            <div class="name"><p><span class="firstname">Sarah</span> <span class="lastname">Walsh</span></p></div>
+        </div>
+        <div class="affiliation">
+            <div class="orgname">
+                <p>University of South Carolina</p></div>
+            </div>
+        </div>
+        <div class="publisher">
+            <div class="publishername">Addison-Wesley</div>
+            <div class="publisherlocation">
+                <p>Boston Columbus Indianapolis New York San Francisco Upper Saddle River Amsterdam Cape Town Dubai London Madrid Milan Munich Paris Montreal Toronto Delhi Mexico City Sao Paulo Sydney Hong Kong Seoul Singapore Taipei Tokyo</p>
+            </div>
+        </div>  
+</section>
+```
+*/
+.author,
+.affiliation,
+.publisher {
+  color: #333;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-right: 0em;
+  margin-bottom: 0em;
+  margin-left: 0em;
+  font-style: normal;
+  font-size: 1em;
+  padding: 0;
+}
+
+header .authorgroup {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  margin-right: 0em;
+  margin-left: 0em;
+}
+header .author {
+  color: #333;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.42105em;
+}
+
+.authorgroup p {
+  margin: 0;
+}
+.authorgroup .affiliation {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.publisher .publisherlocation {
+  font-weight: normal;
+}
+
+/*doc
+---
+title: Vignette
+name: vignette
+category: Sections
+---
+
+A vignette is a short descriptive scene, sometimes fictional, related as a story to set the stage for the chapter's focus. Typically used in the chapter frontmatter and set differently from the surrounding text.
+
+```html_example
+<section class="vignette">
+    <header>
+        <h1>Making your own luck</h1>
+    </header>
+    <p>Frank Jao worked as a translator for the American military during the war in Vietnam, and when Saigon fell in 1975, he and his wife, Kathy, were flown out of the country to Camp Pendleton, California. They had the clothes on their backs and about 20 dollars.</p>
+    <p>Because of Frank and Kathy’s creativity, courage, and persistence over the years, their company, Bridgecreek, has developed more than 2 million square feet of retail, condo, and apartment space. It owns and manages 1.5 million square feet of space in Southern California and employs 18 people.</p>
+</section>
+```
+*/
+/*doc
+---
+title: Volume
+name: volume
+category: Sections
+---
+
+An optional level used primarily for multi-volume books. Represents content that may be sold separately or as a complete work (i.e. Volume 1, Volume 2 and Combined.)
+
+```html_example
+<section class="volume">
+    <header>
+        <h1><span class="label">Vol. </span><span class="number">I </span>Decline of Western Civilization</h1>
+    </header>
+</section>
+```
+*/
+/* 
+## Epub
+Styles specific to ePub readers.
+*/
+/*
+### Page Breaks
+Avoid splitting the following elements across pages in ePub readrers.
+Note: This technique is not supported by all ePub readers.
+*/
+aside, blockquote, figure, header, iframe,
+nav, object, pre, section, table {
+  page-break-inside: avoid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+
+p {
+  orphans: 2;
+  widows: 2;
+}
+
+/*# sourceMappingURL=default.css.map */

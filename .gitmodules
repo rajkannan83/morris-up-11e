@@ -1,0 +1,3 @@
+[submodule "0133952983/OPS/components/metrodigi/_framework"]
+	path = 0133952983/OPS/components/metrodigi/_framework
+	url = ssh://git@bitbucket.org/mdbooks/metrodigi-widget-framework.git

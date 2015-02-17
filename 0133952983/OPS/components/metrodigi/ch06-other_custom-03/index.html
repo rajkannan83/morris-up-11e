@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Pearson Ciccarelli Chapter 5 Sample</title>
+        <link rel="stylesheet" href="styles/template.css">
+        <link rel="stylesheet" href="styles/style.css" type="text/css" />
+        <link rel="stylesheet" href="styles/maze.css" type="text/css" />
+        <link rel="stylesheet" href="styles/animations.css" type="text/css" />
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="MetrodigiWidget large">
+                <article class="widget-content">
+                    <section id="rat-maze" class="widget-body no-padding">
+                        
+                          <div class="maze" aria-describedby="maze_alt_text"></div>
+                        	<div aria-hidden="true">
+                            <div class="group1 rat"></div>
+                            <div class="group2 rat"></div>
+                            <div class="group1 food"></div>
+                            <div class="group2 food"></div>
+                            <div class="group1 happy"></div>
+                            <div class="group2 happy"></div>
+                            <div class="second-hand" id="time"></div>
+                       	</div>
+
+                        <div class="text" tabindex="0">
+                            <p class="message-0" ><span class="responsive-call-to-action">Tap</span> “Start” for a demonstration of a maze such as the one used in Tolman's experiments in latent learning. A rat is placed in the start box. The trial is over when the rat gets to the end box.</p>
+                            <p class="message-1">The first group is placed in the maze. They wander aimlessly until they randomly find the exit where they are given food as a reinforcer.<br><strong><span class="responsive-call-to-action">Tap</span> Next to continue.</strong></p>
+                            <p class="message-2">They are then placed in the maze over and over until they can run it without making any mistakes, each time getting the reinforcement.<br><strong><span class="responsive-call-to-action">Tap</span> Next to continue.</strong></p>
+                            <p class="message-3">Group 2 is similarly placed in the maze over and over but is never given a reinforcer.<br><strong><span class="responsive-call-to-action">Tap</span> Next to continue.</strong></p>
+                            <p class="message-4">Group 1 consistently runs the maze correctly.<br><strong><span class="responsive-call-to-action">Tap</span> Next to continue.</strong></p>
+                            <p class="message-5">Group 2 seems to always wander about and find the exit by accident.<br><strong><span class="responsive-call-to-action">Tap</span> Next to continue.</strong></p>
+                            <p class="message-6">After ten days group 2 is given the reinforcer upon completing the maze.<br><strong><span class="responsive-call-to-action">Tap</span> Next to continue.</strong></p>
+                            <p class="message-7">Almost immediately they can run the maze succesfully from memory.<br><strong><span class="responsive-call-to-action">Tap</span> Reset to start over.</strong></p>
+                        </div>
+                        
+                        <div id="maze_alt_text" class="offscreen" tabindex="0">Image of a Rat Maze</div>
+
+                        <div id="start-box" class="start-text">Start<br />box</div>
+                        <div id="end-box" class="start-text">End<br />box</div>
+
+                        <div class="rat-count"></div>
+                    </section>
+                    <footer class="widget-footer">
+                        <button id="start" class="buttonBoxShadow">Start</button>
+                        <button class="grayed-2-rat grayed-rat" id="next">Next</button>
+                        <button class="grayed-1-rat grayed-rat" id="previous" disabled="disabled">Previous</button>
+                        <button id="reset" disabled="disabled">Reset</button>
+                    </footer>
+                </article>
+            </div>
+        </div>
+        <script src="javascript/maze.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/template.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../_framework/_base_metrodigi/alt_slider.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../_framework/_base_external/d3.v3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../_framework/_base_external/dimple.v1.1.2.min.js" charset="utf-8"></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="MetrodigiWidget Experiment">
+                <article class="widget-content">
+                    <header class="widget-header">
+                        <nav class="widget-header-menu">
+                            <ul class="elements-6">
+                                <li class="slide-1 slide-2 active"><div class="arrowtab">Introduction</div></li>
+                                <li class="slide-3"><div class="arrowtab">Instructions</div></li>
+                                <li class="slide-3-5"><div class="arrowtab">Experiment</div></li>
+                                <li class="slide-4 results"><div class="arrowtab">Results</div></li>
+                                <li class="slide-5"><div class="arrowtab">Discussion</div></li>
+                                <li class="slide-6"><div class="arrowtab">Reference</div></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <section class="widget-body">
+
+                        <article class="slide slide-1 adjust-text-total active" data-next-slide="2" tabindex="0">
+                            <img class="constrain-height" src="images/petLogo.png" alt="" />
+                            <p>In studying Sensation and Perception, scientists determine thresholds for detection of stimuli for each of the senses.  These studies determine what are known as absolute thresholds and difference thresholds.  The  absolute threshold is the smallest amount of a stimulus that can be detected by the subject.  Thresholds are determined using a variety of procedures, though many involve the random presentation of stimuli of varying levels and tracking each presentation for whether or not the subject indicates they detect the stimulus.  The absolute threshold can be determined for a taste, a smell, a light, a sound, or pressure on the skin.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                            <p class="undo_label">Your previous results have been cleared. <a href="#" class="undo">Undo</a></p>
+                        </article>
+
+                        <article class="slide slide-2 adjust-text" data-prev-slide="1" data-next-slide="3">
+                                 <img class="constrain-height" src="images/2-3.jpg" alt="" />
+                            <p>When investigating difference thresholds on perception of weight, Weber recognized that when subjects were given a heavier weight, that it required a greater overall change in the weight for them to notice a difference than when they were given a very light weight (Weber, 1834).  He named this consistent finding "Weber's Law" and introduced a mathematical equation that demonstrated the effect.  The mathematical equation is represented as displayed on the right.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                        </article>
+
+                        <article class="slide slide-3 actual experiment" data-prev-slide="2">
+                            <img class="constrain-height" src="images/petLogo.png" alt="" />
+                            <p>The following experiment contains 80 pairs of circles with brightness levels that may or may not be identical. When presented with a pair of circles, indicate whether or not they are the same by selecting the "Same" or "Different" button. You will be shown the next set of circles once a button is clicked, so be sure of your answer before entering a response.</p>
+                            <p>When you are ready, <span class="responsive-call-to-action">click</span> the "Start Experiment" button to begin.</p>
+                        </article>
+
+                        <article class="slide slide-4" data-next-slide="5">
+                            <p>What most people see is that differences between the two disks are fairly easy to detect when the disks are dark, but that same difference is much harder to detect when the disks are light. This demonstrates Weber's Law which states that the ability to detect a difference between two stimuli depends on the intensity of the stimuli. Specifically, the more intense the stimulus (Light Base comparisons in this study), the harder it is to detect differences. If your performance on the Dark Base comparisons is better than your performance on the Light Base comparisons, then your data is supporting Weber's Law.</p>
+                            <div class="result-area" aria-describedby="info1">
+                                <div class="chart-type" aria-hidden="true">Light Base</div>
+                                <div id="chart_L" aria-hidden="true"></div>
+                                <div id="info1" tabindex="0" class="offscreen">Light Base graph. A light base graph of performance where the X axis is Percent Correct and the Y Axis is difference in intensity.</div>
+                            </div>
+                            <div class="result-area" aria-describedby="info2">
+                                <div class="chart-type" aria-hidden="true">Dark Base</div>
+                                <div id="chart_D" aria-hidden="true"></div>
+                                <div id="info2" tabindex="0" class="offscreen">Dark Base graph. A dark base graph of performance where the X axis is Percent Correct and the Y Axis is difference in intensity.</div>
+                            </div>
+                        </article>
+
+                        <article class="slide slide-5 adjust-text" data-next-slide="6" data-prev-slide="4">
+                            <img class="constrain-height" src="images/sky.png" alt="" />
+                            <p>There are examples of Weber's Law all around you.  For example, at night, you can see stars, because the change in brightness they produce is large relative to the dark night sky.  During the day, those same stars are shining just as brightly at night, but you can't see them because now the change in brightness is miniscule when compared to the sun.  The little bit of noise that a ticking clock adds to a party isn't even noticed, but add that same ticking clock to a quiet room when you are trying to sleep and it becomes a nuisance you can't ignore.  Weber's law helps us to understand why we sometimes detect a stimulus and sometimes don’t.</p>
+                        </article>
+
+                        <article class="slide slide-6 adjust-text last" data-prev-slide="5">
+                            <img class="constrain-height" src="images/petLogo.png" alt="" />
+                            <p>Weber, E.H. (1834). <em>De pulsu, resorptione, auditu et tactu. Annotationes anatomicae et physiologicae.</em> Lipsiae: Koehler.</p>
+                        </article>
+
+                    </section>
+                    <footer class="widget-footer">
+                        <button class="skip-experiment offscreen">Skip to Results</button>
+                        
+                        <button class="reset">Restart Experiment</button>
+                        <button class="start-experiment actual">Start Experiment</button>
+                        <button class="next">Next</button>
+                        <button class="previous">Previous</button>
+                        <button class="close-img-overlay">Close</button>
+                        
+                    </footer>
+                </article>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="javascript/experiment.js"></script>
+        <script type="text/javascript" src="javascript/script.js"></script>
+        <script type="text/javascript">
+            window.addEvent('domready', function() {
+                // Widget initialization
+                widget = new WeberExperiment({
+                    container: $$('.MetrodigiWidget')[0],
+                    delay: 1000
+                });
+            })
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,535 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    vertical-align: middle;
+    width: 100%;
+}
+ol {
+    list-style: decimal;
+    margin-left: 2.5em;
+    margin-top: .5em;
+}
+ol p {
+    font-size: 1.2em;
+    line-height: 1.1;
+}
+
+.MetrodigiWidget header.widget-header .notes .note {
+    padding: 10px 15px 10px;
+}
+
+.container {
+    position: absolute;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+.head {
+    background-color: rgb(97, 62, 86);
+    padding: 15px 0px 10px 10px;
+    color: #fff;
+    display: none;
+}
+
+
+.head .modifier {
+    color: rgb(226, 217, 217);
+}
+
+.head-text-wrap {
+    height: 66px;
+}
+
+
+.stageWrap {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.MetrodigiWidget section.widget-body .feedback {
+    text-align: left;
+    width: 240px;
+    left: 12px;
+    bottom: 10px;
+    top: auto;
+    padding-left: 0;
+}
+
+.bubble {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 51px;
+}
+
+.bubbleState1, .bubbleState2, .bubbleState3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 51px;
+    text-align: center;
+    vertical-align: text-bottom;
+    display: none;
+}
+
+.bubble[data-state='1'] .bubbleState1 {
+    display: block;
+}
+
+.bubble[data-state='2'] .bubbleState2 {
+    display: block;
+}
+
+.bubble[data-state='3'] .bubbleState3 {
+    display: block;
+}
+
+.bubbleState1 {
+    cursor: pointer;
+    background-color: rgb(101, 144, 162);
+    color: #fff;
+}
+
+.bubbleState1 div {
+    padding: 3px 0 0 0;
+}
+
+.bubbleState1 .questionMark {
+    font-size: 2.2em;
+    padding: 0.55em 0 0.35em;
+}
+
+.bubbleState2 {
+    background-color: rgb(166, 170, 169);
+    cursor: pointer;
+}
+
+.bubbleState2 div {
+    padding: 17px 0 0 0;
+}
+
+.bubbleState2 .questionMark {
+    font-size: 3.3em;
+    color: #fff;
+    padding-top: 0.7em;
+}
+
+.stageWrap.quiz-mode .bubbleState3 {
+    border: 2px solid black;
+    background-color: #dedede;
+}
+
+/* dropdown */
+.answer {
+    padding: 0;
+    text-align: center;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: black;
+    z-index: 2000;
+    box-shadow: 5px 5px 5px #888888;
+    display: none;
+		width: 150px;
+}
+
+.bubble[data-state='2'] .dropdown {
+    display: block!important;
+}
+
+.option {
+    position: relative;
+    width: 150px;
+    padding: 8px 0 8px 10px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.option a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.optBlock {
+    font-family: "HelveticaNeueETW01-75Bd";
+    padding-top: 5px;
+}
+
+.optIcon {
+    position: absolute;
+    right: 2px;
+    top: 8px;
+    width:  14px;
+    height: 14px;
+    padding-top: 4px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position:center;
+}
+
+
+.option[data-state=no] {
+    color:  #f54646;
+}
+
+.option[data-state=no] .optIcon {
+    background-image:url('../images/quiz-x-mark@2x.png');
+    background-size: 14px 14px;
+}
+
+.option[data-state=yes] {
+    color: rgb(113, 191, 68);
+}
+
+.option[data-state=yes] .optIcon {
+    background-image:url('../images/quiz-check-mark@2x.png');
+}
+
+.option:nth-child(1) {
+    border-top: 1px solid white;
+}
+
+/*------- set all bubble and dropdown positions -------------------------------------------*/
+
+.dropdownTL {
+    top: 30px;
+    left: 82px;
+}
+.dropdownTR {
+    top: 30px;
+    left: -166px;
+}
+
+.dropdownBL{
+	top: 110px;
+	left: -21px;
+}
+
+.dropdownMR{
+	top: -53px;
+	left: 123px;
+}
+.dropdownBR{
+	top: -150px;
+	left: 109px;
+}
+.dropdownBR.far{
+	top: -149px;
+	left: 110px;
+}
+.dropdownLB{
+	top: -114px;
+	left: -165px;
+}
+
+.dropdownOM{
+	top: -220px;
+	left: -46px;
+}
+
+/*-------------------------------------------------------------*/
+
+
+.dropdownOM:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 86px;
+    top: 211px;
+    border: 11px solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.dropdownOM:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 86px;
+    top: 209px;
+    border: 11px solid;
+    border-color: #000 transparent transparent transparent;
+}
+
+
+.dropdownLB:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 150px;
+    top: 153px;
+    border: 11px solid;
+    border-color: transparent transparent transparent #fff;
+}
+
+.dropdownLB:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 148px;
+    top: 153px;
+    border: 11px solid;
+    border-color: transparent transparent transparent #000;
+}
+
+
+
+.dropdownBR:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: -21px;
+    top: 188px;
+    border: 11px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.dropdownBR:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: -19px;
+    top: 188px;
+    border: 11px solid;
+    border-color: transparent #000 transparent transparent;
+}
+
+
+.dropdownMR:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: -21px;
+    top: 89px;
+    border: 11px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.dropdownMR:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: -21px;
+    top: 89px;
+    border: 11px solid;
+    border-color: transparent #000 transparent transparent;
+}
+
+
+
+.dropdownBL:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 60px;
+    top: -22px;
+    border: 11px solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.dropdownBL:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 60px;
+    top: -20px;
+    border: 11px solid;
+    border-color: transparent transparent #000 transparent;
+}
+
+.dropdownBL2:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 53px;
+    top: -22px;
+    border: 11px solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.dropdownBL2:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 53px;
+    top: -20px;
+    border: 11px solid;
+    border-color: transparent transparent #000 transparent;
+}
+
+
+.dropdownTL:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: -22px;
+    top: 10px;
+    border: 11px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.dropdownTL:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: -20px;
+    top: 10px;
+    border: 11px solid;
+    border-color: transparent #000 transparent transparent;
+}
+
+
+.dropdownTR:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 187px;
+    top: 13px;
+    border: 11px solid;
+    border-color: transparent transparent transparent #fff;
+}
+
+.dropdownTR:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 185px;
+    top: 13px;
+    border: 11px solid;
+    border-color: transparent transparent transparent #000;
+}
+
+/*-------------------------------------------------------------*/
+
+.text-box div {
+    position: absolute;
+    width: 170px;
+}
+
+.text-box div strong {
+    position: absolute;
+    left: -13px;
+}
+/*-------------------------------------------------------------*/
+
+
+canvas {
+	margin: 0 auto;
+	display: block;
+	background: url('../images/cochlear-1.png') no-repeat scroll 135px 0 transparent;
+	background-size:59%;
+	background-position:130px 98%;
+}
+
+/*-------------------------------------------------------------*/
+
+.container .MetrodigiWidget .widget-header .notes .note[data-stage="initial"] { display: block; }
+.container[data-step] .MetrodigiWidget .widget-header .notes .note[data-stage="initial"] { display: none; }
+.container[data-step="1"] .MetrodigiWidget .widget-header .notes .note[data-stage="1"],
+.container[data-step="2"] .MetrodigiWidget .widget-header .notes .note[data-stage="2"],
+.container[data-step="3"] .MetrodigiWidget .widget-header .notes .note[data-stage="3"],
+.container[data-step="4"] .MetrodigiWidget .widget-header .notes .note[data-stage="4"],
+.container[data-step="5"] .MetrodigiWidget .widget-header .notes .note[data-stage="5"],
+.container[data-step="6"] .MetrodigiWidget .widget-header .notes .note[data-stage="6"],
+.container[data-step="7"] .MetrodigiWidget .widget-header .notes .note[data-stage="7"],
+.container[data-step="8"] .MetrodigiWidget .widget-header .notes .note[data-stage="8"],
+.container[data-step="9"] .MetrodigiWidget .widget-header .notes .note[data-stage="9"] ,
+.container[data-step="10"] .MetrodigiWidget .widget-header .notes .note[data-stage="10"]  { display: block; }
+.container[data-step="11"] .MetrodigiWidget .widget-header .notes .note[data-stage="result"] { display: block; }
+.container.quiz-mode-on .MetrodigiWidget .widget-header .notes .note[data-stage="quiz"] { display: block; }
+
+/*-------------------------------------------------------------*/
+
+.quiz-mode [data-step] {
+	display: none;
+}
+.widget-footer button[disabled]{
+    display: none !important;
+}
+
+.MetrodigiWidget section.widget-body .bubble .bubbleState2 .questionMark {
+	font-size: 45px;
+	color: #fff;
+	padding-top:0;
+	line-height: 100px;
+}
+
+.offscreen {
+    display:block;
+    position: absolute;
+    clip: rect(1px1px1px1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    z-index: -1000;
+}
+
+
+.dropdownUL {
+	top: 111px;
+	left: -30px;
+}
+
+.dropdownUL:before {
+	right: 59px;
+}
+.dropdownUL:after {
+	right: 59px;
+}
+.bubble.bubble1 .answer{
+	margin-left:-6px;	
+}
+
+
+.bubble.bubble3 .dropdown.dropdown2.dropdownBR{
+	left: 110px;
+}

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+  <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+  <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+   <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="Flashcards">
+
+            <nav class="main-nav">
+                <button tabindex="0" class="current-chapter-cards"></button>
+                <button tabindex="0" class="all-chapters-cards"></button>
+                <div class="right-helper">
+                    <button tabindex="0" class="flip right">Flip Cards</button>
+                    <button tabindex="0" class="restart right">Start Over</button>
+                </div>
+            </nav>
+
+            <section class="cards">
+
+                <div class="end-screen">
+                    <div class="content-wrapper">
+                        <h2>All done!</h2>
+                        <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                        <ul class="repeated-cards"></ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+                <button tabindex="0" class="skip right">Skip</button>
+            </nav>
+
+        </div>
+
+    </div> <!-- container -->
+
+    <script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+    <script type="text/javascript">
+
+        window.addEvent('domready', function() {
+            // Widget initialization
+            window.widget_instance = new Flashcards({
+                container: $$('.Flashcards')[0],
+                currentchapter: 1, displayCurrentChapterButton: false,
+                cards: [
+                    {
+                        chapter: 1,
+                        term: "alcohol",
+                        definition: "Depressant that is the intoxicating ingredient in whiskey, beer, wine, and other fermented or distilled liquors."
+                    },
+                    {
+                        chapter: 1,
+                        term: "alcoholic myopia",
+                        definition: "A condition resulting from alcohol consumption involving poor judgments arising from misdirected attention and failure to consider negative consequences."
+                    },
+                    {
+                        chapter: 1,
+                        term: "altered states of consciousness",
+                        definition: "Mental states that differ noticeably from normal waking consciousness."
+                    },
+                    {
+                        chapter: 1,
+                        term: "amphetamines",
+                        definition: "Stimulant drugs that initially produce “rushes” of euphoria often followed by sudden “crashes” and, sometimes, severe depression."
+                    },
+                    {
+                        chapter: 1,
+                        term: "apnea",
+                        definition: "Sleep disorder characterized by breathing difficulty during the night and feelings of exhaustion during the day."
+                    },
+                    {
+                        chapter: 1,
+                        term: "barbiturates",
+                        definition: "Potentially deadly depressants, first used for their sedative and anticonvulsant properties, now used only to treat such conditions as epilepsy and arthritis."
+                    },
+                    {
+                        chapter: 1,
+                        term: "circadian rhythm",
+                        definition: "A regular biological rhythm with a period of approximately 24 hours."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cocaine",
+                        definition: "Drug derived from the coca plant that, although producing a sense of euphoria by stimulating the sympathetic nervous system, also leads to anxiety, depression, and addictive cravings."
+                    },
+                    {
+                        chapter: 1,
+                        term: "consciousness",
+                        definition: "Our awareness of various cognitive processes, such as sleeping, dreaming, concentrating, and making decisions."
+                    },
+                    {
+                        chapter: 1,
+                        term: "depressants",
+                        definition: "Chemicals that slow down behavior or cognitive processes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "double-blind procedure",
+                        definition: "Experimental design useful in studies of the effects of drugs, in which neither the subject nor the researcher knows at the time of administration which subjects are receiving an active drug and which are receiving an inactive substance."
+                    },
+                    {
+                        chapter: 1,
+                        term: "dreams",
+                        definition: "Vivid visual and auditory experiences that occur primarily during REM periods of sleep."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hallucinogens",
+                        definition: "Any of a number of drugs, such as LSD and mescaline, that distort visual and auditory perception."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hypnosis",
+                        definition: "Trancelike state in which a person responds readily to suggestions."
+                    },
+                    {
+                        chapter: 1,
+                        term: "insomnia",
+                        definition: "Sleep disorder characterized by difficulty in falling asleep or remaining asleep throughout the night."
+                    },
+                    {
+                        chapter: 1,
+                        term: "lysergic acid diethylamide (LSD)",
+                        definition: "Hallucinogenic or “psychedelic” drug that produces hallucinations and delusions similar to those occurring in a psychotic state."
+                    },
+                    {
+                        chapter: 1,
+                        term: "marijuana",
+                        definition: "A mild hallucinogen that produces a “high” often characterized by feelings of euphoria, a sense of well-being, and swings in mood from gaiety to relaxation; may also cause feelings of anxiety and paranoia."
+                    },
+                    {
+                        chapter: 1,
+                        term: "meditation",
+                        definition: "Any of the various methods of concentration, reflection, or focusing of thoughts undertaken to suppress the activity of the sympathetic nervous system."
+                    },
+                    {
+                        chapter: 1,
+                        term: "narcolepsy",
+                        definition: "Hereditary sleep disorder characterized by sudden nodding off during the day and sudden loss of muscle tone following moments of emotional excitement."
+                    },
+                    {
+                        chapter: 1,
+                        term: "night terrors",
+                        definition: "Frightening, often terrifying dreams that occur during NREM sleep from which a person is difficult to awaken and doesn’t remember the content."
+                    },
+                    {
+                        chapter: 1,
+                        term: "nightmares",
+                        definition: "Frightening dreams that occur during REM sleep and are remembered."
+                    },
+                    {
+                        chapter: 1,
+                        term: "non-REM (NREM) sleep",
+                        definition: "Non-rapid-eye-movement stages of sleep that alternate with REM stages during the sleep cycle."
+                    },
+                    {
+                        chapter: 1,
+                        term: "opiates",
+                        definition: "Drugs, such as opium and heroin, derived from the opium poppy, that dull the senses and induce feelings of euphoria, well-being, and relaxation. Synthetic drugs resembling opium derivatives are also classified as opiates."
+                    },
+                    {
+                        chapter: 1,
+                        term: "placebo",
+                        definition: "Chemically inactive substance used for comparison with active drugs in experiments on the effects of drugs."
+                    },
+                    {
+                        chapter: 1,
+                        term: "psychoactive drugs",
+                        definition: "Chemical substances that change moods and perceptions."
+                    },
+                    {
+                        chapter: 1,
+                        term: "rapid-eye movement (REM)",
+                        definition: "Sleep stage characterized by rapid-eye movements and increased dreaming."
+                    },
+                    {
+                        chapter: 1,
+                        term: "stimulants",
+                        definition: "Drugs, including amphetamines and cocaine, that stimulate the sympathetic nervous system and produce feelings of optimism and boundless energy."
+                    },
+                    {
+                        chapter: 1,
+                        term: "substance abuse",
+                        definition: "A pattern of drug use that diminishes the ability to fulfill responsibilities at home, work, or school that results in repeated use of a drug in dangerous situations or that leads to legal difficulties related to drug use."
+                    },
+                    {
+                        chapter: 1,
+                        term: "substance dependence",
+                        definition: "A pattern of compulsive drug taking that results in tolerance, withdrawal symptoms, or other specific symptoms for at least a year."
+                    },
+                    {
+                        chapter: 1,
+                        term: "suprachiasmatic nucleus (SCN)",
+                        definition: "A cluster of neurons in the hypothalamus that receives input from the retina regarding light and dark cycles and is involved in regulating the biological clock."
+                    },
+                    {
+                        chapter: 1,
+                        term: "waking consciousness",
+                        definition: "Mental state that encompasses the thoughts, feelings, and perceptions that occur when we are awake and reasonably alert."
+                    },
+                ]
+            });
+        })
+    </script>
+
+</body>
+</html>

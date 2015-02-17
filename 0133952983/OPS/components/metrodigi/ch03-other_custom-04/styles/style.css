@@ -1,0 +1,100 @@
+.MetrodigiWidget .widget-content {
+    position: relative;
+    width: 100%;
+    height: 552px;
+    font-family: "HelveticaNeueETW01-55Rg";
+    /*font-size: 16px;*/
+}
+
+.MetrodigiWidget header.widget-header {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 10;
+}
+.MetrodigiWidget header.widget-header button{
+    margin-left: 10px
+}
+.MetrodigiWidget header.widget-header .notes .note {
+    transition: all 1s;
+}
+.MetrodigiWidget section.widget-body {
+    height: 488px;
+}
+.MetrodigiWidget .spider {
+    position: absolute;
+    top: 120px;
+    left: -268px;
+    width: 75px;
+    height: 72px;
+    background: url(../images/spider.png) no-repeat scroll 0 0 transparent;
+    background-size: contain;
+    cursor: pointer;
+}
+.MetrodigiWidget .drop-area {
+    position: absolute;
+    top: 245px;
+    left: -66px;
+    width: 160px;
+    height: 100px;
+    border: 3px dotted silver;
+}
+
+
+.MetrodigiWidget .image-area,
+.MetrodigiWidget .image-area .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 413px;
+    height: 533px;
+    background: none no-repeat scroll top center transparent;
+    background-size: 413px 533px;
+}
+.MetrodigiWidget .image-area .overlay {
+    transition: all 1s;
+}
+.MetrodigiWidget[data-state="1"] .image-area {
+    background-image: url(../images/normal.png);
+}
+.MetrodigiWidget[data-state="1"] .image-area .overlay {
+    height: 0;
+}
+.MetrodigiWidget[data-state="2"] .image-area {
+    background-image: url(../images/sympathetic_system.png);
+}
+.MetrodigiWidget[data-state="3"] .image-area {
+	background-image: url(../images/parasympathetic_system.png);
+}
+.SimpleDragDrop[data-state="2"] .image-area .overlay,
+.SimpleDragDrop[data-state="3"] .image-area .overlay {
+	height: 552px;
+}
+.MetrodigiWidget[data-state="2"] .image-area .overlay {
+    background-image: url(../images/overlay_sympathetic_system.png);
+}
+.MetrodigiWidget[data-state="3"] .image-area .overlay {
+    background-image: url(../images/overlay_parasympathetic_system.png);
+}
+
+
+.MetrodigiWidget .description {
+    padding: 15px;
+    width: 100%;
+    padding-bottom: 0;
+}
+.MetrodigiWidget .description h3 {
+    margin-bottom: 1em;
+}
+.MetrodigiWidget .description p {
+    /*font-size: 0.9em;*/
+}
+.MetrodigiWidget .hidden {
+    opacity: 0;
+}
+.MetrodigiWidget .notes{
+    width: 50%;
+}
+.MetrodigiWidget .notes .note[data-state="2"]{
+    padding-bottom: 0px !important;
+}

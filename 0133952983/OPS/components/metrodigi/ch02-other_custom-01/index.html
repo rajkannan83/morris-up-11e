@@ -1,0 +1,682 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../_framework/_base_pearson/template.css">
+        <link rel="stylesheet" href="styles/survey.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="Survey">
+                <div class="widget-content">
+                    <nav class="widget-header">
+                        <ul>
+                            <li class="slide-intro slide-intro-2 active"><button tabindex="0">Introduction</button></li>
+                            <li class="slide-question-1 slide-question-2 slide-question-3 slide-question-4 slide-question-5 slide-question-6 slide-question-7 slide-question-8 slide-question-9 slide-question-10 slide-question-11 slide-question-12 slide-question-13
+                                 slide-question-14 slide-question-15 slide-question-16 slide-question-17 slide-question-18 slide-question-19 slide-question-20 slide-question-21 slide-question-22"><button tabindex="0">Survey</button></li>
+                            <li class="slide-results slide-results-2"><button tabindex="0" class="results">Results</button></li>
+                        </ul>
+                    </nav>
+                    <section class="widget-body">
+
+                        <article class="slide-intro active" data-next-slide="intro-2"tabindex="0">
+                            <img src="images/petLogo.png" alt="" />
+                            <p>This is a non-scientific survey about your thoughts, experiences, and understanding of psychological concepts.</p>
+                            <p>Your responses to this survey are completely anonymous. Data will be reported only in survey format and no individual responses will be revealed to your instructor or anyone else.</p>
+                            <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                        </article>
+                        
+                        
+                        
+                        <article class="slide-intro-2" data-prev-slide="intro" data-next-slide="question-1" tabindex="0">
+                            <img src="images/petLogo.png" alt="" />
+                            <p tabindex="0">Psychologists rely on formal, systematic observation to help find answers to questions about human behavior. To this end, psychological research is conducted daily on a variety of topics from parenting to personality to the memory of eyewitnesses.</p>
+                            <p tabindex="0">All research on human behavior, thoughts, and feelings requires the researcher—psychologist, sociologist, anthropologist, or other—to study real people. How have you participated in research?</p>
+                            <p tabindex="0">This non-scientific survey asks about your attitudes towards and experience with participating in research, particularly psychological research.</p>
+                            <p tabindex="0">Your responses to this survey are completely anonymous. Data will be reported only in survey format and no individual responses will be revealed to your instructor or anyone else.</p>
+                            <p tabindex="0"><strong><span class="responsive-call-to-action">Click or tap</span> Next to begin the survey.</strong></p>
+                        </article>
+                        
+
+                        <article class="slide-results scroll">
+                            <p class="status bigger">Congratulations! You have finished this survey.</p>
+                            <p class="status bigger">Take a look at how your answers compare to your peers’ answers.<br><br></p>
+                            <div class="chart"></div>
+                        </article>
+
+                    </section>
+                    <footer class="widget-footer">
+                        <button class="next">Next</button>
+                        <button class="previous">Previous</button>
+                        <button class="next-result">Next</button>
+                        <button class="reset">Repeat Survey</button>
+                        <span class="status"></span>
+                    </footer>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="javascripts/survey.js"></script>
+        <script type="text/javascript">
+            window.addEvent('domready', function() {
+                var data = {
+                    questions: [
+                        {//01
+                            "question": "<p>Have you EVER participated in any type of research?</p>",
+                            "radioButtons": [
+                                {"label": "Yes"},
+                                {"label": "No"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Yes"},
+                                {"label": "No"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "58%"},
+                                {"percentage": "38.4%"},
+                                {"percentage": "3.6%"}
+                            ]
+                        },
+                        {//02
+                            "question": "<p>Have you EVER participated in a psychological research study?</p>",
+                            "radioButtons": [
+                                {"label": "Yes"},
+                                {"label": "No"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Yes"},
+                                {"label": "No"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "29.2%"},
+                                {"percentage": "67.7%"},
+                                {"percentage": "3%"}
+                            ]
+                        },
+                        {//03
+                            "question": "<p>When you participated in psychological research, did you feel you were properly informed about the study and what you would do as a participant?</p>",
+                            "radioButtons": [
+                                {"label": "Yes"},
+                                {"label": "No"},
+                                {"label": "Not sure"},
+                                {"label": "Prefer not to state"},
+                                {"label": "N/A—I have never participated in a psychological research study"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Yes"},
+                                {"label": "No"},
+                                {"label": "Not sure"},
+                                {"label": "Prefer not to state"},
+                                {"label": "N/A—I have never participated in a psychological research study"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "24.6%"},
+                                {"percentage": "6.5%"},
+                                {"percentage": "8.1%"},
+                                {"percentage": "1.8%"},
+                                {"percentage": "59.1%"}
+                            ]
+                        },
+                        {//04
+                            "question": "<p>What kind of compensation did you get for participating in a research study?</p><p><i>Please check all that apply.</i></p>",
+                            "checkBoxes": [
+                                {"label": "Course grade (research was part of a course/class assignment)"},
+                                {"label": "Degree requirement (research was needed for a degree or program)"},
+                                {"label": "Class credit"},
+                                {"label": "Extra credit"},
+                                {"label": "Money"},
+                                {"label": "Gift card"},
+                                {"label": "Other"},
+                                {"label": "N/A—I have never participated in a psychological research study"},
+                                {"label": "No response"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Course grade (research was part of a course/class assignment)"},
+                                {"label": "Degree requirement (research was needed for a degree or program)"},
+                                {"label": "Class credit"},
+                                {"label": "Extra credit"},
+                                {"label": "Money"},
+                                {"label": "Gift card"},
+                                {"label": "Other"},
+                                {"label": "N/A—I have never participated in a psychological research study"},
+                                {"label": "No response"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "24.7%"},
+                                {"percentage": "3.5%"},
+                                {"percentage": "22.2%"},
+                                {"percentage": "10.1%"},
+                                {"percentage": "8.4%"},
+                                {"percentage": "4.3%"},
+                                {"percentage": "9.1%"},
+                                {"percentage": "47.5%"},
+                                {"percentage": "3.3%"}
+                            ]
+                        },
+                        {//05
+                            "question": "<p>How often do you take quizzes (in magazines, online, etc.) that tell you about yourself or how you get along with others?</p>",
+                            "radioButtons": [
+                                {"label": "Never"},
+                                {"label": "A few times a year"},
+                                {"label": "Monthly"},
+                                {"label": "Weekly"},
+                                {"label": "Daily"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Never"},
+                                {"label": "A few times a year"},
+                                {"label": "Monthly"},
+                                {"label": "Weekly"},
+                                {"label": "Daily"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "25%"},
+                                {"percentage": "55.2%"},
+                                {"percentage": "11.1%"},
+                                {"percentage": "4.8%"},
+                                {"percentage": "1.6%"},
+                                {"percentage": "2.2%"},
+                            ]
+                        },
+                        {//06
+                            "question": "<p>Thinking of your overall experience with research as a participant, an experimenter, or just someone who reads about research on the Internet, please indicate the extent of your agreement with the following statement: I like reading about psychological research.</p>",
+                            "radioButtons": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "3.8%"},
+                                {"percentage": "7.7%"},
+                                {"percentage": "24%"},
+                                {"percentage": "44.8%"},
+                                {"percentage": "16.8%"},
+                                {"percentage": "2.8%"},
+                            ]
+                        },
+                        {//07
+                            "question": "<p>Thinking of your overall experience with research as a participant, an experimenter, or just someone who reads about research on the Internet, please indicate the extent of your agreement with the following statement: I like taking quizzes that tell me about my personality and personal characteristics.</p>",
+                            "radioButtons": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "6.1%"},
+                                {"percentage": "8.5%"},
+                                {"percentage": "18.4%"},
+                                {"percentage": "37.4%"},
+                                {"percentage": "27.3%"},
+                                {"percentage": "2.2%"}
+                            ]
+                        },
+                        {//08
+                            "question": "<p>Thinking of your overall experience with research as a participant, an experimenter, or just someone who reads about research on the Internet, please indicate the extent of your agreement with the following statement: I have applied psychological research to my life (e.g., read about a study in a magazine and then changed my behavior or thoughts because of it).</p>",
+                            "radioButtons": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "12.6%"},
+                                {"percentage": "15%"},
+                                {"percentage": "32.4%"},
+                                {"percentage": "28.5%"},
+                                {"percentage": "8.9%"},
+                                {"percentage": "2.6%"}
+                            ]
+                        },
+                        {//09
+                            "question": "<p>Thinking of your overall experience with research as a participant, an experimenter, or just someone who reads about research on the Internet, please indicate the extent of your agreement with the following statement: Psychological research is useful for understanding human behavior.</p>",
+                            "radioButtons": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "2.6%"},
+                                {"percentage": "1.6%"},
+                                {"percentage": "11.5%"},
+                                {"percentage": "28.5%"},
+                                {"percentage": "53.8%"},
+                                {"percentage": "1.8%"}
+                            ]
+                        },
+                        {//10
+                            "question": "<p>Thinking of your overall experience with research as a participant, an experimenter, or just someone who reads about research on the Internet, please indicate the extent of your agreement with the following statement: Psychological research is relevant to my personal, everyday life.</p>",
+                            "radioButtons": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "4.9%"},
+                                {"percentage": "10.1%"},
+                                {"percentage": "29.4%"},
+                                {"percentage": "29.4%"},
+                                {"percentage": "24.5%"},
+                                {"percentage": "1.8%"}
+                            ]
+                        },
+                        {//11
+                            "question": "<p>Thinking of your overall experience with research as a participant, an experimenter, or just someone who reads about research on the Internet, please indicate the extent of your agreement with the following statement: Most psychological studies are conducted in a scientific manner.</p>",
+                            "radioButtons": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "4%"},
+                                {"percentage": "8.7%"},
+                                {"percentage": "28.9%"},
+                                {"percentage": "36.6%"},
+                                {"percentage": "19.8%"},
+                                {"percentage": "1.8%"}
+                            ]
+                        },
+                        {//12
+                            "question": "<p>Thinking of your overall experience with research as a participant, an experimenter, or just someone who reads about research on the Internet, please indicate the extent of your agreement with the following statement: Psychological studies done today are ethical.</p>",
+                            "radioButtons": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Strongly disagree"},
+                                {"label": "Moderately disagree"},
+                                {"label": "Neither agree nor disagree"},
+                                {"label": "Moderately agree"},
+                                {"label": "Strongly agree"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "1.6%"},
+                                {"percentage": "7.1%"},
+                                {"percentage": "34.8%"},
+                                {"percentage": "35.6%"},
+                                {"percentage": "17.8%"},
+                                {"percentage": "3%"}
+                            ]
+                        },
+                        {//13
+                            "question": "<p>There are many different ways to learn about psychological research. Please rate the overall quality of the research-based information you would expect to receive from: local newspaper</p>",
+                            "radioButtons": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "10.5%"},
+                                {"percentage": "30.8%"},
+                                {"percentage": "45.3%"},
+                                {"percentage": "5.1%"},
+                                {"percentage": "1.8%"},
+                                {"percentage": "6.5%"}
+                            ]
+                        },
+                        {//14
+                            "question": "<p>There are many different ways to learn about psychological research. Please rate the overall quality of the research-based information you would expect to receive from: national newspaper (e.g., <em>Wall Street Journal</em>, <em>Christian Science Monitor</em>)</p>",
+                            "radioButtons": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "4%"},
+                                {"percentage": "13%"},
+                                {"percentage": "40.3%"},
+                                {"percentage": "32.2%"},
+                                {"percentage": "5.7%"},
+                                {"percentage": "4.9%"}
+                            ]
+                        },
+                        {//15
+                            "question": "<p>There are many different ways to learn about psychological research. Please rate the overall quality of the research-based information you would expect to receive from: magazine</p>",
+                            "radioButtons": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "14.4%"},
+                                {"percentage": "30.4%"},
+                                {"percentage": "35.2%"},
+                                {"percentage": "13%"},
+                                {"percentage": "3.8%"},
+                                {"percentage": "3.2%"}
+                            ]
+                        },
+                        {//16
+                            "question": "<p>There are many different ways to learn about psychological research. Please rate the overall quality of the research-based information you would expect to receive from: local TV news</p>",
+                            "radioButtons": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "7.1%"},
+                                {"percentage": "28.3%"},
+                                {"percentage": "42.5%"},
+                                {"percentage": "15.4%"},
+                                {"percentage": "3.4%"},
+                                {"percentage": "3.2%"}
+                            ]
+                        },
+                        {//17
+                            "question": "<p>There are many different ways to learn about psychological research. Please rate the overall quality of the research-based information you would expect to receive from: national TV news (e.g., CNN, MSNBC)</p>",
+                            "radioButtons": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "4.7%"},
+                                {"percentage": "12.3%"},
+                                {"percentage": "37.7%"},
+                                {"percentage": "28.3%"},
+                                {"percentage": "14.2%"},
+                                {"percentage": "2.8%"}
+                            ]
+                        },
+                        {//18
+                            "question": "<p>There are many different ways to learn about psychological research. Please rate the overall quality of the research-based information you would expect to receive from: personality news-based opinion show (e.g., featuring Bill O’Reilly or Rachel Maddow)</p>",
+                            "radioButtons": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "20%"},
+                                {"percentage": "29.6%"},
+                                {"percentage": "31.8%"},
+                                {"percentage": "9.7%"},
+                                {"percentage": "3.6%"},
+                                {"percentage": "5.3%"}
+                            ]
+                        },
+                        {//19
+                            "question": "<p>There are many different ways to learn about psychological research. Please rate the overall quality of the research-based information you would expect to receive from: daytime TV talk show (e.g., <em>Ellen</em>, <em>Dr. Phil</em>)</p>",
+                            "radioButtons": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "14.4%"},
+                                {"percentage": "23.1%"},
+                                {"percentage": "33.2%"},
+                                {"percentage": "18.6%"},
+                                {"percentage": "7.1%"},
+                                {"percentage": "3.6%"}
+                            ]
+                        },
+                        {//20
+                            "question": "<p>There are many different ways to learn about psychological research. Please rate the overall quality of the research-based information you would expect to receive from: AM radio talk show (e.g., featuring Rush Limbaugh, or NPR)</p>",
+                            "radioButtons": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Extremely poor"},
+                                {"label": "Below average"},
+                                {"label": "Average"},
+                                {"label": "Above average"},
+                                {"label": "Excellent"},
+                                {"label": "N/A"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "14.4%"},
+                                {"percentage": "29.4%"},
+                                {"percentage": "37%"},
+                                {"percentage": "9.9%"},
+                                {"percentage": "2.6%"},
+                                {"percentage": "6.7%"}
+                            ]
+                        },
+                        {//21
+                            "question": "<p>Which of these roles have you performed in any way as part of your participation in any type of research project?</p><p><i>Please check all that apply.</i></p>",
+                            "checkBoxes": [
+                                {"label": "Participant/Subject"},
+                                {"label": "Experimenter"},
+                                {"label": "Confederate (someone who is “in” on the study and helps the experimenter)"},
+                                {"label": "Designed a study"},
+                                {"label": "Collected data for a study"},
+                                {"label": "Entered data into a computer program"},
+                                {"label": "Analyzed data/statistics"},
+                                {"label": "Wrote up a description of the research"},
+                                {"label": "Presented the research to a group of people"},
+                                {"label": "Other"},
+                                {"label": "N/A—I have never participated in any type of research"},
+                                {"label": "No response"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Experimenter"},
+                                {"label": "Confederate (someone who is “in” on the study and helps the experimenter)"},
+                                {"label": "Designed a study"},
+                                {"label": "Collected data for a study"},
+                                {"label": "Entered data into a computer program"},
+                                {"label": "Analyzed data/statistics"},
+                                {"label": "Wrote up a description of the research"},
+                                {"label": "Presented the research to a group of people"},
+                                {"label": "Other"},
+                                {"label": "N/A—I have never participated in any type of research"},
+                                {"label": "No response"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "27%"},
+                                {"percentage": "12.3%"},
+                                {"percentage": "22.6%"},
+                                {"percentage": "35.8%"},
+                                {"percentage": "23.7%"},
+                                {"percentage": "29.8%"},
+                                {"percentage": "28%"},
+                                {"percentage": "28.8%"},
+                                {"percentage": "18.3%"},
+                                {"percentage": "7.8%"},
+                                {"percentage": "7%"}
+                            ]
+                        },
+                        {//22
+                            "question": "<p>Would you like to participate in psychological research in the future?</p>",
+                            "radioButtons": [
+                                {"label": "Yes"},
+                                {"label": "No"},
+                                {"label": "Maybe"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultLabels": [
+                                {"label": "Yes"},
+                                {"label": "No"},
+                                {"label": "Maybe"},
+                                {"label": "Prefer not to state"}
+                            ],
+                            "resultPercentages": [
+                                {"percentage": "43.5%"},
+                                {"percentage": "13.4%"},
+                                {"percentage": "39.7%"},
+                                {"percentage": "3.4%"}
+                            ]
+                        }
+                    ]
+                    ,
+                };
+
+                // Widget initialization
+                widget = new Survey({
+                    container: $$('.Survey')[0],
+                    initialSlide: 'intro',
+                    delay: 1000,
+                    data: data
+                });
+            })
+        </script>
+
+    </body>
+</html>

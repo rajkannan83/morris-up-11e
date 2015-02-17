@@ -1,0 +1,348 @@
+.widget-content .widget-body {
+    position: relative;
+    overflow: hidden;
+}
+.widget-content article {
+    display: none;
+    height: 435px;
+}
+.widget-content article.active {
+    display: block;
+}
+.widget-content article.question,
+.widget-content article .bigger {
+    font-size: 1em;
+}
+.widget-content article button {
+    font-size: 0.9em;
+}
+.widget-content article p {
+    font-family: "HelveticaNeueETW01-55Rg";
+    margin: 0 0 7px;
+    font-size: 0.85em;
+    line-height: 1.4em;
+}
+.widget-content article.adjust-text p {
+    width: 50%;
+}
+.widget-content article img {
+    float: right;
+    max-width: 50%;
+    margin-left: 1.5em;
+}
+.widget-content article .img-wrapper {
+    display: inline-block;
+    float: right;
+    max-width: 50%;
+    margin-left: 1.5em;
+    text-align: center;
+}
+.widget-content article .img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    float: none;
+}
+.widget-content article .img-wrapper .expand-img {
+    margin-top: 1.5em;
+    font-size: 0.75em;
+}
+.widget-content article .status {
+    color: #902789;
+}
+.widget-content article ul {
+    padding: 0;
+    line-height: 1.8em;
+}
+.widget-content article ol {
+    padding: 0 0 0 20px
+}
+.widget-content article ul li {
+    list-style: none;
+    font-family: "HelveticaNeueETW01-55Rg";
+    font-size: 0.9em;
+}
+.widget-content article ul.results-wrapper {
+    width: 45%;
+    padding-right:10px;
+    overflow-y:scroll!important;
+    height: 405px;
+    float: left;
+    margin: 0.5em 0 0;
+}
+.widget-content article ul.results-wrapper li {
+    border-top: 1px solid black;
+}
+.widget-content article ul.results-wrapper li:first-child {
+    border-top: 0 none;
+}
+.widget-content article .correct {
+    font-family: "HelveticaNeueETW01-55Rg";
+}
+.widget-content article .incorrect {
+    font-family: "HelveticaNeueETW01-55Rg";
+}
+.widget-content article .correct .answer-type {
+    color: #94C873;
+}
+.widget-content article .incorrect .answer-type {
+    color: red;
+}
+.widget-content article .incorrect-prefix {
+    display: none;
+}
+.widget-content article .incorrect .incorrect-prefix {
+    display: inline;
+}
+
+.widget-content article .graph {
+    width: 40%;
+    margin: auto;
+}
+
+
+.widget-content .overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 570px;
+    background-color: #000;
+    z-index: 100;
+}
+.widget-content .item {
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    left: 0;
+    top: 50%;
+    margin-top: -0.5em;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+.widget-content button {
+    font-family: "HelveticaNeueETW01-55Rg";
+    text-transform: capitalize;
+    text-align: center;
+    background: linear-gradient(#fcfcfc, #f1f1f1);
+    border-radius: 4px;
+    height: 30px;
+    border: 1px solid #c0c0c0;
+    padding: 0.3em 2.1em 0.3em;
+    font-size: 0.75em;
+    margin: 5px 15px 0 0;
+    cursor: pointer;
+}
+
+.widget-content input {
+    cursor: pointer;
+}
+
+.widget-content label {
+    cursor: pointer;
+}
+
+.widget-content footer {
+    clear: both;
+    height: 40px;
+    background-color: #e3e3e3;
+    font-size: 1.1em;
+}
+.widget-content footer button {
+    float: right;
+}
+.widget-content footer button.next,
+.widget-content footer button.previous {
+    width: 8.5em;
+    padding: 0.3em 0 0.3em;
+}
+.widget-content footer button.close-img-overlay {
+    display: none;
+}
+.widget-content.img-overlay footer button.next,
+.widget-content.img-overlay footer button.previous {
+    display: none;
+}
+.widget-content.img-overlay footer button.close-img-overlay {
+    display: block;
+}
+
+.widget-content .controls-wrapper {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 9em;
+    font-size: 0.75em;
+    text-align: center;
+    color: white;
+}
+.widget-content .controls-wrapper .instructions,
+.widget-content .controls-wrapper .instructions-next {
+    margin-bottom: 1em;
+}
+.widget-content .controls-wrapper[data-state="choose-answer"] .instructions-next,
+.widget-content .controls-wrapper[data-state="choose-answer"] .next-word,
+.widget-content .controls-wrapper[data-state="next-word"] .instructions,
+.widget-content .controls-wrapper[data-state="next-word"] [data-answer] {
+    display: none;
+}
+.widget-content .controls-wrapper button {
+    font-size: 0.9em;
+}
+
+.widget-content .dot {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -7px;
+    background-color: red;
+    border-radius: 15px;
+}
+.widget-content .dot.animate {
+    -webkit-animation: blink 0.5s step-end 3;
+    animation: blink 0.5s step-end 3;
+}
+.widget-content .overlay.intermediate-overlay .instructions {
+    width: 60%;
+    padding: 0 20%;
+    font-size: 1em;
+    color: white;
+    margin-top: 12em;
+}
+.widget-content .overlay.intermediate-overlay[data-answer-type="incorrect"] .instructions.correct {
+    display: none;
+}
+.widget-content .overlay.intermediate-overlay[data-answer-type="correct"] .instructions.incorrect {
+    display: none;
+}
+.widget-content .overlay.intermediate-overlay > button {
+    margin: 1em 0 0 20%;
+}
+.widget-content .overlay .input-wrapper {
+    width: 34%;
+    padding: 0 33%;
+    margin-top: 1.2em;
+}
+.widget-content .overlay .input-wrapper input[type="text"] {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    width: 100%;
+    font-size: 1em;
+    padding: 0.5em 0.2em;
+    display: block;
+    clear: both;
+    margin-bottom: 0.6em;
+}
+.widget-content .overlay .input-wrapper button {
+    float: right;
+    margin: 0;
+}
+.widget-content .overlay .words-container{
+    width:50%;
+    background: #fff;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 150px;
+    text-align: center;
+    line-height: 250px;
+    font-size: 40px;
+}
+.widget-content .overlay .words-container .word{
+    display:none;
+}
+.widget-content .overlay .form-container{
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    margin-left: -25%;
+    display:none;
+}
+.widget-content .overlay .control-container{
+    display:none;
+}
+.widget-content .overlay .control-container-button{
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 257px;
+    width: 300px;
+    text-transform: none;
+}
+.widget-content .overlay .form-instructions{
+    color: #fff;
+    margin-bottom: 17px;
+}
+.widget-content .overlay .form-textarea{
+    width: 97.6%;
+    height: 238px;
+    font-size: 20px;
+    font-family: "HelveticaNeueETW01-55Rg";
+    padding:5px;
+}
+.widget-content .overlay .form-button{
+    float: right;
+    margin-right: 0px;
+}
+.widget-content .recalled-words{
+    text-transform:uppercase;
+}
+.widget-content .correct{
+    color:green!important;
+}
+.widget-content .error{
+    color:red!important;
+}
+.widget-content ul.results {
+    margin: 0 0 1em;
+    padding: 0;
+    line-height: 1.2em;
+}
+.widget-content .slide-11 ul.results {
+    overflow: auto;
+    max-height: 7em;
+}
+.widget-content .result-element {
+    margin: 0 0 0.25em;
+    padding: 0;
+}
+.widget-content .result-element.correct {
+    color: #00882b;
+}
+.widget-content .result-element.incorrect {
+    color: #c82606;
+}
+.axis.title{
+    font-weight:bold!important;	
+    font-size: 0.8em!important;
+}
+.overlay .counter{
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    right: 200px;
+    text-align: center;
+    color: #AAA;
+    text-indent: 0;
+    font-size: 1em;
+}
+
+.MetrodigiWidget .offscreen {
+    display:block;
+    position: absolute;
+    clip: rect(1px1px1px1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    z-index: -1000;
+}

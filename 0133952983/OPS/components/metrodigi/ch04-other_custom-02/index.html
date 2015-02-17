@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/template.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="../_framework/_base_pearson/config.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+        <script src='../_framework/_base_pearson/score.js' type='text/javascript'></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="MetrodigiWidget large">
+                <article class="widget-content">
+
+                    <header class="widget-header">
+                        <div class="notes">
+                            <div class="note initial">Study the structure of the eye and try a challenge when you’re ready.</div>
+                            <div class="note term">Term Challenge: Drag the circle to connect the term to the matching definition.</div>
+                            <div class="note definition">Definition Challenge: Drag the circle to connect the definition to the matching term.</div>
+                            <div class="note header-feedback score"></div>
+                        </div>
+                    </header>
+
+                    <section class="widget-body no-padding">
+                        <div class="draw-area">
+                            <canvas width="700" height="500"></canvas>
+                            <div class="challenge-term"></div>
+                            <div class="draggable grab"></div>
+                            <span class="feedback" aria-live='assertive'></span>
+                        </div>
+                    </section>
+
+                    <footer class="widget-footer no-float">
+                        <span class="questions">Question <span class="question-number"></span> of <span class="total-questions"></span></span>
+                        <button class="start-term-challenge">Start Term Challenge</button>
+                        <button class="start-definition-challenge">Start Definition Challenge</button>
+                        <button class="end-challenge">End Challenge</button>
+                    </footer>
+
+                </article>
+            </div>
+            <div class="shout offscreen" aria-live="assertive"></div>
+        </div>
+
+        <script type="text/javascript" src="javascript/script.js"></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+        <script type='text/javascript' src='../_framework/_base_metrodigi/accessibility.js'></script>
+        <script type="text/javascript">
+            window.addEvent('domready', function() {
+                var data = [
+                    {
+                        term: 'Pupil',
+                        definition: 'Iris opening that changes size depending on the amount of light in the environment',
+                        position: [230, -5]
+                    },
+                    {
+                        term: 'Lens',
+                        definition: 'Changes shape to bring objects into focus',
+                        position: [463, 32]
+                    },
+                    {
+                        term: 'Retina',
+                        definition: 'Contains photoreceptor cells',
+                        position: [527, 126]
+                    },
+                    {
+                        term: 'Fovea',
+                        definition: 'Central area of retina; greatest density of photoreceptors',
+                        position: [542, 220]
+                    },
+                    {
+                        term: 'Optic nerve',
+                        definition: 'Sends visual information to the brain',
+                        position: [582, 315]
+                    },
+                    {
+                        term: 'Blind spot (optic disc)',
+                        definition: 'Where the optic nerve leaves the eye; there are no photoreceptor cells here',
+                        position: [502, 417]
+                    },
+                    {
+                        term: 'Vitreous humor',
+                        definition: 'Jelly-like liquid that nourishes and gives shape to the eye',
+                        position: [180, 407]
+                    },
+                    {
+                        term: 'Cornea',
+                        definition: 'Bends light waves so the image can be focused on the retina',
+                        position: [103, 320]
+                    },
+                    {
+                        term: 'Aqueous humor',
+                        definition: 'Clear liquid that nourishes the eye',
+                        position: [75, 145]
+                    },
+                    {
+                        term: 'Iris',
+                        definition: 'Its muscles control the size of the pupil',
+                        position: [125, 79]
+                    }
+                ];
+
+                // Widget initialization
+                window.widget_instance = new TermsAndDefinitions({
+                    container: $$('.MetrodigiWidget')[0],
+                    data: data
+                });
+                
+                // Accessibility initialization
+                new Accessibility({
+                    container: $$('.MetrodigiWidget')[0],
+                    data: {
+                        elements: [
+                            "li.droppable"
+                        ],
+                        feedback: ".widget-body .feedback"
+                    }
+                });
+            })
+        </script>
+
+    </body>
+</html>

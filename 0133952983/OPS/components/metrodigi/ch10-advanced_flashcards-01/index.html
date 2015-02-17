@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+    <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+    <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="container has-instructions">
+
+    <div class="Flashcards">
+
+        <nav class="main-nav">
+            <button tabindex="0" class="current-chapter-cards"></button>
+            <button tabindex="0" class="all-chapters-cards"></button>
+            <div class="right-helper">
+                <button tabindex="0" class="flip right">Flip Cards</button>
+                <button tabindex="0" class="restart right">Start Over</button>
+            </div>
+        </nav>
+
+        <section class="cards">
+
+            <div class="end-screen">
+                <div class="content-wrapper">
+                    <h2>All done!</h2>
+                    <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                    <ul class="repeated-cards"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+            <button tabindex="0" class="skip right">Skip</button>
+        </nav>
+
+    </div>
+
+</div> <!-- container -->
+
+<script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+<script type="text/javascript">
+
+    window.addEvent('domready', function() {
+        // Widget initialization
+        window.widget_instance = new Flashcards({
+            container: $$('.Flashcards')[0],
+            currentChapter: 0, displayCurrentChapterButton: false,
+            cards: [
+                {
+                    chapter: 0,
+                    term: "Alzheimer’s disease",
+                    definition: "A neurological disorder, most commonly found in late adulthood, characterized by progressive losses in memory and cognition and by changes in personality."
+                },
+                {
+                    chapter: 0,
+                    term: "attachment",
+                    definition: "Emotional bond that develops in the first year of life that makes human babies cling to their caregivers for safety and comfort."
+                },
+                {
+                    chapter: 0,
+                    term: "autonomy",
+                    definition: "Sense of independence; a desire not to be controlled by others."
+                },
+                {
+                    chapter: 0,
+                    term: "babbling",
+                    definition: "A baby’s vocalizations, consisting of repetition of consonant–vowel combinations."
+                },
+                {
+                    chapter: 0,
+                    term: "biographical (or retrospective) study",
+                    definition: "A method of studying developmental changes by reconstructing a person’s past through interviews and inferring the effects of past events on current behaviors."
+                },
+                {
+                    chapter: 0,
+                    term: "cliques",
+                    definition: "Groups of adolescents with similar interests and strong mutual attachment."
+                },
+                {
+                    chapter: 0,
+                    term: "cohort",
+                    definition: "A group of people born during the same period in historical time."
+                },
+                {
+                    chapter: 0,
+                    term: "concrete-operational stage",
+                    definition: "In Piaget’s theory, the stage of cognitive development between 7 and 11 years of age in which the individual can attend to more than one thing at a time and understand someone else’s point of view, though thinking is limited to concrete matters."
+                },
+                {
+                    chapter: 0,
+                    term: "critical period",
+                    definition: "A time when certain internal and external influences have a major effect on development; at other periods, the same influences will have little or no effect."
+                },
+                {
+                    chapter: 0,
+                    term: "cross-sectional study",
+                    definition: "A method of studying developmental changes by comparing people of different ages at about the same time."
+                },
+                {
+                    chapter: 0,
+                    term: "developmental psychology",
+                    definition: "The study of the changes that occur in people from birth through old age."
+                },
+                {
+                    chapter: 0,
+                    term: "egocentric",
+                    definition: "Unable to see things from another’s point of view."
+                },
+                {
+                    chapter: 0,
+                    term: "embryo",
+                    definition: "A developing human between 2 weeks and 3 months after conception."
+                },
+                {
+                    chapter: 0,
+                    term: "fetal alcohol spectrum disorder (FASD)",
+                    definition: "A disorder that occurs in children of women who drink alcohol during pregnancy; this disorder is characterized by facial deformities, heart defects, stunted growth, brain damage and cognitive impairments."
+                },
+                {
+                    chapter: 0,
+                    term: "fetus",
+                    definition: "A developing human between 3 months after conception and birth."
+                },
+                {
+                    chapter: 0,
+                    term: "formal-operational stage",
+                    definition: "In Piaget’s theory, the stage of cognitive development beginning about 11 years of age in which the individual becomes capable of abstract thought."
+                },
+                {
+                    chapter: 0,
+                    term: "gender constancy",
+                    definition: "The realization that gender does not change with age."
+                },
+                {
+                    chapter: 0,
+                    term: "gender identity",
+                    definition: "A little girl’s knowledge that she is a girl, and a little boy’s knowledge that he is a boy."
+                },
+                {
+                    chapter: 0,
+                    term: "gender stereotypes",
+                    definition: "General beliefs about characteristics that men and women are presumed to have."
+                },
+                {
+                    chapter: 0,
+                    term: "gender-role awareness",
+                    definition: "Knowledge of what behavior is appropriate for each gender."
+                },
+                {
+                    chapter: 0,
+                    term: "holophrases",
+                    definition: "One-word sentences commonly used by children under 2 years of age."
+                },
+                {
+                    chapter: 0,
+                    term: "identity crisis",
+                    definition: "A period of intense self-examination and decision making; part of the process of identity formation."
+                },
+                {
+                    chapter: 0,
+                    term: "identity formation",
+                    definition: "Erickson’s term for the development of a stable sense of self necessary to make the transition from dependence on others to dependence on oneself."
+                },
+                {
+                    chapter: 0,
+                    term: "imprinting",
+                    definition: "The tendency in certain species to follow the first moving thing (usually its mother) it sees after it is born or hatched."
+                },
+                {
+                    chapter: 0,
+                    term: "language acquisition device",
+                    definition: "A hypothetical neural mechanism for acquiring language that is presumed to be “wired into” all humans."
+                },
+                {
+                    chapter: 0,
+                    term: "longitudinal studies",
+                    definition: "A method of studying developmental changes by evaluating the same people at different points in their lives."
+                },
+                {
+                    chapter: 0,
+                    term: "menarche",
+                    definition: "First menstrual period."
+                },
+                {
+                    chapter: 0,
+                    term: "menopause",
+                    definition: "The time in a woman’s life when menstruation ceases."
+                },
+                {
+                    chapter: 0,
+                    term: "mental representations",
+                    definition: "Mental images or symbols (such as words) used to think about or remember an object, a person, or an event."
+                },
+                {
+                    chapter: 0,
+                    term: "midlife crisis",
+                    definition: "A time when adults discover they no longer feel fulfilled in their jobs or personal lives and attempt to make a decisive shift in career or lifestyle."
+                },
+                {
+                    chapter: 0,
+                    term: "midlife transition",
+                    definition: "According to Levinson, a process whereby adults assess the past and formulate new goals for the future."
+                },
+                {
+                    chapter: 0,
+                    term: "neonates",
+                    definition: "Newborn babies."
+                },
+                {
+                    chapter: 0,
+                    term: "non-shared environment",
+                    definition: "The unique aspects of the environment that are experienced differently by siblings, even though they are reared in the same family."
+                },
+                {
+                    chapter: 0,
+                    term: "object permanence",
+                    definition: "The concept that things continue to exist even when they are out of sight."
+                },
+                {
+                    chapter: 0,
+                    term: "peer group",
+                    definition: "A network of same-aged friends and acquaintances who give one another emotional and social support."
+                },
+                {
+                    chapter: 0,
+                    term: "prenatal development",
+                    definition: "Development from conception to birth."
+                },
+                {
+                    chapter: 0,
+                    term: "preoperational stage",
+                    definition: "In Piaget’s theory, the stage of cognitive development between 2 and 7 years of age in which the individual becomes able to use mental representations and language to describe, remember, and reason about the world, though only in an egocentric fashion."
+                },
+                {
+                    chapter: 0,
+                    term: "principles of conservation",
+                    definition: "The concept that the quantity of a substance is not altered by reversible changes in its appearance."
+                },
+                {
+                    chapter: 0,
+                    term: "puberty",
+                    definition: "The onset of sexual maturation, with accompanying physical development."
+                },
+                {
+                    chapter: 0,
+                    term: "sensory-motor stage",
+                    definition: "In Piaget’s theory, the stage of cognitive development between birth and 2 years of age in which the individual develops object permanence and acquires the ability to form mental representations."
+                },
+                {
+                    chapter: 0,
+                    term: "sex-typed behavior",
+                    definition: "Socially prescribed ways of behaving that differ for boys and girls."
+                },
+                {
+                    chapter: 0,
+                    term: "socialization",
+                    definition: "Process by which children learn the behaviors and attitudes appropriate to their family and culture."
+                },
+                {
+                    chapter: 0,
+                    term: "stranger anxiety",
+                    definition: "Fear of unfamiliar people which usually emerges around 7 months, reaching its peak at 12 months and declining during the second year."
+                },
+                {
+                    chapter: 0,
+                    term: "temperament",
+                    definition: "Characteristic patterns of emotional reactions and emotional self-regulation."
+                },
+                {
+                    chapter: 0,
+                    term: "teratogens",
+                    definition: "Toxic substances such as alcohol or nicotine that cross the placenta and may result in birth defects."
+                }
+            ]
+        });
+    })
+</script>
+
+</body>
+</html>

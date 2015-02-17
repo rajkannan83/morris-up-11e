@@ -1,0 +1,312 @@
+.MetrodigiWidget.challenge header.widget-header .notes .note.initial,
+.MetrodigiWidget.challenge-complete header.widget-header .notes .note.initial,
+.MetrodigiWidget header.widget-header .notes .note.term,
+.MetrodigiWidget header.widget-header .notes .note.definition,
+.MetrodigiWidget header.widget-header .notes .note.header-feedback {
+    display: none;
+}
+.MetrodigiWidget header.widget-header .notes .note.initial{
+    display: block;
+}
+.MetrodigiWidget[data-challenge="term"] header.widget-header .term,
+.MetrodigiWidget[data-challenge="definition"] header.widget-header .definition,
+.MetrodigiWidget header.widget-header .header-feedback.visible {
+    display: block !important;
+}
+
+.MetrodigiWidget button.accessibility {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    right: 15px;
+    z-index: 1000000;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.MetrodigiWidget .widget-footer {
+    width: 100%;
+    text-align: right;
+    left: 0;
+    bottom: 0;
+    padding: 0.35em 0;
+    margin: 0.5em 0 0;
+    background-color: #e3e3e3;
+}
+.MetrodigiWidget button {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-family: "HelveticaNeueETW01-55Rg";
+    background: linear-gradient(#fcfcfc, #f1f1f1);
+    border-radius: 4px;
+    border: 1px solid #c0c0c0;
+
+    padding: 0.55em 1em 0.5em;
+    font-size: 0.75em;
+
+    margin: 0 0.6em 0 -0.4em;
+    cursor: pointer;
+}
+.MetrodigiWidget .widget-footer .questions {
+	font-size: 1em!important;
+	margin-left: 1%;
+	line-height: 2.5em!important;
+}
+.MetrodigiWidget.challenge .widget-footer .questions {
+    display: block;
+    float: left;
+}
+
+.MetrodigiWidget .draw-area {
+    position: relative;
+    width: 700px;
+    height: 483px;
+    margin: 0 auto;
+    background: url(../images/background.png) no-repeat scroll center 90px transparent;
+    background-size: 370px 400px;
+}
+.MetrodigiWidget .draw-area canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.MetrodigiWidget .draw-area .term-list,
+.MetrodigiWidget .draw-area .list-item {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.MetrodigiWidget .draw-area .term-list {
+    width: 100%;
+    height: 100%;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item {
+    width: 120px;
+    height: 65px;
+}
+
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="0"] {
+    width: 117px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="9"] {
+    width: 165px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="8"] {
+    width: 213px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="7"] {
+    width: 170px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="6"] {
+    width: 160px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="5"] {
+    width: 165px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="4"] {
+    width: 148px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="3"] {
+    width: 137px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="2"] {
+    width: 165px;
+}
+.MetrodigiWidget section.widget-body .draw-area .list-item[data-term-id="1"] {
+    width: 124px;
+}
+
+.MetrodigiWidget .draw-area .term,
+.MetrodigiWidget .draw-area .definition {
+    display: block;
+}
+.MetrodigiWidget .draw-area .term,
+.MetrodigiWidget.challenge .draw-area .challenge-term .term {
+    font-family: "HelveticaNeueETW01-75Bd";
+}
+.MetrodigiWidget.challenge .draw-area .term {
+    font-family: "HelveticaNeueETW01-55Rg";
+}
+.MetrodigiWidget.challenge .draw-area .answered .term,
+.MetrodigiWidget.challenge .draw-area .hover .term,
+.MetrodigiWidget.challenge .draw-area .hover .definition {
+    font-family: "HelveticaNeueETW01-75Bd";
+}
+
+
+.MetrodigiWidget .challenge-term,
+.MetrodigiWidget .draggable {
+    display: none;
+    cursor: pointer;
+}
+.MetrodigiWidget.challenge .challenge-term,
+.MetrodigiWidget.challenge .draggable {
+    display: block;
+}
+.MetrodigiWidget .draggable {
+    position: relative;
+    top: 0px;
+    left: 190px;
+    width: 30px;
+    height: 30px;
+    border: 4px solid red;
+    border-radius: 30px;
+    background-color: rgba(255,255,255,0.4);
+}
+.MetrodigiWidget .challenge-term,
+.MetrodigiWidget .challenge-term li {
+    width: 158px;
+    height: 106px;
+}
+.MetrodigiWidget[data-challenge="term"] .challenge-term,
+.MetrodigiWidget[data-challenge="term"] .challenge-term li,
+.MetrodigiWidget[data-challenge="term"] .challenge-term li.term span {
+    width: 121px;
+    height: 45px;
+}
+.MetrodigiWidget .challenge-term {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    background-color: #dedede;
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 3px 5px;
+}
+.MetrodigiWidget .challenge-term ul {
+    margin: 0;
+    padding: 0;
+}
+.MetrodigiWidget .challenge-term li {
+    font-family: "HelveticaNeueETW01-75Bd";
+    margin-bottom: 2em;
+}
+.MetrodigiWidget .challenge-term li.term {
+    font-size: 0.9em;
+}
+.MetrodigiWidget[data-challenge="term"] .challenge-term li.term span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.MetrodigiWidget .challenge-term li.definition {
+    font-size: 0.75em;
+}
+
+.MetrodigiWidget[data-challenge="term"] .feedback {
+    top: 65px;
+}
+
+.MetrodigiWidget .end-challenge,
+.MetrodigiWidget.challenge .start-term-challenge,
+.MetrodigiWidget.challenge .start-definition-challenge {
+    display: none;
+}
+.MetrodigiWidget.challenge .end-challenge {
+    display: inline-block;
+}
+.MetrodigiWidget.challenge[data-challenge="term"] .draw-area .term-list .term,
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .term-list .definition {
+    display: none;
+}
+.MetrodigiWidget.challenge[data-challenge="term"] .draw-area .term-list .definition {
+    margin-top: 1em;
+}
+.MetrodigiWidget.challenge[data-challenge="term"] .draw-area .term-list  .answered .definition {
+    margin-top: 0;
+}
+.MetrodigiWidget.challenge[data-challenge="term"] .draw-area .term-list .answered .term,
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .term-list .answered .definition {
+    display: block;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item .term {
+    position: absolute;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item.answered .term {
+    position: static;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="0"] .term {
+    bottom: 7px;
+    left: -1em;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="9"] .term {
+    bottom: -0.5em;
+    right: 0.4em;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="8"] .term {
+    bottom: 2em;
+    right: 5.9em;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="7"] .term {
+    top: 4.7em;
+    right: 3.9em;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="6"] .term {
+    top: 2.3em;
+    right: 4.3em;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="5"] .term {
+    top: 2.9em;
+    left: 0;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="4"] .term {
+    top: 2.8em;
+    left: 0;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="3"] .term {
+    top: 4.8em;
+    left: 0;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="2"] .term {
+    top: 5.1em;
+    left: 0;
+}
+.MetrodigiWidget.challenge[data-challenge="definition"] .draw-area .list-item[data-term-id="1"] .term {
+    top: 2.5em;
+    left: 0;
+}
+.MetrodigiWidget.Accessibility.challenge section.widget-body .draw-area .draggable,
+.MetrodigiWidget.Accessibility.challenge .challenge-term,
+.MetrodigiWidget.Accessibility.challenge-complete .challenge-term{
+    display: none;
+}
+.MetrodigiWidget.Accessibility.challenge[data-challenge="term"] header.widget-header .notes .note.accessibility:before{
+    /*content: "Term Challenge: "*/
+}
+.MetrodigiWidget.Accessibility.challenge[data-challenge="definition"] header.widget-header .notes .note.accessibility:before{
+    /*content: "Definition Challenge: "*/
+}
+.MetrodigiWidget.Accessibility li.droppable{
+    cursor: pointer
+}
+
+.offscreen {
+    display:block;
+    position: absolute;
+    clip: rect(1px1px1px1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    z-index: -1000;
+}
+
+.MetrodigiWidget button.accessibility:focus{
+  outline-style: auto !important;
+}

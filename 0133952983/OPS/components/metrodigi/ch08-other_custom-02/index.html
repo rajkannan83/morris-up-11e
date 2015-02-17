@@ -1,0 +1,441 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/template.css">
+        <link rel="stylesheet" href="styles/survey.css">
+
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="Survey">
+            <div class="widget-content">
+                <nav class="widget-header">
+                    <ul>
+                        <li class="slide-intro slide-intro-2 active"><button tabindex="0">Introduction</button></li>
+                        <li class="slide-question-1 slide-question-2 slide-question-3 slide-question-4 slide-question-5 slide-question-6 slide-question-7 slide-question-8 slide-question-9 slide-question-10 slide-question-11"><button tabindex="0">Survey</button></li>
+                        <li class="slide-results slide-results-2"><button tabindex="0" class="results">Results</button></li>
+                    </ul>
+                </nav>
+                <section class="widget-body">
+
+                    <article class="slide-intro active" data-next-slide="intro-2">
+                        <img src="images/petLogo.png" alt="" />
+                        <p tabindex="0">This is a non-scientific survey about your thoughts, experiences, and understanding of psychological concepts.</p>
+                        <p tabindex="0">Your responses to this survey are <strong>completely anonymous</strong>.  Data will be reported only in survey format and no individual responses will be revealed to your instructor or anyone else.</p>
+                        <p tabindex="0"><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                    </article>
+
+                    <article class="slide-intro-2" data-prev-slide="intro" data-next-slide="question-1">
+                        <img src="images/petLogo.png" alt="" />
+                        <p tabindex="0">This survey asks about your experiences with being creative and your beliefs about the creative process and creative people.</p>
+                        <p tabindex="0">Creativity is defined as the ability to produce novel and socially valued ideas or objects.</p>
+                        <p tabindex="0"><strong><span class="responsive-call-to-action">Click or tap</span> Next to begin the survey.</strong></p>
+                    </article>
+
+                    <article class="slide-results scroll">
+                        <p class="status bigger">Congratulations! You have finished this survey.</p>
+                        <p class="status bigger">Take a look at how your answers compare to your peers’ answers.<br><br></p>
+                        <div class="chart"></div>
+                    </article>
+
+                </section>
+                <footer class="widget-footer">
+                    <button class="next">Next</button>
+                    <button class="previous">Previous</button>
+                    <button class="next-result">Next</button>
+                    <button class="reset">Repeat Survey</button>
+                    <span class="status"></span>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="javascript/survey.js"></script>
+    <script type="text/javascript">
+        window.addEvent('domready', function() {
+            var data = {
+                questions: [
+    { //01
+        "question": "<p>How much time do you generally tend to spend organizing and thinking through a research paper or essay before you begin to write it?</p>",
+        "radioButtons": [
+            { "label": "None"},
+            { "label": "A Little" },
+            { "label": "Some"},
+            { "label": "Much"},
+            { "label": "A Great Deal"}
+        ],
+        "resultLabels": [
+            { "label": "None"},
+            { "label": "A Little" },
+            { "label": "Some"},
+            { "label": "Much"},
+            { "label": "A Great Deal"}
+        ],
+        "resultPercentages": [
+             { "percentage": "2.8%"},
+             { "percentage": "20%"},
+             { "percentage": "33.4%"},
+             { "percentage": "26.9%"},
+             { "percentage": "16.9%"}
+        ]
+    },
+
+    { //02
+        "question": "<p>Do you balance your schedule between hard work and time off?</p>",
+        "radioButtons": [
+            { "label": "Yes - I keep a strict schedule."},
+            { "label": "Yes - I try but plans don't always work out." },
+            { "label": "No - I tend to work more than have time off."},
+            { "label": "No - I tend to have more time off than work."},
+            { "label": "Prefer Not to State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes - I keep a strict schedule."},
+            { "label": "Yes - I try but plans don't always work out." },
+            { "label": "No - I tend to work more than have time off."},
+            { "label": "No - I tend to have more time off than work."},
+            { "label": "Prefer Not to State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "8.4%"},
+             { "percentage": "49.3%"},
+             { "percentage": "24.5%"},
+             { "percentage": "13.8%"},
+             { "percentage": "4%"}
+        ]
+    },
+
+    { //03
+        "question": "<p>Sometimes when we are trying to solve a problem, we take a break to give our mind a rest. Have you EVER had an aha moment upon waking up in the morning or when you were doing something off task (relaxing, exercising, hanging out with friends, etc.)?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "83.5%"},
+             { "percentage": "6.6%"},
+             { "percentage": "7.2%"},
+             { "percentage": "2.7%"}
+        ]
+    },
+
+    { //04
+        "question": "<p>In general, do you tend to have many projects going on at once, or do you work on one project at a time?</p>",
+        "radioButtons": [
+            { "label": "One project at a time"},
+            { "label": "Many project at a time" },
+            { "label": "It depends - sometimes I have just one, sometimes many projects at a time" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "One project at a time"},
+            { "label": "Many project at a time" },
+            { "label": "It depends - sometimes I have just one, sometimes many projects at a time" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "14.1%"},
+             { "percentage": "36.8%"},
+             { "percentage": "43.4%"},
+             { "percentage": "2.9%"},
+             { "percentage": "2.9%"}
+        ]
+    },
+
+    { //05
+        "question": "<p>When you are having trouble solving a problem, which of the following behaviors do you tend to do? </p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Take a break."},
+            { "label": "Take a nap." },
+            { "label": "Get outside / away from where I'm working on the problem."},
+            { "label": "Play a game."},
+            { "label": "Read a book."},
+            { "label": "Other "},
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Take a break."},
+            { "label": "Take a nap." },
+            { "label": "Get outside / away from where I'm working on the problem."},
+            { "label": "Play a game."},
+            { "label": "Read a book."},
+            { "label": "Other "},
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "76%"},
+             { "percentage": "32%"},
+             { "percentage": "54.6%"},
+             { "percentage": "26%"},
+             { "percentage": "18.4%"},
+             { "percentage": "30.4%"},
+             { "percentage": "1%"}
+        ]
+    },
+
+    { //06
+        "question": "<p>Does extended time away from work/school - such as a vacation or school break - help you be more creative?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "55.1%"},
+             { "percentage": "18.8%"},
+             { "percentage": "22.9%"},
+             { "percentage": "3.2%"}
+        ]
+    },
+
+    { //07
+        "question": "<p>Are YOU a creative person?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To State"}
+        ],
+        "resultPercentages": [
+             { "percentage": "62.9%"},
+             { "percentage": "14.5%"},
+             { "percentage": "19.8%"},
+             { "percentage": "2.9%"}
+        ]
+    },
+
+    { //08
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "Creativity is something you're born with." },
+            { "label": "You can teach someone to be creative."}
+        ],
+        "resultLabels": [
+            { "label": "Creativity is something you're born with." },
+            { "label": "You can teach someone to be creative."}
+        ],
+        "resultPercentages": [
+             { "percentage": "62.9%"},
+             { "percentage": "37.1%"}
+        ]
+    },
+
+    { //09
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "Creativity is a special gift." },
+            { "label": "Creativity has to do with cognitive processes that we all have."}
+        ],
+        "resultLabels": [
+            { "label": "Creativity is a special gift." },
+            { "label": "Creativity has to do with cognitive processes that we all have."}
+        ],
+        "resultPercentages": [
+             { "percentage": "41.8%"},
+             { "percentage": "58.2%"}
+        ]
+    },
+
+    { //10
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "Creativity comes naturally to highly creative people." },
+            { "label": "Highly creative people have to work hard to be creative."}
+        ],
+        "resultLabels": [
+            { "label": "Creativity comes naturally to highly creative people." },
+            { "label": "Highly creative people have to work hard to be creative."}
+        ],
+        "resultPercentages": [
+             { "percentage": "73.4%"},
+             { "percentage": "26.6%"}
+        ]
+    },
+
+    { //12
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "A person is more creative when s/he is alone." },
+            { "label": "A person is more creative when s/he collaborates with others."}
+        ],
+        "resultLabels": [
+            { "label": "A person is more creative when s/he is alone." },
+            { "label": "A person is more creative when s/he collaborates with others."}
+        ],
+        "resultPercentages": [
+             { "percentage": "45.4%"},
+             { "percentage": "54.6%"}
+        ]
+    },
+
+    { //13
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "Creative people tend to dress in an unusual manner, have tattoos, sleep at odd hours, ect." },
+            { "label": "Creative people look and act normal - like everyone else."}
+        ],
+        "resultLabels": [
+            { "label": "Creative people tend to dress in an unusual manner, have tattoos, sleep at odd hours, ect." },
+            { "label": "Creative people look and act normal - like everyone else."}
+        ],
+        "resultPercentages": [
+             { "percentage": "33.4%"},
+             { "percentage": "66.6%"}
+        ]
+    },
+
+    { //14
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "Creative people are socially awkward and/or have odd mannerisms." },
+            { "label": "Creative people are socially smooth and skilled at interacting with others."}
+        ],
+        "resultLabels": [
+            { "label": "Creative people are socially awkward and/or have odd mannerisms." },
+            { "label": "Creative people are socially smooth and skilled at interacting with others."}
+        ],
+        "resultPercentages": [
+             { "percentage": "32.3%"},
+             { "percentage": "67.7%"}
+        ]
+    },
+
+    { //15
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "Creative people often have some sort of psychological disorder such as depression, bipolar disorder, schizophrenia, or alcoholism." },
+            { "label": "Creative people are normal, happy, mentally healthy people."}
+        ],
+        "resultLabels": [
+            { "label": "Creative people often have some sort of psychological disorder such as depression, bipolar disorder, schizophrenia, or alcoholism." },
+            { "label": "Creative people are normal, happy, mentally healthy people."}
+        ],
+        "resultPercentages": [
+             { "percentage": "23.5%"},
+             { "percentage": "76.5%"}
+        ]
+    },
+
+    { //16
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "Creative people are loners that stick to themselves." },
+            { "label": "Creative people are social, networking with others."}
+        ],
+        "resultLabels": [
+            { "label": "Creative people are loners that stick to themselves." },
+            { "label": "Creative people are social, networking with others."}
+        ],
+        "resultPercentages": [
+             { "percentage": "23.7%"},
+             { "percentage": "76.3%"}
+        ]
+    },
+
+    { //17
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "Creative people are unconventional and break the rules." },
+            { "label": "Convention, constraint, and structure inspire creative people."}
+        ],
+        "resultLabels": [
+            { "label": "Creative people are unconventional and break the rules." },
+            { "label": "Convention, constraint, and structure inspire creative people."}
+        ],
+        "resultPercentages": [
+             { "percentage": "62.4%"},
+             { "percentage": "37.6%"}
+        ]
+    },
+
+    { //18
+        "question": "<p>Below is a pair of statements about creativity. Please select the sentence with which you MOST AGREE.</p>",
+        "radioButtons": [
+            { "label": "A creative idea just comes to a creative person." },
+            { "label": "A creative person spends a lot of time in preparation."}
+        ],
+        "resultLabels": [
+            { "label": "A creative idea just comes to a creative person." },
+            { "label": "A creative person spends a lot of time in preparation."}
+        ],
+        "resultPercentages": [
+             { "percentage": "55.8%"},
+             { "percentage": "44.2%"}
+        ]
+    },
+
+    { //19
+        "question": "<p>How often do you have a really good conversation with someone, where each person is attentively listening, absorbing, and building on what the other is saying?</p>",
+        "radioButtons": [
+            { "label": "Never"},
+            { "label": "Very Rarely" },
+            { "label": "Rarely"},
+            { "label": "Occasionally"},
+            { "label": "Frequently"},
+            { "label": "Very Frequently"}
+        ],
+        "resultLabels": [
+            { "label": "Never"},
+            { "label": "Very Rarely" },
+            { "label": "Rarely"},
+            { "label": "Occasionally"},
+            { "label": "Frequently"},
+            { "label": "Very Frequently"}
+        ],
+        "resultPercentages": [
+             { "percentage": "2.2%"},
+             { "percentage": "7.2%"},
+             { "percentage": "11.8%"},
+             { "percentage": "42.9%"},
+             { "percentage": "28.4%"},
+             { "percentage": "7.6%"}
+        ]
+    }
+
+]
+,
+            };
+
+            // Widget initialization
+            widget = new Survey({
+                container: $$('.Survey')[0],
+                initialSlide: 'intro',
+                delay: 1000,
+                data: data
+            });
+        })
+    </script>
+
+</body>
+</html>

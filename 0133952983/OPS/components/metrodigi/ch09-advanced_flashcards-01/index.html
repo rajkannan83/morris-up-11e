@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+  <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+  <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+   <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="Flashcards">
+
+            <nav class="main-nav">
+                <button tabindex="0" class="current-chapter-cards"></button>
+                <button tabindex="0" class="all-chapters-cards"></button>
+                <div class="right-helper">
+                    <button tabindex="0" class="flip right">Flip Cards</button>
+                    <button tabindex="0" class="restart right">Start Over</button>
+                </div>
+            </nav>
+
+            <section class="cards">
+
+                <div class="end-screen">
+                    <div class="content-wrapper">
+                        <h2>All done!</h2>
+                        <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                        <ul class="repeated-cards"></ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+                <button tabindex="0" class="skip right">Skip</button>
+            </nav>
+
+        </div>
+
+    </div> <!-- container -->
+
+    <script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+    <script type="text/javascript">
+
+        window.addEvent('domready', function() {
+            // Widget initialization
+            window.widget_instance = new Flashcards({
+                container: $$('.Flashcards')[0],
+                currentchapter: 1, displayCurrentChapterButton: false,
+                cards: [
+                    {
+                        chapter: 1,
+                        term: "achievement motive",
+                        definition: "The need to excel, to overcome obstacles."
+                    },
+                    {
+                        chapter: 1,
+                        term: "affiliation motive",
+                        definition: "The need to be with others."
+                    },
+                    {
+                        chapter: 1,
+                        term: "aggression",
+                        definition: "Behavior aimed at doing harm to others; also, the motive to behave aggressively."
+                    },
+                    {
+                        chapter: 1,
+                        term: "anorexia nervosa",
+                        definition: "A serious eating disorder that is associated with an intense fear of weight gain and a distorted body image."
+                    },
+                    {
+                        chapter: 1,
+                        term: "arousal theory",
+                        definition: "Theory of motivation that proposes that organisms seek an optimal level of arousal."
+                    },
+                    {
+                        chapter: 1,
+                        term: "bulimia nervosa",
+                        definition: "An eating disorder characterized by binges of eating followed by self-induced vomiting."
+                    },
+                    {
+                        chapter: 1,
+                        term: "Cannon–Bard theory",
+                        definition: "States that the experience of emotion occurs simultaneously with biological changes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "cognitive theory",
+                        definition: "States that emotional experience depends on one’s perception or judgment of a situation."
+                    },
+                    {
+                        chapter: 1,
+                        term: "display rules",
+                        definition: "Culture-specific rules that govern how, when, and why expressions of emotion are appropriate."
+                    },
+                    {
+                        chapter: 1,
+                        term: "drive",
+                        definition: "State of tension or arousal that motivates behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "drive-reduction theory",
+                        definition: "States that motivated behavior is aimed at reducing a state of bodily tension or arousal and returning the organism to homeostasis."
+                    },
+                    {
+                        chapter: 1,
+                        term: "emotion",
+                        definition: "Feeling, such as fear, joy, or surprise, that underlies behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "extrinsic motivation",
+                        definition: "A desire to perform a behavior to obtain an external reward or avoid punishment.ghrelin"
+                    },
+                    {
+                        chapter: 1,
+                        term: "ghrelin",
+                        definition: "A hormone produced in the stomach and small intestines that increases appetite."
+                    },
+                    {
+                        chapter: 1,
+                        term: "glucose",
+                        definition: "A simple sugar used by the body for energy."
+                    },
+                    {
+                        chapter: 1,
+                        term: "hierarchy of needs",
+                        definition: "A theory of motivation advanced by Maslow holding that higher order motives involving social and personal growth only emerge after lower level motives related to survival have been satisfied."
+                    },
+                    {
+                        chapter: 1,
+                        term: "homeostasis",
+                        definition: "State of balance and stability in which the organism functions effectively."
+                    },
+                    {
+                        chapter: 1,
+                        term: "incentive",
+                        definition: "External stimulus that prompts goal-directed behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "instincts",
+                        definition: "Inborn, inflexible, goal-directed behaviors that are characteristic of an entire species."
+                    },
+                    {
+                        chapter: 1,
+                        term: "intrinsic motivation",
+                        definition: "A desire to perform a behavior that stems from the enjoyment derived from the behavior itself."
+                    },
+                    {
+                        chapter: 1,
+                        term: "James–Lange theory",
+                        definition: "States that stimuli cause physiological changes in our bodies, and emotions result from those physiological changes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "leptin",
+                        definition: "A hormone released by fat cells that reduces appetite."
+                    },
+                    {
+                        chapter: 1,
+                        term: "motive",
+                        definition: "Specific need or desire, such as hunger, thirst, or achievement, that prompts goal-directed behavior."
+                    },
+                    {
+                        chapter: 1,
+                        term: "muscle dysmorphia",
+                        definition: "A disorder generally seen in young men involving an obsessive concern with muscle size."
+                    },
+                    {
+                        chapter: 1,
+                        term: "primary drives",
+                        definition: "Unlearned drive, such as hunger, that are based on a physiological state."
+                    },
+                    {
+                        chapter: 1,
+                        term: "secondary drives",
+                        definition: "Learned drives, such as ambition, that are not based on a physiological state."
+                    },
+                    {
+                        chapter: 1,
+                        term: "set point theory",
+                        definition: "A theory that our bodies are genetically predisposed to maintaining a certain weight by changing our metabolic rate and activity level in response to caloric intake."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sexual orientation",
+                        definition: "Refers to the direction of one’s sexual interest toward members of the same sex, the other sex, or both sexes."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sexual response cycle",
+                        definition: "The typical sequence of events, including excitement, plateau, orgasm, and resolution, characterizing sexual response in males and females."
+                    },
+                    {
+                        chapter: 1,
+                        term: "stimulus motives",
+                        definition: "Unlearned motives, such as curiosity or contact, that prompts us to explore or change the world around us."
+                    },
+                    {
+                        chapter: 1,
+                        term: "testosterone",
+                        definition: "The primary male sex hormone."
+                    },
+                    {
+                        chapter: 1,
+                        term: "Yerkes–Dodson law",
+                        definition: "States that there is an optimal level of arousal for the best performance of any task; the more complex the task, the lower the level of arousal that can be tolerated before performance deteriorates."
+                    },
+                ]
+            });
+        })
+    </script>
+
+</body>
+</html>

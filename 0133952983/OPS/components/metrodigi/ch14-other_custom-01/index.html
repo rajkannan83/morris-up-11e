@@ -1,0 +1,613 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/template.css">
+<link rel="stylesheet" href="styles/survey.css">
+
+
+    <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+
+<script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="Survey">
+            <div class="widget-content">
+                <nav class="widget-header">
+                    <ul>
+                        <li class="slide-intro slide-intro-2 active">Introduction</li>
+                        <li class="slide-question-1 slide-question-2 slide-question-3 slide-question-4 slide-question-5 slide-question-6 slide-question-7 slide-question-8 slide-question-9 slide-question-10 slide-question-11">Survey</li>
+                        <li class="slide-results slide-results-2">Results</li>
+                    </ul>
+                </nav>
+                <section class="widget-body">
+
+                    <article class="slide-intro active" data-next-slide="intro-2">
+                        <img src="../_framework/_base_pearson/images/petLogo.png" alt="" />
+                        <p>This is a non-scientific survey about your thoughts, experiences, and understanding of psychological concepts.</p>
+                        <p>Your responses to this survey are <strong>completely anonymous</strong>.  Data will be reported only in survey format and no individual responses will be revealed to your instructor or anyone else.</p>
+                        <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to continue.</strong></p>
+                    </article>
+
+                    <article class="slide-intro-2" data-prev-slide="intro" data-next-slide="question-1">
+                        <img src="../_framework/_base_pearson/images/petLogo.png" alt="" />
+                        <p>This survey asks you about your attitudes towards and experiences with taking care of your mental health.</p>
+                        <p><strong><span class="responsive-call-to-action">Click or tap</span> Next to begin the survey.</strong></p>
+                    </article>
+
+                    <article class="slide-results scroll">
+                        <p class="status bigger">Congratulations! You have finished this survey.</p>
+                        <p class="status bigger">Take a look at how your answers compare to your peers’ answers.<br><br></p>
+                        <div class="chart"></div>
+                    </article>
+
+                </section>
+                <footer class="widget-footer">
+                    <button class="next">Next</button>
+                    <button class="previous">Previous</button>
+                    <button class="next-result">Next</button>
+                    <button class="reset">Repeat Survey</button>
+                    <span class="status"></span>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="javascript/survey.js"></script>
+    <script type="text/javascript" src="../_framework/_base_pearson/responsive.js"></script>
+    <script type="text/javascript">
+        window.addEvent('domready', function() {
+            var data = {
+                questions: [
+    { //01
+        "question": "<p>Do you enjoy talk shows where people seek advice about their life problems?</p>",
+        "radioButtons": [
+            { "label": "Yes - very much"},
+            { "label": "Yes - somewhat"},
+            { "label": "No" },
+            { "label": "Prefer Not To Say"}
+        ],
+        "resultLabels": [
+            { "label": "Yes - very much"},
+            { "label": "Yes - somewhat"},
+            { "label": "No" },
+            { "label": "Prefer Not To Say"}
+        ],
+        "resultPercentages": [
+             { "percentage": "16.6%"},
+             { "percentage": "42.9%"},
+             { "percentage": "38.9%"},
+             { "percentage": "1.6%"}
+        ]
+    },
+
+    { //02
+        "question": "<p>Do you regularly read one or more advice columns (Dear Abby, Dan Savage, etc.)?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To Say"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To Say"}
+        ],
+        "resultPercentages": [
+             { "percentage": "11.2%"},
+             { "percentage": "86%"},
+             { "percentage": "2.8%"}
+        ]
+    },
+
+    { //03
+        "question": "<p>Have you EVER analyzed your dreams to gain insight into yourself or your life?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To Say"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To Say"}
+        ],
+        "resultPercentages": [
+             { "percentage": "63.2%"},
+             { "percentage": "34.4%"},
+             { "percentage": "2.4%"}
+        ]
+    },
+
+    { //04
+        "question": "<p>How often do you talk to your friends and/or family about problems or issues in your life?</p>",
+        "radioButtons": [
+            { "label": "Never"},
+            { "label": "Seldom" },
+            { "label": "Sometimes"},
+            { "label": "Often"}
+        ],
+        "resultLabels": [
+           { "label": "Never"},
+            { "label": "Seldom" },
+            { "label": "Sometimes"},
+            { "label": "Often"}
+        ],
+        "resultPercentages": [
+             { "percentage": "4.2%"},
+             { "percentage": "21.3%"},
+             { "percentage": "40.6%"},
+             { "percentage": "33.9%"}
+        ]
+    },
+
+    { //05
+        "question": "<p>How often do you talk to some type of professional (guidance counselor, academic advisor, therapist, etc.) about problems or issues in your life?</p>",
+        "radioButtons": [
+            { "label": "Never"},
+            { "label": "Seldom" },
+            { "label": "Sometimes"},
+            { "label": "Often"}
+        ],
+        "resultLabels": [
+           { "label": "Never"},
+            { "label": "Seldom" },
+            { "label": "Sometimes"},
+            { "label": "Often"}
+        ],
+        "resultPercentages": [
+             { "percentage": "53.2%"},
+             { "percentage": "27.8%"},
+             { "percentage": "14.6%"},
+             { "percentage": "4.5%"}
+        ]
+    },
+
+    { //06
+        "question": "<p>In which of the following activities do you participate in order to take care of your mental health (feel good, minimize stress, feel balanced, etc.)?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Exercise / play sports"},
+            { "label": "Meditation" },
+            { "label": "Yoga"},
+            { "label": "Listen to music"},
+            { "label": "Spend time outside"},
+            { "label": "Spend time with family/friends" },
+            { "label": "Take vacations" },
+            { "label": "Write in a journal" },
+            { "label": "Other " },
+            { "label": "No Response"}
+        ],
+        "resultLabels": [
+            { "label": "Exercise / play sports"},
+            { "label": "Meditation" },
+            { "label": "Yoga"},
+            { "label": "Listen to music"},
+            { "label": "Spend time outside"},
+            { "label": "Spend time with family/friends" },
+            { "label": "Take vacations" },
+            { "label": "Write in a journal" },
+            { "label": "Other " },
+            { "label": "No Response"}
+        ],
+        "resultPercentages": [
+             { "percentage": "66.8%"},
+             { "percentage": "16.2%"},
+             { "percentage": "16.7%"},
+             { "percentage": "89.3%"},
+             { "percentage": "67.4%"},
+             { "percentage": "82.6%"},
+             { "percentage": "39.7%"},
+             { "percentage": "21.9%"},
+             { "percentage": "26.9%"},
+             { "percentage": "1%"}
+        ]
+    },
+
+    { //07
+        "question": "<p>Have you EVER genuinely encouraged someone (friend, family member, coworker, etc.) to go to therapy?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" }
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" }
+        ],
+        "resultPercentages": [
+             { "percentage": "56.8%"},
+             { "percentage": "43.2%"}
+        ]
+    },
+
+    { //08
+        "question": "<p>Have you EVER seen a psychological/psychiatric therapist or counselor to talk about problems or issues in your life?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To Say"}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Prefer Not To Say"}
+        ],
+        "resultPercentages": [
+             { "percentage": "44.5%"},
+             { "percentage": "53.1%"},
+             { "percentage": "2.4%"}
+        ]
+    },
+
+    { //09
+        "question": "<p>Which of the following types of counseling/therapy have you EVER participated in?</p><p><i>Please check all that apply</i></p>",
+        "checkBoxes": [
+            { "label": "Individual "},
+            { "label": "Group" },
+            { "label": "Family"},
+            { "label": "Couples/marriage"},
+            { "label": "Recovery programs (Alcoholics Anonymous, Overeaters Anonymous, etc.)"},
+            { "label": "Support programs (Al-anon, cancer survivors, caregiver support, etc.)" },
+            { "label": "N/A - I have never participated in counseling/therapy." },
+            { "label": "No Response" }
+        ],
+        "resultLabels": [
+            { "label": "Individual "},
+            { "label": "Group" },
+            { "label": "Family"},
+            { "label": "Couples/marriage"},
+            { "label": "Recovery programs (Alcoholics Anonymous, Overeaters Anonymous, etc.)"},
+            { "label": "Support programs (Al-anon, cancer survivors, caregiver support, etc.)" },
+            { "label": "N/A - I have never participated in counseling/therapy." },
+            { "label": "No Response" }
+        ],
+        "resultPercentages": [
+             { "percentage": "43.8%"},
+             { "percentage": "12%"},
+             { "percentage": "19.6%"},
+             { "percentage": "7.1%"},
+             { "percentage": "6%"},
+             { "percentage": "3.9%"},
+             { "percentage": "45.2%"},
+             { "percentage": "1.9%"}
+        ]
+    },
+
+    { //10
+        "question": "<p>Thinking of your overall experiences with psychological therapy or counseling, please indicate the extent of your agreement with the statement below. (Mark N/A if you have never participated in therapy/counseling).</p><p>I gained insight about myself and/or my life from therapy.</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "7%"},
+             { "percentage": "5.9%"},
+             { "percentage": "12.8%"},
+             { "percentage": "15.8%"},
+             { "percentage": "12%"},
+             { "percentage": "46.4%"}
+        ]
+    },
+
+    { //11
+        "question": "<p>Thinking of your overall experiences with psychological therapy or counseling, please indicate the extent of your agreement with the statement below. (Mark N/A if you have never participated in therapy/counseling).</p><p>Therapy helped me learn more effective ways of interacting with others.</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "6.5%"},
+             { "percentage": "5.9%"},
+             { "percentage": "16.2%"},
+             { "percentage": "14.6%"},
+             { "percentage": "8.7%"},
+             { "percentage": "48.2%"}
+        ]
+    },
+
+    { //12
+        "question": "<p>Thinking of your overall experiences with psychological therapy or counseling, please indicate the extent of your agreement with the statement below. (Mark N/A if you have never participated in therapy/counseling).</p><p>Therapy helped me let go of negative ways of thinking.</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "6%"},
+             { "percentage": "7.1%"},
+             { "percentage": "14.1%"},
+             { "percentage": "16%"},
+             { "percentage": "7.8%"},
+             { "percentage": "48.9%"}
+        ]
+    },
+
+    { //13
+        "question": "<p>Thinking of your overall experiences with psychological therapy or counseling, please indicate the extent of your agreement with the statement below. (Mark N/A if you have never participated in therapy/counseling).</p><p>Therapy helped me make positive changes in my life.</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "4.8%"},
+             { "percentage": "5.2%"},
+             { "percentage": "11.8%"},
+             { "percentage": "18.2%"},
+             { "percentage": "11.4%"},
+             { "percentage": "48.5%"}
+        ]
+    },
+
+    { //14
+        "question": "<p>Thinking of your overall experiences with psychological therapy or counseling, please indicate the extent of your agreement with the statement below. (Mark N/A if you have never participated in therapy/counseling).</p><p>I had a good therapist.</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "5.9%"},
+             { "percentage": "5%"},
+             { "percentage": "9.7%"},
+             { "percentage": "12.8%"},
+             { "percentage": "15.8%"},
+             { "percentage": "50.7%"}
+        ]
+    },
+
+    { //15
+        "question": "<p>Thinking of your overall experiences with psychological therapy or counseling, please indicate the extent of your agreement with the statement below. (Mark N/A if you have never participated in therapy/counseling).</p><p>Therapy was a good use of my time.</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "6%"},
+             { "percentage": "5.3%"},
+             { "percentage": "11.7%"},
+             { "percentage": "13%"},
+             { "percentage": "14.2%"},
+             { "percentage": "49.8%"}
+        ]
+    },
+
+    { //16
+        "question": "<p>Thinking of your overall experiences with psychological therapy or counseling, please indicate the extent of your agreement with the statement below. (Mark N/A if you have never participated in therapy/counseling).</p><p>I would recommend others go to therapy.</p>",
+        "radioButtons": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultLabels": [
+            { "label": "Strongly Disagree"},
+            { "label": "Moderately Disagree" },
+            { "label": "Neither Agree nor Disagree" },
+            { "label": "Moderately Agree" },
+            { "label": "Strongly Agree" },
+            { "label": "N/A"}
+        ],
+        "resultPercentages": [
+             { "percentage": "2.2%"},
+             { "percentage": "2.6%"},
+             { "percentage": "13.7%"},
+             { "percentage": "16.5%"},
+             { "percentage": "19.4%"},
+             { "percentage": "45.6%"}
+        ]
+    },
+
+    { //17
+        "question": "<p>If you have never been in therapy/counseling, would you EVER consider going to therapy?</p>",
+        "radioButtons": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To Say"},
+            { "label": "N/A - I've already been in therapy/counseling."}
+        ],
+        "resultLabels": [
+            { "label": "Yes"},
+            { "label": "No" },
+            { "label": "Not Sure" },
+            { "label": "Prefer Not To Say"},
+            { "label": "N/A - I've already been in therapy/counseling."}
+        ],
+        "resultPercentages": [
+             { "percentage": "28.7%"},
+             { "percentage": "9%"},
+             { "percentage": "24.9%"},
+             { "percentage": "2.7%"},
+             { "percentage": "34.7%"}
+        ]
+    },
+
+    { //018
+        "question": "<p>Please indicate whether you agree with the statement below.</p><p>Going to therapy shows a weakness of character.</p>",
+        "radioButtons": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultLabels": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultPercentages": [
+             { "percentage": "5.1%"},
+             { "percentage": "85.3%"},
+             { "percentage": "9.6%"}
+        ]
+    },
+
+    { //19
+        "question": "<p>Please indicate whether you agree with the statement below.</p><p>Going to therapy is something to be ashamed of.</p>",
+        "radioButtons": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultLabels": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultPercentages": [
+             { "percentage": "3.6%"},
+             { "percentage": "89.4%"},
+             { "percentage": "6.9%"}
+        ]
+    },
+
+    { //20
+        "question": "<p>Please indicate whether you agree with the statement below.</p><p>Going to therapy helps people deal better with the problems or issues in their lives.</p>",
+        "radioButtons": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultLabels": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultPercentages": [
+             { "percentage": "80.8%"},
+             { "percentage": "4.6%"},
+             { "percentage": "14.7%"}
+        ]
+    },
+
+    { //21
+        "question": "<p>Please indicate whether you agree with the statement below.</p><p>It's acceptable to prescribe drugs to treat people with depression and/or anxiety issues.</p>",
+        "radioButtons": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultLabels": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultPercentages": [
+             { "percentage": "65.1%"},
+             { "percentage": "13.7%"},
+             { "percentage": "21.2%"}
+        ]
+    },
+
+    { //22
+        "question": "<p>Do you think that drugs are overprescribed (prescribed too often) for mental health issues?</p>",
+        "radioButtons": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultLabels": [
+            { "label": "Agree" },
+            { "label": "Disagree" },
+            { "label": "Not Sure"}
+        ],
+        "resultPercentages": [
+             { "percentage": "61.3%"},
+             { "percentage": "13.1%"},
+             { "percentage": "25.6%"}
+        ]
+    }
+
+]
+,
+            };
+
+            // Widget initialization
+            widget = new Survey({
+                container: $$('.Survey')[0],
+                initialSlide: 'intro',
+                delay: 1000,
+                data: data
+            });
+        })
+    </script>
+
+</body>
+</html>

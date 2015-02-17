@@ -1,0 +1,122 @@
+
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/template.css">
+        <link rel="stylesheet" href="../_framework/_base_pearson/button-bar.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="../_framework/_base_pearson/config.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more-flashcards-fix.js" type="text/javascript" charset="utf-8"></script>
+        <script src='../_framework/_base_pearson/responsive.js' type='text/javascript'></script>
+        <script src='../_framework/_base_pearson/score.js' type='text/javascript'></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="MetrodigiWidget">
+                <article class="widget-content">
+                    <header class="widget-header">
+                        <div class="notes" tabindex='1'>
+                            <div class='note' data-stage="initial"><strong>Study the activation-synthesis theory of dreaming and then <span class="responsive-call-to-action">tap or click</span> “Check Your Understanding” when you’re ready to review.</strong></div>
+                            <div class='note' data-stage="1">Where do dreams originate, according to the activation-synthesis theory?</div>
+                            <div class='note' data-stage="2">Where do dreams originate, according to the activation-synthesis theory?</div>
+                            <div class='note' data-stage="3">Where do the random signals go next?</div>
+                            <div class='note' data-stage="4">Where do the random signals go next?</div>
+                            <div class='note' data-stage="5">What is the final step in the process?</div>
+                            <div class='note' data-stage="6">What is the final step in the process?</div>
+                            <div class='note result' data-stage="result"></div>
+                        </div>
+                    </header>
+                    <section class="widget-body no-padding">
+                        <div class='stageWrap'>
+                            <canvas class='imgCanvas' width="700" height="424"  tabindex='1' >
+                                Here comes the image description.
+                            </canvas>
+
+                            <div class='bubble'
+                                 data-step="2"
+                                 data-correct-answer='pons'
+                                 data-position-x='540' data-position-y='197'
+                                 data-line='{ "x": 352,  "y": 197, "from": "left" }'
+                                 data-label='the label for the bubble'>
+
+                                <div class='dropdown'
+                                     data-type='BM'
+                                     data-options='cerebral cortex,thalamus,pons'>
+                                </div>
+                            </div>
+
+                            <div class='bubble'
+                                 data-step="4"
+                                 data-correct-answer='thalamus'
+                                 data-position-x='540' data-position-y='84'
+                                 data-line='{ "x": 340, "y": 120, "from": "left" }'
+                                 data-label='the label for the bubble'>
+
+                                <div class='dropdown'
+                                     data-type='OM'
+                                     data-options='cerebral cortex,thalamus,pons'>
+                                </div>
+                            </div>
+
+                            <div class='bubble'
+                                 data-step="6"
+                                 data-correct-answer='cerebral cortex'
+                                 data-position-x='35' data-position-y='40'
+                                 data-line='{ "x": 220, "y": 40, "from": "right" }'
+                                 data-label='the label for the bubble'>
+
+                                <div class='dropdown'
+                                     data-type='OM'
+                                     data-options='cerebral cortex,thalamus,pons'>
+                                </div>
+                            </div>
+
+                            <div class="text-box">
+                                <div data-step="1"
+                                    data-position-x='514'
+                                    data-position-y='315'
+                                    style='width: 180px;'>
+                                    <p><strong>1.</strong> The pons, which normally conveys sensory information from the real world, sends random signals to the upper part of the brain during REM sleep.</p>
+                                </div>
+                                <div class="text-box"
+                                    data-step="3"
+                                    data-position-x='523'
+                                    data-position-y='10'
+                                    style='width: 170px;'>
+                                    <p><strong>2.</strong> The thalamus receives random signals from the pons and sends them to the proper sensory areas of the cortex.</p>
+                                </div>
+                                <div class="text-box"
+                                    data-step="5"
+                                    data-position-x='20'
+                                    data-position-y='158'
+                                    style='width: 150px;'>
+                                    <p><strong>3.</strong> The association areas of the cerebral cortex respond to the random activation of cortical cells by synthesizing (making up) a <br>story, or dream, using bits and pieces of life experiences and memories.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class='feedback' aria-live='assertive' aria-relevant='additions'></div>
+                    </section>
+
+                    <footer class="widget-footer">
+                        <button class="btnStart">Check Your Understanding</button>
+                        <button class="btnReset" disabled="disabled">Start Over</button>
+                    </footer>
+                </article>
+            </div>
+        </div>
+
+            <script type='text/javascript' src='javascript/script.js'></script>
+            <script type="text/javascript">
+                window.addEvent('domready', function() {
+                    window.widget_instance = new VisualQuiz({
+                        container: $$('.container')[0]
+                    });
+                });
+            </script>
+    </body>
+</html>

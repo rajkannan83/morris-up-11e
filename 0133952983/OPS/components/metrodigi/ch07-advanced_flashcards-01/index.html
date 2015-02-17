@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../_framework/_base_external/font-awesome.min.css">
+  <link rel="stylesheet" href="../_framework/_base_pearson/fonts.css">
+  <link rel="stylesheet" href="../_framework/flashcards-advanced-v1/flashcards.css">
+   <script src="../_framework/_base_external/mootools-core-1.5.0-full-compat-yc_with-mootools-more.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="Flashcards">
+
+            <nav class="main-nav">
+                <button tabindex="0" class="current-chapter-cards"></button>
+                <button tabindex="0" class="all-chapters-cards"></button>
+                <div class="right-helper">
+                    <button tabindex="0" class="flip right">Flip Cards</button>
+                    <button tabindex="0" class="restart right">Start Over</button>
+                </div>
+            </nav>
+
+            <section class="cards">
+
+                <div class="end-screen">
+                    <div class="content-wrapper">
+                        <h2>All done!</h2>
+                        <strong>You needed to repeat <span class="repeated"></span>.</strong>
+                        <ul class="repeated-cards"></ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <nav class="bottom-nav">
+                <span class="status">
+                    <span class="status-reviewed">0</span>&nbsp;REVIEWED&nbsp;&sdot;&nbsp;
+                    <span class="status-mastered">0</span>&nbsp;MASTERED&nbsp;&sdot;&nbsp;
+                    <span class="status-to-go">10</span>&nbsp;TO GO
+                </span>
+
+                <button tabindex="0" class="skip right">Skip</button>
+            </nav>
+
+        </div>
+
+    </div> <!-- container -->
+
+    <script type="text/javascript" src="../_framework/flashcards-advanced-v1/flashcards.js"></script>
+    <script type="text/javascript">
+
+        window.addEvent('domready', function() {
+            // Widget initialization
+            window.widget_instance = new Flashcards({
+                container: $$('.Flashcards')[0],
+                currentchapter: 1, displayCurrentChapterButton: false,
+                cards: [
+                    {
+                        chapter: 1,
+                        term: "attention",
+                        definition: "The selection of some incoming information for further processing."
+                    },
+                    {
+                        chapter: 1,
+                        term: "childhood amnesia",
+                        definition: "The difficulty adults have remembering experiences from their first 2 years of life."
+                    },
+                    {
+                        chapter: 1,
+                        term: "chunking",
+                        definition: "The grouping of information into meaningful units for easier handling by short-term memory."
+                    },
+                    {
+                        chapter: 1,
+                        term: "decay theory",
+                        definition: "A theory that argues that the passage of time causes forgetting."
+                    },
+                    {
+                        chapter: 1,
+                        term: "eidetic imagery",
+                        definition: "The ability to reproduce unusually sharp and detailed images of something one has seen."
+                    },
+                    {
+                        chapter: 1,
+                        term: "elaborative rehearsal",
+                        definition: "The linking of new information in short-term memory to familiar material stored in long-term memory."
+                    },
+                    {
+                        chapter: 1,
+                        term: "emotional memories",
+                        definition: "Learned emotional responses to various stimuli."
+                    },
+                    {
+                        chapter: 1,
+                        term: "episodic memories",
+                        definition: "The portion of long-term memory that stores personally experienced events."
+                    },
+                    {
+                        chapter: 1,
+                        term: "explicit memory",
+                        definition: "Memory for information that we can readily express in words and are aware of having; these memories can be intentionally retrieved from memory."
+                    },
+                    {
+                        chapter: 1,
+                        term: "flashbulb memory",
+                        definition: "A vivid memory of a certain event and the incidents surrounding it even after a long time has passed."
+                    },
+                    {
+                        chapter: 1,
+                        term: "implicit memory",
+                        definition: "Memory for information that we cannot readily express in words and may not be aware of having; these memories cannot be intentionally retrieved from memory."
+                    },
+                    {
+                        chapter: 1,
+                        term: "inattentional blindness",
+                        definition: "Failure to notice or be aware of something that is in plain sight."
+                    },
+                    {
+                        chapter: 1,
+                        term: "information-processing model",
+                        definition: "A computer-like model used to describe the way humans encode, store, and retrieve information."
+                    },
+                    {
+                        chapter: 1,
+                        term: "long-term memory (LTM)",
+                        definition: "The portion of memory that is more or less permanent, corresponding to everything we “know.”"
+                    },
+                    {
+                        chapter: 1,
+                        term: "long-term potentiation (LTP)",
+                        definition: "A long-lasting change in the structure or function of a synapse that increases the efficiency of neural transmission and is thought to be related to how information is stored by neurons."
+                    },
+                    {
+                        chapter: 1,
+                        term: "memory",
+                        definition: "The ability to remember the things that we have experienced, imagined, and learned."
+                    },
+                    {
+                        chapter: 1,
+                        term: "mnemonics",
+                        definition: "Techniques that make material easier to remember."
+                    },
+                    {
+                        chapter: 1,
+                        term: "mnemonists",
+                        definition: "People with highly developed memory skills."
+                    },
+                    {
+                        chapter: 1,
+                        term: "proactive interference",
+                        definition: "The process by which information already in memory interferes with new information."
+                    },
+                    {
+                        chapter: 1,
+                        term: "procedural memories",
+                        definition: "The portion of long-term memory that stores information relating to skills, habits, and other perceptual-motor tasks."
+                    },
+                    {
+                        chapter: 1,
+                        term: "retroactive interference",
+                        definition: "The process by which new information interferes with information already in memory."
+                    },
+                    {
+                        chapter: 1,
+                        term: "retrograde amnesia",
+                        definition: "The inability to recall events preceding an accident or injury, but without loss of earlier memory."
+                    },
+                    {
+                        chapter: 1,
+                        term: "rote rehearsal",
+                        definition: "Retaining information in memory simply by repeating it over and over."
+                    },
+                    {
+                        chapter: 1,
+                        term: "schema (skee-mah; plural: schemata)",
+                        definition: "A set of beliefs or expectations about something that is based on past experience."
+                    },
+                    {
+                        chapter: 1,
+                        term: "semantic memories",
+                        definition: "The portion of long-term memory that stores general facts and information."
+                    },
+                    {
+                        chapter: 1,
+                        term: "sensory registers",
+                        definition: "Entry points for raw information from the senses."
+                    },
+                    {
+                        chapter: 1,
+                        term: "serial position effect",
+                        definition: "The finding that when asked to recall a list of unrelated items, performance is better for the items at the beginning and end of the list."
+                    },
+                    {
+                        chapter: 1,
+                        term: "short-term memory (STM)",
+                        definition: "Working memory; briefly stores and processes selected information from the sensory registers."
+                    },
+                    {
+                        chapter: 1,
+                        term: "tip-of-the-tongue phenomenon (or TOT)",
+                        definition: "Knowing a word, but not being able to immediately recall it."
+                    },
+                    {
+                        chapter: 1,
+                        term: "working memory",
+                        definition: "Another term for STM that emphasizes the active processing component of this memory system."
+                    },
+                ]
+            });
+        })
+    </script>
+
+</body>
+</html>
